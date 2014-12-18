@@ -5,7 +5,7 @@ var
 	Poet = require('poet');
 
 var poet = Poet(app, {
-	postsPerPage: 1,
+	postsPerPage: 10,
 	posts: './_posts',
 	metaFormat: 'json',
 	routes: {

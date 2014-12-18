@@ -1,4 +1,4 @@
-- var pageCount = Math.floor(getPageCount() / 2);
+- var pageCount = Math.floor(getPageCount());
   - var prev = parseInt(page) + 1;
   - var next = parseInt(page) - 1;
   script.
@@ -6,7 +6,7 @@
     //- alert(#{page});
   if pageCount > 1
     ul.pagination
-      if page < pageCount
+      if page < pageCount - 1
         a.older(href=pageURL(prev)) «&nbsp;Older posts
       if page > 0
         if next == 0

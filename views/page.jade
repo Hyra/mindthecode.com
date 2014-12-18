@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  - var posts = getPosts(page*2, page*2+2)
+  - var posts = getPosts(page*10, (page*10)+10)
   - each post in posts
 
     - var month = new Array(12);

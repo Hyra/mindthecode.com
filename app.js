@@ -38,6 +38,10 @@ app.get('/feed.xml', function(req, res, next) {
 	res.redirect(301, 'http://mindthecode.com/rss');
 });
 
+app.get('/demo/:demo', function(req, res, next) {
+  res.render('demos', { demo: req.params.demo });
+});
+
 app.get('/rss', function(req, res, next) {
   var posts = poet.helpers.getPosts(0, 15);
   res.setHeader('Content-Type', 'application/xml');

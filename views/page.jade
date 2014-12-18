@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+  - var posts = getPosts(page*2, page*2+2)
+  - each post in posts
+
+    - var month = new Array(12);
+    - month[0] = 'January';
+    - month[1] = 'February';
+    - month[2] = 'March';
+    - month[3] = 'April';
+    - month[4] = 'May';
+    - month[5] = 'June';
+    - month[6] = 'July';
+    - month[7] = 'August';
+    - month[8] = 'September';
+    - month[9] = 'October';
+    - month[10] = 'November';
+    - month[11] = 'December';
+    .post-head.group.list
+      h4.postDate
+        span!= [month[post.date.getUTCMonth()], post.date.getUTCDate() + ',', post.date.getUTCFullYear()].join(' ')
+      a(href="#{post.url}")
+        h1.post-title.list= post.title
+
+  include includes/pagination

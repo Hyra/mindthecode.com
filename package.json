@@ -1,0 +1,15 @@
+{
+  "name": "mindthecode-blog",
+  "version": "0.1.0",
+  "description": "Mindthecode Blog - Solving the web one pixel at the time.",
+  "author": "Stef van den Ham <stef@mindthecode.com>",
+  "dependencies": {
+    "node-compass": "~0.2.3",
+    "express": "~4.10.6",
+    "poet": "~2.0.0",
+    "jade": "~1.8.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

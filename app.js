@@ -21,7 +21,7 @@ poet.init().then(function () {
 });
 
 // TODO: Properly check this
-if(process.env.PORT) {
+if(!process.env.PORT) {
 	app.use(compass());
 }
 

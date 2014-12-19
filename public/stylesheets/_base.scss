@@ -73,7 +73,7 @@ body {
   }
   .bg {
     // background-image: url(/images/headers/default.jpg);
-    background-image: url(http://www.howest.be/images/news/normal/javascript.jpg);
+    background-image: url(/images/headers/javascript.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -89,6 +89,15 @@ body {
     -o-box-shadow: inset 0 -10px 100px -5px rgba(0,0,0,0.5);
     @include breakpoint(small-phone) {
       height: 200px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(/images/bg-pixel-20.png);
     }
   }
   .logo {

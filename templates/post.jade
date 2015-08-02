@@ -11,7 +11,12 @@ block head
     meta(name="keywords", content="#{keywords}")
   if description
     meta(name="description", content="#{description}")
-
+  if header
+    script.
+      $(document).ready(function() {
+        $('.teaser').css('background-image', 'url(/images/headers/#{header})');
+      });
+    
 block main
   article
     h1= title

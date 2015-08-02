@@ -3,6 +3,7 @@ title: "Writing Browserify modules for your Angular app"
 tags: browserify, angular
 publishDate: 2014-06-03
 template: post.jade
+header: _bg.jpg
 ---
 
 Following up on my previous [Let's Build an angular app with Browserify](/lets-build-an-angularjs-app-with-browserify-and-gulp/) post I got a few questions on how to create modules for your app. Let me show you.
@@ -77,7 +78,7 @@ exports.inject = function(app) {
 
 // Any extra dependencies can just be passed in
 exports.factory = function($http, $cookieStore, $resource) {
-  
+
   var monkey = 'Strawberry';
 
   return {

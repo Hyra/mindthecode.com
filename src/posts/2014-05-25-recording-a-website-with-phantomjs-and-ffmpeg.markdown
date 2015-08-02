@@ -3,15 +3,16 @@ title: "Recording a website with PhantomJS and FFMpeg"
 tags: ffmpeg, phantomjs
 publishDate: 2014-05-25
 template: post.jade
+header: camera-lens-close-up-photography-hd-wallpaper-1920x1200-9574.jpg
 ---
 
-When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video. 
+When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video.
 
 ## The goal
 
 What I wanted was to record 10 seconds of video from a random website and output it as a .mp4. For this short demo I decided we should go with one of the fun examples on Pixi.JS as they're interesting to capture.
 
-Here it is, a <a href="http://www.goodboydigital.com/pixijs/examples/12-2/" target="_blank">Pixi dragon</a>
+Here it is, a <a href="http://www.goodboydigital.com/pixijs/examples/12-2/" target="\_blank">Pixi dragon</a>
 
 ## The ingredients
 
@@ -21,7 +22,7 @@ In case you've been hiding, [PhantomJS](http://phantomjs.org/) is a headless scr
 
 ### FFMPeg
 
-[FFMPeg](http://www.ffmpeg.org/) is our all purpose video and audio toolbox to record, convert and stream on the command line. 
+[FFMPeg](http://www.ffmpeg.org/) is our all purpose video and audio toolbox to record, convert and stream on the command line.
 
 With these two tools installed we are ready to create a video.
 
@@ -114,7 +115,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     page.render('/dev/stdout', { format: "png" });
   }, 25);
 });
-``` 
+```
 
 We have removed the timeout as we don't need it anymore and we took out the frame counting code as we will tell ffmpeg how long to record for.
 
@@ -123,7 +124,7 @@ Now, when we run the runner again, the CLI will throw raw image data at us, so d
 Instead, let's add a pipe to it and feed that juicy image data to ffmpeg instead, who can devour it much better than we can:
 
 ```bash
-$ phantomjs runner.js | ffmpeg -y -c:v png -f image2pipe -r 25 -t 10  -i - -c:v libx264 -pix_fmt yuv420p -movflags +faststart dragon.mp4 
+$ phantomjs runner.js | ffmpeg -y -c:v png -f image2pipe -r 25 -t 10  -i - -c:v libx264 -pix_fmt yuv420p -movflags +faststart dragon.mp4
 ```
 
 This might take a while, but eventually you will end up with a file `dragon.mp4` that's a lot smoother than our first attempt. This is because we feed a lot more images to ffmpeg.

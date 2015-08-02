@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(http-equiv="cleartype", content="on")
+    meta(charset="utf-8")
+    meta(name="author", content="Stef van den Ham @stefvdham")
+    meta(property="fb:admins" content="1322812414")
+    meta(property="og:type", content="article")
+    meta(property="og:image", content="http://mindthecode.com/images/og_image.png")
+    meta(property="og:site_name", content="Mindthecode")
+    meta(property="fb:app_id", content="116332715192025")
+    meta(name="twitter:creator", content="@stefvdham")
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:image:", content="http://mindthecode.com/images/og_image.png")
+    link(href="/favicon.ico", rel="icon", type="image/png")
+    link(href="http://mindthecode.com/rss.xml", type="application/atom+xml", rel="alternate", title="Mindthecode")
+    link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
+    <!--[if lt IE 9]>
+    script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
+    <![endif]-->
+    link(href="//highlightjs.org/static/demo/styles/hybrid.css", rel="stylesheet")
+    link(href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic", rel="stylesheet")
+    link(href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|PT+Serif:400,700,400italic", rel="stylesheet")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
+    script(src="/js/jquery.readingTime.js")
+    script(src="/js/main.js")
+    script(id="twitter-wjs", src="http://platform.twitter.com/widgets.js")
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(href="/css/main.css", rel="stylesheet")
+    block head
+      link(rel="canonical", href="http://mindthecode.com/")
+      meta(name="twitter:title", content="Mindthecode")
+      meta(name="twitter:description", content="Rambling about all things web.")
+      meta(property="og:title", content="Mindthecode")
+      meta(property="og:description", content="Rambling about all things web.")
+      meta(property="og:url", content="http://mindthecode.com/")
+      meta(name="description", content="Rambling about all things web.")
+    block title
+      title= title ? title + " | " + site.title : site.title
+    block styles
+  body
+    block body
+      header(role="banner")
+        .contents
+          a(class="logo", href="/")
+            img(src="/images/logo.png", alt="Mindthecode")
+          nav
+            a(href="/") Articles
+            a(href="/about") About
+      //- .teaservideo
+        video(autoplay, loop, poster="polina.jpg", id="bgvid")
+          source(src="/js/video5.mp4", type="video/mp4")
+      .teaser
+        .badge
+          img(src="/images/badge.png")
+      section(role="main", class="main")
+        block main
+      .carbon
+        script(async, type="text/javascript", src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode", id="_carbonads_js")
+      footer
+        .contents
+          .logo
+            a(href="/")
+              img(src="/images/logo_white.png", height="30")
+          //- .footer-social
+            ul(class="social")
+              li
+                a(class="twitter-follow-button", href="https://twitter.com/stefvdham") Follow @stefvdham
+          .payoff © 2011 - 2015 Mindthecode B.V. Trademarks and brands are the property of their respective owners.
+      #fb-root

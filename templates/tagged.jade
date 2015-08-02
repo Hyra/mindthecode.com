@@ -1,0 +1,14 @@
+extends layout
+block main
+  h1 Posts tagged '#{tag}'
+  if pagination.files && pagination.files.length > 0
+    ul(class="articles")
+      each post in pagination.files
+        if post
+          li
+              small #{moment(post.publishDate).format('MMMM Do YYYY')}
+            h3
+              a(href='/' + post.path)!= post.title
+  else
+    h2= collections.posts.length
+    h2 there ain't no posts here, man

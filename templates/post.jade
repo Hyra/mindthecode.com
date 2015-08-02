@@ -1,0 +1,71 @@
+extends layout
+
+block head
+  link(rel="canonical",href="http://mindthecode.com/#{path}/")
+  meta(name="twitter:title",content="#{title}")
+  //- meta(name="twitter:description",content="#{description}")
+  meta(property="og:title",content="#{title}")
+  //- meta(property="og:description",content="#{description}")
+  meta(property="og:url",content="http://mindthecode.com/#{path}/")
+  if keywords
+    meta(name="keywords", content="#{keywords}")
+  if description
+    meta(name="description", content="#{description}")
+
+block main
+  article
+    h1= title
+    //- h2= next ? next.path : ''
+    .meta-data
+      time(pubdate="#{moment(publishDate).format('YYYY-MM-DD')}", datetime="2015-01-04") #{moment(publishDate).format("MMMM Do YYYY")}
+      if tags && tags.length > 0
+        .tags
+          span Tagged:
+          ul.tag-list
+            each tag in tags
+              li
+                a(href="/tags/#{tag}.html") #{tag}
+                
+    div!= contents
+
+    .meta-data(style="border-top: 0")
+      if tags && tags.length > 0
+        .tags
+          span Tagged:
+          ul.tag-list
+            each tag in tags
+              li
+                a(href="/tags/#{tag}.html") #{tag}
+    
+    hr
+    
+    h3 Share this post
+    ul(class="social")
+      li
+        a(href="https://twitter.com/intent/tweet?text=#{title}&url=http://mindthecode.com/#{path}/&via=stefvdham", class='socialshare')
+          img(src="/images/twitter-32.png", alt="")
+      li
+        a(href="https://www.facebook.com/sharer/sharer.php?app_id=116332715192025&sdk=joey&u=http://mindthecode.com/#{path}/&display=popup&ref=plugin&src=share_button", class='socialshare', target='_blank')
+          img(src="/images/facebook-32.png", alt="")
+      li
+        a(href="https://plus.google.com/share?url=http://mindthecode.com/#{path}/", class='socialshare', target='_blank')
+          img(src="/images/google+-32.png", alt="")
+      li
+        a(href="mailto:?subject=#{title}&body=http://mindthecode.com/#{path}/", class='socialshare')
+          img(src="/images/email-32.png", alt="")
+    hr
+    
+    if next
+      h3 Previous post
+      h3
+        a(href='/' + next.path)!= next.title
+    if previous
+      h3 Next post
+      h3
+        a(href='/' + previous.path)!= previous.title
+      
+    hr
+    
+    //- include includes/social
+    //- div #{wordCount} words
+    //- div #{readingTime}

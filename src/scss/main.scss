@@ -1,0 +1,402 @@
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+@import "mixins";
+@include meyer-reset;
+
+@font-face {
+    font-family: "museo_sans_500regular";
+    src: url("https://kraken-nekkraug.netdna-ssl.com/assets/fonts/Museo500.woff2") format('woff');
+}
+
+body {
+	background: #fcfcfc;
+	line-height: 1;
+	color: #414141;
+	font-family: 'Ubuntu', 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	font-feature-settings: "liga";
+	font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+	@include respond-to(small) {
+    // background: red;
+  }
+}
+
+p, code {
+	line-height: 1.667em;
+}
+
+.hljs {
+	background: none;
+	padding: 0;
+}
+
+.carbon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 130px;
+  height: 235px;
+  color: #333;
+  background: white;
+  border: 1px dashed #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  a {
+    font-size: 12px;
+    color: #333;
+  }
+  @include respond-to(small) {
+    display: none;
+  }
+}
+
+.main h1, .main h2, .main h3, .main ol, .main ul, .main p, .main code, .main .meta-data,
+.teaser h1,
+hr,
+header .contents,
+footer .contents {
+	width: 90%;
+	max-width: 700px;
+	margin: 20px auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.main hr {
+  height: 1px;
+  border: 0;
+  color: #e7e7e7;
+  background-color: #e7e7e7;
+}
+
+pre {
+  width: 100%;
+  box-sizing: border-box;
+  background: #2a3541; //#011b21;
+  color: #fff;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  font-family: 300;
+  overflow: auto;
+	padding: 8px 16px;
+  font-weight: 600;
+
+	code {
+	  white-space: pre-wrap;
+		display: block;
+	}
+}
+
+::selection {
+    color: #fff;
+    background: #eb6355;
+}
+
+header {
+  transition: all 0.2s ease-in-out;
+	height: 45px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  // position: fixed;
+  // height: 65px;
+
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	transform: translate3d(0,0,0);
+	background: #fff;
+	// box-shadow: 0 1px 4px rgba(0,0,0,.2);
+	z-index: 100;
+	.logo {
+		position: absolute;
+		left: 0px;
+    top: -3px;
+		img {
+			width: 200px;
+      @include respond-to(small) {
+        width: 110px;
+        margin-top: 7px;
+      }
+		}
+	}
+	nav {
+		position: absolute;
+	  right: 0px;
+    top: 7px;
+	  text-transform: uppercase;
+		a {
+			font-size: 12px;
+			font-family: museo_sans_500regular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+			text-decoration: none;
+			color: #333;
+			padding: 0px 15px;
+			float: left;
+      // text-shadow: 1px 1px 0 #333;
+			-webkit-transition: color .1s;
+			-moz-transition: color .1s;
+			-o-transition: color .1s;
+			transition: color .1s;
+		}
+	}
+}
+
+.header-up {
+  top: -75px; // same as header height. use variables in LESS/SASS
+}
+
+.badge {
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	margin-left: -32px;
+  transition: top 0.667s cubic-bezier(0.61, 0, 0.27, 1.55);
+	&.active {
+		top: 315px;
+	}
+}
+
+.teaser {
+	background: url(http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg);
+	background: url(https://d262ilb51hltx0.cloudfront.net/proxy/1*qr1GN2xOlSPq4xPvzq856A.jpeg);
+	background: url(https://d262ilb51hltx0.cloudfront.net/fit/t/2000/1600/gradv/29/81/55/1*yALlUpRb5FYZKfR5v1vYbg.jpeg);
+	background: url(/images/headers/music.jpg);
+	background: url(/images/headers/camera-lens-close-up-photography-hd-wallpaper-1920x1200-9574.jpg);
+	background: url(http://friedpixel.com/wp-content/uploads/2011/07/ThumbBigPeng1.png);
+	background: url(http://oyster.ignimgs.com/wordpress/www.ign.com/1783/2012/01/mariorulz101run.gif);
+	background: url(http://media.giphy.com/media/f9fbEUI4nrFWU/giphy.gif);
+	background: url(http://media.giphy.com/media/qwDIeQO0rzVVS/giphy.gif);
+	background: url(http://media.giphy.com/media/yRH9XoRR0LUgo/giphy.gif);
+	background: url(http://media.giphy.com/media/Lry6jqqgMf3kk/giphy.gif);
+	background: url(http://media.giphy.com/media/zNTZUt6u68VIk/giphy.gif);
+	background: url(http://31.media.tumblr.com/tumblr_ly7ksrSMxK1qbbcazo1_500.gif);
+	background: url(http://static.boredpanda.com/blog/wp-content/themes/boredpanda/images/header-background.jpg);
+	background: url(/images/_bg.jpg);
+	background: url(http://media.giphy.com/media/jNCT0DtwX6GFG/giphy.gif);
+	background: url(http://media.giphy.com/media/11H2Qn6XBrfZfi/giphy.gif);
+	background: url(http://media.giphy.com/media/K3yHR4ARBtNPq/giphy.gif);
+	background: url(http://media.giphy.com/media/HoffxyN8ghVuw/giphy.gif);
+	background: url(http://media.giphy.com/media/o9mJBCUG1nzTa/giphy.gif);
+	background: url(http://media.giphy.com/media/11vAxecuDSIEQE/giphy.gif);
+	background: url(http://media.giphy.com/media/WMWiJzKsRJTnG/giphy.gif);
+	background: url(http://media.giphy.com/media/PyMKiKdmsyg6s/giphy.gif);
+	background: url(http://media.giphy.com/media/hJ2BmdBT1IF7q/giphy.gif);
+	background: url(http://media.giphy.com/media/mgcLRhWpyXkiI/giphy.gif);
+  // background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+	height: 275px;
+  // width: 100%;
+	// margin-top: 75px;
+	display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+
+	h1 {
+		font-size: 2.0em;
+		text-transform: uppercase;
+		line-height: 1.6;
+		font-weight: 600;
+		span {
+			-webkit-box-decoration-break: clone;
+			background: rgba(0,0,0,0.65);
+			padding: 5px 10px;
+			color: white;
+		}
+	}
+}
+
+.teaservideo {
+  overflow: hidden;
+  height: 275px;
+  video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 275px;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+article {
+  margin-top: 50px;
+}
+
+section.main {
+  margin: 60px 0 60px 0;
+}
+
+ul.social {
+  // text-align: center;
+  li {
+    // float: left;
+    display: inline;
+    padding: 0 10px 0 0;
+  }
+}
+
+footer {
+  background: #2a3541;
+  padding: 20px 0;
+  text-align: center;
+  .payoff {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.5em;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.prev-next {
+  h3 i {
+    padding: 0 10px 0 10px;
+  }
+}
+
+ul.articles {
+  li {
+    padding: .3em 0;
+    border-bottom: dotted 1px #e7e7e7;
+    small {
+      position: relative;
+      bottom: -10px;
+      margin-left: 0px;
+      font-size: 0.9em;
+    }
+  }
+  h3 {
+    color: #333;
+    font-size: .875em;
+    font-weight: 700;
+    margin: 1em 0 0.5em;
+    text-transform: uppercase;
+  }
+}
+h1 {
+  color: #333;
+  font-weight: 700;
+  font-size: 2.1em;
+  margin: 0 0 0.5em;
+  line-height: 1.2em;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+h2 {
+    color: #f33e47;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0.75em 0 0em;
+    margin-bottom: -10px !important;
+}
+h3 {
+    color: #333;
+    font-size: .875em;
+    font-weight: 700;
+    // letter-spacing: 0.1em;
+    margin: 1em 0 .5em;
+    text-transform: uppercase;
+}
+article h3 {
+  margin-bottom: -10px !important;
+}
+article p:first-child {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  font-size: 1.1em;
+}
+p {
+  margin-bottom: 1em;
+  margin-top: 10px !important;
+  img {
+    width: 100%;
+  }
+}
+a {
+  color: #f43e47;
+  text-decoration: none;
+  &:hover {
+    color: #333;
+  }
+}
+p code {
+  background: #ebebff;
+  border: 1px solid #e6e6e6;
+  padding: 0 0.23em;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0;
+  font-size: .7em;
+  line-height: 1.5em;
+  font-family: Monaco,Consolas,monospace;
+}
+
+
+.meta-data {
+    margin: 1em 0 1em;
+    border-top: 1px solid #efefef;
+    line-height: 3em
+}
+.meta-data>div,
+.meta-data>time {
+    font-size: .875em
+}
+.meta-data time {
+    color: #746e77;
+}
+.tags {
+  float: right;
+    color: #746e77;
+    display: inline;
+}
+.tags ul,
+.tags li {
+    display: inline;
+    margin: 0;
+    padding: 0
+}
+.tags li {
+    margin: 0 0.5em
+}
+.tags li:after {
+    content: "/";
+    margin-left: 0.6em;
+    color: rgba(116, 110, 119, 0.3)
+}
+.tags li:last-child:after {
+    display: none
+}
+
+
+.floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, -15px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}

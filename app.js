@@ -3,12 +3,11 @@ var compression = require('compression');
 var app = express();
 var oneDay = 86400000;
 
-app.all(/.*/, function(req, res, next) {
-  var host = req.header("host");
-  if (host.match(/^www\..*/i)) {
-    next();
+app.all('*', function(req, res, next) {
+  if (req.headers.host.match(/^www\./) != null) {
+    res.redirect("http://" + req.headers.host.slice(4) + req.url, 301);
   } else {
-    res.redirect(301, "http://www." + host);
+    next();
   }
 });
 

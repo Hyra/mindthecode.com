@@ -7,15 +7,14 @@ app.use(compression());
 
 app.use(express.static(__dirname + '/build/', { maxAge: oneDay }));
 
-if(process.env.NODE_ENV === 'production') {
-  app.get('/*', function(req, res, next) {
+function removeWWW(req, res, next){
     if (req.headers.host.match(/^www/) !== null ) {
-      res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
     } else {
-      next();     
+        next();
     }
-  });
 }
+app.use(removeWWW);
 
 var port = process.env.PORT || 8000;
 app.listen(port, function() {

@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "Mindthecode Blog - Solving the web one pixel at the time",
   "scripts": {
+    "postinstall": "node build.js",
     "start": "node app.js"
   },
   "author": "Stef van den Ham <stef@mindthecode.com>",

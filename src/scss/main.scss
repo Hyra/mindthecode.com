@@ -40,12 +40,21 @@ p, code {
   bottom: 10px;
   right: 10px;
   width: 130px;
-  height: 235px;
+  // height: 235px;
   color: #333;
   background: white;
   border: 1px dashed #ddd;
   border-radius: 3px;
   padding: 10px;
+  font-size: 0.9em; line-height: 1.4; padding: 15px; min-height: 200px;
+  a { display: block; margin: 0; padding: 0; color: #65686d; transition: color 100ms linear; cursor: pointer; }
+  a:hover { color: #ddd; }
+  // .carbon-img { text-align: left; background-color: rgba(0, 0, 0, 0.1); box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); border-radius: 4px; padding: 20px; transition: background-color 100ms linear; }
+  .carbon-img img { box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); border-radius: 2px; background: #242930; height: 100px; width: 130px; }
+  .carbon-img:hover { background-color: rgba(9, 41, 23, 0.1); box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .carbon-text { margin-top: 10px; color: #a1a3a5; }
+  .carbon-poweredby { color: #65686d; }
+  img { display: block; width: 130px; height: 100px; }
   a {
     font-size: 12px;
     color: #333;

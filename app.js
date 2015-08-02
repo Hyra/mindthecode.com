@@ -8,6 +8,7 @@ app.use(compression());
 app.use(express.static(__dirname + '/build/', { maxAge: oneDay }));
 
 function removeWWW(req, res, next){
+  console.log(req.headers.host);
     if (req.headers.host.match(/^www/) !== null ) {
         res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
     } else {

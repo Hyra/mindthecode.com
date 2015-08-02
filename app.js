@@ -7,15 +7,14 @@ app.use(compression());
 
 app.use(express.static(__dirname + '/build/', { maxAge: oneDay }));
 
-function removeWWW(req, res, next){
-  console.log(req.headers.host);
-    if (req.headers.host.match(/^www/) !== null ) {
-        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
-    } else {
-        next();
-    }
-}
-app.use(removeWWW);
+app.all(/.*/, function(req, res, next) {
+  var host = req.header("host");
+  if (host.match(/^www\..*/i)) {
+    next();
+  } else {
+    res.redirect(301, "http://www." + host);
+  }
+});
 
 var port = process.env.PORT || 8000;
 app.listen(port, function() {

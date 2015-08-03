@@ -3,6 +3,7 @@ title: "Use GZip with PHP"
 tags: php
 publishDate: 2011-10-14
 template: post.jade
+header: gzip.gif
 ---
 
 I recently started using GZip headers in my websites and the results are simply amazing. Right up there with coffee, sneezing polar bears and green traffic lights.

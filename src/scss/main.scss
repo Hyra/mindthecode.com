@@ -342,7 +342,7 @@ a {
     color: #333;
   }
 }
-p code {
+p code, li code {
   background: #ebebff;
   border: 1px solid #e6e6e6;
   padding: 0 0.23em;
@@ -408,4 +408,9 @@ p code {
     from {-webkit-transform:translate(0, 0px);}
     65% {-webkit-transform:translate(0, -15px);}
     to {-webkit-transform: translate(0, -0px);    }
+}
+
+ol li {
+  list-style-type: decimal;
+  padding: 0 0 10px 0;
 }

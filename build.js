@@ -97,14 +97,17 @@ var siteBuild = metalsmith(__dirname)
     }));
 
 if (process.env.NODE_ENV !== 'production') {
-  siteBuild = siteBuild
+  siteBuild
+      .use(watch({
+        // pattern: '**/*',
+        paths: {
+          "${source}/**/*": true
+        },
+        livereload: true
+      }))
       .use(serve({
         port: 8082,
         verbose: true
-      }))
-      .use(watch({
-        pattern: '**/*',
-        livereload: true
       }))
 }
 siteBuild.build(function (err) {

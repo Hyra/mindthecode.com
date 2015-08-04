@@ -26,7 +26,7 @@
     "metalsmith-sitemap": "0.0.9",
     "metalsmith-tags": "^0.10.1",
     "metalsmith-templates": "^0.6.1",
-    "metalsmith-watch": "^0.2.0",
+    "metalsmith-watch": "^1.0.1",
     "metalsmith-word-count": "0.0.4",
     "moment": "^2.10.6"
   },

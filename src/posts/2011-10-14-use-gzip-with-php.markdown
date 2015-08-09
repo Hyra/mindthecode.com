@@ -1,5 +1,6 @@
 ---
 title: "Use GZip with PHP"
+description: In this post I will show you how to add GZip to your PHP application
 tags: php
 publishDate: 2011-10-14
 template: post.jade

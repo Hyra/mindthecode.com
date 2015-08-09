@@ -1,5 +1,6 @@
 ---
 title: "Spotify Boilerplate App"
+description: A Boilerplate with best practices to kickstart your Spotify App
 tags: spotify
 publishDate: 2012-09-18
 template: post.jade

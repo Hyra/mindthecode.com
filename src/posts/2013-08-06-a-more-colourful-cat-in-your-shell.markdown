@@ -1,5 +1,6 @@
 ---
 title: "A more colourful cat in your shell"
+description: Let me show you how you can get syntax highlighted output from cat in the terminal
 tags: terminal
 publishDate: 2013-08-06
 template: post.jade

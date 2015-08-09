@@ -1,5 +1,6 @@
 ---
 title: "Spotify Preview Build expired"
+description: The Spotify Preview build has expired
 tags: spotify
 publishDate: 2012-02-11
 template: post.jade

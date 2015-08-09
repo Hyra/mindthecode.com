@@ -1,5 +1,6 @@
 ---
 title: "Using Markdown in CakePHP"
+description: Let me show you how you can use Markdown within your next CakePHP project
 tags: markdown, cakephp, php
 publishDate: 2011-07-10
 template: post.jade

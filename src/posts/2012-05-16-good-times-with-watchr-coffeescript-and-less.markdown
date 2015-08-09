@@ -1,5 +1,6 @@
 ---
 title: "Good times with Watchr, Coffeescript and LESS"
+description: With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.
 tags: less, coffeescript
 publishDate: 2012-05-16
 template: post.jade

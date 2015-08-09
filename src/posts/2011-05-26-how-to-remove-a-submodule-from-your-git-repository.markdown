@@ -1,5 +1,6 @@
 ---
 title: "How to remove a Submodule from your Git repository"
+description: In this short post I will show you how to get rid of a Git submodule
 tags: git
 publishDate: 2011-05-26
 template: post.jade

@@ -1,5 +1,6 @@
 ---
 title: "Using SASS in your next CakePHP project"
+description: I heard a lot about SASS, mostly a lot of people raving about how it was the best thing since chocolate.
 publishDate: 2011-04-14
 tags: sass, cakephp
 template: post.jade

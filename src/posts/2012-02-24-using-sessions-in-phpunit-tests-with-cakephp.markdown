@@ -1,5 +1,6 @@
 ---
 title: "Using Sessions in PHPUnit Tests with CakePHP"
+description: How to use sessions within your unit tests using PHPUnit and CakePHP
 tags: phpunit, cakephp
 publishDate: 2012-02-24
 template: post.jade

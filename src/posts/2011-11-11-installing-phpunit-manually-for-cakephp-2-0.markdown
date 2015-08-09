@@ -1,5 +1,6 @@
 ---
 title: "Installing PHPUnit manually for CakePHP 2.0"
+description: How to install PHPUnit manually for CakePHP 2.0
 tags: phpunit, php, cakephp
 publishDate: 2011-11-11
 template: post.jade

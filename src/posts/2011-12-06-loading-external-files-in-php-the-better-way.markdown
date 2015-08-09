@@ -1,5 +1,6 @@
 ---
 title: "Loading external files in PHP the better way"
+description: Loading external assets with curl is not only easy, it's also a lot faster than file_get_contents
 tags: php
 publishDate: 2011-12-06
 template: post.jade

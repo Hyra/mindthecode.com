@@ -1,5 +1,6 @@
 ---
 title: "Blogging with Octopress"
+description: My experiences while converting this blog to an Octopress one
 tags: octopress
 publishDate: 2012-10-26
 template: post.jade

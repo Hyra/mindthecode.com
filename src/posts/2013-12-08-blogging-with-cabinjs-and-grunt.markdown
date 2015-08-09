@@ -1,5 +1,6 @@
 ---
 title: "Blogging with CabinJS and Grunt"
+description: My experience while rebuilding this blog with CabinJS and Grunt
 tags: cabinjs, grunt
 publishDate: 2013-12-08
 template: post.jade

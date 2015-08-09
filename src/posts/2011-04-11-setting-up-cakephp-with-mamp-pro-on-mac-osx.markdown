@@ -1,5 +1,6 @@
 ---
 title: "Setting up CakePHP with MAMP Pro on Mac OSX"
+description: I'd like to use my first post to describe how I set up new projects in a simple way that works best for me.
 publishDate: 2011-04-11
 tags: php, cakephp, osx, mamp
 template: post.jade

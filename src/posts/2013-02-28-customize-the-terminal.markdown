@@ -1,5 +1,6 @@
 ---
 title: "Customize the terminal"
+description: In this post I want to show you how you can customize the terminal to not only make it look cool but work better, too
 tags: terminal, zsh
 publishDate: 2013-02-28
 template: post.jade

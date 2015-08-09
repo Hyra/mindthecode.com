@@ -1,5 +1,6 @@
 ---
 title: "How to use environment variables in your Angular application"
+description: I will explain how to use environment variables in your Angular app
 tags: angular
 publishDate: 2013-12-29
 template: post.jade

@@ -1,5 +1,6 @@
 ---
 title: "Using LESS in CakePHP"
+description: Let me show you how to use a little helper so you can use LESS in your next CakePHP project
 tags: less, cakephp, php
 publishDate: 2011-09-10
 template: post.jade

@@ -1,5 +1,6 @@
 ---
 title: "HTTPIe, a command line HTTP client"
+description: Curl on steroids with an easy interface and syntax highlighted output.
 tags: http
 publishDate: 2013-12-08
 template: post.jade

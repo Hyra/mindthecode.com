@@ -1,5 +1,6 @@
 ---
 title: "Updated the PHPUnit CakePHP installer"
+description: Updated the PHPUnit CakePHP installer
 tags: phpunit, cakephp
 publishDate: 2012-11-06
 template: post.jade

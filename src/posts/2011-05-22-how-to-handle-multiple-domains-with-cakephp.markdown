@@ -1,5 +1,6 @@
 ---
 title: "How to handle multiple domains with CakePHP"
+description: The following setup can work nicely when you develop your sites locally and don't want to change the configuration every time you upload it.
 tags: cakephp, php
 publishDate: 2011-05-22
 template: post.jade

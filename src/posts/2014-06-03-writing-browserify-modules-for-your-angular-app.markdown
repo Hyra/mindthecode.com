@@ -1,5 +1,6 @@
 ---
 title: "Writing Browserify modules for your Angular app"
+description: Following up on my previous post I got a few questions on how to create modules for your app. Let me show you.
 tags: browserify, angular
 publishDate: 2014-06-03
 template: post.jade

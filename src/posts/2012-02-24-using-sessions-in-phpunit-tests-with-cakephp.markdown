@@ -3,6 +3,7 @@ title: "Using Sessions in PHPUnit Tests with CakePHP"
 tags: phpunit, cakephp
 publishDate: 2012-02-24
 template: post.jade
+header: sessions.gif
 ---
 
 I was breaking my head over failing unit tests when trying to test a simple Controller that was saving a new record.

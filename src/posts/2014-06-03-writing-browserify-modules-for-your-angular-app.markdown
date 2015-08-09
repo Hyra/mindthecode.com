@@ -3,7 +3,7 @@ title: "Writing Browserify modules for your Angular app"
 tags: browserify, angular
 publishDate: 2014-06-03
 template: post.jade
-header: _bg.jpg
+header: modules.gif
 ---
 
 Following up on my previous [Let's Build an angular app with Browserify](/lets-build-an-angularjs-app-with-browserify-and-gulp/) post I got a few questions on how to create modules for your app. Let me show you.

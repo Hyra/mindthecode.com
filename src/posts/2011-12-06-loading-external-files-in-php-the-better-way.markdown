@@ -3,6 +3,7 @@ title: "Loading external files in PHP the better way"
 tags: php
 publishDate: 2011-12-06
 template: post.jade
+header: external.gif
 ---
 
 Sometimes you run into "weird behavior" when using `file_get_contents` in your code when retrieving external data. I noticed this for instance when accessing the Facebook Graph API the other day. When using file\_get\_contents the results were so much different than when using cUrl.

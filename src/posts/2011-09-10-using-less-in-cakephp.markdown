@@ -3,6 +3,7 @@ title: "Using LESS in CakePHP"
 tags: less, cakephp, php
 publishDate: 2011-09-10
 template: post.jade
+header: less-cakephp.gif
 ---
 
 I was a bit bored this morning with my previous Less component, so decided to rewrite the thing and added some new features such as caching. It's pretty straightforward and simple to set up. If you can't wait, the code is available [here][1]. For more information, read on.

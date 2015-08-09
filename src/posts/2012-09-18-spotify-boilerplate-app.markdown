@@ -3,9 +3,10 @@ title: "Spotify Boilerplate App"
 tags: spotify
 publishDate: 2012-09-18
 template: post.jade
+header: spotify-boilerplate.gif
 ---
 
-A while ago we were proud to be releasing 2 of the very first Spotify Apps in the Netherlands at <a href="http://noprotocol.nl" title="NoProtocol" target="_blank">NoProtocol</a>. For a long time since I've been planning on creating a Boilerplate in which we could put all the best practices and redo some stuff in hindsight.
+A while ago we were proud to be releasing 2 of the very first Spotify Apps in the Netherlands at <a href="http://noprotocol.nl" title="NoProtocol" target="\_blank">NoProtocol</a>. For a long time since I've been planning on creating a Boilerplate in which we could put all the best practices and redo some stuff in hindsight.
 
 And finally, it's here! You can grab it at <a href="https://github.com/Hyra/Spotify-Boilerplate" title="https://github.com/Hyra/Spotify-Boilerplate" target="_blank">https://github.com/Hyra/Spotify-Boilerplate</a>
 

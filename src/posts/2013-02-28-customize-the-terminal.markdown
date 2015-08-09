@@ -3,6 +3,7 @@ title: "Customize the terminal"
 tags: terminal, zsh
 publishDate: 2013-02-28
 template: post.jade
+header: customize-terminal.gif
 ---
 
 I love the terminal. Besides the fact it makes you look awesome while using it, it can also do about a gazillion different things. Most of them useful.

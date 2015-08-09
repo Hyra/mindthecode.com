@@ -3,6 +3,7 @@ title: "Getting used to Vim"
 tags: vim
 publishDate: 2013-02-09
 template: post.jade
+header: vim.gif
 ---
 
 So there we go. Writing this post in vim. Macvim to be exact. Trying not to touch the arrow keys, not use the h-j-k-l too extensively either, work with A and I a lot, and generally trying not to cock things up too much by hitting the wrong commands.

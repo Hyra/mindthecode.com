@@ -3,6 +3,7 @@ title: "How to remove a Submodule from your Git repository"
 tags: git
 publishDate: 2011-05-26
 template: post.jade
+header: submodule.gif
 ---
 
 Submodules are awesome. Adding them is easy enough. But how about getting rid of them again? In this short post I'll share how to do just that.

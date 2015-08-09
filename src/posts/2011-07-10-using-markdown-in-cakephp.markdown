@@ -3,6 +3,7 @@ title: "Using Markdown in CakePHP"
 tags: markdown, cakephp, php
 publishDate: 2011-07-10
 template: post.jade
+header: markdown-cakephp.gif
 ---
 
 Markdown rocks. I lately fell in love with it when I was setting up this very blog. You can just write easy-to-read and easy-to-write plain text files, and Markdown takes care of the rest.

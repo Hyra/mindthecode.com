@@ -3,6 +3,7 @@ title: "How to use environment variables in your Angular application"
 tags: angular
 publishDate: 2013-12-29
 template: post.jade
+header: environment.gif
 ---
 
 If you develop a website that uses multiple environments such as **development**, **staging** and **production** you probably have a configuration file of sorts to handle things like database settings, mail server credentials, and so on for your backend system.

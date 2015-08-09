@@ -3,6 +3,7 @@ title: "A more colourful cat in your shell"
 tags: terminal
 publishDate: 2013-08-06
 template: post.jade
+header: colourful.gif
 ---
 
 I just wanted to quickly share a shell alias I have been using lately to get some more color in the terminal when you cat a file.

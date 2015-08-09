@@ -3,6 +3,7 @@ title: "Blogging with Octopress"
 tags: octopress
 publishDate: 2012-10-26
 template: post.jade
+header: octopress.gif
 ---
 
 As some of you may know, even though I don't blog all that often, I do mess about with it a lot. Mostly on what makes it run. Switching between [Croogo](http://croogo.org), a custom built [CakePHP](http://cakephp.org) site, [Wordpress](http://wordpress.org) .. and back again.

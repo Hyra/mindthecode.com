@@ -3,6 +3,7 @@ title: "Good times with Watchr, Coffeescript and LESS"
 tags: less, coffeescript
 publishDate: 2012-05-16
 template: post.jade
+header: good-times.gif
 ---
 
 I have been working on a pure HTML front-end for one of the pet projects I'm doing. A lot of fun, but while developing, running the terminal commands to compile both the .less and .coffee files gets a tad tedious. ["Watchr"][1] to the rescue! With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.

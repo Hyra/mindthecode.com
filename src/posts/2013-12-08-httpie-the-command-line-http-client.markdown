@@ -3,6 +3,7 @@ title: "HTTPIe, a command line HTTP client"
 tags: http
 publishDate: 2013-12-08
 template: post.jade
+header: httpie.gif
 ---
 
 Stumbled upon **[HTTPie](https://github.com/jkbr/httpie)**, a command line HTTP client. It's pretty awesome. Basically it's Curl on steroids, as it has an easy interface and syntax highlighted output.

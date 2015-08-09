@@ -3,6 +3,7 @@ title: "Format associative JSON to work with Knockout.js"
 tags: knockout.js
 publishDate: 2012-05-09
 template: post.jade
+header: associative.gif
 ---
 
 I recently started creating a RESTful API in CakePHP to work with a Knockout.js frontend.

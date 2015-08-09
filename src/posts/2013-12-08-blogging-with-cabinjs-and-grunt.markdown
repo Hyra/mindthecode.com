@@ -3,6 +3,7 @@ title: "Blogging with CabinJS and Grunt"
 tags: cabinjs, grunt
 publishDate: 2013-12-08
 template: post.jade
+header: cabinjs.gif
 ---
 
 I just want to mention [CabinJS](http://www.cabinjs.com). It took me all of 10 minutes to set it up, and another 10 to get the automatic deployment to Github Pages working. The other 4 hours this sunday I spent on *layouting*, *designing* and *tweaking* the blog you're reading now.

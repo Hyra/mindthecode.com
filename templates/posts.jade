@@ -13,3 +13,16 @@ block main
   else
     h2= collections.posts.length
     h2 there ain't no posts here, man
+
+  script.
+    var headers = [];
+  each post in collections.posts
+    if post.header
+      script.
+        headers.push('#{post.header}');
+  script.
+    var items = headers;
+    var item = items[Math.floor(Math.random()*items.length)];
+    $(document).ready(function() {
+      $('.teaser').css('background-image', 'url(/images/headers/' + item);
+    });

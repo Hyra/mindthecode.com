@@ -3,7 +3,7 @@ title: "Recording a website with PhantomJS and FFMpeg"
 tags: ffmpeg, phantomjs
 publishDate: 2014-05-25
 template: post.jade
-header: camera-lens-close-up-photography-hd-wallpaper-1920x1200-9574.jpg
+header: recording-phantomjs.gif
 ---
 
 When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video.

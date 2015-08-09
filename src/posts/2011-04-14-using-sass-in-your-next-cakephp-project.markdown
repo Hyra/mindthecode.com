@@ -3,6 +3,7 @@ title: "Using SASS in your next CakePHP project"
 publishDate: 2011-04-14
 tags: sass, cakephp
 template: post.jade
+header: sass-cake.gif
 ---
 
 I heard a lot about SASS, mostly a lot of people raving about how it was the best thing since chocolate. When I first saw some examples I thought the idea was good, but didn't see the point of learning a new syntax in order to not having to use the CSS syntax. Because, honestly, how does typing some curly brackets and semicolons hurt?

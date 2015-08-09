@@ -3,6 +3,7 @@ title: "Installing PHPUnit manually for CakePHP 2.0"
 tags: phpunit, php, cakephp
 publishDate: 2011-11-11
 template: post.jade
+header: phpunit-manually.gif
 ---
 
 I was trying to get into Unit Testing a few months ago. It was a steep learning curve and eventually I gave myself a non-excuse and decided to wait for Cake 2.0 as that would have PHPUnit and it "wouldn't make sense to learn SimpleTest" at that time.

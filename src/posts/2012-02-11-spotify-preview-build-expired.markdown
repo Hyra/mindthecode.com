@@ -3,6 +3,7 @@ title: "Spotify Preview Build expired"
 tags: spotify
 publishDate: 2012-02-11
 template: post.jade
+header: spotify.gif
 ---
 
 Today I decided to tinker some more on our Spotify App, only to find that the Preview Build had expired, and was not gonna launch. Period. Great, so now what?

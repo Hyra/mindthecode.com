@@ -3,3 +3,7 @@ block main
   article#article
     h1= title
     div!= contents
+  script.
+    $(document).ready(function() {
+      $('.teaser').css('background-image', 'url(/images/headers/about.gif)');
+    });

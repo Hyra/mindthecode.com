@@ -3,14 +3,14 @@ extends layout
 block head
   link(rel="canonical",href="http://mindthecode.com/#{path}/")
   meta(name="twitter:title",content="#{title}")
-  //- meta(name="twitter:description",content="#{description}")
   meta(property="og:title",content="#{title}")
-  //- meta(property="og:description",content="#{description}")
   meta(property="og:url",content="http://mindthecode.com/#{path}/")
   if keywords
     meta(name="keywords", content="#{keywords}")
   if description
     meta(name="description", content="#{description}")
+    meta(name="twitter:description",content="#{description}")
+    meta(property="og:description",content="#{description}")
   if header
     script.
       $(document).ready(function() {

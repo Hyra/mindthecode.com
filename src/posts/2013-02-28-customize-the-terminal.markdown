@@ -40,9 +40,7 @@ Choosing a font is the most important thing, because, if you're anything like me
 
 I recently got to know [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), which as Robby describes it, is:
 
-"A handful of functions, auto-complete helpers, and stuff that makes you shout..
-
-	'OH MY ZSHELL!'
+"A handful of functions, auto-complete helpers, and stuff that makes you shout.. **'OH MY ZSHELL!'**
 
 To get it working you first have to change the shell you're working in. By default OSX users get the `/bin/bash` shell. ZSH is pretty much the same, but comes with quite a few handy additions to make it cool enough to use. To change your shell to zsh simply go:
 
@@ -54,9 +52,9 @@ To get it working you first have to change the shell you're working in. By defau
 
 Next, to get oh-my-zsh working, they have provided a nice one-line install script which you run, of course, in the terminal:
 
-{% highlight bash %}
-$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-{% endhighlight %}
+```
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+```
 
 ### Preparing the ZSH theme
 

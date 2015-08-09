@@ -45,19 +45,8 @@ block main
     hr
     
     h3 Share this post
-    ul(class="social")
-      li
-        a(href="https://twitter.com/intent/tweet?text=#{title}&url=http://mindthecode.com/#{path}/&via=stefvdham", class='socialshare')
-          img(src="/images/twitter-32.png", alt="")
-      li
-        a(href="https://www.facebook.com/sharer/sharer.php?app_id=116332715192025&sdk=joey&u=http://mindthecode.com/#{path}/&display=popup&ref=plugin&src=share_button", class='socialshare', target='_blank')
-          img(src="/images/facebook-32.png", alt="")
-      li
-        a(href="https://plus.google.com/share?url=http://mindthecode.com/#{path}/", class='socialshare', target='_blank')
-          img(src="/images/google+-32.png", alt="")
-      li
-        a(href="mailto:?subject=#{title}&body=http://mindthecode.com/#{path}/", class='socialshare')
-          img(src="/images/email-32.png", alt="")
+    .addthis_sharing_toolbox
+    
     hr
     
     if next

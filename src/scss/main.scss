@@ -80,6 +80,7 @@ strong {
 
 .main h1, .main h2, .main h3, .main ol, .main ul, .main p, .main code, .main .meta-data,
 .teaser h1,
+.addthis_sharing_toolbox,
 hr,
 header .contents,
 footer .contents {
@@ -234,15 +235,6 @@ article {
 
 section.main {
   margin: 60px 0 60px 0;
-}
-
-ul.social {
-  // text-align: center;
-  li {
-    // float: left;
-    display: inline;
-    padding: 0 10px 0 0;
-  }
 }
 
 footer {

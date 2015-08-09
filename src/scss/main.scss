@@ -30,6 +30,10 @@ p, code {
 	line-height: 1.667em;
 }
 
+strong {
+  font-weight: 500;
+}
+
 .hljs {
 	background: none;
 	padding: 0;
@@ -171,31 +175,7 @@ header {
 }
 
 .teaser {
-	background: url(http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg);
-	background: url(https://d262ilb51hltx0.cloudfront.net/proxy/1*qr1GN2xOlSPq4xPvzq856A.jpeg);
-	background: url(https://d262ilb51hltx0.cloudfront.net/fit/t/2000/1600/gradv/29/81/55/1*yALlUpRb5FYZKfR5v1vYbg.jpeg);
-	background: url(/images/headers/music.jpg);
-	background: url(/images/headers/camera-lens-close-up-photography-hd-wallpaper-1920x1200-9574.jpg);
-	background: url(http://friedpixel.com/wp-content/uploads/2011/07/ThumbBigPeng1.png);
-	background: url(http://oyster.ignimgs.com/wordpress/www.ign.com/1783/2012/01/mariorulz101run.gif);
-	background: url(http://media.giphy.com/media/f9fbEUI4nrFWU/giphy.gif);
-	background: url(http://media.giphy.com/media/qwDIeQO0rzVVS/giphy.gif);
-	background: url(http://media.giphy.com/media/yRH9XoRR0LUgo/giphy.gif);
-	background: url(http://media.giphy.com/media/Lry6jqqgMf3kk/giphy.gif);
-	background: url(http://media.giphy.com/media/zNTZUt6u68VIk/giphy.gif);
-	background: url(http://31.media.tumblr.com/tumblr_ly7ksrSMxK1qbbcazo1_500.gif);
-	background: url(http://static.boredpanda.com/blog/wp-content/themes/boredpanda/images/header-background.jpg);
-	background: url(/images/_bg.jpg);
-	background: url(http://media.giphy.com/media/jNCT0DtwX6GFG/giphy.gif);
-	background: url(http://media.giphy.com/media/11H2Qn6XBrfZfi/giphy.gif);
-	background: url(http://media.giphy.com/media/K3yHR4ARBtNPq/giphy.gif);
-	background: url(http://media.giphy.com/media/HoffxyN8ghVuw/giphy.gif);
-	background: url(http://media.giphy.com/media/o9mJBCUG1nzTa/giphy.gif);
-	background: url(http://media.giphy.com/media/11vAxecuDSIEQE/giphy.gif);
-	background: url(http://media.giphy.com/media/WMWiJzKsRJTnG/giphy.gif);
-	background: url(http://media.giphy.com/media/PyMKiKdmsyg6s/giphy.gif);
-	background: url(http://media.giphy.com/media/hJ2BmdBT1IF7q/giphy.gif);
-	background: url(http://media.giphy.com/media/mgcLRhWpyXkiI/giphy.gif);
+	// background: url(/images/headers/music.jpg);
   // background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -412,5 +392,9 @@ p code, li code {
 
 ol li {
   list-style-type: decimal;
+  padding: 0 0 10px 0;
+}
+ul li {
+  list-style-type: disc;
   padding: 0 0 10px 0;
 }

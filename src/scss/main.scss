@@ -34,6 +34,16 @@ strong {
   font-weight: 500;
 }
 
+.rss {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  @include respond-to(small) {
+    right: 5px;
+    top: 5px;
+  }
+}
+
 .hljs {
 	background: none;
 	padding: 0;

@@ -21,7 +21,6 @@ $(function() {
 		$('.badge').addClass('active');
 		$('.badge').addClass('floating');
 	},666);
-	// $('.main').readingTime();
 });
 
 window.mobilecheck = function() {

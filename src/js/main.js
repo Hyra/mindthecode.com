@@ -38,6 +38,7 @@ $(document).ready(function(){
 
   $('a').each(function() {
     // if (this.href.match(/kickstarter/)) return;
+    if (this.childNodes[0].tagName === 'IMG') return;
     if (this.className.match(/social/)) return;
     $(this).css('position', 'relative');
     $(this).mousemove(function(e) {

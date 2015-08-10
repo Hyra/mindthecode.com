@@ -78,7 +78,6 @@ var siteBuild = metalsmith(__dirname)
       collection: 'posts',
       limit: false
     }))
-    .use(path())
     .use(sitemap({
        output: 'sitemap.xml',
        urlProperty: 'path',
@@ -88,6 +87,7 @@ var siteBuild = metalsmith(__dirname)
          changefreq: 'daily'
        }
     }))
+    .use(path())
     .use(sass({
       outputStyle: "expanded",
       outputDir: 'css/'

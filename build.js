@@ -94,6 +94,7 @@ var siteBuild = metalsmith(__dirname)
     }))
     .use(redirect({
       // '/lets-build-an-angularjs-app-with-browserify-and-gulp/': '/let-s-build-an-angularjs-app-with-browserify-and-gulp/'
+      '/googlef03de932be2bb371.html': '/googlef03de932be2bb371'
     }));
 
 if (process.env.NODE_ENV !== 'production') {

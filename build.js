@@ -84,7 +84,7 @@ var siteBuild = metalsmith(__dirname)
        hostname: 'http://mindthecode.com',
        defaults: {
          priority: 0.5,
-         changefreq: 'daily'
+         changefreq: 'weekly'
        }
     }))
     .use(path())

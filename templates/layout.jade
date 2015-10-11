@@ -63,6 +63,11 @@ html(lang="en")
           source(src="/js/video5.mp4", type="video/mp4")
       a(href="http://feeds.feedburner.com/mindthecode/OGDG", rel="alternate", type="application/rss+xml", class='rss')
         img(src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png", alt="", style="vertical-align:middle;border:0")
+      form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", style="position: fixed; right: 40px; top: 12px;")
+        input(type="hidden", name="cmd", value="_s-xclick")
+        input(type="hidden", name="hosted_button_id", value="JSHH5BQWCE79C")
+        input(type="image", src="http://mindthecode.com/images/donate.png", width="145" border="0", name="submit", alt="PayPal - The safer, easier way to pay online!")
+        img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
       .teaser
         .badge
           img(src="/images/badge.png")

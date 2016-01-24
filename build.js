@@ -41,7 +41,7 @@ var siteBuild = metalsmith(__dirname)
     }))
     .use(branch('posts/**.html')
         .use(permalinks({
-          pattern: ':title/',
+          pattern: ':title',
           relative: true
         }))
     )
@@ -96,6 +96,7 @@ var siteBuild = metalsmith(__dirname)
       // '/lets-build-an-angularjs-app-with-browserify-and-gulp/': '/let-s-build-an-angularjs-app-with-browserify-and-gulp/'
       '/googlef03de932be2bb371.html': '/googlef03de932be2bb371'
     }));
+
 
 if (process.env.NODE_ENV !== 'production') {
   siteBuild

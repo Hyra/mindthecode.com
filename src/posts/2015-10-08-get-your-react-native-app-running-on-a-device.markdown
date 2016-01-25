@@ -5,6 +5,7 @@ tags: react, react-native, ios, mobile
 publishDate: 2015-10-08
 template: post.jade
 header: react_native.gif
+canonical: getting-your-react-native-app-on-an-ios-device/
 ---
 
 As I was playing around with the awesome React Native library I encountered a few small hicups getting an app running on an actual device, so here's how I made it work for me.

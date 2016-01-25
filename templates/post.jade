@@ -14,52 +14,48 @@ block head
   if header
     script.
       $(document).ready(function() {
-        $('.teaser').css('background-image', 'url(/images/headers/#{header})');
+        $('#teaser').css('background-image', 'url(/images/headers/#{header})');
       });
     
 block main
-  article
+  header(id="begin")
+    if tags && tags.length > 0
+    #cats
+      ul(class="post-categories")
+        each tag in tags
+          li
+            a(href="/tags/#{tag}.html", rel="category tag") #{tag}
+    time(pubdate="#{moment(publishDate).format('YYYY-MM-DD')}", datetime="#{moment(publishDate).format('YYYY-MM-DD')}", id="top_time")
+      span #{moment(publishDate).format('MMMM Do YYYY')}
+      
+  article.post
+    #teaser
     h1= title
-    //- h2= next ? next.path : ''
-    .meta-data
-      time(pubdate="#{moment(publishDate).format('YYYY-MM-DD')}", datetime="2015-01-04") #{moment(publishDate).format("MMMM Do YYYY")}
-      if tags && tags.length > 0
-        .tags
-          span Tagged:
-          ul.tag-list
-            each tag in tags
-              li
-                a(href="/tags/#{tag}.html") #{tag}
-                
+
     div!= contents
 
-    .meta-data(style="border-top: 0")
-      if tags && tags.length > 0
-        .tags
-          span Tagged:
-          ul.tag-list
-            each tag in tags
-              li
-                a(href="/tags/#{tag}.html") #{tag}
-    
-    hr
-    
+  .share
     h3 Share this post
     .addthis_sharing_toolbox
-    
-    hr
-    
+
+  nav(class="pagination")
     if next
-      h3 Previous post
-      h3
+      span(class="prev")
         a(href='/' + next.path)!= next.title
     if previous
-      h3 Next post
-      h3
+      span(class="next")
         a(href='/' + previous.path)!= previous.title
-      
-    hr
-    
-    //- include includes/social
-    //- div #{wordCount} words
-    //- div #{readingTime}
+  
+  .comments
+    #disqus_thread
+    script.
+      var disqus_config = function () {
+      this.page.url = "http://mindthecode.com/#{path}/"; // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "#{path}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//mindthecode.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();

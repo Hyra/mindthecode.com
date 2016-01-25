@@ -15,14 +15,14 @@ html(lang="en")
     meta(name="twitter:card", content="summary")
     meta(name="twitter:image:", content="http://mindthecode.com/images/og_image.png")
     link(href="/favicon.ico", rel="icon", type="image/png")
-    link(href="http://mindthecode.com/rss.xml", type="application/atom+xml", rel="alternate", title="Mindthecode")
+    link(href="http://mindthecode.com/sitemap.xml", type="application/atom+xml", rel="alternate", title="Mindthecode")
     link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
     <!--[if lt IE 9]>
     script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
     <![endif]-->
     link(href="//highlightjs.org/static/demo/styles/hybrid.css", rel="stylesheet")
-    link(href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic", rel="stylesheet")
-    link(href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|PT+Serif:400,700,400italic", rel="stylesheet")
+    //- link(href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic", rel="stylesheet")
+    //- link(href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|PT+Serif:400,700,400italic", rel="stylesheet")
     script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
     script(src="/js/jquery.readingTime.js")
@@ -51,38 +51,56 @@ html(lang="en")
     block styles
   body
     block body
-      header(role="banner")
-        .contents
-          a(class="logo", href="/")
-            img(src="/images/logo.png", alt="Mindthecode")
-          nav
-            a(href="/") Articles
-            a(href="/about") About
-      //- .teaservideo
-        video(autoplay, loop, poster="polina.jpg", id="bgvid")
-          source(src="/js/video5.mp4", type="video/mp4")
-      a(href="http://feeds.feedburner.com/mindthecode/OGDG", rel="alternate", type="application/rss+xml", class='rss')
-        img(src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png", alt="", style="vertical-align:middle;border:0")
-      form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", style="position: fixed; right: 40px; top: 12px;")
-        input(type="hidden", name="cmd", value="_s-xclick")
-        input(type="hidden", name="hosted_button_id", value="JSHH5BQWCE79C")
-        input(type="image", src="http://mindthecode.com/images/donate.png", width="145" border="0", name="submit", alt="PayPal - The safer, easier way to pay online!")
-        img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
-      .teaser
-        .badge
-          img(src="/images/badge.png")
-      section(role="main", class="main")
-        block main
-      .carbon
+      header(id='sidebar', role="banner")
+        a(href='/')
+          img(src='/images/badge.png', class='floating')
+        br
+        div(class="shadow")
+        a(href='/')
+          img(src='/images/logo.png', width='120')
+        br
+        br
+        br
+
+        section(id="social")
+          ul
+            li
+              a(href="https://github.com/Hyra", target='_blank')
+                img(src='/images/sociocons/github.png')
+            li
+              a(href="https://www.linkedin.com/in/stef-van-den-ham-21265214", target='_blank')
+                img(src='/images/sociocons/linkedin.png')
+            li
+              a(href="https://twitter.com/stefvdham", target='_blank')
+                img(src='/images/sociocons/twitter.png')
+            li
+              a(href="https://plus.google.com/102230925443628784177", target='_blank')
+                img(src='/images/sociocons/g+.png')
+            li
+              a(href="http://mindthecode.com/rss.xml", target='_blank')
+                img(src='/images/sociocons/rss.png')
+
+        br
+        br
+
+        section(id='subs')
+          ul
+            li
+              a(href="/") Writings
+              a(href="/about") About me
+
+        br
+        br
+        br
+
+        form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
+          input(type="hidden", name="cmd", value="_s-xclick")
+          input(type="hidden", name="hosted_button_id", value="JSHH5BQWCE79C")
+          input(type="image", src="//mindthecode.com/images/donate.png", width="145", border="0", name="submit", alt="PayPal - The safer, easier way to pay online!")
+          img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+        br
+        br
         script(async, type="text/javascript", src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode", id="_carbonads_js")
-      footer
-        .contents
-          .logo
-            a(href="/")
-              img(src="/images/logo_white.png", height="30")
-          //- .footer-social
-            ul(class="social")
-              li
-                a(class="twitter-follow-button", href="https://twitter.com/stefvdham") Follow @stefvdham
-          .payoff © 2011 - 2015 Mindthecode B.V. Trademarks and brands are the property of their respective owners.
-      #fb-root
+        
+      section(role='main', id='river')
+        block main

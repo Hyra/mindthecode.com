@@ -1,9 +1,11 @@
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
 @import "normalize";
 @import "mixins";
-
-// @include respond-to(small) {
-//   display: none;
-// }
 
 @font-face {
   font-family: 'ff-tisa-web-pro';
@@ -67,6 +69,21 @@ header#sidebar {
     background: -o-linear-gradient(top, rgba(227, 224, 216, 0) 0%,#E3E0D8 20%,#E3E0D8 80%,rgba(227, 224, 216, 0) 100%);
     background: linear-gradient(top, rgba(227, 224, 216, 0) 0%,#E3E0D8 20%,#E3E0D8 80%,rgba(227, 224, 216, 0) 100%);
   }
+
+  .ctm {
+    @include respond-to(small) {
+      display: none;
+    }
+  }
+
+  @include respond-to(small) {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    padding-top: 30px;
+  }
+
 }
 
 section#river {
@@ -93,6 +110,10 @@ section#river {
       letter-spacing: 1px;
       line-height: 23px;
       font-weight: bold;
+    }
+
+    @include respond-to(small) {
+      padding: 0px 0 20px 20px;
     }
 
   }
@@ -131,6 +152,10 @@ section#river {
       font-size: 18px;
       color: #666;
     }
+  }
+
+  @include respond-to(small) {
+    margin-left: 0;
   }
 
 }
@@ -199,6 +224,10 @@ article {
       font-size: 17px;
       font-weight: 300;
       line-height: 27px;
+    }
+
+    @include respond-to(small) {
+      padding: 20px;
     }
 
   }

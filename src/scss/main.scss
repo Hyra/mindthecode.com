@@ -8,20 +8,55 @@ $breakpoints: (
 @import "mixins";
 
 @font-face {
-  font-family: 'ff-tisa-web-pro';
-  src: url('../fonts/ff-tisa-web-pro.eot');
-  src: url('../fonts/ff-tisa-web-pro.woff') format('woff'), url('../fonts/ff-tisa-web-pro.ttf') format('truetype'), url('../fonts/ff-tisa-web-pro.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'tisaprobold';
+    src: url('../fonts/tisapro-bold-webfont.eot');
+    src: url('../fonts/tisapro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tisapro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/tisapro-bold-webfont.woff') format('woff'),
+         url('../fonts/tisapro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/tisapro-bold-webfont.svg#tisaprobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tisapromedium';
+    src: url('../fonts/tisapro-medi-webfont.eot');
+    src: url('../fonts/tisapro-medi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tisapro-medi-webfont.woff2') format('woff2'),
+         url('../fonts/tisapro-medi-webfont.woff') format('woff'),
+         url('../fonts/tisapro-medi-webfont.ttf') format('truetype'),
+         url('../fonts/tisapro-medi-webfont.svg#tisapromedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tisaproregular';
+    src: url('../fonts/tisapro-regular-webfont.eot');
+    src: url('../fonts/tisapro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tisapro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/tisapro-regular-webfont.woff') format('woff'),
+         url('../fonts/tisapro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/tisapro-regular-webfont.svg#tisaproregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body {
-  font-family: 'ff-tisa-web-pro', 'Georgia', 'Times New Roman', serif;
+  font-family: 'tisaproregular', 'Georgia', 'Times New Roman', serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
 	font-feature-settings: "liga";
   line-height: 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'tisaprobold';
 }
 
 header#sidebar {

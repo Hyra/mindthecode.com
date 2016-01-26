@@ -13,10 +13,9 @@ block head
     meta(property="og:description",content="#{description}")
   if header
     script.
-      $(document).ready(function() {
-        $('#teaser').css('background-image', 'url(/images/headers/#{header})');
-      });
-    
+      window.onload=function() {
+        document.getElementById('teaser').style.backgroundImage = 'url(/images/headers/#{header})';
+      };
 block main
   header(id="begin")
     if tags && tags.length > 0

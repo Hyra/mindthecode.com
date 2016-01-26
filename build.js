@@ -7,6 +7,7 @@ var metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     branch = require('metalsmith-branch'),
     permalinks = require('metalsmith-permalinks'),
+    drafts = require('metalsmith-drafts'),
     feed = require('metalsmith-feed'),
     wordcount = require('metalsmith-word-count'),
     sitemap = require('metalsmith-sitemap'),
@@ -29,6 +30,7 @@ var siteBuild = metalsmith(__dirname)
     .use(markdown())
     .use(metallic())
     .use(excerpts())
+    .use(drafts())
     .use(collections({
       posts: {
         pattern: 'posts/**.html',

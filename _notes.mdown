@@ -1,0 +1,5 @@
+http://dbushell.com/2015/12/30/2015-in-review/
+
+http://mindthecode.com/writing-browserify-modules-for-your-angular-app/
+
+

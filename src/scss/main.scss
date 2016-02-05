@@ -89,7 +89,7 @@ header#sidebar {
     font-size: 16px;
     display: block;
     padding: 10px 0;
-    color: #333b4d;
+    color: #473D4D;
   }
 
   &::after {
@@ -141,7 +141,7 @@ section#river {
       /* font-family: "freight-sans-pro",sans-serif; */
       position: relative;
       text-transform: uppercase;
-      color: #000;
+      color: #473D4D;
       font-weight: 700;
       font-size: 16px;
       letter-spacing: 1px;
@@ -354,7 +354,7 @@ pre {
 }
 
 a {
-  color: #2E2E2E;
+  color: #473D4D;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   text-decoration: none;
@@ -363,13 +363,13 @@ a {
 article a {
   text-decoration: none;
   border-bottom: 1px solid #ccc;
-  color: #000;
+  color: #473D4D;
 }
 
 p a, p a:visited {
   background-color: #E8EFF5;
   padding: 5px;
-  color: #45494C;
+  color: #473D4D;
   font-family: monospace;
   font-size: 15px;
 }

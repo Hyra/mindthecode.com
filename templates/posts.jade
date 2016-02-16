@@ -7,7 +7,7 @@ block main
   if collections.posts && collections.posts.length > 0
       each post in collections.posts
         article(class='blog-entry')
-          small #{moment(post.publishDate).format('MMMM Do YYYY')}
+          strong #{moment(post.publishDate).format('MMMM Do YYYY')}
           h2
             a(href='/' + post.path)!= post.title
           div!= post.excerpt

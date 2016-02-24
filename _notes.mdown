@@ -3,7 +3,14 @@ http://blog.stefanxo.com/
 
 # Things to write about:
 
-- 
+- EventEmitter tutorial
+  - http://www.sitepoint.com/nodejs-events-and-eventemitter/
+- Promises tutorial
+- How to set up webpack / babel 6
+- Lets Build React boilerplate (smaller version? or parts)
+- .dotfiles setup
+- Getting started with Travis
+- React Native push notifications tutorial (android + ios)
 
 # List of blogs to read
 

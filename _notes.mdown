@@ -14,4 +14,4 @@ http://blog.stefanxo.com/
 
 # List of blogs to read
 
-
+http://prismjs.com/ over highlightjs?

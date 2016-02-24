@@ -70,10 +70,11 @@ $breakpoints: (
 }
 
 body {
-  font-family: 'skolar_peregular', 'Georgia', 'Times New Roman', serif;
+  // font-family: 'skolar_peregular', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Helvetica Neue', 'Georgia', 'Times New Roman', serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-smoothing: subpixel-antialiased;
+  // -webkit-font-smoothing: subpixel-antialiased;
   font-feature-settings: "liga";
   line-height: 1;
   strong {
@@ -208,9 +209,10 @@ section#river {
     margin-left: 50px;
     max-width: 657px;
     p {
-      font-size: 17px;
-      font-weight: 300;
-      line-height: 27px;
+      font-size: 16px;
+      // font-weight: 300;
+      line-height: 25px;
+      letter-spacing: .2px;
     }
     h2 a {
       border-bottom: 0;
@@ -322,9 +324,10 @@ article {
     }
 
     p, li {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 300;
-      line-height: 27px;
+      line-height: 26px;
+      letter-spacing: .2px;
     }
 
     @include respond-to(small) {
@@ -413,20 +416,20 @@ a {
 
 article a {
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
-  color: #473D4D;
+  // border-bottom: 1px solid #ccc;
+  color: #4183c4;
 }
 
 p a, p a:visited {
-  background-color: #E8EFF5;
-  padding: 5px;
-  color: #473D4D;
-  font-family: monospace;
-  font-size: 15px;
+  // background-color: #E8EFF5;
+  // padding: 5px;
+  color: #4183c4;
+  // font-family: monospace;
+  // font-size: 15px;
 }
 
 p a:hover {
-  background-color: rgb(37, 39, 41);
+  // background-color: rgb(37, 39, 41);
   color: rgb(188, 214, 253);
 }
 

@@ -3,7 +3,10 @@ title: About
 layout: single
 ---
 
-<div style='float: left; padding: 0px 20px 20px 0;'>
+# About me
+---
+
+<div style='float: right; padding: 20px 0px 10px 20px;'>
   <img src="/images/avatar.png" alt="Stef van den Ham (Hyra)" />
 </div>
 

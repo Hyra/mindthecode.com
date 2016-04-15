@@ -50,7 +50,7 @@ $ phantomjs runner.js
 After a few moments PhantomJS will have booted up and rendered an image. But .. it's white! That's because PhantomJS takes the image before the `<canvas>` has actually fully loaded and started the animation. Let's add a little delay before we write the image.
 
 
-```
+{% highlight javascript %}
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -60,7 +60,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     phantom.exit();
   }, 666);
 });
-```
+{% endhighlight %}
 
 This time, you should end up with an image of .. a dragon!
 
@@ -70,7 +70,7 @@ This time, you should end up with an image of .. a dragon!
 
 From here it's easy enough to render multiple images with an interval. Create a folder `frames` and modify the runner code to capture 50 images:
 
-```
+```javascript
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 

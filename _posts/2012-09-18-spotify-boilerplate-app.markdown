@@ -42,21 +42,25 @@ The aim is to keep the Boilerplate as clean as possible, while giving all the to
 
 What you want to look for is `js/app.js`. Once index.html has been loaded by Spotify it will fire off our Sammy instance:
 
-    $(document).ready(function() {
-    	app.run('/home');
-    });
+```javascript
+$(document).ready(function() {
+  app.run('/home');
+});
+```
 
 Here you can also handle any other bootstrapping you might want to do.
 
 Next up, the Sammy route gets invoked:
 
-    this.get('home', function(ctxt) {
+```javascript
+this.get('home', function(ctxt) {
 
-    	loadSection(ctxt, "news", "/templates/home.html", "js/_example_data.json", function() {
-    		// Callback actions
-    	});
-
-    });
+  loadSection(ctxt, "news", "/templates/home.html", "js/_example_data.json", function() {
+    // Callback actions
+  });
+  
+});
+```
 
 This is what you will most likely expand on for your app. The route loads a Mustache template into the DOM, parses it, asynch-y fill in the Spotify details, and cache it. After that it will run your callback actions, should you need to.
 

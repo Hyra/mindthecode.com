@@ -68,50 +68,55 @@ ngconstant: {
     }
   }
 },
-
 {% endhighlight %}
 
 This tells Grunt about your environments. Each target is told where to write the config file to, and inside `constants` you define your environmental variables you wish to use in your Angular App.
 
 Next up, we need to tell Grunt when to write this config file. Depending on your Gruntfile you will probably have a section that tells it to run a local server so you can develop your site. Mine usually looks like this:
 
-    grunt.registerTask('serve', function (target) {
-      if (target === 'dist') {
-        return grunt.task.run(['build', 'connect:dist:keepalive']);
-      }
+{% highlight javascript %}
+grunt.registerTask('serve', function (target) {
+  if (target === 'dist') {
+    return grunt.task.run(['build', 'connect:dist:keepalive']);
+  }
 
-      grunt.task.run([
-        'clean:server',
-        'ngconstant:development', // ADD THIS
-        'bower-install',
-        'concurrent:server',
-        'autoprefixer',
-        'connect:livereload',
-        'watch'
-      ]);
-    });
+  grunt.task.run([
+    'clean:server',
+    'ngconstant:development', // ADD THIS
+    'bower-install',
+    'concurrent:server',
+    'autoprefixer',
+    'connect:livereload',
+    'watch'
+  ]);
+});
+{% endhighlight %}
 
 Here we tell Grunt to build the ng-constants for the **development** area. So whenever you boot up the local environment with `grunt serve`, it will write out the config file for the development target.
 
 Likewise, we want to do the same for our production environment. Best place to do that is in our `grunt build` task:
 
-    grunt.registerTask('build', [
-      'clean:dist',
-      'ngconstant:production', // ADD THIS
-      'bower-install',
-      .. // other build tasks
-    ]);
+{% highlight javascript %}
+grunt.registerTask('build', [
+  'clean:dist',
+  'ngconstant:production', // ADD THIS
+  'bower-install',
+  .. // other build tasks
+]);
+{% endhighlight %}
 
 When Grunt runs the task, a config file is generated, with our constants:
 
-    'use strict';
+{% highlight javascript %}
+'use strict';
 
-    angular.module('config', [])
+angular.module('config', [])
 
-    .constant('ENV', {
-      'name': 'development',
-      'apiEndpoint': 'http://your-development.api.endpoint:3000'
-    });
+.constant('ENV', {
+  'name': 'development',
+  'apiEndpoint': 'http://your-development.api.endpoint:3000'
+});
+{% endhighlight %}
 
 ## Using the config file in your App
 
@@ -119,29 +124,35 @@ So, now that we have a dynamic `config.js` file based on where we are, let's see
 
 First thing to do is add the config file to our `index.html`
 
-    <script src="/scripts/config.js" />
+{% highlight html %}
+<script src="/scripts/config.js" />
+{% endhighlight %}
 
 Next, we can inject it into our app:
 
-    var app = angular.module('myApp', [ 'config' ]);
+{% highlight javascript %}
+var app = angular.module('myApp', [ 'config' ]);
+{% endhighlight %}
 
 And now, since config.js exposes an object `ENV` which is injected, whenever we need our ENV variables we can simply use them in our controllers by doing:
 
-    angular.module('myApp')
-      .controller('MainCtrl', function ($scope, $http, ENV) { // ENV is injected
+{% highlight javascript %}
+angular.module('myApp')
+  .controller('MainCtrl', function ($scope, $http, ENV) { // ENV is injected
 
-      $scope.login = function() {
+  $scope.login = function() {
 
-        $http.post(
-          ENV.apiEndPoint, // Our environmental var :)
-          $scope.yourData
-        ).success(function() {
-          console.log('Cows');
-        });
-
-      };
-
+    $http.post(
+      ENV.apiEndPoint, // Our environmental var :)
+      $scope.yourData
+    ).success(function() {
+      console.log('Cows');
     });
+
+  };
+
+});
+{% endhighlight %}
 
 And there you have it. Environmental variables in your front-end. It might look like a lot of work, but once you've set it up it's easy to extend the variables and duplicate environments to match your needs.
 

@@ -51,38 +51,40 @@ Watchr works with a config file, which basically tells it what to watch for, and
 
 Here's my config file at the moment:
 
-    def compile_less
-        %x[lessc less/bootstrap/bootstrap.less ../css/main.css --yui-compress]
-    end
+```ruby
+def compile_less
+    %x[lessc less/bootstrap/bootstrap.less ../css/main.css --yui-compress]
+end
 
-    def compile_coffee
-        %x[coffee -c -j ../js/app.js coffee/]
-    end
+def compile_coffee
+    %x[coffee -c -j ../js/app.js coffee/]
+end
 
-    def do_growl(message)
-        growlnotify = `which growlnotify`.chomp
-      title = "Watchr Message"
-      passed = message.include?('0 failures, 0 errors')
-      image = passed ? "~/.watchr_images/passed.png" : "~/.watchr_images/failed.png"
-      severity = passed ? "-1" : "1"
-      options = "-w -n Watchr --image '#{File.expand_path(image)}'"
-      options << " -m '#{message}' '#{title}' -p #{severity}"
-      system %(#{growlnotify} #{options} &)
-    end
+def do_growl(message)
+  growlnotify = `which growlnotify`.chomp
+  title = "Watchr Message"
+  passed = message.include?('0 failures, 0 errors')
+  image = passed ? "~/.watchr_images/passed.png" : "~/.watchr_images/failed.png"
+  severity = passed ? "-1" : "1"
+  options = "-w -n Watchr --image '#{File.expand_path(image)}'"
+  options << " -m '#{message}' '#{title}' -p #{severity}"
+  system %(#{growlnotify} #{options} &)
+end
 
-    do_growl "Watching folders and waiting for changes .."
+do_growl "Watching folders and waiting for changes .."
 
-    watch('less/*') { |m|
-        # Recompile LESS files
-        compile_less
-        do_growl "LESS Compiled and Compressed!"
-    }
+watch('less/*') { |m|
+    # Recompile LESS files
+    compile_less
+    do_growl "LESS Compiled and Compressed!"
+}
 
-    watch('coffee/*') { |m|
-        # Recompile Coffeescripts
-        compile_coffee
-        do_growl "Coffeescripts compiled and concatenated!"
-    }
+watch('coffee/*') { |m|
+    # Recompile Coffeescripts
+    compile_coffee
+    do_growl "Coffeescripts compiled and concatenated!"
+}
+```
 
 As you can see at the bottom I'm watching the 2 folders seperately, as I want to run different commands for them. For the project I'm working on I'm using Twitter Bootstrap, so rather than compiling all the .less files to seperate .css files I just want to compiled bootstrap.less as that @imports all the things it needs. When it's done with that it yui-compresses the lot and writes the output to `css/main.css`. Pretty cool!
 

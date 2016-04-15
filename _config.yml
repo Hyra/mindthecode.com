@@ -6,7 +6,7 @@ kramdown:
 highlighter:      rouge
 
 # Permalinks
-permalink:        /:title
+permalink:        /:title/
 
 # Setup
 name:             "Mindthecode"

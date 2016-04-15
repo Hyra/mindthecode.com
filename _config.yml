@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter:      rouge
+
+# Permalinks
+permalink:        /:title
+
+# Setup
+name:             "Mindthecode"
+title:            "Mindthecode"
+description:      "Writing about all things web."
+url:              http://mindthecode.com
+baseurl:          "/"
+
+author:
+  name:           "Stef van den Ham"
+
+# Custom vars
+twitter:        https://twitter.com/stefvdham
+github:         https://github.com/Hyra
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+
+gems:
+  - jekyll-sitemap

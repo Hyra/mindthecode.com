@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+<header>
+  <p>
+    <a href="/" class='noundy'>
+      <img id='logo' src='/logo.png' class='floating' alt='Mindthecode' />
+    </a>
+  </p>
+  <nav>
+  <ul>
+    <li>
+      <a href="/">Writings</a> /
+    </li>
+    <li>
+      <a href="/about">About me</a></li>
+  </ul>
+</nav>
+</header>
+
+<main>
+      <div  style='width: 130px; font-size: 10px; line-height: 20px; margin: 0 0 20px 20px; padding: 10px; border-radius: 3px; border: 1px dashed #DDD; background: #F3F3F3; float: right;'>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode" id="_carbonads_js"></script>
+      </div>
+  {% for post in site.posts %}
+    <article>
+      <header class="heading">
+        <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a> </h1>
+        <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+      </header>
+    </article>
+  {% endfor %}
+</main>
+
+<footer>
+  <img src='/images/mtc_inv.png' id='logo-footer' alt='Mindthecode' />
+  <br />
+  &copy; Copyright 2011-2016
+</footer>

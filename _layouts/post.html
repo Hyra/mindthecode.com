@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Stef van den Ham @stefvdham">
+
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://mindthecode.com/images/og_image.png">
+  <meta property="og:site_name" content="Mindthecode">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="http://mindthecode.com{{ page.url }}">
+  <meta property="og:description" content="{{ page.description }}">
+
+  <meta name="twitter:creator" content="@stefvdham">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image:" content="http://mindthecode.com/images/og_image.png">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+
+  <meta name="keywords" content="{{ page.tags }}">
+  <meta name="description" content="{{ page.description }}">
+
+  <link rel="author" href="https://plus.google.com/102230925443628784177?rel=author">
+
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+  <!-- <script src="/js/jquery.readingTime.js"></script> -->
+
+  <link rel="canonical" href="http://mindthecode.com{{ page.url }}">
+
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed Mindthecode" href="http://mindthecodec.om/rss.xml" />
+</head>
+<body>
+  <header>
+    <!-- <p class="username"><a href="../" target="_self">Tyler Benziger</a></p> -->
+    <p>
+      <a href="/" class='noundy'>
+        <img id='logo' src='/logo.png' class='floating' alt='Mindthecode' />
+      </a>
+    </p>
+    <nav>
+    <ul>
+      <li>
+        <a href="/">Writings</a> /
+      </li>
+      <li>
+        <a href="/about">About me</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
+      <time itemprop="datePublished" datetime="{{page.date | date: '%Y-%m-%d'}}"></time>
+      <header class="heading">
+        <h1>{{ page.title }}</h1>
+        <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
+        <hr>
+      </header>
+
+      <div  style='width: 130px; font-size: 10px; line-height: 20px; margin: 0 0 20px 20px; padding: 10px; border-radius: 3px; border: 1px dashed #DDD; background: #F3F3F3; float: right;'>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode" id="_carbonads_js"></script>
+      </div>
+
+      {{ content }}
+
+    </article>
+
+    <br />
+
+    Tags:
+    {% for tag in page.tags %}
+      <a href='/tags#{{ tag }}'>{{ tag }}</a>
+    {% endfor %}
+
+    <br /><br />
+
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ page.title | replace: ' ', '%20' }}" data-size="large">Tweet</a>
+
+    <hr>
+
+    <div class="prevnext">
+      {% if page.previous.url %}
+        <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
+
+    <hr>
+
+    {% include comments.html %}
+
+  </main>
+
+  <footer>
+    <img src='/images/mtc_inv.png' id='logo-footer' alt='Mindthecode' />
+    <br />
+    &copy; Copyright 2011-2016
+  </footer>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40203772-4', 'auto');
+    ga('send', 'pageview');
+
+    if (typeof console === "undefined" || typeof console.log === "undefined") {
+      console = {};
+      console.log = function () { };
+    }
+    console.log('%cMade with ❤ and %c🍺', "color: #333; font-size: 12px; font-weight: bold;", "font-weight: normal");
+    console.log('%cYou can follow me on https://twitter.com/stefvdham', "color: #333; font-size: 11px;");
+  </script>
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+
+</body>
+</html>

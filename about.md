@@ -4,13 +4,14 @@ layout: single
 ---
 
 # About me
----
 
-<div style='float: right; padding: 20px 0px 10px 20px;'>
-  <img src="/images/avatar.png" alt="Stef van den Ham (Hyra)" />
+--------------------------------------------------------------------------------
+
+<div style="float: right; padding: 20px 0px 10px 20px;">
+  <img src="/images/avatar.png" alt="Stef van den Ham (Hyra)">
 </div>
 
-I'm Stef van den Ham. I write SASS, HTML5, Javascript, PHP, Bash with <strike>Sublime Text 2</strike>, <strike>Atom</strike>, **Vim** for fun and profit. I work as CTO at [NoProtocol](http://noprotocol.nl) in Amsterdam. When not fondling with Node or sockets I like to twiddle with Arduino's and making useful and useless things with hardware.
+I'm Stef van den Ham. I write SASS, HTML5, Javascript, PHP, Bash with ~~Sublime Text 2~~, ~~Atom~~, **Vim** for fun and profit. I work as CTO at [NoProtocol](http://noprotocol.nl) in Amsterdam. When not fondling with Node or sockets I like to twiddle with Arduino's and making useful and useless things with hardware.
 
 ## You can find me at ..
 

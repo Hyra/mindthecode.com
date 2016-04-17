@@ -1,8 +1,10 @@
 ---
-title: "PHPUnit Installer updated to 3.6.4"
+title: PHPUnit Installer updated to 3.6.4
 description: PHPUnit Installer updated to 3.6.4
-tags: ['phpunit', 'cakephp']
-publishDate: 2011-11-29
+tags:
+  - phpunit
+  - cakephp
+publishDate: 2011-11-29T00:00:00.000Z
 layout: post
 ---
 

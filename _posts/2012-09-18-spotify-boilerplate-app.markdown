@@ -1,15 +1,16 @@
 ---
-title: "Spotify Boilerplate App"
+title: Spotify Boilerplate App
 description: A Boilerplate with best practices to kickstart your Spotify App
-tags: ['spotify']
-publishDate: 2012-09-18
+tags:
+  - spotify
+publishDate: 2012-09-18T00:00:00.000Z
 layout: post
 header: spotify-boilerplate.gif
 ---
 
-A while ago we were proud to be releasing 2 of the very first Spotify Apps in the Netherlands at <a href="http://noprotocol.nl" title="NoProtocol" target="\_blank">NoProtocol</a>. For a long time since I've been planning on creating a Boilerplate in which we could put all the best practices and redo some stuff in hindsight.
+A while ago we were proud to be releasing 2 of the very first Spotify Apps in the Netherlands at [NoProtocol](http://noprotocol.nl "NoProtocol"). For a long time since I've been planning on creating a Boilerplate in which we could put all the best practices and redo some stuff in hindsight.
 
-And finally, it's here! You can grab it at <a href="https://github.com/Hyra/Spotify-Boilerplate" title="https://github.com/Hyra/Spotify-Boilerplate" target="_blank">https://github.com/Hyra/Spotify-Boilerplate</a>
+And finally, it's here! You can grab it at <https://github.com/Hyra/Spotify-Boilerplate>
 
 For a bit more in-depth information, read on ..
 
@@ -17,28 +18,28 @@ The Boilerplate project aims to provide a foundation upon which you can start bu
 
 I will add to it as I stumble upon free time, but feel free to open a Pull Request or submit an issue for a suggestion
 
-## Some of the features
+# Some of the features
 
-*   Small footprint
-*   Automatic Tab Handling
-*   Automatic Deeplink handling
-*   Automatic Cover Loading for playlists (mosaics)
-*   Online/offline status tracking and content switching
+- Small footprint
+- Automatic Tab Handling
+- Automatic Deeplink handling
+- Automatic Cover Loading for playlists (mosaics)
+- Online/offline status tracking and content switching
 
-## How to set it up (on your Mac)
+# How to set it up (on your Mac)
 
-1.  Sign up for a developer account on Spotify
-2.  Open Terminal, and if it doesn't exist yet `mkdir ~/Spotify`
-3.  cd ~/Spotify
-4.  git clone git@github.com:Hyra/Spotify-Boilerplate.git
-5.  Download the latest version of Spotify
-6.  Open Spotify and type `spotify:app:boilerplate` in the search bar
+1. Sign up for a developer account on Spotify
+2. Open Terminal, and if it doesn't exist yet `mkdir ~/Spotify`
+3. cd ~/Spotify
+4. git clone git@github.com:Hyra/Spotify-Boilerplate.git
+5. Download the latest version of Spotify
+6. Open Spotify and type `spotify:app:boilerplate` in the search bar
 
-## What's in the Boilerplate
+# What's in the Boilerplate
 
 The aim is to keep the Boilerplate as clean as possible, while giving all the tools to quickly develop your app.
 
-### How to work with it (the short version)
+## How to work with it (the short version)
 
 What you want to look for is `js/app.js`. Once index.html has been loaded by Spotify it will fire off our Sammy instance:
 
@@ -58,7 +59,7 @@ this.get('home', function(ctxt) {
   loadSection(ctxt, "news", "/templates/home.html", "js/_example_data.json", function() {
     // Callback actions
   });
-  
+
 });
 ```
 
@@ -76,7 +77,7 @@ This is what you will most likely expand on for your app. The route loads a Must
 
 **Callback** This callback function you can use to do your post-processing
 
-### Dependencies
+## Dependencies
 
 The boilerplate relies on a couple of libraries:
 
@@ -86,8 +87,8 @@ jQuery as we've all become used to it at some point
 
 Mustache as a template handler. This can just as well be any of the other gazillion templating engines out there, so feel free to hack your favourite in.
 
-### Roadmap
+## Roadmap
 
-*   Add more features/functionality regarding the Spotify API
-*   Make the loadSection and Sammy integration a bit more seamless and less explicit
-*   Spend more time documenting and writing how-to's
+- Add more features/functionality regarding the Spotify API
+- Make the loadSection and Sammy integration a bit more seamless and less explicit
+- Spend more time documenting and writing how-to's

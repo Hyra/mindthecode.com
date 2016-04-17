@@ -1,8 +1,11 @@
 ---
-title: "Using Markdown in CakePHP"
+title: Using Markdown in CakePHP
 description: Let me show you how you can use Markdown within your next CakePHP project
-tags: ['markdown', 'cakephp', 'php']
-publishDate: 2011-07-10
+tags:
+  - markdown
+  - cakephp
+  - php
+publishDate: 2011-07-10T00:00:00.000Z
 layout: post
 header: markdown-cakephp.gif
 ---
@@ -15,4 +18,4 @@ I put it on Github @ [Markdown for CakePHP][1] along with the necessary instruct
 
 Hope you enjoy it, and if you have any suggestions or tips, don't hesitate to leave a comment or Fork it.
 
- [1]: https://github.com/Hyra/markdown "CakePHP Markdown Github"
+[1]: https://github.com/Hyra/markdown "CakePHP Markdown Github"

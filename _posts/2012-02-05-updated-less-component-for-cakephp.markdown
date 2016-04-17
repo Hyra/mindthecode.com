@@ -1,8 +1,10 @@
 ---
-title: "Updated LESS component for CakePHP"
+title: Updated LESS component for CakePHP
 description: A small update to my LESS component for CakePHP
-tags: ['less', 'cakephp']
-publishDate: 2012-02-05
+tags:
+  - less
+  - cakephp
+publishDate: 2012-02-05T00:00:00.000Z
 layout: post
 ---
 
@@ -12,4 +14,4 @@ So this is just to let you guys know I wrote a small tweak, and now it works per
 
 If you have any other alterations you would like to see feel free to fork, or drop me a comment below.
 
-The new version: https://github.com/Hyra/less
+The new version: <https://github.com/Hyra/less>

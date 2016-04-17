@@ -1,23 +1,29 @@
 ---
-title: "Lets build: An AngularJS app with Browserify and Gulp"
-description: Today I want to show a generic workflow and setup I have used a lot lately when working on building apps with Angular. It uses Gulp as a CI system and Browserify to minimize code clutter and maximize awesomeness.
-tags: ['angular', 'browserify', 'gulp']
-publishDate: 2014-05-05
+title: 'Lets build: An AngularJS app with Browserify and Gulp'
+description: >-
+  Today I want to show a generic workflow and setup I have used a lot lately
+  when working on building apps with Angular. It uses Gulp as a CI system and
+  Browserify to minimize code clutter and maximize awesomeness.
+tags:
+  - angular
+  - browserify
+  - gulp
+publishDate: 2014-05-05T00:00:00.000Z
 layout: post
 header: letsbuild.gif
 ---
 
 Today I want to show a generic workflow and setup I have used a lot lately when working on building apps with Angular. It uses Gulp as a CI system and Browserify to minimize code clutter and maximize awesomeness. So let's jump in.
 
-## Update 21 october 2014 - Frickle
+# Update 21 october 2014 - Frickle
 
 As with most things, boilerplates evolve. I decided to expand the boilerplate we're building below with a backend for the API side, as well as cleaning up some things based on new findings and updated modules. To find out more about that have a look at [Frickle](http://github.com/Hyra/Frickle).
 
-## Let's get started!
+# Let's get started!
 
 Instead of starting from a cloned code repository let's build our setup together. From scratch. This way you know what each piece does, and allows you to tweak it to your liking. Of course, the final product can be found [here](https://github.com/Hyra/angular-gulp-browserify-livereload-boilerplate) at Github, but it might be better to use it as a reference rather than a starting point.
 
-## Folder structure
+# Folder structure
 
 When building a web application I tend to have an `app` folder for the original source files, and a `dist` folder which contains all the processed files and will serve as the root directory for the webserver. So let's create the following folder structure:
 
@@ -37,43 +43,43 @@ When building a web application I tend to have an `app` folder for the original 
 - package.json        // Package file with installation references
 ```
 
-## Getting some modules
+# Getting some modules
 
 To get everything up and running, let's first get some NPM modules we want to work with. Depending on your personal preferences you might want to replace some of them or add other ones to suit your specific needs. The modules I usually install are:
 
-### Gulp
+## Gulp
 
 This is the workhorse of our setup.
 
-### Angular
+## Angular
 
 We will install Angular through NPM so we can require it with browserify.
 
-### Browserify
+## Browserify
 
 Browserify allows us to utilize the `require()` syntax we love in NodeJS in our front-end. Can you spell u.n.i.c.o.r.n.s ?
 
-### gulp-browserify
+## gulp-browserify
 
 This allows us to run Browserify from within our Gulpfile.
 
-### gulp-clean
+## gulp-clean
 
 Allows us to clean (empty) a folder or file, which is nice to make sure we don't end up with any artifacts.
 
-### gulp-concat
+## gulp-concat
 
 When using browserify for our code we want to concat it to a single bundled javascript file. This plugin allows us to do just that.
 
-### gulp-jshint
+## gulp-jshint
 
 We all love syntactically correct code, don't we? This plugin checks your javascript files and tells you when something is wrong. Or not pretty enough.
 
-### gulp-util
+## gulp-util
 
 General gulp utilities, such as colour in your `gutil.log()` calls, and handy methods for common operations such as `replaceExtension()` and `noop()`.
 
-### gulp-embedlr, gulp-livereload, tiny-lr, connect-livereload, express
+## gulp-embedlr, gulp-livereload, tiny-lr, connect-livereload, express
 
 These I use so I can run a local webserver and support live reloading of the app as we save files.
 
@@ -83,7 +89,7 @@ And this will do fine for now. So! Let's install all these babies, and save them
 $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint gulp-util gulp-embedlr gulp-livereload tiny-lr connect-livereload express --save-dev
 ```
 
-## Configuring our Gulpfile
+# Configuring our Gulpfile
 
 Now we have all the components in place it's time to write our Gulpfile. Let's start small and expand as we go along.
 
@@ -130,7 +136,7 @@ gulp.task('watch', ['lint'], function() {
 
 So far so good! Whenever we change code in our javascript files a fresh bundle.js is created for us to use in our site.
 
-## Set up our index.html file
+# Set up our index.html file
 
 Let's create a simple `index.html` file so we can see our work in the browser. Open up `index.html` and add something like the following:
 
@@ -177,7 +183,7 @@ gulp.watch(['app/index.html', 'app/views/**/*.html'], [
 
 At the moment we pretty much have a working app. We just can't see it. Let's change this by adding a self contained webserver, straight from our Gulp.
 
-## Webserver with live reload
+# Webserver with live reload
 
 First of all, we need to add some modules to our Gulpfile that allows us to run a mini express server.
 
@@ -198,7 +204,7 @@ server.use(livereload({port: livereloadport}));
 server.use(express.static('./dist'));
 // Because I like HTML5 pushstate .. this redirects everything back to our index.html
 server.all('/*', function(req, res) {
-	res.sendfile('index.html', { root: 'dist' });
+    res.sendfile('index.html', { root: 'dist' });
 });
 ```
 
@@ -216,7 +222,7 @@ gulp.task('dev', function() {
 });
 ```
 
-Now, when you run `gulp dev` it will kickstart our internal webserver with our `dist` folder as root. You can verify everything is working by navigating to http://localhost:5000
+Now, when you run `gulp dev` it will kickstart our internal webserver with our `dist` folder as root. You can verify everything is working by navigating to <http://localhost:5000>
 
 If all is well you should see the `index.html` show up. Whenever you change a file however, the changes won't automatically show up in the browser. This is because we have to manually invoke the server refresh from within our task. Let's modify our `views` task to automatically refresh the browser after it has done its work:
 
@@ -233,7 +239,7 @@ gulp.task('views', function() {
 
 Now, whenever you change a view file, the server will reload. Of course, you can do this whenever you want. So feel free to add it in the `browserify` task as well.
 
-## Add some Angular
+# Add some Angular
 
 We are getting somewhere. All that's missing is some actual Angular code. So let's add some. Open up the `main.js` file and put in the following:
 
@@ -280,7 +286,7 @@ app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
 
 This is obviously a very bare example, but you can see how using simple `require` calls will save a lot of script tags in your index.html, and having your files behave as modules helps you write re-usable code.
 
-## JSHint.rc
+# JSHint.rc
 
 You might have noticed `gulp lint` gives us some errors. That's because it needs some guidance, as it doesn't know about our `require` and preferences. Let's add a file called `.jshintrc` and add in the following configuration:
 
@@ -310,7 +316,7 @@ You might have noticed `gulp lint` gives us some errors. That's because it needs
 
 You may or may not agree with any of these settings, so feel free to tweak them.
 
-## SASS Support
+# SASS Support
 
 You may have a CSS pre-processor of choice, so let's add support for this. I usually go with SASS, but of course this is adaptable to your liking. Let's install a new module named `gulp-sass` and include it in our Gulpfile.
 
@@ -350,7 +356,7 @@ gulp.watch(['app/styles/**/*.scss'], [
 
 Now, whenever you make changes to your SASS files it will compile it to CSS and live-reload our webserver. Good times.
 
-## Wrapping up
+# Wrapping up
 
 We've done quite a lot. We have set up a webserver, added Gulp to automate all our tasks, added live reloading for easy developing, sass processing, and added support for Browserify so we can script in style.
 

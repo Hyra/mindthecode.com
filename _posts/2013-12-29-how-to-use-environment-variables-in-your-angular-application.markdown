@@ -1,8 +1,9 @@
 ---
-title: "How to use environment variables in your Angular application"
+title: How to use environment variables in your Angular application
 description: I will explain how to use environment variables in your Angular app
-tags: ['angular']
-publishDate: 2013-12-29
+tags:
+  - angular
+publishDate: 2013-12-29T00:00:00.000Z
 layout: post
 header: environment.gif
 ---
@@ -15,8 +16,9 @@ For instance, you might have a seperate API you're talking to for your content, 
 
 In this post I'll show you how to set this up automagically using Grunt and ngConstant.
 
-### UPDATE
-[Malte](http://werk85.de/) was so kind as to provide an updated configuration for the *ngconstant 0.5.0* version. The example code in the post has been updated accordingly.
+# UPDATE
+
+[Malte](http://werk85.de/) was so kind as to provide an updated configuration for the _ngconstant 0.5.0_ version. The example code in the post has been updated accordingly.
 
 ## The ingredients
 
@@ -28,15 +30,15 @@ I'll assume you're familiar with [Grunt](http://gruntjs.com/) and have set it up
 
 This Grunt plugin takes care of the dynamic generation of your constants. Grab it [here](https://github.com/werk85/grunt-ng-constant), or simply install it by doing:
 
-{% highlight javascript %}
+```javascript
 npm install grunt-ng-constant --save-dev
-{% endhighlight %}
+```
 
 ## Automatically write your config.js file
 
 Now that you have all you need, let's set it up! Open up your `Gruntfile.js`, and inside the `grunt.initConfig` section add the following:
 
-{% highlight javascript %}
+```javascript
 ngconstant: {
   // Options for all targets
   options: {
@@ -68,13 +70,13 @@ ngconstant: {
     }
   }
 },
-{% endhighlight %}
+```
 
 This tells Grunt about your environments. Each target is told where to write the config file to, and inside `constants` you define your environmental variables you wish to use in your Angular App.
 
 Next up, we need to tell Grunt when to write this config file. Depending on your Gruntfile you will probably have a section that tells it to run a local server so you can develop your site. Mine usually looks like this:
 
-{% highlight javascript %}
+```javascript
 grunt.registerTask('serve', function (target) {
   if (target === 'dist') {
     return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -90,24 +92,24 @@ grunt.registerTask('serve', function (target) {
     'watch'
   ]);
 });
-{% endhighlight %}
+```
 
 Here we tell Grunt to build the ng-constants for the **development** area. So whenever you boot up the local environment with `grunt serve`, it will write out the config file for the development target.
 
 Likewise, we want to do the same for our production environment. Best place to do that is in our `grunt build` task:
 
-{% highlight javascript %}
+```javascript
 grunt.registerTask('build', [
   'clean:dist',
   'ngconstant:production', // ADD THIS
   'bower-install',
   .. // other build tasks
 ]);
-{% endhighlight %}
+```
 
 When Grunt runs the task, a config file is generated, with our constants:
 
-{% highlight javascript %}
+```javascript
 'use strict';
 
 angular.module('config', [])
@@ -116,7 +118,7 @@ angular.module('config', [])
   'name': 'development',
   'apiEndpoint': 'http://your-development.api.endpoint:3000'
 });
-{% endhighlight %}
+```
 
 ## Using the config file in your App
 
@@ -124,19 +126,19 @@ So, now that we have a dynamic `config.js` file based on where we are, let's see
 
 First thing to do is add the config file to our `index.html`
 
-{% highlight html %}
+```html
 <script src="/scripts/config.js" />
-{% endhighlight %}
+```
 
 Next, we can inject it into our app:
 
-{% highlight javascript %}
+```javascript
 var app = angular.module('myApp', [ 'config' ]);
-{% endhighlight %}
+```
 
 And now, since config.js exposes an object `ENV` which is injected, whenever we need our ENV variables we can simply use them in our controllers by doing:
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp')
   .controller('MainCtrl', function ($scope, $http, ENV) { // ENV is injected
 
@@ -152,7 +154,7 @@ angular.module('myApp')
   };
 
 });
-{% endhighlight %}
+```
 
 And there you have it. Environmental variables in your front-end. It might look like a lot of work, but once you've set it up it's easy to extend the variables and duplicate environments to match your needs.
 

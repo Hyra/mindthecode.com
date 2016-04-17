@@ -1,8 +1,12 @@
 ---
-title: "Good times with Watchr, Coffeescript and LESS"
-description: With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.
-tags: ['less', 'coffeescript']
-publishDate: 2012-05-16
+title: 'Good times with Watchr, Coffeescript and LESS'
+description: >-
+  With this little gem you can watch specific folders or file extensions and run
+  commands based on the files you watch.
+tags:
+  - less
+  - coffeescript
+publishDate: 2012-05-16T00:00:00.000Z
 layout: post
 header: good-times.gif
 ---
@@ -11,41 +15,47 @@ I have been working on a pure HTML front-end for one of the pet projects I'm doi
 
 Here is how I got it set up now ..
 
-## Installing watchr
+# Installing watchr
 
 First of all we need to get the Watchr gem installed. Assuming you have a Mac and got XCode (or at least the tools) installed, this is pretty simple:
 
-    $ gem install watchr
+```bash
+$ gem install watchr
+```
 
-
-## Installing coffeescript
+# Installing coffeescript
 
 Another easy one ..
 
-    $ npm install -g coffee-script
+```bash
+$ npm install -g coffee-script
+```
 
 Don't forget the `-g` flag as you (probably) want it to be installed globally.
 
-## Installing the LESS compiler
+# Installing the LESS compiler
 
 You got the hang of it now, it's as easy as ..
 
-    $ npm install -g less
+```bash
+$ npm install -g less
+```
 
-## The fun part!
+# The fun part!
 
 Now we're ready for the fun bit, setting up watchr to do some automagic stuff.
 
 I have a typical folder structure, with the exception of a new `_src` folder which will contain all the raw coffeescript and less files.
 
-    /index.html
-    /css
-    /js
-    /img
-    /_src
-        /less
-        /coffee
-
+```bash
+/index.html
+/css
+/js
+/img
+/_src
+    /less
+    /coffee
+```
 
 Watchr works with a config file, which basically tells it what to watch for, and what to do if it finds any changes. I placed the file inside the `_src` folder and named it `watchr.rb`
 
@@ -92,7 +102,9 @@ The compile_coffee command does something pretty similar. Whenever a .coffee fil
 
 To get the show on the road, cd to the `_src` folder, and run:
 
-    $ watchr watchr.rb
+```bash
+$ watchr watchr.rb
+```
 
 You may have noticed the `do_growl` function, which doesn't really add value except that it's just cool to get a Growl message whenever it has done it's thing. To get that bit working you have to install ["Growl Notify"][2].
 
@@ -102,5 +114,5 @@ I'm sure I could optimize this a bit, and add variables for output folders and o
 
 Let me know how you get your watchr set up!
 
- [1]: https://github.com/mynyml/watchr
- [2]: http://growl.info/extras.php#growlnotify
+[1]: https://github.com/mynyml/watchr
+[2]: http://growl.info/extras.php#growlnotify

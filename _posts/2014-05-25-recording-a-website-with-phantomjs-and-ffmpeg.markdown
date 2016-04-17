@@ -1,37 +1,42 @@
 ---
-title: "Recording a website with PhantomJS and FFMpeg"
-description: When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video.
-tags: ['ffmpeg', 'phantomjs']
-publishDate: 2014-05-25
+title: Recording a website with PhantomJS and FFMpeg
+description: >-
+  When I realised you could easily generate screenshots from a site with
+  PhantomJS I just needed to know if I could take it one step further, and
+  record a video.
+tags:
+  - ffmpeg
+  - phantomjs
+publishDate: 2014-05-25T00:00:00.000Z
 layout: post
 header: recording-phantomjs.gif
 ---
 
 When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video.
 
-## The goal
+# The goal
 
-What I wanted was to record 10 seconds of video from a random website and output it as a .mp4. For this short demo I decided we should go with one of the fun examples on Pixi.JS as they're interesting to capture.
+What I wanted was to record 10 seconds of video from a random website and output it as a .mp4\. For this short demo I decided we should go with one of the fun examples on Pixi.JS as they're interesting to capture.
 
-Here it is, a <a href="http://www.goodboydigital.com/pixijs/examples/12-2/" target="\_blank">Pixi dragon</a>
+Here it is, a [Pixi dragon](http://www.goodboydigital.com/pixijs/examples/12-2/)
 
-## The ingredients
+# The ingredients
 
-### PhantomJS
+## PhantomJS
 
 In case you've been hiding, [PhantomJS](http://phantomjs.org/) is a headless scriptable webkit browser with a Javascript API. We will use it to generate screenshots of a site.
 
-### FFMPeg
+## FFMPeg
 
 [FFMPeg](http://www.ffmpeg.org/) is our all purpose video and audio toolbox to record, convert and stream on the command line.
 
 With these two tools installed we are ready to create a video.
 
-## From the top
+# From the top
 
 Capturing a webpage as an image with PhantomJS is easy stuff. They have a example on how to do this [over here](https://github.com/ariya/phantomjs/blob/master/examples/technews.js), so let's strip it down to what we need and save it as `runner.js`
 
-{% highlight javascript %}
+```javascript
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -39,18 +44,17 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
   page.render('dragon.png', { format: "png" });
   phantom.exit();
 });
-{% endhighlight %}
+```
 
 We can now run this with:
 
-{% highlight bash %}
+```bash
 $ phantomjs runner.js
-{% endhighlight %}
+```
 
 After a few moments PhantomJS will have booted up and rendered an image. But .. it's white! That's because PhantomJS takes the image before the `<canvas>` has actually fully loaded and started the animation. Let's add a little delay before we write the image.
 
-
-{% highlight javascript %}
+```javascript
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -60,13 +64,13 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     phantom.exit();
   }, 666);
 });
-{% endhighlight %}
+```
 
 This time, you should end up with an image of .. a dragon!
 
 ![Pixi Dragon](/images/screenshots/dragon01.png)
 
-## Rendering multiple images
+# Rendering multiple images
 
 From here it's easy enough to render multiple images with an interval. Create a folder `frames` and modify the runner code to capture 50 images:
 
@@ -93,7 +97,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
 
 Sweet, we end up with 50 frames of the dragon. When flicking through them it looks like it's flying, so we're almost there!
 
-## Rendering a movie
+# Rendering a movie
 
 Now we know how to get the frames we want, we need to figure out how to feed them to ffmpeg. Traditionally, one would first render all the frames and then use an ffmpeg command to stitch the images to a movie. This would look a bit like this:
 
@@ -107,7 +111,7 @@ So, at this point we have a movie from the site we wanted. Good stuff, but we ca
 
 Let's alter the render method a bit:
 
-{% highlight javascript %}
+```javascript
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -116,7 +120,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     page.render('/dev/stdout', { format: "png" });
   }, 25);
 });
-{% endhighlight %}
+```
 
 We have removed the timeout as we don't need it anymore and we took out the frame counting code as we will tell ffmpeg how long to record for.
 
@@ -134,7 +138,7 @@ The important flags to notice in the ffmpeg command is `-t 10` which tells it to
 
 ![Pixi Dragon](/images/screenshots/dragon.gif)
 
-## Wrapping it up
+# Wrapping it up
 
 And there we go. We can stream images through PhantomJS and feed them to ffmpeg to create a movie. I haven't thought of a practical purpose for this, but maybe someone else will.
 

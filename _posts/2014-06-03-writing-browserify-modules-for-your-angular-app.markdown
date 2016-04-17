@@ -1,8 +1,12 @@
 ---
-title: "Writing Browserify modules for your Angular app"
-description: Following up on my previous post I got a few questions on how to create modules for your app. Let me show you.
-tags: ['browserify', 'angular']
-publishDate: 2014-06-03
+title: Writing Browserify modules for your Angular app
+description: >-
+  Following up on my previous post I got a few questions on how to create
+  modules for your app. Let me show you.
+tags:
+  - browserify
+  - angular
+publishDate: 2014-06-03T00:00:00.000Z
 layout: post
 header: modules.gif
 ---
@@ -15,7 +19,7 @@ Basically, what you do when you `require()` a module, is looking for what the sc
 
 Now, what does this look like for our Browserify Angular app?
 
-## A Controller module
+# A Controller module
 
 Let's assume we're using ui-router for the awesome stateprovider, and want to specify one of our own controllers through `require()`
 
@@ -51,7 +55,7 @@ exports.controller = function AboutCtrl($scope) {
 
 As you can see, our inject function takes the app, and in turn returns our controller function. Simple, clean and effective.
 
-## Dependency injection
+# Dependency injection
 
 But what if we want to use a dependency. Simply require it and inject it:
 

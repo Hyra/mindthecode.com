@@ -24,7 +24,9 @@ Make sure you run with NPM3 following this post as otherwise you might end up wi
 
 Let's start from scratch by creating a new directory and typing:
 
-{% highlight bash %} $ npm init {% endhighlight %}
+```bash
+$ npm init
+```
 
 This way we end up with a `package.json` that Storybook relies on. In my case it looks like this:
 

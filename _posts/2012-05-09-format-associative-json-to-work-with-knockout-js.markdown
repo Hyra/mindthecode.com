@@ -1,8 +1,9 @@
 ---
-title: "Format associative JSON to work with Knockout.js"
+title: Format associative JSON to work with Knockout.js
 description: How to format an associative array in JSON with Knockout
-tags: ['knockout.js']
-publishDate: 2012-05-09
+tags:
+  - knockout.js
+publishDate: 2012-05-09T00:00:00.000Z
 layout: post
 header: associative.gif
 ---
@@ -53,9 +54,7 @@ This is fine to work with in your typical View, but Knockout rather has a nested
 
 Instead, I wrote a little function to reformat the response to get the result Knockout likes:
 
-```php
-<?php
-
+```php?start_inline=1
 public function formatResponse($data) {
     $ret = array();
     foreach($data as $key) {
@@ -74,8 +73,6 @@ $projects = $this->Project->find('all');
 $projects = $this->formatResponse($projects);
 $this->set(compact('projects'));
 $this->set('_serialize', array('projects'));
-
-?>
 ```
 
 This will reformat the Projects response to:

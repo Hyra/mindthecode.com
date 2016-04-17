@@ -1,8 +1,12 @@
 ---
-title: "Customize the terminal"
-description: In this post I want to show you how you can customize the terminal to not only make it look cool but work better, too
-tags: ['terminal', 'zsh']
-publishDate: 2013-02-28
+title: Customize the terminal
+description: >-
+  In this post I want to show you how you can customize the terminal to not only
+  make it look cool but work better, too
+tags:
+  - terminal
+  - zsh
+publishDate: 2013-02-28T00:00:00.000Z
 layout: post
 header: customize-terminal.gif
 ---
@@ -11,7 +15,7 @@ I love the terminal. Besides the fact it makes you look awesome while using it, 
 
 One thing is for sure, while developing webapps I have it running all the time and spend a lot of time running commands and monitoring output. So why not make it look as pretty as it is awesome? In this short walkthrough I'll explain how to customize the terminal to make it look like mine, but make sure you fiddle with the settings so it works best for you.
 
-## What we will be making
+# What we will be making
 
 Below is a screenshot of what my terminal looks like:
 
@@ -19,11 +23,11 @@ Below is a screenshot of what my terminal looks like:
 
 That's right, besides the beautiful colour-scheme it also visually tells you what git branch you're in and information about its status.
 
-## The ingredients
+# The ingredients
 
 So, let's get to it. We will be needing a few things to set up the basis, and will then start fiddling with settings.
 
-### Colour theme
+## Colour theme
 
 The theme I'm using is **Tomorrow Night**. I use it for my every day coding, so it made sense to propagate those colours into the terminal. [Chris Kempson](https://github.com/chriskempson) did an amazing job at making this theme available for pretty much everything out there, so [grab the Terminal version](https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night.terminal) here.
 
@@ -33,11 +37,11 @@ Once you've done that, simply double click the file and it will open a terminal 
 
 In the `Settings` tab you will see a list of themes, including your fresh `Tomorrow Night` one. Make sure to make it the `Default` one.
 
-### Font
+## Font
 
 Choosing a font is the most important thing, because, if you're anything like me, you spend a hell of a lot of time looking at it. For the last 4 months I've been using `Monaco 12pt`. Make sure to select the font you like to work with in the Theme Settings.
 
-### ZSH
+## ZSH
 
 I recently got to know [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), which as Robby describes it, is:
 
@@ -57,7 +61,7 @@ Next, to get oh-my-zsh working, they have provided a nice one-line install scrip
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
-### Preparing the ZSH theme
+## Preparing the ZSH theme
 
 We're almost there! Next up is creating a theme for zsh to get the prompt to work and look the way we want. Oh My ZSH was installed into `~/.oh-my-zsh` so open up that folder. You will see it has a lot of `themes` ready. What we want to look at first though is the `zshrc.zsh-template` file in the `templates` folder. If you've ever did any terminal customisation you might be familiar with a file called `.bashrc`. This is pretty much the same thing, but for .. you guessed it: zsh
 
@@ -67,7 +71,7 @@ We will create our own theme so replace the theme name with your own theme name.
 
 Save this file as `~/.zshrc`. Go to the `themes` folder again, and create a new file called `sheeptheme.zsh-theme`, or whatever title you gave your theme.
 
-### Creating your custom ZSH theme
+## Creating your custom ZSH theme
 
 Now the fun part. Making it all yours. Open up the theme file you created, and put the following inside:
 
@@ -114,11 +118,11 @@ ZSH_THEME_GIT_PROMPT_CLEAN="$fg[green]"
 
 The above will probably be pretty self-explanatory, we got a function to get the Git information from the current folder, so we can determin if it's dirty. A function to get the current directory. And a function to determin how much space to put between the first part of the prompt and the last part (the git part) so that it aligns nicely.
 
-## Extending even more
+# Extending even more
 
 You will probably find it doesn't **exactly** fit your exact needs, and I would encourage you to fiddle with it as long and as much until you are happy with it. You can find a lot of nice plugins in the `/.oh-my-zsh` directory to play around with, so please do.
 
-## Conslusion
+# Conslusion
 
 A good prompt comes down to personal preference. I hope you can make yours look the way you want and that the above was a good starting point to get there.
 

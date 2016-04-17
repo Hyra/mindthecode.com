@@ -1,8 +1,10 @@
 ---
-title: "Using Sessions in PHPUnit Tests with CakePHP"
+title: Using Sessions in PHPUnit Tests with CakePHP
 description: How to use sessions within your unit tests using PHPUnit and CakePHP
-tags: ['phpunit', 'cakephp']
-publishDate: 2012-02-24
+tags:
+  - phpunit
+  - cakephp
+publishDate: 2012-02-24T00:00:00.000Z
 layout: post
 header: sessions.gif
 ---
@@ -15,26 +17,28 @@ Luckily, the solution was simple ..
 
 The PHPUnit command line suite apparently outputs contents early, before the session gets initiated.
 
-## Solution 1
+# Solution 1
 
 Add `--stderr` to the command line:
 
-    cake testsuite app Controller/YourFancyController --stderr
-
+```bash
+$ cake testsuite app Controller/YourFancyController --stderr
+```
 
 This will pass the tests again, as it doesn't output contents early to `STDOUT`. The only "problem" is you won't see the awesome green and red colors in the CLI output anymore.
 
-## Solution 2
+# Solution 2
 
 This is the one I use, as it brings the colors back.
 
 As I'm using my self-contained PHPUnit Install, as found on Github @ [PHPUnit-Cake2][1] I am able to edit the following file: `Vendor/PHPUnit/Autoload.php` At the very top of this file, initialize the session early:
 
-    session_start();
-
+```php?start_inline=1
+session_start();
+```
 
 This will pass the tests again, and even better, bring back the colors!
 
 Maybe the session initialization can be done early by putting it in a file by CakePHP itself, but haven't found the right place yet. Any suggestions?
 
- [1]: https://github.com/hyra/PHPUnit-Cake2
+[1]: https://github.com/hyra/PHPUnit-Cake2

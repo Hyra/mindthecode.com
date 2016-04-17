@@ -1,8 +1,15 @@
 ---
-title: "Getting your React Native App on an iOS device"
-description: As I was playing around with the awesome React Native library I encountered a few small hicups getting an app running on an actual device, so here's how I made it work for me.
-tags: ['react', 'react-native', 'ios', 'mobile']
-publishDate: 2015-10-08
+title: Getting your React Native App on an iOS device
+description: >-
+  As I was playing around with the awesome React Native library I encountered a
+  few small hicups getting an app running on an actual device, so here's how I
+  made it work for me.
+tags:
+  - react
+  - react-native
+  - ios
+  - mobile
+publishDate: 2015-10-08T00:00:00.000Z
 layout: post
 header: react_native.gif
 canonical: getting-your-react-native-app-on-an-ios-device/
@@ -12,10 +19,10 @@ As I was playing around with the awesome React Native library I encountered a fe
 
 At the time of writing I've tested the following with:
 
-* OSX
-* react-native 0.11.4
-* nodejs v4.1.1
-* XCode 7.0.1
+- OSX
+- react-native 0.11.4
+- nodejs v4.1.1
+- XCode 7.0.1
 
 I won't go into much detail on how to get a React Native project going on your computer, as the nice guys at Facebook do an excellent job [https://facebook.github.io/react-native/docs/getting-started.html#content](explaining this process).
 
@@ -28,9 +35,9 @@ Now, to get the app on your iPhone the documentation will want you to do the fol
 
 This was not enough in my and my colleagues case. Additionally, you will want to do the following:
 
-2. Select the project in the navigator pane
-3. Go to the Build Settings tab
-4. Search for `Dead Code Stripping` and set it to `NO`
+1. Select the project in the navigator pane
+2. Go to the Build Settings tab
+3. Search for `Dead Code Stripping` and set it to `NO`
 
 Once that's done you should be able to select your phone as build target and press "Build and run".
 

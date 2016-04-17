@@ -85,6 +85,14 @@
     }
     console.log('%cMade with ❤ and %c🍺', "color: #333; font-size: 12px; font-weight: bold;", "font-weight: normal");
     console.log('%cYou can follow me on https://twitter.com/stefvdham', "color: #333; font-size: 11px;");
+
+    var links = document.links;
+
+    for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+       if (links[i].hostname != window.location.hostname) {
+           links[i].target = '_blank';
+       }
+    }
   </script>
   <script>
     window.twttr = (function(d, s, id) {

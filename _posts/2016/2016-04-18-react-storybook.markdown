@@ -4,7 +4,6 @@ description: >-
   Recently React Storybook came out. It's a tool to isolate your React
   Components to develop and design them outside of your app. I'll be walking
   through setting it up
-publishDate: 2016-04-17T00:00:00.000Z
 tags:
   - react
 layout: post

@@ -1,8 +1,13 @@
 ---
-title: "Let's build: A React App with Redux using Webpack - Part 1"
-description: Let's walk through building a React App using Redux, Hot Reloading, DevTools, Webpack and all the other good stuff we have.
-tags: ['react', 'redux', 'webpack']
-publishDate: 2016-03-07
+title: 'Let''s build: A React App with Redux using Webpack - Part 1'
+description: >-
+  Let's walk through building a React App using Redux, Hot Reloading, DevTools,
+  Webpack and all the other good stuff we have.
+tags:
+  - react
+  - redux
+  - webpack
+publishDate: 2016-03-07T00:00:00.000Z
 layout: post
 header: letsbuild.gif
 ---

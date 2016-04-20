@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Getting started with the PanResponder in React Native
-date: '2016-04-20 15:45'
 description: >-
   Inside React Native you can use the PanResponder to recognize multi-touch
   gestures as well as swipes and other touches that make native apps feel snappy

@@ -16,6 +16,11 @@ main, footer, body > header {
 .index main article {
   display: flex;
 }
+article p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 header {
   position: relative;
 }

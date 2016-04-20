@@ -387,22 +387,22 @@ video {
 }
 
 .prevnext {
-font-size: 14px;
-display: block;
-width: auto;
-overflow: hidden;
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
 }
 
 .prevnext a {
-display: block;
-width: 50%;
-float: left;
-margin: 1em 0;
-background: none;
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+  background: none;
 }
 
 .prevnext .next {
-text-align: right;
+  text-align: right;
 }
 
 .about-avatar {
@@ -416,26 +416,28 @@ text-align: right;
     width: 4.1em;
   }
 }
+
 /*#carbonads img{display:block;float:right;margin-left:1em}#carbonads .carbon-wrap{display:block;float:left;line-height:1.7em}#carbonads .carbon-poweredby{font-size:.8em;display:block;clear:both;text-align:left}*/
+
 .floating {
--webkit-animation-name: Floatingx;
--webkit-animation-duration: 3s;
--webkit-animation-iteration-count: infinite;
--webkit-animation-timing-function: ease-in-out;
--moz-animation-name: Floating;
--moz-animation-duration: 3s;
--moz-animation-iteration-count: infinite;
--moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes Floatingx {
-from {
-  -webkit-transform: translate(0, 0px);
-}
-65% {
-  -webkit-transform: translate(0, -5px);
-}
-to {
-  -webkit-transform: translate(0, 0px);
-}
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, -5px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+  }
 }

@@ -13,7 +13,7 @@ name:             "Mindthecode"
 title:            "Mindthecode"
 description:      "Writing about all things web."
 url:              http://mindthecode.com
-baseurl:          "/"
+baseurl:          ""
 
 author:
   name:           "Stef van den Ham"

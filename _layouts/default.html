@@ -36,6 +36,11 @@
   <title>{{ site.title }}</title>
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed Mindthecode" href="http://mindthecodec.om/rss.xml" />
+
+  <style media="screen">
+    {% include style.css %}
+  </style>
+
 </head>
 <body class="index">
 
@@ -66,8 +71,17 @@
     }
   </script>
 
-  <link rel="stylesheet" href="/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css">
+  <!-- <script>
+    var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = '/style.css';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+  </script> -->
 
 </body>
 </html>

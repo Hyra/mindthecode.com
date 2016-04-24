@@ -3,7 +3,11 @@ require 'rack/contrib/try_static'
 use Rack::TryStatic,
     :root => "_site",
     :urls => %w[/],
-    :try => ['.html', 'index.html', '/index.html']
+    :try => ['.html', 'index.html', '/index.html'],
+    :header_rules => [
+      [:all, {'Cache-Control' => 'public, max-age=31536000'}],
+      [:fonts, {'Access-Control-Allow-Origin' => '*'}]
+    ]
 
 run lambda { |env|
   four_oh_four_page = File.expand_path("../_site/404.html", __FILE__)

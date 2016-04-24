@@ -1,8 +1,11 @@
 require 'rack/contrib/try_static'
+require 'rack/rewrite'
 
 use Rack::Deflater
 
-# use Rack::NonWwwEnforcer
+use Rack::Rewrite do
+  r301 /.*/,  Proc.new {|path, rack_env| "http://www.#{rack_env['SERVER_NAME']}#{path}" },     :if => Proc.new {|rack_env| ! (rack_env['SERVER_NAME'] =~ /www\./i)}
+end
 
 use Rack::TryStatic,
     :root => "_site",

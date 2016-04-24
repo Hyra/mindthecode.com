@@ -24,9 +24,6 @@
 
   <link rel="author" href="https://plus.google.com/102230925443628784177?rel=author">
 
-  <link rel="stylesheet" href="/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css">
-
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script async="" src="//www.google-analytics.com/analytics.js"></script>
@@ -61,7 +58,7 @@
     <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
       <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
       <header class="heading">
-        <h1>{{ page.title }}</h1>
+        <h1 itemprop="headline">{{ page.title }}</h1>
         <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
         <hr>
       </header>
@@ -70,7 +67,18 @@
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode" id="_carbonads_js"></script>
       </div>
 
-      {{ content }}
+      <div itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      Written by
+      <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="name">
+              <a href="https://plus.google.com/111007558771439626078" itemprop="url" rel="author">Stef van den Ham</a>
+          </span>
+      </span>
+      on
+      <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e %Y" }}</time>
 
     </article>
 

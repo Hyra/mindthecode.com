@@ -2,6 +2,8 @@ require 'rack/contrib/try_static'
 
 use Rack::Deflater
 
+use Rack::NonWwwEnforcer
+
 use Rack::TryStatic,
     :root => "_site",
     :urls => %w[/],

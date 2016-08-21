@@ -115,8 +115,10 @@
 
 body {
   font: 16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+  font: 16px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
   padding: 1ch;
   margin: 0;
+  color: #32323c;
 }
 body .username:after {
   content: ' ✐';
@@ -161,9 +163,27 @@ main {
 h1 {
   font-size: 1em;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: -15px;
+  font-family: 'quatro-semi-bold';
 }
-h1, .timestamp {
+.heading h1, .timestamp {
   margin: 0;
+}
+h1, h2, h3 {
+  margin-bottom: -15px;
+}
+header h1 {
+  font-size: 2.0em;
+  line-height: 1.3em;
+  font-family: 'quatro-extra-light-italic';
+}
+.post-overview h1 {
+  font-size: 0.95em;
+  line-height: 1.3em;
+  font-family: 'quatro-semi-bold';
+  letter-spacing: 0.1em;
 }
 a {
   color: indianred;
@@ -190,6 +210,11 @@ a.noundy {
 .heading a {
   color: black;
   background-image: linear-gradient(to bottom,black 75%,black 75%);
+  background-image: none;
+}
+.heading a:hover {
+  color: #FF005B;
+  color: indianred;
 }
 .heading {
   margin: 0 0 2ch;
@@ -576,3 +601,65 @@ video {
     -webkit-transform: translate(0, 0px);
   }
 }
+
+
+@font-face {
+  font-family: 'quatro-extra-light';
+  src: url("/fonts/Quatro_ExtraLight_v3Web.eot");
+  src: url("/fonts/Quatro_ExtraLight_v3Web.woff") format("woff"), url("/fonts/Quatro_ExtraLight_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-extra-light-italic';
+  src: url("/fonts/Quatro_ExtraLightItalic_v3Web.eot");
+  src: url("/fonts/Quatro_ExtraLightItalic_v3Web.woff") format("woff"), url("/fonts/Quatro_ExtraLightItalic_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-light';
+  src: url("/fonts/Quatro_Light_v3Web.eot");
+  src: url("/fonts/Quatro_Light_v3Web.woff") format("woff"), url("/fonts/Quatro_Light_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-light-italic';
+  src: url("/fonts/Quatro_LightItalic_v3Web.eot");
+  src: url("/fonts/Quatro_LightItalic_v3Web.woff") format("woff"), url("/fonts/Quatro_LightItalic_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-black';
+  src: url("/fonts/Quatro_Black_v3Web.eot");
+  src: url("/fonts/Quatro_Black_v3Web.woff") format("woff"), url("/fonts/Quatro_Black_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-bold';
+  src: url("/fonts/Quatro_Bold_v3Web.eot");
+  src: url("/fonts/Quatro_Bold_v3Web.woff") format("woff"), url("/fonts/Quatro_Bold_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-book';
+  src: url("/fonts/Quatro_Book_v3Web.eot");
+  src: url("/fonts/Quatro_Book_v3Web.woff") format("woff"), url("/fonts/Quatro_Book_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-medium';
+  src: url("/fonts/Quatro_Medium_v3Web.eot");
+  src: url("/fonts/Quatro_Medium_v3Web.woff") format("woff"), url("/fonts/Quatro_Medium_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-semi-bold';
+  src: url("/fonts/Quatro_SemiBold_v3Web.eot");
+  src: url("/fonts/Quatro_SemiBold_v3Web.woff") format("woff"), url("/fonts/Quatro_SemiBold_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-ultra';
+  src: url("/fonts/Quatro_Ultra_v3Web.eot");
+  src: url("/fonts/Quatro_Ultra_v3Web.woff") format("woff"), url("/fonts/Quatro_Ultra_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }

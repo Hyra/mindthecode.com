@@ -26,3 +26,4 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
 
 gems:
   - jekyll-sitemap
+  - jekyll-gist

@@ -53,8 +53,8 @@ h1, .timestamp {
   margin: 0;
 }
 a {
-  color: indianred;
-  background-image: linear-gradient(to bottom,indianred 75%,indianred 75%);
+  color: #c84e4e;
+  background-image: linear-gradient(to bottom,#c84e4e 75%,#c84e4e 75%);
   text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
   background-repeat: repeat-x;
   background-size: 1px 1px;
@@ -64,7 +64,7 @@ a {
 }
 /*a:hover {
   color: black;
-  background: indianred;
+  background: #c84e4e;
   text-shadow: none;
   color: white;
 }*/

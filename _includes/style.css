@@ -532,6 +532,26 @@ video {
   }
 }
 
+#carbonads {
+  width: 130px;
+  font-size: 10px;
+  line-height: 20px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px dashed #DDD;
+  background: #F3F3F3;
+  float: right;
+}
+
+@media screen and (max-width:880px) {
+  #carbonads {
+    display: none;
+  }
+}
+
 /*#carbonads img{display:block;float:right;margin-left:1em}#carbonads .carbon-wrap{display:block;float:left;line-height:1.7em}#carbonads .carbon-poweredby{font-size:.8em;display:block;clear:both;text-align:left}*/
 
 .floating {

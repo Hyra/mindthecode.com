@@ -36,7 +36,7 @@ With these two tools installed we are ready to create a video.
 
 Capturing a webpage as an image with PhantomJS is easy stuff. They have a example on how to do this [over here](https://github.com/ariya/phantomjs/blob/master/examples/technews.js), so let's strip it down to what we need and save it as `runner.js`
 
-```javascript
+{% prism javascript %}
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -44,17 +44,17 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
   page.render('dragon.png', { format: "png" });
   phantom.exit();
 });
-```
+{% endprism %}
 
 We can now run this with:
 
-```bash
+{% prism bash %}
 $ phantomjs runner.js
-```
+{% endprism %}
 
 After a few moments PhantomJS will have booted up and rendered an image. But .. it's white! That's because PhantomJS takes the image before the `<canvas>` has actually fully loaded and started the animation. Let's add a little delay before we write the image.
 
-```javascript
+{% prism javascript %}
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -64,7 +64,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     phantom.exit();
   }, 666);
 });
-```
+{% endprism %}
 
 This time, you should end up with an image of .. a dragon!
 
@@ -74,7 +74,7 @@ This time, you should end up with an image of .. a dragon!
 
 From here it's easy enough to render multiple images with an interval. Create a folder `frames` and modify the runner code to capture 50 images:
 
-```javascript
+{% prism javascript %}
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -93,7 +93,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     }, 25);
   }, 666);
 });
-```
+{% endprism %}
 
 Sweet, we end up with 50 frames of the dragon. When flicking through them it looks like it's flying, so we're almost there!
 
@@ -101,9 +101,9 @@ Sweet, we end up with 50 frames of the dragon. When flicking through them it loo
 
 Now we know how to get the frames we want, we need to figure out how to feed them to ffmpeg. Traditionally, one would first render all the frames and then use an ffmpeg command to stitch the images to a movie. This would look a bit like this:
 
-```bash
+{% prism bash %}
 $ ffmpeg -start_number 10 -i frames/dragon%02d.png -c:v libx264 -r 25 -pix_fmt yuv420p out.mp4
-```
+{% endprism %}
 
 Notice I added a `-start_number` parameter because the frames we generated don't have a leading 0.
 
@@ -111,7 +111,7 @@ So, at this point we have a movie from the site we wanted. Good stuff, but we ca
 
 Let's alter the render method a bit:
 
-```javascript
+{% prism javascript %}
 var page = require('webpage').create();
 page.viewportSize = { width: 640, height: 480 };
 
@@ -120,7 +120,7 @@ page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
     page.render('/dev/stdout', { format: "png" });
   }, 25);
 });
-```
+{% endprism %}
 
 We have removed the timeout as we don't need it anymore and we took out the frame counting code as we will tell ffmpeg how long to record for.
 
@@ -128,9 +128,9 @@ Now, when we run the runner again, the CLI will throw raw image data at us, so d
 
 Instead, let's add a pipe to it and feed that juicy image data to ffmpeg instead, who can devour it much better than we can:
 
-```bash
+{% prism bash %}
 $ phantomjs runner.js | ffmpeg -y -c:v png -f image2pipe -r 25 -t 10  -i - -c:v libx264 -pix_fmt yuv420p -movflags +faststart dragon.mp4
-```
+{% endprism %}
 
 This might take a while, but eventually you will end up with a file `dragon.mp4` that's a lot smoother than our first attempt. This is because we feed a lot more images to ffmpeg.
 

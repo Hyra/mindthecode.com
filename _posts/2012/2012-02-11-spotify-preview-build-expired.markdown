@@ -22,7 +22,7 @@ I downloaded the normal user version, and obviously my application didn't fully 
 
 This means one can't change tabs in the following way anymore:
 
-```javascript
+{% prism javascript %}
 application.observe(models.EVENT.ARGUMENTSCHANGED, handleArgs);
 
 function handleArgs() {
@@ -30,18 +30,18 @@ function handleArgs() {
     $(".section").hide();   // Hide all sections
     $("#"+args[0]).show();  // Show current section
 }
-```
+{% endprism %}
 
 # So now what?
 
 I did some digging, and noticed `sp.core` has some eventListeners. After some fiddling I can now switch tabs again by doing the following:
 
-```javascript
+{% prism javascript %}
 sp.core.addEventListener('argumentsChanged', function() {
     $(".section").hide();                   // Hide all sections
     $("#"+sp.core.getArguments()).show();   // Show current section
 });
-```
+{% endprism %}
 
 Nothe most elegant, and I'll probably be able to change it back to the original code when the new Preview Build comes out, but for now I can at least work on the App.
 

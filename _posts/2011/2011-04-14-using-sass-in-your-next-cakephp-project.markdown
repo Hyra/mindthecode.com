@@ -25,9 +25,9 @@ SASS is an abbrevation of [Syntactically Awesome Style Sheets][1]. While I don't
 
 For the Mac users it's easy. Open up the Terminal and go:
 
-```bash
+{% prism bash %}
 $ gem install compass
-```
+{% endprism %}
 
 This will utilize Ruby to install Compass for you along with Sass.
 
@@ -35,16 +35,16 @@ This will utilize Ruby to install Compass for you along with Sass.
 
 Now for the fun part, getting Compass to work with Cake! Open up the Terminal again and do:
 
-```bash
+{% prism bash %}
 $ cd <your project folder>
 $ mkdir sass
 $ cs sass
 $ touch config.rb
-```
+{% endprism %}
 
 This sass dir will be our home base for the SASS-stuff. Edit the config.rb file we just created and put in:
 
-```javascript
+{% prism javascript %}
 http_path = "/"
 sass_dir = 'src'
 css_dir = '../app/webroot/css'
@@ -55,31 +55,31 @@ http_javascripts_path = 'js'
 http_images_path = 'img'
 environment = :development
 output_style = :compressed
-```
+{% endprism %}
 
 This basically tells Compass where we will have our SASS files (sass_dir) and to save the compiled CSS files and where the other diectories are. Not the output_style. This tells Compass how to compile them. I usually have it on :expanded during development so it's easier on the eyes when opening the CSS file.
 
 Now, we're good to go. Go back to the Terminal, and in your sass-directory, type:
 
-```javascript
+{% prism javascript %}
 $ compass install blueprint/semantic
-```
+{% endprism %}
 
 This is just an example. You can use whatever framework you feel comfortable with, or use the compass default project ones. You will notice the 'src' folder has been created and you have a few Sass files to work on.
 
 I usually create a file `_base.sass` in `src/partials` and in screen.scss add:
 
-```css
+{% prism css %}
 @import 'partials/base';
-```
+{% endprism %}
 
 Notice the underscore in the filename, but not in the import.
 
 In the Terminal, still in your `sass` directory, type:
 
-```bash
+{% prism bash %}
 $ compass watch
-```
+{% endprism %}
 
 This will run Compass in watch-mode and when it detects any changes in the `src` directory, it will automagically save the compiled files to webroot/css
 

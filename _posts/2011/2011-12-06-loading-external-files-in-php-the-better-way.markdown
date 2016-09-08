@@ -18,7 +18,7 @@ Sometimes even, it is disabled on your host for security reasons. So i'm making 
 
 Indeed! Take this benchmark for instance, `file_get_contents` vs `curl` on google.com:
 
-```javascript
+{% prism javascript %}
 [1] => Array   // 1 request to google.com
 (
     [FGC] =>  0.4955058 // 38.88% slower
@@ -49,7 +49,7 @@ Indeed! Take this benchmark for instance, `file_get_contents` vs `curl` on googl
     [FGC] =>  44.685283 // 18.57% slower
     [CURL] => 37.688820
 )
-```
+{% endprism %}
 
 Sure, it might not seem that big a difference. But imagine loading an external file being a big part of your (heavily) used application.
 
@@ -57,17 +57,17 @@ Sure, it might not seem that big a difference. But imagine loading an external f
 
 Sure, no worries. Rather than calling:
 
-```bash
+{% prism bash %}
 $data = file_get_contents('http://whatever.com/sheep.jpg');
-```
+{% endprism %}
 
 you could do:
 
-```javascript
+{% prism javascript %}
 var t = 'typed code'
-```
+{% endprism %}
 
-```javascript
+{% prism javascript %}
 function loadFile($url) {
     $ch = curl_init();
 
@@ -82,7 +82,7 @@ function loadFile($url) {
 }
 
 $data = loadFile('http://whatever.com/sheep.jpg');
-```
+{% endprism %}
 
 And you're done.
 

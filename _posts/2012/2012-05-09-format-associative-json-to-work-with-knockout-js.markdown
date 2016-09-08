@@ -14,7 +14,7 @@ While Knockout.js is a lot of fun, it does expect your JSON to be in a certain f
 
 Take the following response from a simple `find` action:
 
-```javascript
+{% prism javascript %}
 "Projects": [
   {
       "Project": {
@@ -48,13 +48,13 @@ Take the following response from a simple `find` action:
       },
       "Task": [ ]
   },
-```
+{% endprism %}
 
 This is fine to work with in your typical View, but Knockout rather has a nested format, and doesn't like the leading `Project` nodes. You could write custom parsers in Knockout, but would quickly become a hell to maintain.
 
 Instead, I wrote a little function to reformat the response to get the result Knockout likes:
 
-```php?start_inline=1
+{% prism php %}
 public function formatResponse($data) {
     $ret = array();
     foreach($data as $key) {
@@ -73,11 +73,11 @@ $projects = $this->Project->find('all');
 $projects = $this->formatResponse($projects);
 $this->set(compact('projects'));
 $this->set('_serialize', array('projects'));
-```
+{% endprism %}
 
 This will reformat the Projects response to:
 
-```javascript
+{% prism javascript %}
 "projects": [
     {
         "id": "151",
@@ -107,7 +107,7 @@ This will reformat the Projects response to:
         "modified": "2012-04-09 13:55:30",
         "tasks": [ ]
     },
-```
+{% endprism %}
 
 This way I don't have to worry about modifying the core of how Knockout.js works with JSON, and focus on developing the front-end of my app instead.
 

@@ -19,17 +19,17 @@ Here is how I got it set up now ..
 
 First of all we need to get the Watchr gem installed. Assuming you have a Mac and got XCode (or at least the tools) installed, this is pretty simple:
 
-```bash
+{% prism bash %}
 $ gem install watchr
-```
+{% endprism %}
 
 # Installing coffeescript
 
 Another easy one ..
 
-```bash
+{% prism bash %}
 $ npm install -g coffee-script
-```
+{% endprism %}
 
 Don't forget the `-g` flag as you (probably) want it to be installed globally.
 
@@ -37,9 +37,9 @@ Don't forget the `-g` flag as you (probably) want it to be installed globally.
 
 You got the hang of it now, it's as easy as ..
 
-```bash
+{% prism bash %}
 $ npm install -g less
-```
+{% endprism %}
 
 # The fun part!
 
@@ -47,7 +47,7 @@ Now we're ready for the fun bit, setting up watchr to do some automagic stuff.
 
 I have a typical folder structure, with the exception of a new `_src` folder which will contain all the raw coffeescript and less files.
 
-```bash
+{% prism bash %}
 /index.html
 /css
 /js
@@ -55,13 +55,13 @@ I have a typical folder structure, with the exception of a new `_src` folder whi
 /_src
     /less
     /coffee
-```
+{% endprism %}
 
 Watchr works with a config file, which basically tells it what to watch for, and what to do if it finds any changes. I placed the file inside the `_src` folder and named it `watchr.rb`
 
 Here's my config file at the moment:
 
-```ruby
+{% prism ruby %}
 def compile_less
     %x[lessc less/bootstrap/bootstrap.less ../css/main.css --yui-compress]
 end
@@ -94,7 +94,7 @@ watch('coffee/*') { |m|
     compile_coffee
     do_growl "Coffeescripts compiled and concatenated!"
 }
-```
+{% endprism %}
 
 As you can see at the bottom I'm watching the 2 folders seperately, as I want to run different commands for them. For the project I'm working on I'm using Twitter Bootstrap, so rather than compiling all the .less files to seperate .css files I just want to compiled bootstrap.less as that @imports all the things it needs. When it's done with that it yui-compresses the lot and writes the output to `css/main.css`. Pretty cool!
 
@@ -102,9 +102,9 @@ The compile_coffee command does something pretty similar. Whenever a .coffee fil
 
 To get the show on the road, cd to the `_src` folder, and run:
 
-```bash
+{% prism bash %}
 $ watchr watchr.rb
-```
+{% endprism %}
 
 You may have noticed the `do_growl` function, which doesn't really add value except that it's just cool to get a Growl message whenever it has done it's thing. To get that bit working you have to install ["Growl Notify"][2].
 

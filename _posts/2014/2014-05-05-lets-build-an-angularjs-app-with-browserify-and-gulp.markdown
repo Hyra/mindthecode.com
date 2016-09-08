@@ -27,7 +27,7 @@ Instead of starting from a cloned code repository let's build our setup together
 
 When building a web application I tend to have an `app` folder for the original source files, and a `dist` folder which contains all the processed files and will serve as the root directory for the webserver. So let's create the following folder structure:
 
-```shell
+{% prism bash %}
 - app
   - index.html
   - images            // Visual assets
@@ -41,7 +41,7 @@ When building a web application I tend to have an `app` folder for the original 
 - dist                // The target and 'www' folder
 - Gulpfile.js         // Gulp instructions file
 - package.json        // Package file with installation references
-```
+{% endprism %}
 
 # Getting some modules
 
@@ -85,9 +85,9 @@ These I use so I can run a local webserver and support live reloading of the app
 
 And this will do fine for now. So! Let's install all these babies, and save them to our `package.json` by adding `--save-dev`
 
-```bash
+{% prism bash %}
 $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint gulp-util gulp-embedlr gulp-livereload tiny-lr connect-livereload express --save-dev
-```
+{% endprism %}
 
 # Configuring our Gulpfile
 
@@ -95,7 +95,7 @@ Now we have all the components in place it's time to write our Gulpfile. Let's s
 
 First, let's make sure we can `watch` our javascript files, and as they change, run them through JSHint and have Browserify bundle the code into a single file:
 
-```javascript
+{% prism javascript %}
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     jshint = require('gulp-jshint'),
@@ -132,7 +132,7 @@ gulp.task('watch', ['lint'], function() {
     'browserify'
   ]);
 });
-```
+{% endprism %}
 
 So far so good! Whenever we change code in our javascript files a fresh bundle.js is created for us to use in our site.
 
@@ -140,7 +140,7 @@ So far so good! Whenever we change code in our javascript files a fresh bundle.j
 
 Let's create a simple `index.html` file so we can see our work in the browser. Open up `index.html` and add something like the following:
 
-```html
+{% prism html %}
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -152,13 +152,13 @@ Let's create a simple `index.html` file so we can see our work in the browser. O
   <script src="/js/bundle.js"></script>
 </body>
 </html>
-```
+{% endprism %}
 
 The above should look familiar. We include our bundle.js file we created earlier at the bottom, initiate a ng-app by adding the directive to the html tag, attach a controller to the body and have a simple variable in the body so we can see if things work. Which at this point is a NO. Let's fix that.
 
 First of all, we want this index.html file to be added to our `dist` folder so we can actually serve it. We can do this by adding an extra task:
 
-```javascript
+{% prism javascript %}
 // Views task
 gulp.task('views', function() {
   // Get our index.html
@@ -171,15 +171,15 @@ gulp.task('views', function() {
   // Will be put in the dist/views folder
   .pipe(gulp.dest('dist/views/'));
 });
-```
+{% endprism %}
 
 We can also set up another watcher in the watch task to pick up any changes as we build:
 
-```javascript
+{% prism javascript %}
 gulp.watch(['app/index.html', 'app/views/**/*.html'], [
   'views'
 ]);
-```
+{% endprism %}
 
 At the moment we pretty much have a working app. We just can't see it. Let's change this by adding a self contained webserver, straight from our Gulp.
 
@@ -187,7 +187,7 @@ At the moment we pretty much have a working app. We just can't see it. Let's cha
 
 First of all, we need to add some modules to our Gulpfile that allows us to run a mini express server.
 
-```javascript
+{% prism javascript %}
 var embedlr = require('gulp-embedlr'),
     refresh = require('gulp-livereload'),
     lrserver = require('tiny-lr')(),
@@ -206,11 +206,11 @@ server.use(express.static('./dist'));
 server.all('/*', function(req, res) {
     res.sendfile('index.html', { root: 'dist' });
 });
-```
+{% endprism %}
 
 Next, let's start the server. You can do this from any task, but let's create a `dev` task for the fun of it.
 
-```javascript
+{% prism javascript %}
 // Dev task
 gulp.task('dev', function() {
   // Start webserver
@@ -220,13 +220,13 @@ gulp.task('dev', function() {
   // Run the watch task, to keep taps on changes
   gulp.run('watch');
 });
-```
+{% endprism %}
 
 Now, when you run `gulp dev` it will kickstart our internal webserver with our `dist` folder as root. You can verify everything is working by navigating to <http://localhost:5000>
 
 If all is well you should see the `index.html` show up. Whenever you change a file however, the changes won't automatically show up in the browser. This is because we have to manually invoke the server refresh from within our task. Let's modify our `views` task to automatically refresh the browser after it has done its work:
 
-```javascript
+{% prism javascript %}
 gulp.task('views', function() {
   gulp.src('./app/index.html')
   .pipe(gulp.dest('dist/'));
@@ -235,7 +235,7 @@ gulp.task('views', function() {
   .pipe(gulp.dest('dist/views/'))
   .pipe(refresh(lrserver)); // Tell the lrserver to refresh
 });
-```
+{% endprism %}
 
 Now, whenever you change a view file, the server will reload. Of course, you can do this whenever you want. So feel free to add it in the `browserify` task as well.
 
@@ -243,7 +243,7 @@ Now, whenever you change a view file, the server will reload. Of course, you can
 
 We are getting somewhere. All that's missing is some actual Angular code. So let's add some. Open up the `main.js` file and put in the following:
 
-```javascript
+{% prism javascript %}
 'use strict';
 
 var angular = require('angular'); // That's right! We can just require angular as if we were in node
@@ -253,7 +253,7 @@ var app = angular.module('myApp', []);
 app.controller('HelloCtrl', function($scope) {
   $scope.test = 'Test varretjes';
 });
-```
+{% endprism %}
 
 In main.js we can now use Node's `require()` way to include modules we want. This is not limited to our own code, we can use most of the ~50k published modules on npmjs.org. When we run `gulp browserify` Browserify will figure out what code to pull in, and will bundle it in our `bundle.js`. Good stuff.
 
@@ -261,7 +261,7 @@ Of course, the controller code should move to a file of its own in the controlle
 
 Create a new file `controllers/WelcomeCtrl.js` and add in the following:
 
-```javascript
+{% prism javascript %}
 'use strict';
 
 var WelcomeCtrl = function($scope) {
@@ -269,11 +269,11 @@ var WelcomeCtrl = function($scope) {
 };
 
 module.exports = WelcomeCtrl;
-```
+{% endprism %}
 
 Notice we use `module.exports` to expose (parts of) our code, as you do with modules. This way we can `require` them from our `main.js` file and use it as a module. Let's change `main.js` to use our fresh module:
 
-```javascript
+{% prism javascript %}
 'use strict';
 
 var angular = require('angular'); // That's right! We can just require angular as if we were in node
@@ -282,7 +282,7 @@ var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our Welcom
 
 var app = angular.module('myApp', []);
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
-```
+{% endprism %}
 
 This is obviously a very bare example, but you can see how using simple `require` calls will save a lot of script tags in your index.html, and having your files behave as modules helps you write re-usable code.
 
@@ -290,7 +290,7 @@ This is obviously a very bare example, but you can see how using simple `require
 
 You might have noticed `gulp lint` gives us some errors. That's because it needs some guidance, as it doesn't know about our `require` and preferences. Let's add a file called `.jshintrc` and add in the following configuration:
 
-```javascript
+{% prism javascript %}
 {
   "node": true,
   "browser": true,
@@ -312,7 +312,7 @@ You might have noticed `gulp lint` gives us some errors. That's because it needs
   "trailing": true,
   "smarttabs": true
 }
-```
+{% endprism %}
 
 You may or may not agree with any of these settings, so feel free to tweak them.
 
@@ -320,19 +320,19 @@ You may or may not agree with any of these settings, so feel free to tweak them.
 
 You may have a CSS pre-processor of choice, so let's add support for this. I usually go with SASS, but of course this is adaptable to your liking. Let's install a new module named `gulp-sass` and include it in our Gulpfile.
 
-```shell
+{% prism bash %}
 $ npm install gulp-sass gulp-autoprefixer --save-dev
-```
+{% endprism %}
 
-```javascript
+{% prism javascript %}
 var sass = require('gulp-sass');
 // Not necessary, but I like this one, it automatically adds prefixes for all browsers
 var autoprefixer = require('gulp-autoprefixer');
-```
+{% endprism %}
 
 Next, let's write a task for it:
 
-```javascript
+{% prism javascript %}
 // Styles task
 gulp.task('styles', function() {
   gulp.src('app/styles/*.scss')
@@ -344,15 +344,15 @@ gulp.task('styles', function() {
   .pipe(gulp.dest('dist/css/'))
   .pipe(refresh(lrserver));
 });
-```
+{% endprism %}
 
 And add another watcher.
 
-```javascript
+{% prism javascript %}
 gulp.watch(['app/styles/**/*.scss'], [
   'styles'
 ]);
-```
+{% endprism %}
 
 Now, whenever you make changes to your SASS files it will compile it to CSS and live-reload our webserver. Good times.
 

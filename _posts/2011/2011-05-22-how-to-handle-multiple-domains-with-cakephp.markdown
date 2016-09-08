@@ -17,7 +17,7 @@ Lately, we've been working with multiple environments/servers for our websites t
 
 So, what changes in your config? Not all that much. Let's have a look at the default database.php config file
 
-```javascript
+{% prism javascript %}
 class DATABASE_CONFIG {
 
     var $default = array(
@@ -40,11 +40,11 @@ class DATABASE_CONFIG {
     'prefix' => '',
     );
 }
-```
+{% endprism %}
 
 The `$default` database config is used when you don't specify anything. The `$test` database is used by SimpleTest. Let's say you want to have a `local` environment and one for when you're on your live/production server. Below is the database config I use
 
-```javascript
+{% prism javascript %}
 class DATABASE_CONFIG {
 
     var $local = array(
@@ -95,7 +95,7 @@ class DATABASE_CONFIG {
   }
 
 }
-```
+{% endprism %}
 
 As you can see we check the `$_SERVER['SERVER_NAME']` . Locally I like to work with `dev.domain.com` domains, but if you're using some sort of `localhost` structure this will work fine as well. So, depending on the server(name) you're on the correct database credentials are put into the `$default` config. Obviously, you can extend the database configs as much as you want. We usually work with 4 arrays: local, development, staging and production. As a bonus, we can set the `debug value` for these environments accordingly as well.
 

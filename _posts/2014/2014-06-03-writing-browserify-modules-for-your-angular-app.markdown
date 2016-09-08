@@ -23,7 +23,7 @@ Now, what does this look like for our Browserify Angular app?
 
 Let's assume we're using ui-router for the awesome stateprovider, and want to specify one of our own controllers through `require()`
 
-```javascript
+{% prism javascript %}
 var app = angular.module('myApp', ['uiRouter']);
 
 $stateProvider
@@ -36,13 +36,13 @@ $stateProvider
       }
     }
   });
-```
+{% endprism %}
 
 What we do here is not that much different from the plain old way, but instead of including a script tag to `controllers/AboutCtrl.js` and using the name, we call `require()` on our module, and call `.injdect(app)` on it.
 
 This works, because our module exports an angular controller object, which it is able to do because we inject our app. Here's what it looks like:
 
-```javascript
+{% prism javascript %}
 exports.inject = function(app) {
   app.controller('AboutCtrl', exports.controller);
   return exports.controller;
@@ -51,7 +51,7 @@ exports.inject = function(app) {
 exports.controller = function AboutCtrl($scope) {
   $scope.regularAngular = 'Hello!';
 };
-```
+{% endprism %}
 
 As you can see, our inject function takes the app, and in turn returns our controller function. Simple, clean and effective.
 
@@ -59,7 +59,7 @@ As you can see, our inject function takes the app, and in turn returns our contr
 
 But what if we want to use a dependency. Simply require it and inject it:
 
-```javascript
+{% prism javascript %}
 exports.inject = function(app) {
   require('./../services/SomeService').inject(app); // Require the someservice module
   app.controller('AboutCtrl', exports.controller);
@@ -71,11 +71,11 @@ exports.controller = function AboutCtrl($scope, SomeService) {
   // And profit.
   $scope.regularAngular = SomeService.getYourStuff();
 };
-```
+{% endprism %}
 
 This is how that SomeService would look like. Not much different, but instead of exposing a controller, we return a factory:
 
-```javascript
+{% prism javascript %}
 exports.inject = function(app) {
   app.factory('SomeService', exports.factory);
   return exports.factory;
@@ -92,7 +92,7 @@ exports.factory = function($http, $cookieStore, $resource) {
     }
   }
 };
-```
+{% endprism %}
 
 And that's how we can write little re-usable modules to use in our Angular App!
 

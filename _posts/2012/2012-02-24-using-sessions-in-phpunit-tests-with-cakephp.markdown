@@ -21,9 +21,9 @@ The PHPUnit command line suite apparently outputs contents early, before the ses
 
 Add `--stderr` to the command line:
 
-```bash
+{% prism bash %}
 $ cake testsuite app Controller/YourFancyController --stderr
-```
+{% endprism %}
 
 This will pass the tests again, as it doesn't output contents early to `STDOUT`. The only "problem" is you won't see the awesome green and red colors in the CLI output anymore.
 
@@ -33,9 +33,9 @@ This is the one I use, as it brings the colors back.
 
 As I'm using my self-contained PHPUnit Install, as found on Github @ [PHPUnit-Cake2][1] I am able to edit the following file: `Vendor/PHPUnit/Autoload.php` At the very top of this file, initialize the session early:
 
-```php?start_inline=1
+{% prism php %}
 session_start();
-```
+{% endprism %}
 
 This will pass the tests again, and even better, bring back the colors!
 

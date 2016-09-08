@@ -16,11 +16,11 @@ We all know having submodules in Git is very handy. You don't have to check all 
 
 When installing a submodule in Git it does a couple of things. It adds a `record` to your `.gitmodules` file. When this file doesn't exist it will create one. An example of this is:
 
-```javascript
+{% prism javascript %}
 [submodule "some/nice/folder"]
     path = some/nice/folder
     url = git://github.com/your_idol/awesome.git
-```
+{% endprism %}
 
 Secondly, it adds the URLs/mappings to your `.git/config` file. This is done when you use `git init submodule`.
 
@@ -30,9 +30,9 @@ Last but not least, it adds references to the submodule in your commits.
 
 The first two traces are easy enough to remove. Just open up `.gitmodules` and remove the reference to it. Next, open up `.git/config` and remove the mappings there as well. Last, but not least, use the following command from the root directory of your git repository:
 
-```bash
+{% prism bash %}
 $ git rm --cached path/to/submodule
-```
+{% endprism %}
 
 Notice that you have to leave out the trailing slash, else the command will moan about it.
 

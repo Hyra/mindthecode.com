@@ -22,17 +22,17 @@ This little helper converts your .less files into .css without relying on Node.j
 
 Clone from github: in your plugin directory type:
 
-```bash
+{% prism bash %}
 $ git clone https://github.com/Hyra/less.git less
-```
+{% endprism %}
 
 ## Submodule
 
 Add as Git submodule: in your plugin directory type:
 
-```bash
+{% prism bash %}
 $ git submodule add https://github.com/Hyra/less.git less
-```
+{% endprism %}
 
 ## Manual
 
@@ -44,9 +44,9 @@ Next, create a folder `less` in `app/webroot/` and apply `chmod 777` to it.
 
 In your `app_controller.php` add the helper:
 
-```javascript
+{% prism javascript %}
 public $helpers = array('Less.Less');
-```
+{% endprism %}
 
 Now every `.less` file from `webroot/less` will be converted to its `.css` equivalent in `webroot/css`
 

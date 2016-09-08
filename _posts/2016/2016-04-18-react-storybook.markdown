@@ -23,65 +23,50 @@ Make sure you run with NPM3 following this post as otherwise you might end up wi
 
 Let's start from scratch by creating a new directory and typing:
 
-```bash
-$ npm init
-```
+{% prism bash %} $ npm init {% endprism %}
 
 This way we end up with a `package.json` that Storybook relies on. In my case it looks like this:
 
-```javascript
-{
-  "name": "storybook-test",
-  "version": "1.0.0",
-  "description": "Testing out Storybook!",
-  "main": "index.js",
-  "scripts": {
-  },
-  "author": "",
-  "license": "ISC"
-}
-```
+{% prism javascript %} { "name": "storybook-test", "version": "1.0.0", "description": "Testing out Storybook!", "main": "index.js", "scripts": { }, "author": "", "license": "ISC" } {% endprism %}
 
 Now let's install React:
 
-```bash
-$ npm install --save react
-```
+{% prism bash %} $ npm install --save react {% endprism %}
 
 Next, let's create a component we want to use in Storybook. Create a folder `components` and add a file `card.js` in it containing the following code:
 
-```javascript
-import React from 'react';
+{% prism javascript %} import React from 'react';
 
 class Card extends React.Component {
 
-  render() {
+render() {
 
-    let styles = {
-      card: {
-        border: '1px solid #FF4422',
-        borderRadius: 4,
-        backgroundColor: '#FF9988',
-      },
-      title: {
-        color: 'white',
-        margin: 0,
-        padding: 10,
-        fontFamily: 'Helvetica Neue',
-      }
-    };
-
-
-    return (
-      <div style={styles.card}>
-        <h1 style={styles.title}>{this.props.title}</h1>
-      </div>
-    );
-  }
-}
-
-module.exports = Card;
 ```
+let styles = {
+  card: {
+    border: '1px solid #FF4422',
+    borderRadius: 4,
+    backgroundColor: '#FF9988',
+  },
+  title: {
+    color: 'white',
+    margin: 0,
+    padding: 10,
+    fontFamily: 'Helvetica Neue',
+  }
+};
+
+
+return (
+  <div style={styles.card}>
+    <h1 style={styles.title}>{this.props.title}</h1>
+  </div>
+);
+```
+
+} }
+
+module.exports = Card; {% endprism %}
 
 # Configuring Storybook
 
@@ -89,44 +74,33 @@ Now that we got a base to work with, let's install Storybook and set it up.
 
 First, install Storybook
 
-```bash
-$ npm install --save @kadira/storybook
-```
+{% prism bash %} $ npm install --save @kadira/storybook {% endprism %}
 
 Storybook depends on a folder `.storybook` which contains the configuration, so let's create that folder and inside add a `config.js`:
 
-```javascript
-import { configure } from '@kadira/storybook';
+{% prism javascript %} import { configure } from '@kadira/storybook';
 
-function loadStories() {
-  require('../components/stories/');
-}
+function loadStories() { require('../components/stories/'); }
 
-configure(loadStories, module);
-```
+configure(loadStories, module); {% endprism %}
 
 From the above you can probably guess the next step, we need to create a folder `stories` inside the `components` folder which will hold our stories. You are free to use any folder you want though.
 
 In `stories`, add a file `card.js` with this code:
 
-```javascript
-import React from 'react';
-import Card from '../card'; // This is our component
-import { storiesOf, action } from '@kadira/storybook';
+{% prism javascript %} import React from 'react'; import Card from '../card'; // This is our component import { storiesOf, action } from '@kadira/storybook';
 
-storiesOf('Card', module)
-  .add('with a text', () => (
-    <Card title="A little card" />
+storiesOf('Card', module) .add('with a text', () => (
+
+<card title="A little card">
   ))
-```
+{% endprism %}</card>
 
 At the top we import our Card component. Storybook provides a chainable method `storiesOf` after which you can describe all your possible 'states'. In the above example we only have one, but we'll add more in a second.
 
 Now, in `.storybook/config.js` we declared our stories can be loaded from `components/stories`, so in order to be able to do that we need to create an `index.js` file which will import all the stories we want to show up in storybook, so create it and add the following inside:
 
-```javascript
-import './card';
-```
+{% prism javascript %} import './card'; {% endprism %}
 
 Alternatively you can specify the story files from the storybook config file, but this feels a bit more logical.
 
@@ -134,19 +108,11 @@ Alternatively you can specify the story files from the storybook config file, bu
 
 We're almost there! In order to run Storybook we need to add a script to our `package.json`. Alter the file so it has the storybook script in there:
 
-```javascript
-...
-"scripts": {
-  "storybook": "start-storybook -p 9001"
-},
-...
-```
+{% prism javascript %} ... "scripts": { "storybook": "start-storybook -p 9001" }, ... {% endprism %}
 
 Now we can go to the command line and run
 
-```bash
-$ npm run storybook
-```
+{% prism bash %} $ npm run storybook {% endprism %}
 
 and if all goes well we can navigate to our very own [Storybook](http://localhost:9001) and see our component!
 
@@ -154,52 +120,34 @@ and if all goes well we can navigate to our very own [Storybook](http://localhos
 
 To illustrate how storybook works, let's add another story for our card:
 
-```javascript
-import React from 'react';
-import Card from '../card'; // This is our component
-import { storiesOf, action } from '@kadira/storybook';
+{% prism javascript %} import React from 'react'; import Card from '../card'; // This is our component import { storiesOf, action } from '@kadira/storybook';
 
-storiesOf('Card', module)
-  .add('with a text', () => (
-    <Card title="A little card" />
+storiesOf('Card', module) .add('with a text', () => (
+
+<card title="A little card">
   ))
-  .add('with a specific background', () => (
-    <Card title="A little card" background={ '#550011' } />
+  .add('with a specific background', () =&gt; (
+    <card title="A little card" background="{" '#550011'="" }="">
   ))
-```
+{% endprism %}</card></card>
 
 We specified a story that states we can have a button with a specific background. Let's modify the render method of our component to make that possible:
 
-```javascript
-...
-render() {
+{% prism javascript %} ... render() {
 
-  let styles = {
-    card: {
-      border: '1px solid #FF4422',
-      borderRadius: 4,
-      backgroundColor: '#FF9988',
-    },
-    title: {
-      color: 'white',
-      margin: 0,
-      padding: 10,
-      fontFamily: 'Helvetica Neue',
-    }
-  };
+let styles = { card: { border: '1px solid #FF4422', borderRadius: 4, backgroundColor: '#FF9988', }, title: { color: 'white', margin: 0, padding: 10, fontFamily: 'Helvetica Neue', } };
 
-  if(this.props.background) {
-    styles.card.background = this.props.background;
-  }
+if(this.props.background) { styles.card.background = this.props.background; }
 
-  return (
-    <div style={styles.card}>
-      <h1 style={styles.title}>{this.props.title}</h1>
-    </div>
-  );
-}
-...
-```
+return (
+
+<div style="{styles.card}">
+  <h1 style="{styles.title}">{this.props.title}</h1>
+</div>
+
+ ); } ... {% endprism %}
+
+
 
 Refresh your storybook, and you should see the second story show up and when you click it the button is slightly darker (unless you felt adventurous and made your own modifications of course!)
 

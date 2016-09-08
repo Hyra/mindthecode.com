@@ -57,9 +57,7 @@ To get it working you first have to change the shell you're working in. By defau
 
 Next, to get oh-my-zsh working, they have provided a nice one-line install script which you run, of course, in the terminal:
 
-{% endprism %}
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-{% endprism %}
+{% prism bash %} curl -L <https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh> | sh {% endprism %}
 
 ## Preparing the ZSH theme
 
@@ -75,46 +73,21 @@ Save this file as `~/.zshrc`. Go to the `themes` folder again, and create a new 
 
 Now the fun part. Making it all yours. Open up the theme file you created, and put the following inside:
 
-{% prism bash %}
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+{% prism bash %} function git_prompt_info() { ref=$(git symbolic-ref HEAD 2> /dev/null) || return echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX" }
 
-function get_pwd() {
-  print -D $PWD
-}
+function get_pwd() { print -D $PWD }
 
-function put_spacing() {
-  local git=$(git_prompt_info)
-  if [ ${#git} != 0 ]; then
-    ((git=${#git} - 10))
-  else
-    git=0
-  fi
+function put_spacing() { local git=$(git_prompt_info) if [ ${#git} != 0 ]; then ((git=${#git} - 10)) else git=0 fi
 
-  local termwidth
-  (( termwidth = ${COLUMNS} - 3 - ${#HOST} - ${#$(get_pwd)} - ${bat} - ${git} ))
+local termwidth (( termwidth = ${COLUMNS} - 3 - ${#HOST} - ${#$(get_pwd)} - ${bat} - ${git} ))
 
-  local spacing=""
-  for i in {1..$termwidth}; do
-    spacing="${spacing} "
-  done
-  echo $spacing
-}
+local spacing="" for i in {1..$termwidth}; do spacing="${spacing} " done echo $spacing }
 
-function precmd() {
-print -rP '
-$fg[cyan]%m: $fg[yellow]$(get_pwd)$(put_spacing)$(git_prompt_info)'
-}
+function precmd() { print -rP ' $fg[cyan]%m: $fg[yellow]$(get_pwd)$(put_spacing)$(git_prompt_info)' }
 
 PROMPT='%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
-ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color"
-ZSH_THEME_GIT_PROMPT_DIRTY="$fg[red]+"
-ZSH_THEME_GIT_PROMPT_CLEAN="$fg[green]"
-{% endprism %}
+ZSH_THEME_GIT_PROMPT_PREFIX="[git:" ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color" ZSH_THEME_GIT_PROMPT_DIRTY="$fg[red]+" ZSH_THEME_GIT_PROMPT_CLEAN="$fg[green]" {% endprism %}
 
 The above will probably be pretty self-explanatory, we got a function to get the Git information from the current folder, so we can determin if it's dirty. A function to get the current directory. And a function to determin how much space to put between the first part of the prompt and the last part (the git part) so that it aligns nicely.
 

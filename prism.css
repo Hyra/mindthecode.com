@@ -15,7 +15,7 @@
     border-radius: 0.3em;
     padding: 1em;
     color: #f8f8f2;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Monaco, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
@@ -136,4 +136,3 @@ pre[class*="language-"] {
 .token.entity {
     cursor: help;
 }
-

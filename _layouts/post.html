@@ -48,7 +48,7 @@
   <header>
     <p>
       <a href="/" class="noundy">
-        <img id="logo" src="/logo.png" class="floating" alt="Mindthecode" />
+        <img id="logo" src="/logo.png" class="animated rubberBand floating_" alt="Mindthecode" />
       </a>
     </p>
     <nav>
@@ -186,6 +186,20 @@
   </script> -->
 
   <script src="http://prismjs.com/prism.js"></script>
+
+  <script>
+    var currentAnim = 'rubberBand';
+    var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello', 'hinge'];
+    var newAnim = anims[Math.floor(Math.random()*anims.length)];
+    setInterval(function() {
+      document.querySelector('#logo').classList.remove(currentAnim);
+      setTimeout(function() {
+        document.querySelector('#logo').classList.add(newAnim);
+      }, 1000);
+      newAnim = anims[Math.floor(Math.random()*anims.length)];
+      currentAnim = newAnim;
+    }, 3000);
+  </script>
 
 </body>
 </html>

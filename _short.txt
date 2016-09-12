@@ -1,0 +1,16 @@
+Merriweather font from:
+http://mindthecode.com/getting-started-with-the-panresponder-in-react-native/
+
+Layout from:
+http://jamesknelson.com/
+
+Post Footer from:
+https://www.dropbox.com/s/yg65zrcgz5s89wp/Screenshot%202016-09-09%2008.41.44.png?dl=0
+(https://www.themarketingtechnologist.co/creating-dynamic-videos-using-javascript-and-after-effects-the-basics/)
+
+
+Have comments on Twitter, rather than on site
+
+Have Code "bits" where something is pointed out or highlighted
+Have tutorials, step by step walkthroughs
+Have hacks .. such as ffmpeg post

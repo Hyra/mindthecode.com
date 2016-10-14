@@ -52,7 +52,7 @@ use Rack::Rewrite do
   r301 '/tag/sass/', '/tags#sass'
   r301 '/tag/markdown/', '/tags/#markdown'
   r301 '/tag/curl/', '/tags/#curl'
-  r301 '/cat/coffeescript', '/tags/#coffeescript'
+  r301 '/cat/coffeescript/', '/tags/#coffeescript'
   r301 '/blog/categories/mamp/', '/tags/#mamp'
   r301 '/blog/categories/git/', '/tags/#git'
   r301 '/blog/categories/command-line/', '/tags'

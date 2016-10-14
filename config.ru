@@ -77,6 +77,7 @@ use Rack::TryStatic,
     :root => "_site",
     :urls => %w[/],
     :try => ['.html', 'index.html', '/index.html'],
+    :gzip => true,
     :header_rules => [
       [:all, {'Cache-Control' => 'public, max-age=31536000'}],
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]

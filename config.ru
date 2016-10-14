@@ -66,6 +66,7 @@ use Rack::Rewrite do
   r301 '/page/10/', '/'
   r301 '/page/6/', '/'
   r301 '/2011/11/', '/'
+  r301 '/2011/10/', '/'
   r301 '/author/hyra/page/2/', '/'
 
 

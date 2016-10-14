@@ -47,6 +47,7 @@ use Rack::Rewrite do
   r301 '/posts/view/how_to_handle_multiple_domains_with_cakephp', '/how-to-handle-multiple-domains-with-cakephp/'
   r301 '/posts/view/how_to_remove_a_submodule_from_your_git_repository', '/how-to-remove-a-submodule-from-your-git-repository/'
   r301 '/how%20to%20use%20environment%20variables%20in%20your%20angular%20application/', '/how-to-use-environment-variables-in-your-angular-application/'
+  r301 '/httpie-a-command-line-http-client/', '/httpie-the-command-line-http-client/'
 
   r301 '/tag/sass/', '/tags#sass'
   r301 '/tag/markdown/', '/tags/#markdown'

@@ -122,7 +122,7 @@ body {
   /*background:url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png");*/
   /*background:url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/skulls.png");*/
   /*background:url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/old_map.png")*/
-  background:url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/geometry.png")
+  background:url("/images/geometry.png")
 }
 body .username:after {
   content: ' ✐';

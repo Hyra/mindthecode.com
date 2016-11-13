@@ -1,5 +1,23 @@
 /*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');*/
 
+@font-face {font-family: "FFTisa";
+  src: url("/fonts/fftisa/onlinewebfonts.eot"); /* IE9*/
+  src: url("/fonts/fftisa/onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/fftisa/onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */
+  url("/fonts/fftisa/onlinewebfonts.woff") format("woff"), /* chrome、firefox */
+  url("/fonts/fftisa/onlinewebfonts.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("/fonts/fftisa/onlinewebfonts.svg#!1!1") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "FFTisaRegular";
+  src: url("/fonts/fftisa-regular/onlinewebfonts.eot"); /* IE9*/
+  src: url("/fonts/fftisa-regular/onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/fftisa-regular/onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */
+  url("/fonts/fftisa-regular/onlinewebfonts.woff") format("woff"), /* chrome、firefox */
+  url("/fonts/fftisa-regular/onlinewebfonts.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("/fonts/fftisa-regular/onlinewebfonts.svg#!1!1") format("svg"); /* iOS 4.1- */
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto Mono';
@@ -165,35 +183,35 @@ main {
   min-height: calc(100vh - 12ch);
 }
 h1 {
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  /*text-transform: uppercase;*/
+  /*letter-spacing: 0.1em;*/
   margin-bottom: -15px;
-  font-family: 'quatro-semi-bold';
 }
 .heading h1, .timestamp {
   margin: 0;
 }
 h1, h2, h3 {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
+  font-family: 'FFTisa';
 }
 header h1 {
-  font-size: 1.2em;
-  line-height: 1.3em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   /* font-family: 'quatro-extra-light'; */
   /* text-transform: none; */
 }
 .post-overview h1 {
-  font-size: 0.95em;
+  font-size: 1.2em;
   line-height: 1.3em;
-  font-family: 'quatro-semi-bold';
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  /*font-family: 'quatro-semi-bold';*/
+  /*letter-spacing: 0.1em;*/
+  /*text-transform: uppercase;*/
 }
 a {
   color: indianred;
-  background-image: linear-gradient(to bottom,indianred 75%,indianred 75%);
+  /*background-image: linear-gradient(to bottom,indianred 75%,indianred 75%);*/
   text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
   background-repeat: repeat-x;
   background-size: 1px 1px;
@@ -201,12 +219,17 @@ a {
   text-decoration: none;
   transition: all 0.4s ease;
 }
-/*a:hover {
+header a {
+  font-family: 'FFTisa';
+  font-size: 1em;
+}
+a:hover {
   color: black;
-  background: indianred;
+  text-shadow: 0;
+  /*background: indianred;*/
   text-shadow: none;
-  color: white;
-}*/
+  /*color: white;*/
+}
 a.noundy {
   background-image: none;
 }
@@ -250,7 +273,7 @@ p {
   margin: 1.5em 0;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1em;
+  font-size: 1.25em;
 }
 pre {
   margin: 0;
@@ -3819,3 +3842,4 @@ video {
   animation-name: slideOutUp;
 }
 
+code[class*=language-],pre[class*=language-]{color:#f8f8f2;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.iconic,body{font-weight:400}.token.italic{font-style:italic}.h1,.h2,.iconic,.mfp-close,h1,h2{font-style:normal}.token.entity{cursor:help}

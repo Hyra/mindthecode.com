@@ -44,28 +44,42 @@
 
 </head>
 <body>
-  <header>
-    <p>
-      <a href="/" class="noundy">
-        <img id="logo" src="/logo.png" class="animated floating_" alt="Mindthecode" />
-      </a>
-    </p>
-    <nav>
-    <ul>
-      <li>
-        <a href="/">Writings</a> /
-      </li>
-      <li>
-        <a href="/about/">About me</a></li>
-    </ul>
-  </nav>
-  </header>
-  <main>
+  
+  <div class="inner">
+
+    <header>
+      <p>
+        <a href="/" class="noundy">
+          <img id="logo" src="/logo.png" class="animated rubberBand floating_" alt="Mindthecode" />
+        </a>
+      </p>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Writings</a> /
+          </li>
+          <li>
+            <a href="/about/">About me</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  </div>
+
+  <div class="inner">
+  <div>
+
+  {% include aside.html %}
+  
+  <main id='content'>
+
     <article>
       {{ content }}
     </article>
 
   </main>
+
+  </div>
 
   <footer>
     <a href="/" class="noundy"><img src="/images/mtc_inv.png" id="logo-footer" alt="Mindthecode" /></a>

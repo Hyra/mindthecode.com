@@ -1,8 +1,11 @@
 ---
-title: About
+title: Tags
 layout: single
 ---
 <style type='text/css'>
+.tagcloud {
+  margin-top: 20px;
+}
 .tagcloud a {
   background: rgba(255, 255, 0, 0.15);
   color: black;
@@ -23,6 +26,8 @@ layout: single
 {% endfor %}
 </ul>
 {% endcomment %}
+
+<h1>Tags</h1>
 
 <div class='tagcloud'>
 {% for tag in site.tags %}

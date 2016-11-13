@@ -27,7 +27,18 @@ Let's start from scratch by creating a new directory and typing:
 
 This way we end up with a `package.json` that Storybook relies on. In my case it looks like this:
 
-{% prism javascript %} { "name": "storybook-test", "version": "1.0.0", "description": "Testing out Storybook!", "main": "index.js", "scripts": { }, "author": "", "license": "ISC" } {% endprism %}
+{% prism javascript %}
+{
+  "name": "storybook-test",
+  "version": "1.0.0", 
+  "description": 
+  "Testing out Storybook!", 
+  "main": "index.js", 
+  "scripts": { }, 
+  "author": "", 
+  "license": "ISC"
+}
+{% endprism %}
 
 Now let's install React:
 
@@ -39,32 +50,30 @@ Next, let's create a component we want to use in Storybook. Create a folder `com
 
 class Card extends React.Component {
 
-render() {
+  render() {
 
-```
-let styles = {
-  card: {
-    border: '1px solid #FF4422',
-    borderRadius: 4,
-    backgroundColor: '#FF9988',
-  },
-  title: {
-    color: 'white',
-    margin: 0,
-    padding: 10,
-    fontFamily: 'Helvetica Neue',
+    let styles = {
+      card: {
+        border: '1px solid #FF4422',
+        borderRadius: 4,
+        backgroundColor: '#FF9988',
+      },
+      title: {
+        color: 'white',
+        margin: 0,
+        padding: 10,
+        fontFamily: 'Helvetica Neue',
+      }
+    };
+
+    return (
+      <div style={styles.card}>
+        <h1 style={styles.title}>{this.props.title}</h1>
+      </div>
+    );
+
   }
-};
-
-
-return (
-  <div style={styles.card}>
-    <h1 style={styles.title}>{this.props.title}</h1>
-  </div>
-);
-```
-
-} }
+}
 
 module.exports = Card; {% endprism %}
 

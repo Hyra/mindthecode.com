@@ -220,7 +220,7 @@ a {
   transition: all 0.4s ease;
 }
 header a {
-  font-family: 'FFTisa';
+  /*font-family: 'FFTisa';*/
   font-size: 1em;
 }
 a:hover {

@@ -1,6 +1,6 @@
 /*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');*/
 
-@font-face {font-family: "FFTisa";
+@font-face ;font-family: "FFTisa";
   src: url("/fonts/fftisa/onlinewebfonts.eot"); /* IE9*/
   src: url("/fonts/fftisa/onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("/fonts/fftisa/onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */
@@ -3936,4 +3936,42 @@ hr.sidebar {
     border: 0;
     padding: 0;
   }
+}
+
+
+article pre[class*=language-]{
+  background:rgba(26,19,31,.91)
+}
+article pre[class*=language-]:before{
+  /*content:attr(data-title);*/
+  /*position:absolute;*/
+  /*top:0;*/
+  /*background:rgba(51,51,51,.4);*/
+  /*text-align:right;*/
+  /*font-family:'Noto Sans',sans-serif;*/
+  /*text-shadow:none;*/
+  /*font-size:20px;*/
+  /*text-transform:uppercase;*/
+  /*font-weight:700;*/
+  /*padding:20px 25%;*/
+  color:#636363!important;
+  /*margin-top:0;*/
+  /*margin-bottom:0*/
+}
+article .token.attr-name,article .token.builtin,article .token.char,article .token.inserted,article .token.selector,article .token.string{
+  color:#B8FFB0
+}
+article .token.constant,article .token.deleted,article .token.property,article .token.symbol,article .token.tag{
+  color:#FF99C6
+}
+article .token.boolean,article .token.number{
+  color:#7BCCFF
+}
+article .token.atrule,article .token.attr-value,article .token.function{
+  color:#FFF595
+}
+article code[class*=language-]{
+  font-family:Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:13px;
+  line-height:1.7;
 }

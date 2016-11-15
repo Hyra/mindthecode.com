@@ -1,6 +1,6 @@
 /*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');*/
 
-@font-face ;font-family: "FFTisa";
+@font-face { font-family: "FFTisa";
   src: url("/fonts/fftisa/onlinewebfonts.eot"); /* IE9*/
   src: url("/fonts/fftisa/onlinewebfonts.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("/fonts/fftisa/onlinewebfonts.woff2") format("woff2"), /* chrome、firefox */

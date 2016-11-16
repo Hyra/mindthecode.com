@@ -1,8 +1,10 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
 
-use HerokuDeflater::ServeZippedAssets
 
+use HerokuDeflater::ServeZippedAssets
+use Rack::Deflater
+use HerokuDeflater::SkipBinary
 # use Rack::Deflater
 
 use Rack::Rewrite do

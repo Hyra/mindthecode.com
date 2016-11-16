@@ -73,6 +73,8 @@ use Rack::Rewrite do
 
 end
 
+use Rack::Deflater
+
 use Rack::TryStatic,
     :root => "_site",
     :urls => %w[/],
@@ -82,8 +84,6 @@ use Rack::TryStatic,
       [:all, {'Cache-Control' => 'public, max-age=31536000'}],
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]
     ]
-
-use Rack::Deflater
 
 run lambda { |env|
   four_oh_four_page = File.expand_path("../_site/404.html", __FILE__)

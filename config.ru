@@ -1,12 +1,7 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
-require 'heroku/deflator'
 
-
-use HerokuDeflater::ServeZippedAssets
 use Rack::Deflater
-use HerokuDeflater::SkipBinary
-# use Rack::Deflater
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },
@@ -77,8 +72,6 @@ use Rack::Rewrite do
 
 
 end
-
-use Rack::Deflater
 
 use Rack::TryStatic,
     :root => "_site",

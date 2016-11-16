@@ -1,5 +1,6 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
+require 'heroku/deflator'
 
 
 use HerokuDeflater::ServeZippedAssets

@@ -138,6 +138,8 @@ h1 {
 
 .heading h1, .timestamp {
   margin: 0;
+  font-family: 'FFTisaRegular';
+  font-size: 16px;
 }
 
 h1, h2, h3 {

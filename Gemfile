@@ -10,4 +10,4 @@ gem 'thin'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'jekyll-sitemap'
-gem 'heroku-deflater', :group => :production
+gem 'rack-zippy'

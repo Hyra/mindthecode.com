@@ -411,7 +411,7 @@ aside ul li a:hover {
 }
 
 hr.sidebar {
-  background: transparent url(https://git-scm.com/images/sidebar-divider@2x.png) center center repeat;
+  background: transparent url(/images/divider@2x.png) center center repeat;
   background-size: 218px 12px;
   border: 0;
   height: 12px;

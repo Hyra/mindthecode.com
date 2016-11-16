@@ -1,5 +1,6 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
+require 'rack/zippy'
 
 # use Rack::Deflater
 use Rack::Zippy

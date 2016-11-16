@@ -2,6 +2,7 @@ require 'rack/contrib/try_static'
 require 'rack/rewrite'
 
 # use Rack::Deflater
+use Rack::Zippy
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },

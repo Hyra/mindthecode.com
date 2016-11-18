@@ -85,7 +85,8 @@ body {
   padding: 1ch;
   margin: 0;
   color: #32323c;
-  background:url("/images/geometry.png")
+  /*background:url("/images/geometry.png")*/
+  background:url("/images/bg-pixels.png")
 }
 
 main, footer, body > header {

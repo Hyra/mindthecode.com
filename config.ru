@@ -83,6 +83,8 @@ use Rack::TryStatic,
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]
     ]
 
+use Rack::Deflater
+
 run lambda { |env|
   four_oh_four_page = File.expand_path("../_site/404.html", __FILE__)
   [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]

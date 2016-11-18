@@ -410,14 +410,17 @@ aside ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 1.8em;
 }
-
+aside ul.postlist {
+  list-style: disc;
+  margin-left: 15px;
+}
 aside ul li a {
   font: 13px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
   color: #424242;
   line-height: 1.5em;
 }
-
 aside ul li a:hover {
   color: indianred;
 }

@@ -373,6 +373,7 @@ main {
   background-color: rgba(255, 255, 255, 0.65);
   border: solid 1px #e2e0d8;
   /*border: dashed 2px #e2e0d8;*/
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;

@@ -1,7 +1,7 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
 
-# use Rack::Deflater
+use Rack::Deflater
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },
@@ -82,8 +82,6 @@ use Rack::TryStatic,
       [:all, {'Cache-Control' => 'public, max-age=31536000'}],
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]
     ]
-
-use Rack::Deflater
 
 run lambda { |env|
   four_oh_four_page = File.expand_path("../_site/404.html", __FILE__)

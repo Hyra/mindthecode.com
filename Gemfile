@@ -11,4 +11,4 @@ gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'jekyll-sitemap'
 
-gem 'heroku_rails_deflate'
+gem 'heroku-deflater', :group => :production

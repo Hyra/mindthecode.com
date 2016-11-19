@@ -2,7 +2,6 @@ require 'rack/contrib/try_static'
 require 'rack/rewrite'
 
 use Rack::Deflater
-use Rack::KeepAlive
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },
@@ -79,6 +78,7 @@ use Rack::TryStatic,
     :gzip => true,
     :header_rules => [
       [:all, {'Cache-Control' => 'public, max-age=31536000'}],
+      [:all, {'Connection' => 'keep-alive'}],
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]
     ]
 

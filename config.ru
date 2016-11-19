@@ -1,11 +1,7 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
-require 'rack-zippy'
-require 'zippy_static_cache'
 
-# use Rack::Deflater
-use ZippyStaticCache, :urls => ['/images', '/assets', '/fonts']
-use Rack::Zippy::AssetServer, '_site'
+use Rack::Deflater
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },

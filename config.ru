@@ -1,7 +1,7 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
 
-use Rack::Deflater
+# use Rack::Deflater
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },
@@ -68,8 +68,6 @@ use Rack::Rewrite do
   r301 '/2011/11/', '/'
   r301 '/2011/10/', '/'
   r301 '/author/hyra/page/2/', '/'
-
-
 
 end
 

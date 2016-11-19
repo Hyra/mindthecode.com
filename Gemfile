@@ -11,3 +11,4 @@ gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'jekyll-sitemap'
 gem "rack-zippy"
+gem 'zippy_static_cache'

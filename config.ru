@@ -1,7 +1,11 @@
 require 'rack/contrib/try_static'
 require 'rack/rewrite'
+require 'rack-zippy'
+require 'zippy_static_cache'
 
 # use Rack::Deflater
+use ZippyStaticCache, :urls => ['/images', '/assets', '/fonts']
+use Rack::Zippy::AssetServer, '_site'
 
 use Rack::Rewrite do
   r301 /.*/,  Proc.new {|path, rack_env| "http://#{rack_env['SERVER_NAME'].gsub(/www\./i, '') }#{path}" },
@@ -75,10 +79,9 @@ use Rack::TryStatic,
     :root => "_site",
     :urls => %w[/],
     :try => ['.html', 'index.html', '/index.html'],
-    :gzip => true,
+    # :gzip => true,
     :header_rules => [
       [:all, {'Cache-Control' => 'public, max-age=31536000'}],
-      [:all, {'Connection' => 'keep-alive'}],
       [:fonts, {'Access-Control-Allow-Origin' => '*'}]
     ]
 

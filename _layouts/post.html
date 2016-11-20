@@ -81,6 +81,11 @@
         <hr>
       </header>
 
+      {% if page.teaser %}
+      <br />
+      <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
+      {% endif %}
+
       <div itemprop="articleBody">
         {{ content }}
       </div>

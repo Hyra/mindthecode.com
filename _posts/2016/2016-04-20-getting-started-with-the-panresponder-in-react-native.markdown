@@ -11,7 +11,6 @@ tags:
   - react
   - react-native
   - javascript
-teaser: submodule.gif
 ---
 
 Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.

@@ -24,21 +24,20 @@ title: Home
 </div>
 
 <div class="inner">
-  <div>
 
   {% include aside.html %}
 
   <main class='post-overview'>
-  {% for post in site.posts %}
-    <article>
-      <header class="heading">
-        <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a> </h1>
-        <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
-        {{ post.description }}
-      </header>
-    </article>
-  {% endfor %}
-</main>
+    {% for post in site.posts %}
+      <article>
+        <header class="heading">
+          <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a> </h1>
+          <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+          {{ post.description }}
+        </header>
+      </article>
+    {% endfor %}
+  </main>
 
 </div>
 

@@ -60,79 +60,79 @@
             <a href="/">Writings</a> /
           </li>
           <li>
-            <a href="/about/">About me</a></li>
-          </ul>
-        </nav>
-      </header>
+            <a href="/about/">About me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    </div>
+  </div>
 
   <div class="inner">
-  <div>
 
-  {% include aside.html %}
-  
-  <main id='content'>
-    <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
-      <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
-      <header class="heading">
-        <h1 itemprop="headline">{{ page.title }}</h1>
-        <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
-        <hr>
-      </header>
+    {% include aside.html %}
+    
+    <main id='content'>
+      <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
+        <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
+        <header class="heading">
+          <h1 itemprop="headline">{{ page.title }}</h1>
+          <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
+          <hr>
+        </header>
 
-      {% if page.teaser %}
+        {% if page.teaser %}
+        <br />
+        <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
+        {% endif %}
+
+        <div itemprop="articleBody">
+          {{ content }}
+        </div>
+
+        Written by
+        <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            <a href="https://plus.google.com/102230925443628784177" itemprop="url" rel="author">Stef van den Ham</a>
+          </span>
+        </span>
+        on
+        <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e %Y" }}</time>
+
+      </article>
+
       <br />
-      <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
-      {% endif %}
 
-      <div itemprop="articleBody">
-        {{ content }}
+      Tags:
+      {% for tag in page.tags %}
+        <a href="/tags#{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+
+      <br /><br />
+
+      <a class="twitter-follow-button"
+          href="https://twitter.com/stefvdham"
+          data-size="large"
+          data-show-count="false">
+        Follow @stefvdham</a>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ page.title | replace: " ", "%20" }}" data-size="large">Tweet</a>
+
+      <hr>
+
+      <div class="prevnext">
+        {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+        {% if page.next.url %}
+          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
       </div>
 
-      Written by
-      <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">
-          <a href="https://plus.google.com/102230925443628784177" itemprop="url" rel="author">Stef van den Ham</a>
-        </span>
-      </span>
-      on
-      <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e %Y" }}</time>
+      <hr>
 
-    </article>
+      {% include comments.html %}
 
-    <br />
-
-    Tags:
-    {% for tag in page.tags %}
-      <a href="/tags#{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-
-    <br /><br />
-
-    <a class="twitter-follow-button"
-        href="https://twitter.com/stefvdham"
-        data-size="large"
-        data-show-count="false">
-      Follow @stefvdham</a>
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ page.title | replace: " ", "%20" }}" data-size="large">Tweet</a>
-
-    <hr>
-
-    <div class="prevnext">
-      {% if page.previous.url %}
-        <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </div>
-
-    <hr>
-
-    {% include comments.html %}
-
-  </main>
+    </main>
   </div>
 
   <footer>

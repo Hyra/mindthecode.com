@@ -73,6 +73,11 @@
     {% include aside.html %}
     
     <main id='content'>
+
+        {% if page.teaser %}
+        <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
+        {% endif %}
+
       <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
         <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
         <header class="heading">
@@ -80,12 +85,6 @@
           <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
           <hr>
         </header>
-
-        {% if page.teaser %}
-        <br />
-        <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
-        {% endif %}
-
         <div itemprop="articleBody">
           {{ content }}
         </div>

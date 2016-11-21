@@ -7,6 +7,7 @@ description: >-
 tags:
   - react
 layout: post
+teaser: modules.gif
 ---
 
 Recently React [Storybook][1] came out. It's a tool to isolate your React Components to develop and design them outside of your app. In this post I'll be going over how to get it set up.

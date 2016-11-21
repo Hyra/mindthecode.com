@@ -491,7 +491,10 @@ article code[class*=language-]{
   font-size:13px;
   line-height:1.7;
 }
-
+code.highlighter-rouge {
+  background: rgba(255, 255, 0, 0.29);
+  padding: 2px 3px;
+}
 
 .floating {
   -webkit-animation-name: Floatingx;

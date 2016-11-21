@@ -16,7 +16,7 @@
   url("/fonts/fftisa-regular/onlinewebfonts.svg#!1!1") format("svg"); /* iOS 4.1- */
 }
 
-/*
+
 @font-face {
   font-family: 'quatro-extra-light';
   src: url("/fonts/Quatro_ExtraLight_v3Web.eot");
@@ -71,7 +71,7 @@
   src: url("/fonts/Quatro_Ultra_v3Web.woff") format("woff"), url("/fonts/Quatro_Ultra_v3Web.eot") format("otf");
   font-weight: normal;
   font-style: normal; }
-*/
+
 
 @font-face {
   font-family: 'quatro-book';
@@ -380,6 +380,7 @@ main {
   border-radius: 3px;
   padding: 22px;
   margin-bottom: 35px;
+  margin-top: -100px;
 }
 
 .inner {
@@ -396,6 +397,7 @@ aside {
 aside.sidebar {
     font-size: 13px !important;
     line-height: 16.5px;
+    /*text-align: right;*/
 }
 main {
     width: 702px;
@@ -405,6 +407,7 @@ main {
 aside h2 {
   margin: 0 0 10px 0;
   font-size: 1.5em;
+  /*font: 13px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;*/
 }
 aside ul {
   list-style: none;
@@ -412,14 +415,11 @@ aside ul {
   padding: 0;
   line-height: 1.8em;
 }
-aside ul.postlist {
-  list-style: disc;
-  margin-left: 15px;
-}
 aside ul li a {
   font: 13px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
   color: #424242;
   line-height: 1.5em;
+  text-transform: uppercase;
 }
 aside ul li a:hover {
   color: indianred;
@@ -449,6 +449,8 @@ hr.sidebar {
     background: none;
     border: 0;
     padding: 0;
+    margin-top: 0px;
+    box-shadow: none;
   }
 }
 

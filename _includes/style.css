@@ -164,10 +164,6 @@ header h1 {
 
 a {
   color: indianred;
-  text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
-  background-position: 0 96%;
   text-decoration: none;
   transition: all 0.4s ease;
 }
@@ -178,8 +174,6 @@ header a {
 
 a:hover {
   color: black;
-  text-shadow: 0;
-  text-shadow: none;
 }
 
 a.noundy {
@@ -420,9 +414,11 @@ aside ul li a {
   color: #424242;
   line-height: 1.5em;
   text-transform: uppercase;
+  padding: 3px;
 }
 aside ul li a:hover {
-  color: indianred;
+  color: white;
+  background: #333;
 }
 
 hr.sidebar {

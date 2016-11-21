@@ -337,13 +337,13 @@ video {
 }
 
 #carbonads {
-  width: 195px;
+  /*width: 195px;*/
   font-size: 10px;
   line-height: 20px;
-  padding: 20px 10px 10px 10px;
-  border-radius: 3px;
-  border: 1px dashed #DDD;
-  background: rgba(255,255,255,0.5);
+  padding: 20px 0px 10px 0px;
+  /*border-radius: 3px;*/
+  /*border: 1px dashed #DDD;*/
+  /*background: rgba(255,255,255,0.5);*/
   text-align: center;;
 }
 #carbonads img {

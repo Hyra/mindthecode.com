@@ -42,7 +42,7 @@ layout: single
   {% assign posts = tag | last %}
 
 <a name='{{ t | downcase | replace:" ","-"  }}'></a>
-<h3>{{ t | downcase }}</h3>
+<h2>{{ t | downcase }}</h2>
 <ul>
 {% for post in posts %}
   {% if post.tags contains t %}

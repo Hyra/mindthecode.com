@@ -151,7 +151,7 @@ h1 {
 }
 .heading h1 {
   letter-spacing: .05em;
-  margin: 0 0 1.04167vw;
+  margin: 0 0 0.321vw;
   font: 2.91667vw/1.1em 'quatro-extra-light',sans-serif;
 }
 .heading h2 {
@@ -173,7 +173,7 @@ h1 {
   font-family: 'quatro-extra-light' ,sans-serif;
 }
 .heading .avatar {
-      overflow: hidden;
+    overflow: hidden;
     display: inline-block;
     width: 4.16667vw;
     height: 4.16667vw;
@@ -185,6 +185,7 @@ h1 {
 }
 .post-overview h2 {
   margin: 0.5vw 0;
+  font: 1.04167vw/1.2em 'quatro-light',sans-serif;
 }
 h1, h2, h3 {
   margin-bottom: -10px;
@@ -203,7 +204,7 @@ header h1 {
   line-height: 1.5em;
 }
 
-.post-overview h1 {
+.post-overview h1, h1 {
   font: 1.234vw/1.1em 'quatro-bold',sans-serif;
   text-transform: uppercase;
   margin: 0 0 5px;

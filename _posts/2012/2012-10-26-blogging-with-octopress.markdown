@@ -12,7 +12,7 @@ As some of you may know, even though I don't blog all that often, I do mess abou
 
 For some reason none of them really seemed what I wanted. Croogo is cool enough, but actually adding posts is a hassle, and theming the thing was more of a puzle. Wordpress does the blogging thing really well, but it always feels ugly, and I had to rely on various plugins to make my post-flow work. I like writing in [Markdown](http://daringfireball.net/projects/markdown/). There's a couple of Markdown plugins for Wordpress, but I would still have to copy paste stuff in webinterface, and had to hack it to allow for code-snippet sharing.
 
-# Enter Octopress
+## Enter Octopress
 
 I somehow stumbled upon [Octopress](http://octopress.org) earlier this week, and decided to give it a go. Short conclusion: _It's awesome_.
 

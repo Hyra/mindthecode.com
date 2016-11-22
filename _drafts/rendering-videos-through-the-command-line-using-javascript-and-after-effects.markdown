@@ -19,6 +19,6 @@ A couple of years ago I created an automated workflow where users could create a
 
 Recently, I was asked to do something similar, so I dusted off the old project and am tried to improve on it. I hope sharing some of my findings might be of use to someone.
 
-# Original approach
+## Original approach
 
 For the original project I

@@ -18,7 +18,7 @@ The Boilerplate project aims to provide a foundation upon which you can start bu
 
 I will add to it as I stumble upon free time, but feel free to open a Pull Request or submit an issue for a suggestion
 
-# Some of the features
+## Some of the features
 
 - Small footprint
 - Automatic Tab Handling
@@ -26,7 +26,7 @@ I will add to it as I stumble upon free time, but feel free to open a Pull Reque
 - Automatic Cover Loading for playlists (mosaics)
 - Online/offline status tracking and content switching
 
-# How to set it up (on your Mac)
+## How to set it up (on your Mac)
 
 1. Sign up for a developer account on Spotify
 2. Open Terminal, and if it doesn't exist yet `mkdir ~/Spotify`
@@ -35,7 +35,7 @@ I will add to it as I stumble upon free time, but feel free to open a Pull Reque
 5. Download the latest version of Spotify
 6. Open Spotify and type `spotify:app:boilerplate` in the search bar
 
-# What's in the Boilerplate
+## What's in the Boilerplate
 
 The aim is to keep the Boilerplate as clean as possible, while giving all the tools to quickly develop your app.
 

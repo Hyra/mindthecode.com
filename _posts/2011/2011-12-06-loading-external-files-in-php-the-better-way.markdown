@@ -14,7 +14,7 @@ Sometimes you run into "weird behavior" when using `file_get_contents` in your c
 
 Sometimes even, it is disabled on your host for security reasons. So i'm making it a habbit to run everything through cUrl instead. Not just to get the "actual results", but also since it's a lot faster.
 
-# Faster you say?
+## Faster you say?
 
 Indeed! Take this benchmark for instance, `file_get_contents` vs `curl` on google.com:
 
@@ -53,7 +53,7 @@ Indeed! Take this benchmark for instance, `file_get_contents` vs `curl` on googl
 
 Sure, it might not seem that big a difference. But imagine loading an external file being a big part of your (heavily) used application.
 
-# Got an example ?
+## Got an example ?
 
 Sure, no worries. Rather than calling:
 
@@ -86,6 +86,6 @@ $data = loadFile('http://whatever.com/sheep.jpg');
 
 And you're done.
 
-# Thoughts?
+## Thoughts?
 
 Anyone else experiencing different results between cUrl and the builtin function? I've been googling what could cause this, but so far nothing conclusive.

@@ -14,15 +14,15 @@ I was trying to get into Unit Testing a few months ago. It was a steep learning 
 
 I intend to keep that promise and have been trying to get into Unit Testing for real this time. The first thing was also the most annoying so far: installing the _(&#(_&. After completely messing up my local PEAR environment I gave up on the "official way" and wrote a `PHPUnit Installer Shell` to install PHPUnit along with the Cake site.
 
-# PHPUnit locally?
+## PHPUnit locally?
 
 Yes! I'm a fan of self-contained systems. Sure, installing PHPUnit through PEAR _should_ provide a systemwide tool, but when you're working on multiple workstations and deploy to different hosting setups its just nice to know you have everything within reach. Besides, my MAMP setup on OSX Lion didn't play nice with PEAR **at all** so enough excuses to write an installer shell.
 
-# What it does
+## What it does
 
 It's quite simple really, it downloads all the files and folders that PHPUnit needs, makes them into a nice package and moves them into the `app` folder, ready for you to play with!
 
-# How do I get it
+## How do I get it
 
 I just pushed it to Github: [Get the installer Shell here](https://github.com/Hyra/PHPUnit-Cake2)
 

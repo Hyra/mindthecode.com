@@ -15,7 +15,7 @@ I have been working on a pure HTML front-end for one of the pet projects I'm doi
 
 Here is how I got it set up now ..
 
-# Installing watchr
+## Installing watchr
 
 First of all we need to get the Watchr gem installed. Assuming you have a Mac and got XCode (or at least the tools) installed, this is pretty simple:
 
@@ -23,7 +23,7 @@ First of all we need to get the Watchr gem installed. Assuming you have a Mac an
 $ gem install watchr
 {% endprism %}
 
-# Installing coffeescript
+## Installing coffeescript
 
 Another easy one ..
 
@@ -33,7 +33,7 @@ $ npm install -g coffee-script
 
 Don't forget the `-g` flag as you (probably) want it to be installed globally.
 
-# Installing the LESS compiler
+## Installing the LESS compiler
 
 You got the hang of it now, it's as easy as ..
 
@@ -41,7 +41,7 @@ You got the hang of it now, it's as easy as ..
 $ npm install -g less
 {% endprism %}
 
-# The fun part!
+## The fun part!
 
 Now we're ready for the fun bit, setting up watchr to do some automagic stuff.
 

@@ -17,7 +17,7 @@ Luckily, the solution was simple ..
 
 The PHPUnit command line suite apparently outputs contents early, before the session gets initiated.
 
-# Solution 1
+## Solution 1
 
 Add `--stderr` to the command line:
 
@@ -27,7 +27,7 @@ $ cake testsuite app Controller/YourFancyController --stderr
 
 This will pass the tests again, as it doesn't output contents early to `STDOUT`. The only "problem" is you won't see the awesome green and red colors in the CLI output anymore.
 
-# Solution 2
+## Solution 2
 
 This is the one I use, as it brings the colors back.
 

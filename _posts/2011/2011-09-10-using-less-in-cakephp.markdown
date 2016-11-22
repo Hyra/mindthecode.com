@@ -16,7 +16,7 @@ I was a bit bored this morning with my previous Less component, so decided to re
 
 This little helper converts your .less files into .css without relying on Node.js
 
-# Installation
+## Installation
 
 ## Clone
 
@@ -40,7 +40,7 @@ Download as archive from github and extract to `app/plugins/less`
 
 Next, create a folder `less` in `app/webroot/` and apply `chmod 777` to it.
 
-# Usage
+## Usage
 
 In your `app_controller.php` add the helper:
 
@@ -52,7 +52,7 @@ Now every `.less` file from `webroot/less` will be converted to its `.css` equiv
 
 In your `default.ctp` layout you can just use `echo $this->Html->css('your_css_file');` as you always do
 
-# Features
+## Features
 
 - Conversion happens on every request while in development mode `(debug at 0)`
 

@@ -12,13 +12,13 @@ I recently started using GZip headers in my websites and the results are simply 
 
 Nowadays, files are big. People used to optimize graphics and CSS stylesheets. This day and age we just don't care anymore. At the same time bandwidth is getting more expensive and the mobile market is growing bigger. Not a good combination.
 
-# Enter GZip
+## Enter GZip
 
 Adding GZip to your applications couldn't be simpler, and using this compression to your output can reduce the amount of data being sent by around **70-80%** for your average stylesheets. That's what you call weight-loss.
 
 I recently built the backend of a mobile application, which relied on a JSON interface. Data being sent to the phone was around `250kb`. Optimizing the content, only returning the bare minimum the phone needed to work resulted in the file being `197kb`. So, I added the GZip compression and guess what. The resulting file was `14kb`. Awesome.
 
-# So how do I use it
+## So how do I use it
 
 Simple. At the top of your PHP file you add the following:
 
@@ -34,7 +34,7 @@ This will tell the server to first zip the contents, before sending it back to t
 
 The only caveat is that you must have `mod_gzip` installed as an Apache module, but most hosting providers install this by default. Just make sure yours does too.
 
-# As a CakePHP component
+## As a CakePHP component
 
 [Jose Gonzales][1] made a nice little plugin to use GZip in your Cake Applications. Find it at [Github][2] Basically, all you have to do is add the plugin to your `plugins` folder, and then add the following to your `app_controller.php`
 

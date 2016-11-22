@@ -26,7 +26,7 @@ Sure, it does the job, and you probably are ok with it looking dull as hell. But
 
 Indeed! If you could, why wouldn't you?
 
-# The ingredients
+## The ingredients
 
 So, let's get to it. Luckily this isn't very complex to get going on your machine. Let's start by installing [Pygments](https://github.com/tmm1/pygments.rb). This little Ruby wrapper library is used to make the realtime syntax highlighting possible: bash
 

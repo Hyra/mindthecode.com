@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with the PanResponder in React Native
+subtitle: Follow along as we tackle the madness that is the PanResponder.
 description: >-
   Inside React Native you can use the PanResponder to recognize multi-touch
   gestures as well as swipes and other touches that make native apps feel snappy
@@ -11,17 +12,18 @@ tags:
   - react
   - react-native
   - javascript
+teaser: modules.gif
 ---
 
 Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
 
-# What we will be making
+## What we will be making
 
 Obviously we'll be wanting to focus on the PanResponder itself so UI wise this will be pretty barebones. We'll have an image on screen we can drag. When we release it it will bounce back to its original position. As a bonus, while we press down on the image it will scale up.
 
 ![PanResponder Demo](/images/panresponder_demo.gif)
 
-# Setting the stage
+## Setting the stage
 
 I'll be assuming you're somewhat familiar with setting up a fresh React Native project. If not, the guys at Facebook have done an excellent job explaining the steps [right here](http://facebook.github.io/react-native/docs/getting-started.html#content).
 
@@ -66,7 +68,7 @@ When you run the app now you should see the image in the center of the screen, w
 
 ![Panresponder 01](/images/panresponder_01.png)
 
-# Adding the PanResponder
+## Adding the PanResponder
 
 Let's get to the more interesting part. Adding the PanResponder system.
 

@@ -7,18 +7,17 @@ description: >-
 tags:
   - react
 layout: post
-teaser: modules.gif
 ---
 
 Recently React [Storybook][1] came out. It's a tool to isolate your React Components to develop and design them outside of your app. In this post I'll be going over how to get it set up.
 
-# Why use it?
+## Why use it?
 
 What intrigued me about Storybook is the fact you can work on defining and designing your React components in an environment where you don't have to worry about the app itself. In fact, by having them isolated you can make sure they work correctly by themselves and don't rely on the rest of your application.
 
 As a nice side effect, you end up with some sort of "Styleguide" for your components so new members on the team can get familiar with the components without having to sift through the code.
 
-# Setting the scene
+## Setting the scene
 
 Make sure you run with NPM3 following this post as otherwise you might end up with storybook being unable to find its dependencies.
 
@@ -78,7 +77,7 @@ class Card extends React.Component {
 
 module.exports = Card; {% endprism %}
 
-# Configuring Storybook
+## Configuring Storybook
 
 Now that we got a base to work with, let's install Storybook and set it up.
 
@@ -114,7 +113,7 @@ Now, in `.storybook/config.js` we declared our stories can be loaded from `compo
 
 Alternatively you can specify the story files from the storybook config file, but this feels a bit more logical.
 
-# Running storybook
+## Running storybook
 
 We're almost there! In order to run Storybook we need to add a script to our `package.json`. Alter the file so it has the storybook script in there:
 
@@ -126,7 +125,7 @@ Now we can go to the command line and run
 
 and if all goes well we can navigate to our very own [Storybook](http://localhost:9001) and see our component!
 
-# Adding more stories
+## Adding more stories
 
 To illustrate how storybook works, let's add another story for our card:
 
@@ -161,7 +160,7 @@ return (
 
 Refresh your storybook, and you should see the second story show up and when you click it the button is slightly darker (unless you felt adventurous and made your own modifications of course!)
 
-# Conclusion
+## Conclusion
 
 I think [Storybook][1] is a perfect way to define the possible 'states' of your component and offers a nice isolated environment where a developer and designer can go over all the components to make sure they look the way they should, without having to interact with the actual app to force all different states to check them.
 

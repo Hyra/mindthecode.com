@@ -15,7 +15,7 @@ I love the terminal. Besides the fact it makes you look awesome while using it, 
 
 One thing is for sure, while developing webapps I have it running all the time and spend a lot of time running commands and monitoring output. So why not make it look as pretty as it is awesome? In this short walkthrough I'll explain how to customize the terminal to make it look like mine, but make sure you fiddle with the settings so it works best for you.
 
-# What we will be making
+## What we will be making
 
 Below is a screenshot of what my terminal looks like:
 
@@ -23,7 +23,7 @@ Below is a screenshot of what my terminal looks like:
 
 That's right, besides the beautiful colour-scheme it also visually tells you what git branch you're in and information about its status.
 
-# The ingredients
+## The ingredients
 
 So, let's get to it. We will be needing a few things to set up the basis, and will then start fiddling with settings.
 
@@ -91,11 +91,11 @@ ZSH_THEME_GIT_PROMPT_PREFIX="[git:" ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color" 
 
 The above will probably be pretty self-explanatory, we got a function to get the Git information from the current folder, so we can determin if it's dirty. A function to get the current directory. And a function to determin how much space to put between the first part of the prompt and the last part (the git part) so that it aligns nicely.
 
-# Extending even more
+## Extending even more
 
 You will probably find it doesn't **exactly** fit your exact needs, and I would encourage you to fiddle with it as long and as much until you are happy with it. You can find a lot of nice plugins in the `/.oh-my-zsh` directory to play around with, so please do.
 
-# Conslusion
+## Conslusion
 
 A good prompt comes down to personal preference. I hope you can make yours look the way you want and that the above was a good starting point to get there.
 

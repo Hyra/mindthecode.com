@@ -15,13 +15,13 @@ header: cake-mamp-osx.gif
 
 I'd like to use my first post to describe how I set up new projects in a simple way that works best for me. My setup is pretty straight-forward, really. I know some people who mess about with include-paths so they can run multiple _apps_ on one cake-install, but since I work for various clients and even more various projects I like my project folders to be self-contained.
 
-# Downloading CakePHP
+## Downloading CakePHP
 
 Easy enough. Grab a fresh copy of [CakePHP @ Github][1]
 
 Unzip the package and copy the extracted folder to your Sites directory (mine is in `/Users/Hyra/Sites`) and rename the folder to the project you want to work on. For example: www.fantasticnewsite.org
 
-# Setting up CakePHP
+## Setting up CakePHP
 
 I won't go through the all of the options as it's perfectly documented [here at the CakePHP Book][2] but what I usually do is the following:
 
@@ -34,7 +34,7 @@ I won't go through the all of the options as it's perfectly documented [here at 
 
 That's it really. Of course, there's a bunch of extra stuff you can set up, but that's all outlined [here][3] if you want to read up on it.
 
-# Setting up MAMP Pro
+## Setting up MAMP Pro
 
 Optional. If you have any form of *AMP setup already running, by all means, skip this step. I just happen to run MAMP Pro for ease and comfort.
 

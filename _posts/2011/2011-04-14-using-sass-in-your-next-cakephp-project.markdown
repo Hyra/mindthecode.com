@@ -15,11 +15,11 @@ I heard a lot about SASS, mostly a lot of people raving about how it was the bes
 
 I did like the idea of inheretance by indentation though. By indenting subsequent selectors it saves a lot of repetitive class assigning and declarations. But I hate adding extra layers onto things. It just feels clunky and wrong. But with Compass your .sass files get compiled to proper CSS files that reside in your /webroot/css folder. Cool! How? Read on.
 
-# SASS
+## SASS
 
 SASS is an abbrevation of [Syntactically Awesome Style Sheets][1]. While I don't really agree with the Syntactially Awesome bit, it IS awesome in that it relies on your syntax. It supports nested rules, selector inheretance, mixins, variables, and even more.
 
-# Installing Compass
+## Installing Compass
 
 [Compass][2] is basically an authoring framework which you install that manages your SASS files and offers plugins supporting CSS frameworks such as 960.gs, Susy and Blueprint. It runs from the command line and is just awesome.
 
@@ -31,7 +31,7 @@ $ gem install compass
 
 This will utilize Ruby to install Compass for you along with Sass.
 
-# Setting up Compass to work with CakePHP
+## Setting up Compass to work with CakePHP
 
 Now for the fun part, getting Compass to work with Cake! Open up the Terminal again and do:
 

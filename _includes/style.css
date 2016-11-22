@@ -206,6 +206,7 @@ header h1 {
 .post-overview h1 {
   font: 1.234vw/1.1em 'quatro-bold',sans-serif;
   text-transform: uppercase;
+  margin: 0 0 5px;
 }
 
 a {
@@ -532,7 +533,7 @@ article code[class*=language-]{
   line-height:1.7;
 }
 code.highlighter-rouge {
-  background: rgba(255, 255, 0, 0.29);
+  background: rgba(255, 255, 0, 0.15);
   padding: 2px 3px;
 }
 

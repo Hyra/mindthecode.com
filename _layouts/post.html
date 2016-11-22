@@ -74,17 +74,22 @@
     
     <main id='content'>
 
-        {% if page.teaser %}
-        <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
-        {% endif %}
-
       <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
         <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
         <header class="heading">
           <h1 itemprop="headline">{{ page.title }}</h1>
-          <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
-          <hr>
+          <h5 class="heading subtitle">{{ page.subtitle }}</h5>
+          <div cass="avatar-author desktop-only">
+            <figure class="avatar" style="background-image: url(/images/avatar.png)"></figure>
+            <h2 class="heading author"><span>By</span> Stef van den Ham<span class="light"> — {{ page.date | date: "%B %d %Y" }}</span></h2>
+          </div>
         </header>
+
+
+        {% if page.teaser %}
+        <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
+        {% endif %}
+
         <div itemprop="articleBody">
           {{ content }}
         </div>

@@ -494,6 +494,12 @@ hr.sidebar {
     margin-top: 0px;
     box-shadow: none;
   }
+  .heading h1 {
+    font: 6.91667vw/1.1em 'quatro-extra-light',sans-serif;
+  }
+  .heading h2 {
+    font: 2.4167vw/1.2em 'quatro-bold',sans-serif;
+  }
 }
 
 

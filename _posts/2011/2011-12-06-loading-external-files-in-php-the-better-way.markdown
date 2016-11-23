@@ -57,15 +57,11 @@ Sure, it might not seem that big a difference. But imagine loading an external f
 
 Sure, no worries. Rather than calling:
 
-{% prism bash %}
+{% prism javascript %}
 $data = file_get_contents('http://whatever.com/sheep.jpg');
 {% endprism %}
 
 you could do:
-
-{% prism javascript %}
-var t = 'typed code'
-{% endprism %}
 
 {% prism javascript %}
 function loadFile($url) {

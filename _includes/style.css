@@ -474,7 +474,7 @@ hr.sidebar {
   height: 12px;
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:950px) {
   aside {
     display: none;
   }
@@ -494,14 +494,28 @@ hr.sidebar {
     margin-top: 0px;
     box-shadow: none;
   }
+  .post-overview .heading h1 {
+    font: 2.234vw/1.1em 'quatro-bold',sans-serif;
+  }
   .heading h1 {
-    font: 6.91667vw/1.1em 'quatro-extra-light',sans-serif;
+    font: 3.91667vw/1.1em 'quatro-extra-light',sans-serif;
   }
   .heading h2 {
-    font: 2.4167vw/1.2em 'quatro-bold',sans-serif;
+    font: 1.4167vw/1.2em 'quatro-bold',sans-serif;
   }
 }
 
+@media screen and (max-width:550px) {
+  .post-overview .heading h1 {
+    font: 4.234vw/1.1em 'quatro-bold',sans-serif;
+  }
+  .heading h1 {
+    font: 5.91667vw/1.1em 'quatro-extra-light',sans-serif;
+  }
+  .heading h2 {
+    font: 3.4167vw/1.2em 'quatro-bold',sans-serif;
+  }
+}
 
 article pre[class*=language-]{
   background:rgba(26,19,31,.91)

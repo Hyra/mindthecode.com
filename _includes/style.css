@@ -152,11 +152,13 @@ h1 {
 .heading h1 {
   letter-spacing: .05em;
   margin: 0 0 0.321vw;
-  font: 2.91667vw/1.1em 'quatro-extra-light',sans-serif;
+  /*font: 2.91667vw/1.1em 'quatro-extra-light',sans-serif;*/
+  font: 37.3334px/1.1em 'quatro-extra-light',sans-serif;
 }
 .heading h2 {
   margin: 2.77778vw 0;
   font: 1.04167vw/1.2em 'quatro-bold',sans-serif;
+  font: 14px/1.2em 'quatro-bold',sans-serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   display: inline;
@@ -166,7 +168,8 @@ h1 {
 }
 .heading h5 {
   margin: 0 0 1.38889vw;
-  font: 2.08333vw/1.2em 'quatro-extra-light',sans-serif;
+  /*font: 2.08333vw/1.2em 'quatro-extra-light',sans-serif;*/
+  font: 26.6667px/1.2em 'quatro-extra-light',sans-serif;
   letter-spacing: .05em;
 }
 .heading span.light {
@@ -186,6 +189,7 @@ h1 {
 .post-overview h2 {
   margin: 0.5vw 0;
   font: 1.04167vw/1.2em 'quatro-light',sans-serif;
+  font: 14px/1.2em 'quatro-light',sans-serif;
 }
 h1, h2, h3 {
   margin-bottom: -10px;
@@ -195,7 +199,8 @@ h1, h2, h3 {
 
 h2 {
   /*margin: 2.77778vw 0;*/
-  font: 1.04167vw/1.2em 'quatro-bold',sans-serif;
+  /*font: 1.04167vw/1.2em 'quatro-bold',sans-serif;*/
+  font: 13.3334px/1.2em 'quatro-bold',sans-serif;
   text-transform: uppercase;
   letter-spacing: .05em;
 }
@@ -205,7 +210,8 @@ header h1 {
 }
 
 .post-overview h1, h1 {
-  font: 1.234vw/1.1em 'quatro-bold',sans-serif;
+  /*font: 1.234vw/1.1em 'quatro-bold',sans-serif;*/
+  font: 15.5556px/1.1em 'quatro-bold',sans-serif;
   text-transform: uppercase;
   margin: 0 0 5px;
 }
@@ -499,25 +505,25 @@ hr.sidebar {
     box-shadow: none;
   }
   .post-overview .heading h1 {
-    font: 2.234vw/1.1em 'quatro-bold',sans-serif;
+    /*font: 2.234vw/1.1em 'quatro-bold',sans-serif;*/
   }
   .heading h1 {
-    font: 3.91667vw/1.1em 'quatro-extra-light',sans-serif;
+    /*font: 3.91667vw/1.1em 'quatro-extra-light',sans-serif;*/
   }
   .heading h2 {
-    font: 1.4167vw/1.2em 'quatro-bold',sans-serif;
+    /*font: 1.4167vw/1.2em 'quatro-bold',sans-serif;*/
   }
 }
 
 @media screen and (max-width:550px) {
   .post-overview .heading h1 {
-    font: 4.234vw/1.1em 'quatro-bold',sans-serif;
+    /*font: 4.234vw/1.1em 'quatro-bold',sans-serif;*/
   }
   .heading h1 {
-    font: 5.91667vw/1.1em 'quatro-extra-light',sans-serif;
+    /*font: 5.91667vw/1.1em 'quatro-extra-light',sans-serif;*/
   }
   .heading h2 {
-    font: 3.4167vw/1.2em 'quatro-bold',sans-serif;
+    /*font: 3.4167vw/1.2em 'quatro-bold',sans-serif;*/
   }
 }
 

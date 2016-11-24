@@ -316,6 +316,9 @@ footer a:hover {
   color: #fff;
   background: #424242;
 }
+footer.noundy a:hover {
+  background: transparent;
+}
 
 footer {
   text-align: center;

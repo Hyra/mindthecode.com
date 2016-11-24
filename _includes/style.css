@@ -113,9 +113,9 @@ header {
 }
 
 header nav {
-  background: white;
+  /*background: white;*/
   width: 100%;
-  height: 50px;
+  height: 40px;
   display: block;
   position: relative;
   margin: 0 auto;
@@ -526,6 +526,13 @@ hr.sidebar {
 }
 
 @media screen and (max-width:550px) {
+  footer {
+    float: none;
+    width: auto;
+  }
+  .teaser {
+    display: none;
+  }
   .post-overview .heading h1 {
     /*font: 4.234vw/1.1em 'quatro-bold',sans-serif;*/
   }

@@ -1,5 +1,6 @@
 ---
 title: Installing PHPUnit manually for CakePHP 2.0
+subtitle: It's just nice to know you have everything within reach
 description: How to install PHPUnit manually for CakePHP 2.0
 tags:
   - phpunit
@@ -7,16 +8,18 @@ tags:
   - cakephp
 publishDate: 2011-11-11T00:00:00.000Z
 layout: post
-header: phpunit-manually.gif
+<!-- header: phpunit-manually.gif -->
 ---
 
 I was trying to get into Unit Testing a few months ago. It was a steep learning curve and eventually I gave myself a non-excuse and decided to wait for Cake 2.0 as that would have PHPUnit and it "wouldn't make sense to learn SimpleTest" at that time.
+
+<!-- <div class="teaser" style='background: transparent url(/images/headers/phpunit-manually.gif) no-repeat center center;'></div> -->
 
 I intend to keep that promise and have been trying to get into Unit Testing for real this time. The first thing was also the most annoying so far: installing the _(&#(_&. After completely messing up my local PEAR environment I gave up on the "official way" and wrote a `PHPUnit Installer Shell` to install PHPUnit along with the Cake site.
 
 ## PHPUnit locally?
 
-Yes! I'm a fan of self-contained systems. Sure, installing PHPUnit through PEAR _should_ provide a systemwide tool, but when you're working on multiple workstations and deploy to different hosting setups its just nice to know you have everything within reach. Besides, my MAMP setup on OSX Lion didn't play nice with PEAR **at all** so enough excuses to write an installer shell.
+Yes! I'm a fan of self-contained systems. Sure, installing PHPUnit through PEAR _should_ provide a systemwide tool, but when you're working on multiple workstations and deploy to different hosting setups it's just nice to know you have everything within reach. Besides, my MAMP setup on OSX Lion didn't play nice with PEAR **at all** so enough excuses to write an installer shell.
 
 ## What it does
 

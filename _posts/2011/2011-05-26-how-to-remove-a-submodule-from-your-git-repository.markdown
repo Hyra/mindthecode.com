@@ -1,14 +1,15 @@
 ---
 title: How to remove a Submodule from your Git repository
+subtitle: Submodules are awesome. Adding them is easy enough. But how about getting rid of them again?
 description: In this short post I will show you how to get rid of a Git submodule
 tags:
   - git
 publishDate: 2011-05-26T00:00:00.000Z
 layout: post
-header: submodule.gif
+<!-- teaser: submodule.gif -->
 ---
 
-Submodules are awesome. Adding them is easy enough. But how about getting rid of them again? In this short post I'll share how to do just that.
+In this short post I'll share how to do just that.
 
 We all know having submodules in Git is very handy. You don't have to check all of the code in, just the reference and, when needed, initialize them.
 

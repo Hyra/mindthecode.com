@@ -1,5 +1,6 @@
 ---
 title: Updated LESS component for CakePHP
+subtitle: A small update to my LESS component for CakePHP
 description: A small update to my LESS component for CakePHP
 tags:
   - less

@@ -1,14 +1,17 @@
 ---
 title: Use GZip with PHP
+subtitle: In this post I will show you how to add GZip to your PHP application
 description: In this post I will show you how to add GZip to your PHP application
 tags:
   - php
 publishDate: 2011-10-14T00:00:00.000Z
 layout: post
-header: gzip.gif
+<!-- header: gzip.gif -->
 ---
 
 I recently started using GZip headers in my websites and the results are simply amazing. Right up there with coffee, sneezing polar bears and green traffic lights.
+
+<!-- <div class="teaser" style='background: transparent url(/images/headers/gzip.gif) no-repeat center center;'></div> -->
 
 Nowadays, files are big. People used to optimize graphics and CSS stylesheets. This day and age we just don't care anymore. At the same time bandwidth is getting more expensive and the mobile market is growing bigger. Not a good combination.
 

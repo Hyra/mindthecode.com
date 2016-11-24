@@ -1,5 +1,6 @@
 ---
 title: Loading external files in PHP the better way
+subtitle: Loading external assets with curl is not only easy, it's also a lot faster than file_get_contents
 description: >-
   Loading external assets with curl is not only easy, it's also a lot faster
   than file_get_contents
@@ -7,10 +8,12 @@ tags:
   - php
 publishDate: 2011-12-06T00:00:00.000Z
 layout: post
-header: external.gif
+<!-- header: external.gif -->
 ---
 
 Sometimes you run into "weird behavior" when using `file_get_contents` in your code when retrieving external data. I noticed this for instance when accessing the Facebook Graph API the other day. When using file_get_contents the results were so much different than when using cUrl.
+
+<!-- <div class="teaser" style='background: transparent url(/images/headers/external.gif) no-repeat center center;'></div> -->
 
 Sometimes even, it is disabled on your host for security reasons. So i'm making it a habbit to run everything through cUrl instead. Not just to get the "actual results", but also since it's a lot faster.
 

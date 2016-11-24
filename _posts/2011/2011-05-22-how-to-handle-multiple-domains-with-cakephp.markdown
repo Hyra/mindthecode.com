@@ -8,7 +8,7 @@ tags:
   - php
 publishDate: 2011-05-22T00:00:00.000Z
 layout: post
-header: multiple-domains.gif
+<!-- teaser: multiple-domains.gif -->
 ---
 
 Lately, we've been working with multiple environments/servers for our websites to be able to have them approved by clients before going live. However, following set up can also work nicely when you develop your sites locally and don't want to keep changing the configuration every time you upload it.

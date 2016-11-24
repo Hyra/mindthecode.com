@@ -93,7 +93,7 @@ body {
   background:url("/images/bg-pixels.png")
 }
 
-main, footer, body > header {
+main, body > header {
   max-width: 64ch;
   margin: auto;
 }
@@ -113,14 +113,18 @@ header {
 }
 
 header nav {
-  position: absolute;
-  right: 0;
-  top: 0;
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
 }
 
 header nav ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  width: 200px;
   padding: 0;
 }
 
@@ -157,7 +161,7 @@ h1 {
 }
 .heading h2 {
   margin: 2.77778vw 0;
-  font: 1.04167vw/1.2em 'quatro-bold',sans-serif;
+  /*font: 1.04167vw/1.2em 'quatro-bold',sans-serif;*/
   font: 14px/1.2em 'quatro-bold',sans-serif;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -188,7 +192,7 @@ h1 {
 }
 .post-overview h2 {
   margin: 0.5vw 0;
-  font: 1.04167vw/1.2em 'quatro-light',sans-serif;
+  /*font: 1.04167vw/1.2em 'quatro-light',sans-serif;*/
   font: 14px/1.2em 'quatro-light',sans-serif;
 }
 h1, h2, h3 {
@@ -316,6 +320,9 @@ footer a:hover {
 footer {
   text-align: center;
   font-size: 11px;
+  width: 702px;
+  float: right;
+  margin-bottom: 80px;
 }
 
 footer #logo-footer {
@@ -519,8 +526,9 @@ hr.sidebar {
   .post-overview .heading h1 {
     /*font: 4.234vw/1.1em 'quatro-bold',sans-serif;*/
   }
-  .heading h1 {
+  #content .heading h1 {
     /*font: 5.91667vw/1.1em 'quatro-extra-light',sans-serif;*/
+    font: 27.3334px/1.1em 'quatro-extra-light',sans-serif;
   }
   .heading h2 {
     /*font: 3.4167vw/1.2em 'quatro-bold',sans-serif;*/

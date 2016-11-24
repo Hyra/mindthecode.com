@@ -83,7 +83,6 @@
           </div>
         </header>
 
-
         {% if page.teaser %}
         <div class="teaser" style='background: transparent url(/images/headers/{{ page.teaser }}) no-repeat center center;'></div>
         {% endif %}
@@ -137,15 +136,16 @@
       {% include comments.html %}
 
     </main>
-  </div>
 
-  <footer>
-    <a href="/" class="noundy"><img src="/images/mtc_inv.png" id="logo-footer" alt="Mindthecode" /></a>
-    <br />
-    &copy; Copyright 2011-2016
-    <br />
-    Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a>, <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a> or <a target="_blank" href="https://plus.google.com/+Mindthecode">Google+</a>
-  </footer>
+    <footer>
+      <a href="/" class="noundy"><img src="/images/mtc_inv.png" id="logo-footer" alt="Mindthecode" /></a>
+      <br />
+      &copy; Copyright 2011-2016
+      <br />
+      Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a>, <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a> or <a target="_blank" href="https://plus.google.com/+Mindthecode">Google+</a>
+    </footer>
+    
+  </div>
 
   <script>
     (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
@@ -176,7 +176,8 @@
 
   <script>
     var currentAnim = 'rubberBand';
-    var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello', 'hinge'];
+    // var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello', 'hinge'];
+    var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello'];
     var newAnim = anims[Math.floor(Math.random()*anims.length)];
     setInterval(function() {
       document.querySelector('#logo').classList.remove(currentAnim);
@@ -185,7 +186,7 @@
       }, 1000);
       newAnim = anims[Math.floor(Math.random()*anims.length)];
       currentAnim = newAnim;
-    }, 6000);
+    }, 10000);
   </script>
 
   <script src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js" type="text/javascript" charset="utf-8" async="async"></script>

@@ -1,5 +1,6 @@
 ---
 title: Writing Browserify modules for your Angular app
+subtitle: How to create little re-usable modules 
 description: >-
   Following up on my previous post I got a few questions on how to create
   modules for your app. Let me show you.
@@ -21,7 +22,7 @@ Now, what does this look like for our Browserify Angular app?
 
 ## A Controller module
 
-Let's assume we're using ui-router for the awesome stateprovider, and want to specify one of our own controllers through `require()`
+Let's assume we're using `ui-router` for the awesome stateprovider, and want to specify one of our own controllers through `require()`
 
 {% prism javascript %}
 var app = angular.module('myApp', ['uiRouter']);

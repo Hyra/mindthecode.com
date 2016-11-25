@@ -1,5 +1,6 @@
 ---
 title: How to use environment variables in your Angular application
+subtitle: Handling and managing variables in the front-end
 description: I will explain how to use environment variables in your Angular app
 tags:
   - angular

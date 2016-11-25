@@ -1,5 +1,6 @@
 ---
 title: A more colourful cat in your shell
+subtitle: Let me show you how you can get syntax highlighted output from cat in the terminal
 description: >-
   Let me show you how you can get syntax highlighted output from cat in the
   terminal

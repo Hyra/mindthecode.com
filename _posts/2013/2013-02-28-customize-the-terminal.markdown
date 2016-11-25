@@ -1,5 +1,6 @@
 ---
 title: Customize the terminal
+subtitle: Not only make it look cool but work better, too
 description: >-
   In this post I want to show you how you can customize the terminal to not only
   make it look cool but work better, too

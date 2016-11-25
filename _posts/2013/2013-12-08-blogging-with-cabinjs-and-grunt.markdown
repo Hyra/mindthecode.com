@@ -1,5 +1,6 @@
 ---
 title: Blogging with CabinJS and Grunt
+subtitle: My experience while rebuilding this blog with CabinJS and Grunt
 description: My experience while rebuilding this blog with CabinJS and Grunt
 tags:
   - cabinjs

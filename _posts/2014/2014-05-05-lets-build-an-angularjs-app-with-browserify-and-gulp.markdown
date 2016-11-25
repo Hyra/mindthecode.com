@@ -1,5 +1,6 @@
 ---
-title: 'Lets build: An AngularJS app with Browserify and Gulp'
+title: "Let's build: An AngularJS app with Browserify and Gulp"
+subtitle: Describing a generic workflow and setup
 description: >-
   Today I want to show a generic workflow and setup I have used a lot lately
   when working on building apps with Angular. It uses Gulp as a CI system and
@@ -10,7 +11,7 @@ tags:
   - gulp
 publishDate: 2014-05-05T00:00:00.000Z
 layout: post
-header: letsbuild.gif
+<!-- teaser: letsbuild.gif -->
 ---
 
 Today I want to show a generic workflow and setup I have used a lot lately when working on building apps with Angular. It uses Gulp as a CI system and Browserify to minimize code clutter and maximize awesomeness. So let's jump in.

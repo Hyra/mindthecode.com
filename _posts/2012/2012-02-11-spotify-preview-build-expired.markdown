@@ -1,5 +1,6 @@
 ---
 title: Spotify Preview Build expired
+subtitle: Great, so now what?
 description: The Spotify Preview build has expired
 tags:
   - spotify

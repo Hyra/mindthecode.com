@@ -1,5 +1,6 @@
 ---
 title: Recording a website with PhantomJS and FFMpeg
+subtitle: "\"I just needed to know if I could take it one step further\""
 description: >-
   When I realised you could easily generate screenshots from a site with
   PhantomJS I just needed to know if I could take it one step further, and

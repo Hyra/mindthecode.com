@@ -1,5 +1,6 @@
 ---
 title: 'HTTPIe, a command line HTTP client'
+subtitle: Curl on steroids with an easy interface and syntax highlighted output.
 description: Curl on steroids with an easy interface and syntax highlighted output.
 tags:
   - http

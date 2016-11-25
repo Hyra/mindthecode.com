@@ -1,5 +1,6 @@
 ---
 title: Getting used to Vim
+subtitle: "\"Trying not to cock things up too much by hitting the wrong commands\""
 description: >-
   Trying not to touch the arrow keys, not use the h-j-k-l too extensively
   either, work with A and I a lot, and generally trying not to cock things up

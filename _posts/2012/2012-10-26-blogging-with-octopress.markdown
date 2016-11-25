@@ -1,5 +1,6 @@
 ---
 title: Blogging with Octopress
+subtitle: My experiences while converting this blog to an Octopress one
 description: My experiences while converting this blog to an Octopress one
 tags:
   - octopress

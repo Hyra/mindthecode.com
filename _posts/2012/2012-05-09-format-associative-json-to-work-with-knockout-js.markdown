@@ -1,5 +1,6 @@
 ---
 title: Format associative JSON to work with Knockout.js
+subtitle: How to format an associative array in JSON with Knockout
 description: How to format an associative array in JSON with Knockout
 tags:
   - knockout.js

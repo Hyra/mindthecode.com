@@ -9,7 +9,7 @@ tags:
   - vim
 publishDate: 2013-02-09T00:00:00.000Z
 layout: post
-header: vim.gif
+<!-- teaser: http://media0.giphy.com/media/3oz8xtBx06mcZWoNJm/giphy.gif -->
 ---
 
 So there we go. Writing this post in vim. Macvim to be exact. Trying not to touch the arrow keys, not use the h-j-k-l too extensively either, work with A and I a lot, and generally trying not to cock things up too much by hitting the wrong commands.

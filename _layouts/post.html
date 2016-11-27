@@ -122,6 +122,23 @@
 
       <hr>
 
+      <h2>Related post</h2>
+      <ul>
+      {% for post in site.related_posts limit:5 %}
+        {% assign match = false %}
+        {% for tag in post.tags %}
+          {% if page.tags contains tag %}
+            {% assign match = true %}
+          {% endif %}
+        {% endfor %}
+        {% if match %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}                  
+        </ul>     
+      {% endfor %}
+
+      <hr>
+
       <div class="prevnext">
         {% if page.previous.url %}
           <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>

@@ -30,14 +30,16 @@ layout: single
 <h1>Tags</h1>
 
 <div class='tagcloud'>
-{% for tag in site.tags %}
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
-  <a href='#{{t | downcase | replace:" ","-" }}'>{{t | downcase | replace:" ","-" }} <span>({{ posts | size }})</span></a>
+  <a href='#{{t | downcase | replace:" ","-" }}'>{{t | downcase | replace:" ","-" }}&nbsp;<span>({{ posts | size }})</span></a>
 {% endfor %}
 </div>
 
-{% for tag in site.tags %}
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 

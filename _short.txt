@@ -14,3 +14,52 @@ Have comments on Twitter, rather than on site
 Have Code "bits" where something is pointed out or highlighted
 Have tutorials, step by step walkthroughs
 Have hacks .. such as ffmpeg post
+
+
+TODO:
+- Auto check html/pagespeed on event (git commit, push, dev service, watcher?)
+- Generate responsive images phantomjs
+
+
+Generate thumbnails -> walkthrough
+
+Generate unique codes with nodes
+
+
+What you can do with curl (downloading things, checking html output, etc.)
+
+
+Console.debug which does a log but extended with which vars you are logging ..
+
+
+
+ES6 things that are actually useful
+
+Cornerstone element
+
+time ago js lib
+
+grok but with publishing from repo by adding a remote ?
+
+https://www.scalescale.com/nginx-haproxy-varnish-comparison/#
+minutes left + scroll to top
+
+https://deploybot.com/blog tags
+
+http://nightwatchjs.org/
+
+threejs tutorial
+
+dotfiles
+
+https://thoughtbot.com/tools + tools
+
+a pixel game
+
+docker tutorial
+
+ffmpeg command 
+
+
+https://news.ycombinator.com/news
+

@@ -98,7 +98,7 @@ services:
 
 In the above statement we've mapped our local `htdocs` folder to the folder `app` in the container. Since we use [Bitnami/Apache](https://github.com/bitnami/bitnami-docker-apache) we know the container uses `/app` as the apache root folder, so by mapping our htdocs to this, our htdocs folder becomes the root.
 
-Stop the docker-compose (`Ctrl-C`) process and rerun `docker-compose up`. When everything is up again you can now visit `http://localhost/index.php` and we will see our page!
+Stop the docker-compose (`ctrl-c` on mac or unix) process and rerun `docker-compose up`. When everything is up again you can now visit `http://localhost/index.php` and we will see our page!
 
 But wait, it's just showing us the PHP as text without being interpreted.
 

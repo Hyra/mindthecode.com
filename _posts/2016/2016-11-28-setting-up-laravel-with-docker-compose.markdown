@@ -20,12 +20,11 @@ Undoubtedly you have heard of [Docker](https://www.docker.com/) and maybe you ev
 
 Basically, Docker allows you to split up your application in different blocks called `containers` which run the same regardless of where you run them. Every container has a job and does that job by itself. Think NPM for devops.
 
-<!-- Responsive Ad -->
+<!-- Rectangle Ad -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="5095101900"
-     data-ad-format="auto"></ins>
+     data-ad-slot="3199566305"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>

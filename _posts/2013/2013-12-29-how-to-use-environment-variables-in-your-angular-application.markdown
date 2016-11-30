@@ -17,6 +17,17 @@ For instance, you might have a seperate API you're talking to for your content, 
 
 In this post I'll show you how to set this up automagically using Grunt and ngConstant.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## UPDATE
 
 [Malte](http://werk85.de/) was so kind as to provide an updated configuration for the _ngconstant 0.5.0_ version. The example code in the post has been updated accordingly.

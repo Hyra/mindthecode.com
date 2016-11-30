@@ -19,6 +19,17 @@ tags:
 
 Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## What we will be making
 
 Obviously we'll be wanting to focus on the PanResponder itself so UI wise this will be pretty barebones. We'll have an image on screen we can drag. When we release it it will bounce back to its original position. As a bonus, while we press down on the image it will scale up.

@@ -12,7 +12,6 @@ layout: post
 <div class="teaser" style='background: transparent url(/images/headers/docker.gif) no-repeat center center;'></div>
 When you work on multiple projects and run these locally through, for example, Apache this means you have to maintain and tweak your local server environment all the time. Additionally, when you work on that same project with multiple people, chances are your co-workers have a slightly different setup. These slight changes in set-up can be harmless, but more times than not, cause for developer headache or unwanted code-alterations to make it work.
 
-
 ## Enter Docker
 Undoubtedly you have heard of [Docker](https://www.docker.com/) and maybe you even played around with it. If you haven't, Docker describes itself as:
 

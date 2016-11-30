@@ -16,6 +16,17 @@ Recently React [Storybook][1] came out. It's a tool to isolate your React Compon
 
 What intrigued me about Storybook is the fact you can work on defining and designing your React components in an environment where you don't have to worry about the app itself. In fact, by having them isolated you can make sure they work correctly by themselves and don't rely on the rest of your application.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 As a nice side effect, you end up with some sort of "Styleguide" for your components so new members on the team can get familiar with the components without having to sift through the code.
 
 ## Setting the scene

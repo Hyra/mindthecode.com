@@ -33,6 +33,17 @@ In case you've been hiding, [PhantomJS](http://phantomjs.org/) is a headless scr
 
 With these two tools installed we are ready to create a video.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## From the top
 
 Capturing a webpage as an image with PhantomJS is easy stuff. They have a example on how to do this [over here](https://github.com/ariya/phantomjs/blob/master/examples/technews.js), so let's strip it down to what we need and save it as `runner.js`

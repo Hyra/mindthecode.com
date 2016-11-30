@@ -24,17 +24,6 @@ tags:
 	- three
 {% endprism %}
 
-<!-- Rectangle Ad -->
-<center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 Now, Jekyll is clever and knows about your tags and stores them in `site.tags`. To display a list of them, use the following snippet:
 
 {% prism markup %}
@@ -57,6 +46,17 @@ Now, Jekyll is clever and knows about your tags and stores them in `site.tags`. 
 So first Jekyll gets all tags, and pipes them through the sort function. Next we iterate over them and link to a page passing the tag for optional use on the target page. Behind the tag we can use the **size** pipe to show how many posts are tagged with the current tag.
 
 Good stuff.
+
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 If you have any questions feel free to reach me at [@stefvdham](http://twitter.com/stefvdham) or in the comments below.
 

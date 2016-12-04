@@ -53,6 +53,17 @@ Take the following response from a simple `find` action:
 
 This is fine to work with in your typical View, but Knockout rather has a nested format, and doesn't like the leading `Project` nodes. You could write custom parsers in Knockout, but would quickly become a hell to maintain.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 Instead, I wrote a little function to reformat the response to get the result Knockout likes:
 
 {% prism php %}

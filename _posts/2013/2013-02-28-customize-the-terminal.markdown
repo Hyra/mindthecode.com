@@ -24,6 +24,17 @@ Below is a screenshot of what my terminal looks like:
 
 That's right, besides the beautiful colour-scheme it also visually tells you what git branch you're in and information about its status.
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## The ingredients
 
 So, let's get to it. We will be needing a few things to set up the basis, and will then start fiddling with settings.

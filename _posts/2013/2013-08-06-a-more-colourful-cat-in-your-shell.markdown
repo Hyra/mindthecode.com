@@ -35,6 +35,17 @@ So, let's get to it. Luckily this isn't very complex to get going on your machin
 gem install pygments
 {% endprism %}
 
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 Next up, the alias itself. Depending on your shell and environment open up your profile. If you aren't sure whether you've installed or configured something specifically on your system, chances are the file you are looking for (on OSX at least) is `~/.bashrc`.
 
 In there, add the following alias:

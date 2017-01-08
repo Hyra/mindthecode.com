@@ -15,7 +15,7 @@ tags:
 <!-- teaser: modules.gif -->
 ---
 
-<div class="teaser" style='background: transparent url(/images/headers/panrespond2.gif) no-repeat center center;'></div>
+<!-- <div class="teaser" style='background: transparent url(/images/headers/panrespond2.gif) no-repeat center center;'></div> -->
 
 Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
 

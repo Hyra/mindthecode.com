@@ -63,3 +63,10 @@ ffmpeg command
 
 https://news.ycombinator.com/news
 
+
+
+
+http://markdotto.com/2012/10/18/terminal-hotness/
+
+http://tybenz.github.io/post/visualizr
+

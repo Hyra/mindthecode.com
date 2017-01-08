@@ -9,18 +9,18 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="http://mindthecode.com/images/og_image.png">
   <meta property="og:site_name" content="Mindthecode">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:url" content="http://mindthecode.com{{ page.url }}">
-  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:title" content="Mindthecode.com">
+  <meta property="og:url" content="http://mindthecode.com">
+  <meta property="og:description" content="Writing about all things web.">
 
   <meta name="twitter:creator" content="@stefvdham">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image:" content="http://mindthecode.com/images/og_image.png">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:title" content="Mindthecode.com">
+  <meta name="twitter:description" content="Writing about all things web.">
 
-  <meta name="keywords" content="{{ page.tags }}">
-  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="html, javascript, code, hacking, tutorial, tutorials, web, css">
+  <meta name="description" content="Writing about all things web.">
 
   <link rel="author" href="https://plus.google.com/102230925443628784177?rel=author">
 
@@ -29,10 +29,9 @@
   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
   <!-- <script src="/js/jquery.readingTime.js"></script> -->
 
-  <link rel="canonical" href="http://mindthecode.com{{ page.url }}">
+  <link rel="canonical" href="http://mindthecode.com">
 
-  <title>{{ page.title }} - {{ site.title }}</title>
-
+  <title>{{ site.title }}</title>
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed Mindthecode" href="http://mindthecode.com/rss.xml" />
   
@@ -43,53 +42,39 @@
   </style>
 
 </head>
-<body>
-  
-  <div class="inner">
+<body class="single">
 
-    <header>
-      <p>
-        <a href="/" class="noundy">
-          <img id="logo" src="/logo.png" class="animated rubberBand floating_" alt="Mindthecode" />
-        </a>
-      </p>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Writings</a> /
-          </li>
-          <li>
-            <a href="/about/">About me</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <a href="/" class="logo">
+      <img src="/logo.png" class="animated floating" alt="Mindthecode" />
+    </a>
+    <nav>
+     <ul>
+       <li>
+         <a href="/">Blog</a> &middot;
+       </li>
+       <li>
+         <a href="/about">About</a> &middot;
+        </li>
+         <li>
+           <a href="/tags">Tags</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  </div>
+  <main>
+    {{ content }}
+  </main>
 
-  <div class="inner">
-
-    {% include aside.html %}
-    
-    <main id='content'>
-
-      <article>
-        {{ content }}
-      </article>
-
-    </main>
-
-  </div>
-
-  <div class='inner'>
   <footer>
-    <a href="/" class="noundy"><img src="/images/mtc_inv.png" id="logo-footer" alt="Mindthecode" /></a>
+    <a href="/" class="noundy"><img src="/images/mtc_inv_white.png" id="logo-footer" alt="Mindthecode" class="animated floating" /></a>
     <br />
-    &copy; Copyright 2011-2016
+    &copy; Copyright 2011-2017
     <br />
     Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a>, <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a> or <a target="_blank" href="https://plus.google.com/+Mindthecode">Google+</a>
   </footer>
-</div>
+
   <script>
     (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -115,7 +100,7 @@
     }
   </script>
 
-  <script src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js" type="text/javascript" charset="utf-8" async="async"></script>
+  <!-- <script src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js" type="text/javascript" charset="utf-8" async="async"></script> -->
 
 </body>
 </html>

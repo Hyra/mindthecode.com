@@ -2,21 +2,6 @@
 title: Tags
 layout: single
 ---
-<style type='text/css'>
-.tagcloud {
-  margin-top: 20px;
-}
-.tagcloud a {
-  background: rgba(255, 255, 0, 0.15);
-  color: black;
-  text-shadow: none;
-  padding: 1px 2px;
-}
-.tagcloud span {
-  font-size: 12px;
-}
-</style>
-
 {% comment %}
 <ul class="tags">
 {% for tag in site.tags %}
@@ -39,6 +24,7 @@ layout: single
 </div>
 
 {% assign sorted_tags = site.tags | sort %}
+
 {% for tag in sorted_tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
@@ -50,9 +36,10 @@ layout: single
   {% if post.tags contains t %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
-    <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+    - <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
   </li>
   {% endif %}
 {% endfor %}
 </ul>
+
 {% endfor %}

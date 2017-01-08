@@ -44,128 +44,128 @@
   <!-- <link href="/prism.css" rel="stylesheet" /> -->
 
 </head>
-<body>
+<body class="post">
 
-  <div class="inner">
+  <header>
+    <a href="/" class="logo">
+      <img src="/logo.png" class="animated floating" alt="Mindthecode" />
+    </a>
+    <nav>
+     <ul>
+       <li>
+         <a href="/">Blog</a> &middot;
+       </li>
+       <li>
+         <a href="/about">About</a> &middot;
+        </li>
+         <li>
+           <a href="/tags">Tags</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-      <p>
-        <a href="/" class="noundy">
-          <img id="logo" src="/logo.png" class="animated rubberBand floating_" alt="Mindthecode" />
-        </a>
-      </p>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Writings</a> /
-          </li>
-          <li>
-            <a href="/about/">About me</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-  </div>
-
-  <div class="inner">
-
-    {% include aside.html %}
-    
-    <main id='content'>
-
-      <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
-        <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
-        <header class="heading">
-          <h1 itemprop="headline">{{ page.title }}</h1>
-          <h5 class="heading subtitle">{{ page.subtitle }}</h5>
-          <div cass="avatar-author desktop-only">
-            <figure class="avatar" style="background-image: url(/images/avatar.png)"></figure>
-            <h2 class="heading author"><span>By</span> Stef van den Ham<span class="light"> — {{ page.date | date: "%B %d %Y" }}</span></h2>
-          </div>
-        </header>
-
-        {% if page.teaser %}
-        <div class="teaser" style='background: transparent url({{ page.teaser }}) no-repeat center center;'></div>
-        {% endif %}
-
-        <div itemprop="articleBody">
-          {{ content }}
+  <main>
+    <article class="md" itemscope itemtype="http://schema.org/BlogPosting">
+      <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
+      <header class="heading">
+        <h1 itemprop="headline">
+          <span>{{ page.title }}</span>
+        </h1>
+        <h5 class="heading subtitle">
+          <span>{{ page.subtitle }}</span>
+        </h5>
+        <div class="authorblock">
+          <figure class="avatar" style="background-image: url(/images/avatar.png)"></figure>
+          <h2 class="author"><span>By</span> Stef van den Ham<span class="light"> — {{ page.date | date: "%B %d %Y" }}</span></h2>
         </div>
+      </header>
 
-        Written by
-        <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <span itemprop="name">
-            <a href="https://plus.google.com/102230925443628784177" itemprop="url" rel="author">Stef van den Ham</a>
-          </span>
-        </span>
-        on
-        <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e %Y" }}</time>
+      {% if page.teaser %}
+      <div class="teaser" style='background: transparent url({{ page.teaser }}) no-repeat center center;'></div>
+      {% endif %}
 
-      </article>
-
-      <br />
-
-      Tags:
-      {% for tag in page.tags %}
-        <a href="/tags#{{ tag }}">{{ tag }}</a>
-      {% endfor %}
-
-        <section id="sharing">
-          <a class="twitter" href="https://twitter.com/intent/tweet?text=http://mindthecode.com{{ page.url }} - {{ page.title }} by @stefvdham"><span class="icon-twitter"> Tweet</span></a>
-
-          <a class="facebook" href="#" onclick="
-            window.open(
-              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-              'facebook-share-dialog',
-              'width=626,height=436');
-            return false;"><span class="icon-facebook-rect"> Share</span></a>
-        </section>
-
-      <hr>
-
-      <h2>Related post</h2>
-      <ul>
-      {% for post in site.related_posts limit:5 %}
-        {% assign match = false %}
-        {% for tag in post.tags %}
-          {% if page.tags contains tag %}
-            {% assign match = true %}
-          {% endif %}
-        {% endfor %}
-        {% if match %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endif %}                  
-        </ul>     
-      {% endfor %}
-
-      <hr>
-
-      <div class="prevnext">
-        {% if page.previous.url %}
-          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-        {% if page.next.url %}
-          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-        {% endif %}
+      <div itemprop="articleBody">
+        {{ content }}
       </div>
-
-      <hr>
-
-      {% include comments.html %}
-
-    </main>
-
-    <footer>
-      <a href="/" class="noundy"><img src="/images/mtc_inv.png" id="logo-footer" alt="Mindthecode" /></a>
-      <br />
-      &copy; Copyright 2011-2016
-      <br />
-      Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a>, <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a> or <a target="_blank" href="https://plus.google.com/+Mindthecode">Google+</a>
-    </footer>
     
-  </div>
+      <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%d" }}"></time>
+  
+    </article>
 
+    <br />
+
+    Tags:
+    {% for tag in page.tags %}
+      <a href="/tags#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+    
+    <hr />
+
+    <center>
+    <h2>Questions?</h2>
+      As always, if you have any questions or comments, you can find me on <a href='http://twitter.com/stefvdham'>Twitter</a>.
+    </center>
+
+    <hr />
+
+    <center>
+      Be notified of new posts. Subscribe to the <a href="http://mindthecode.com/rss.xml">RSS Feed</a>.
+    </center>
+    
+    <!-- 
+      <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://mindthecode.com{{ page.url }} - {{ page.title }} by @stefvdham"><span class="icon-twitter"> Tweet</span></a>
+
+        <a class="facebook" href="#" onclick="
+          window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+            'facebook-share-dialog',
+            'width=626,height=436');
+          return false;"><span class="icon-facebook-rect"> Share</span></a>
+      </section>
+
+    <hr>
+
+    <h2>Related post</h2>
+    <ul>
+    {% for post in site.related_posts limit:5 %}
+      {% assign match = false %}
+      {% for tag in post.tags %}
+        {% if page.tags contains tag %}
+          {% assign match = true %}
+        {% endif %}
+      {% endfor %}
+      {% if match %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}                  
+    </ul>     
+    {% endfor %}
+
+    <hr>
+ 
+    <div class="prevnext">
+      {% if page.previous.url %}
+        <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
+
+    <hr>
+  -->
+
+  </main>
+
+  <footer>
+    <a href="/" class="noundy"><img src="/images/mtc_inv_white.png" id="logo-footer" alt="Mindthecode" class="animated floating" /></a>
+    <br />
+    &copy; Copyright 2011-2017
+    <br />
+    Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a>, <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a> or <a target="_blank" href="https://plus.google.com/+Mindthecode">Google+</a>
+  </footer>
+    
   <script>
     (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -193,22 +193,9 @@
   
   <script src="/assets/prism.js"></script>
 
-  <script>
-    var currentAnim = 'rubberBand';
-    // var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello', 'hinge'];
-    var anims = ['bounce', 'pulse', 'floating', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello'];
-    var newAnim = anims[Math.floor(Math.random()*anims.length)];
-    setInterval(function() {
-      document.querySelector('#logo').classList.remove(currentAnim);
-      setTimeout(function() {
-        document.querySelector('#logo').classList.add(newAnim);
-      }, 1000);
-      newAnim = anims[Math.floor(Math.random()*anims.length)];
-      currentAnim = newAnim;
-    }, 10000);
-  </script>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode" id="_carbonads_js"></script>
 
-  <script src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js" type="text/javascript" charset="utf-8" async="async"></script>
+  <!-- <script src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js" type="text/javascript" charset="utf-8" async="async"></script> -->
 
 </body>
 </html>

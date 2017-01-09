@@ -17,16 +17,6 @@ tags:
 
 Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
 
-<!-- Rectangle Ad -->
-<center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 ## What we will be making
 
@@ -49,6 +39,17 @@ First up, let's add an image to the project that will act as your drag and drop 
 Create a directory `assets` to the panresponder_demo folder and insert the image you want to use in there. If you don't have one, you can use [this one](/images/panresponder-target.png).
 
 Let's get our image on the screen so we can continue on to the cool part.
+
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 Open up `index.ios.js` and add the `Image` component at the top:
 

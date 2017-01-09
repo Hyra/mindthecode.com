@@ -24,17 +24,6 @@ As with most things, boilerplates evolve. I decided to expand the boilerplate we
 
 Instead of starting from a cloned code repository let's build our setup together. From scratch. This way you know what each piece does, and allows you to tweak it to your liking. Of course, the final product can be found [here](https://github.com/Hyra/angular-gulp-browserify-livereload-boilerplate) at Github, but it might be better to use it as a reference rather than a starting point.
 
-<!-- Rectangle Ad -->
-<center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 ## Folder structure
 
 When building a web application I tend to have an `app` folder for the original source files, and a `dist` folder which contains all the processed files and will serve as the root directory for the webserver. So let's create the following folder structure:
@@ -100,6 +89,17 @@ And this will do fine for now. So! Let's install all these babies, and save them
 {% prism bash %}
 $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint gulp-util gulp-embedlr gulp-livereload tiny-lr connect-livereload express --save-dev
 {% endprism %}
+
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## Configuring our Gulpfile
 

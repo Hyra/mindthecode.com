@@ -16,17 +16,6 @@ Following up on my previous [Let's Build an angular app with Browserify](/lets-b
 
 If you haven't already, make sure you've read the [walkthrough](/lets-build-an-angularjs-app-with-browserify-and-gulp/) on how to set up the environment to work with Browserify and Gulp, so you can follow along.
 
-<!-- Rectangle Ad -->
-<center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 Basically, what you do when you `require()` a module, is looking for what the script you require exposes to the outside world through `module.exports`. This is following the [CommonJS](http://en.wikipedia.org/wiki/CommonJS) spec. This allows us to encapsulate functionality privately within our module, and only export the 'public' methods or variables to the outside world.
 
 Now, what does this look like for our Browserify Angular app?
@@ -66,6 +55,17 @@ exports.controller = function AboutCtrl($scope) {
 {% endprism %}
 
 As you can see, our inject function takes the app, and in turn returns our controller function. Simple, clean and effective.
+
+<!-- Rectangle Ad -->
+<center>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0534492338431642"
+     data-ad-slot="3199566305"></ins>
+</center>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## Dependency injection
 

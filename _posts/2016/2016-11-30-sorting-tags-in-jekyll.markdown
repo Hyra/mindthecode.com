@@ -7,8 +7,6 @@ tags:
 layout: post
 ---
 
-<!-- <div class="teaser" style='background: transparent url(/images/headers/sorting.gif) no-repeat center center;'></div> -->
-
 On this blog I list all the used tags in the sidebar. I realised these tags were listed _randomly_ so wanted to know if you could sort them alphabetically.
 
 Turns out you can.

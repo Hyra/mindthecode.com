@@ -63,7 +63,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 16px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+  font: 16px/1.7em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
   padding: 1ch 1ch 0 1ch;
   margin: 0;
   color: #32323c;
@@ -71,7 +71,7 @@ body {
   background: url(/images/bg-pixels.png); }
 
 main, body > header {
-  max-width: 64ch;
+  max-width: 58ch; /* 64ch; */
   margin: auto; }
 
 main {

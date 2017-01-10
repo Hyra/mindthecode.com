@@ -69,6 +69,9 @@ body {
   color: #32323c;
   /*background:url("/images/geometry.png")*/
   background: url(/images/bg-pixels.png); }
+  @media (max-width: 767px) {
+    body {
+      font: 16px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace; } }
 
 main, body > header {
   max-width: 58ch;

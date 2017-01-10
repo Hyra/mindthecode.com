@@ -93,7 +93,10 @@ body {
   margin: 0;
   color: #32323c;
   /*background:url("/images/geometry.png")*/
-  background:url(/images/bg-pixels.png)
+  background:url(/images/bg-pixels.png);
+  @include respond-to('small') {
+    font: 16px/1.5em 'quatro-book', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+  }
 }
 
 main, body > header {

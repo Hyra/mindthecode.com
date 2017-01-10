@@ -71,7 +71,8 @@ body {
   background: url(/images/bg-pixels.png); }
 
 main, body > header {
-  max-width: 58ch; /* 64ch; */
+  max-width: 58ch;
+  /* 64ch; */
   margin: auto; }
 
 main {

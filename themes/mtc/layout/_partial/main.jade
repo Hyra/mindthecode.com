@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        include head
+    body
+        header
+            a.logo(href="/")
+                img(src="http://mindthecode.com/logo.png", height="30", class="floating")
+            nav
+                ul
+                    li
+                        a(href="/") Blog
+                    li
+                        a(href="/about") About
+                    li
+                        a(href="/atom.xml") RSS
+        main
+            block main
+        footer
+            a(href="/")
+              img(src="http://mindthecode.com/images/mtc_inv_white.png", alt="Mindthecode", class="floating")
+            br
+            p Made with ❤ and 🍺
+            p Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a> or <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a>
+            p © Copyright 2011-2017
+        script(src="/js/main.js")
+        script(async, type="text/javascript", src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=mindthecode", id="_carbonads_js")

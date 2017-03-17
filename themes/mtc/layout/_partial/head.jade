@@ -1,0 +1,29 @@
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+if config.description
+  meta(name='description', content = config.description)
+if theme.rss
+  link(rel='alternative', href = theme.rss, title = config.title, type='application/atom+xml')
+if theme.favicon
+  link(rel="icon", href = theme.favicon)
+
+  meta(name="author", content="Stef van den Ham @stefvdham")
+    
+  meta(property="og:type", content="article")
+  meta(property="og:image", content="http://mindthecode.com/images/og_image.png")
+  meta(property="og:site_name", content="Mindthecode")
+  meta(name="twitter:creator", content="@stefvdham")
+  meta(name="twitter:card", content="summary")
+  meta(name="twitter:image:", content="http://mindthecode.com/images/og_image.png")
+  meta(name="keywords", content="html, javascript, code, hacking, tutorial, tutorials, web, css")
+
+  link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
+  link(rel="canonical", href="http://mindthecode.com")
+
+  script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+  link(href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700', rel='stylesheet', type='text/css')
+  
+block head
+!= css('css/main')
+<!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]-->

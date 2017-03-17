@@ -1,0 +1,15 @@
+include _partial/post
+extends _partial/main
+
+block main
+  +post(page, 'post')
+
+block head
+  title
+    = page.title + ' - ' + config.title
+  meta(property="og:title", content=page.title)
+  meta(property="og:url", content=config.url + config.root + page.path)
+  meta(property="og:description", content=page.description)
+  meta(name="twitter:title", content=page.title)
+  meta(name="twitter:description", content=page.description)
+  meta(name="description", content=page.description)

@@ -1,0 +1,41 @@
+mixin post_snippet(post)
+  article.index
+    header
+      h1: a(href = config.root + post.path)
+        span
+          = post.title
+      time.post__time(datetime = date_xml(post.date))
+        = date(post.date, theme.date_format)
+
+mixin post(post)
+  article.post
+    header
+      h1
+        span
+          = post.title
+      h5
+        span
+          = post.subtitle
+      time.post__time(datetime = date_xml(post.date))
+        = date(post.date, theme.date_format)
+    hr
+    != post.content
+    hr
+    if post.tags && post.tags.length
+      ul.tags
+        li Tags: 
+        -post.tags.forEach(function(tag){
+          li.post__tag__item: a.post__tag__link(href = config.root + tag.path)
+            = tag.name
+        - })
+    a(class="twitter-share-button", href="https://twitter.com/intent/tweet") Tweet
+    hr
+    h2 Questions or comments?
+    p As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.
+    .prevnext
+        if post.next
+          a(href=url_for(post.next.path), class="prevnext-prev")
+            p ← Prev
+        if post.prev
+          a(href=url_for(post.prev.path), class="prevnext-next")
+            p Next →

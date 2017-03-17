@@ -100,4 +100,4 @@ deploy:
   # message: [message]
 - type: git
   repo: git@github.com:Hyra/mindthecode.com.git
-  branch: master
+  branch: generated

@@ -96,6 +96,6 @@ theme: mtc
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: heroku
-  repo: <repository url>
-  message: [message]
+  repo: https://git.heroku.com/mindthecode.git
+  # message: [message]
 

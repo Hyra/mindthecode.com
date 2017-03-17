@@ -198,6 +198,24 @@
   </entry>
   
   <entry>
+    <title>HTTPIe, a command line HTTP client</title>
+    <link href="http://mindthecode.com/httpie-the-command-line-http-client/"/>
+    <id>http://mindthecode.com/httpie-the-command-line-http-client/</id>
+    <published>2013-12-07T23:00:00.000Z</published>
+    <updated>2017-03-16T07:47:06.000Z</updated>
+    
+    <summary type="html">
+    
+      Curl on steroids with an easy interface and syntax highlighted output.
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://mindthecode.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Blogging with CabinJS and Grunt</title>
     <link href="http://mindthecode.com/blogging-with-cabinjs-and-grunt/"/>
     <id>http://mindthecode.com/blogging-with-cabinjs-and-grunt/</id>
@@ -214,24 +232,6 @@
       <category term="cabinjs" scheme="http://mindthecode.com/tags/cabinjs/"/>
     
       <category term="grunt" scheme="http://mindthecode.com/tags/grunt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTPIe, a command line HTTP client</title>
-    <link href="http://mindthecode.com/httpie-the-command-line-http-client/"/>
-    <id>http://mindthecode.com/httpie-the-command-line-http-client/</id>
-    <published>2013-12-07T23:00:00.000Z</published>
-    <updated>2017-03-16T07:47:06.000Z</updated>
-    
-    <summary type="html">
-    
-      Curl on steroids with an easy interface and syntax highlighted output.
-    
-    </summary>
-    
-    
-      <category term="http" scheme="http://mindthecode.com/tags/http/"/>
     
   </entry>
   
@@ -305,9 +305,9 @@
     </summary>
     
     
-      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
-    
       <category term="phpunit" scheme="http://mindthecode.com/tags/phpunit/"/>
+    
+      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
     
   </entry>
   
@@ -399,9 +399,9 @@
     </summary>
     
     
-      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
-    
       <category term="phpunit" scheme="http://mindthecode.com/tags/phpunit/"/>
+    
+      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
     
   </entry>
   

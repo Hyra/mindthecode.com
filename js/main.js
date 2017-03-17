@@ -1,10 +1,3 @@
-var giftofspeed = document.createElement('link');
-giftofspeed.rel = 'stylesheet';
-giftofspeed.href = '../css/main.css';
-giftofspeed.type = 'text/css';
-var godefer = document.getElementsByTagName('link')[0];
-godefer.parentNode.insertBefore(giftofspeed, godefer);
-
 window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

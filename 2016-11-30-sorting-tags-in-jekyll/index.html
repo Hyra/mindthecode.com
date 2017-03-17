@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>Sorting tags in Jekyll - Mindthecode</title><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>Sorting tags in Jekyll</span></h1><h5><span>A short tip on how to sort your tags in your Jekyll blog</span></h5><time datetime="2017-01-08T20:06:35.000Z" class="post__time">Jan 8 2017</time></header><hr/><p>On this blog I list all the used tags in the sidebar. I realised these tags were listed <em>randomly</em> so wanted to know if you could sort them alphabetically.</p>
+<p>Turns out you can.</p>
+<h2 id="Tagging-posts"><a href="#Tagging-posts" class="headerlink" title="Tagging posts"></a>Tagging posts</h2><p>In your posts, make sure you tag your posts in the meta section:</p>
+<pre class=" language-markdown"><code class="language-markdown">title: Your awesome title
+tags:
+<span class="token code keyword">    - something</span>
+<span class="token code keyword">    - here</span>
+<span class="token code keyword">    - three</span>
+</code></pre>
+<p>Now, Jekyll is clever and knows about your tags and stores them in <code>site.tags</code>. To display a list of them, use the following snippet:</p>
+<pre class=" language-markup"><code class="language-markup">{% raw %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Tags<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+{{ "{% assign sorted_tags = site.tags | sort " }}%}
+{{ "{% for tag in sorted_tags " }}%}
+  {{ "{% assign t = tag | first " }}%}
+  {{ "{% assign posts = tag | last " }}%}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+  	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/tags/# {{ <span class="token punctuation">"</span></span> <span class="token attr-name">{{</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">t</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">|</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">downcase</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">replace:</span>'</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">','-'"</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">}}}}"</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		{{ "{{t | downcase | replace:' ','-' " }}}} 
+  		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>({{ "{{ posts | size " }}}})<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+{{ "{% endfor " }}%}
+{% endraw %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
+<p>So first Jekyll gets all tags, and pipes them through the sort function. Next we iterate over them and link to a page passing the tag for optional use on the target page. Behind the tag we can use the <strong>size</strong> pipe to show how many posts are tagged with the current tag.</p>
+<p>Good stuff.</p>
+<!-- Rectangle Ad -->
+<p><center><br><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-0534492338431642" data-ad-slot="3199566305"></ins><br></center></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>If you have any questions feel free to reach me at <a href="http://twitter.com/stefvdham" target="_blank" rel="external">@stefvdham</a> or in the comments below.</p>
+<p>Happy coding!</p>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/jekyll/" class="post__tag__link">jekyll</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/2016-04-20-getting-started-with-the-panresponder-in-react-native/" class="prevnext-prev"><p>← Prev</p></a><a href="/hello-world/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode"></a><br><p>Made with ❤ and 🍺</p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

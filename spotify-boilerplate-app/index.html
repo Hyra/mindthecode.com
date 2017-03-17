@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><meta name="author" content="Stef van den Ham @stefvdham"><meta property="og:type" content="article"><meta property="og:image" content="http://mindthecode.com/images/og_image.png"><meta property="og:site_name" content="Mindthecode"><meta name="twitter:creator" content="@stefvdham"><meta name="twitter:card" content="summary"><meta name="twitter:image:" content="http://mindthecode.com/images/og_image.png"><meta name="keywords" content="html, javascript, code, hacking, tutorial, tutorials, web, css"><link rel="author" href="https://plus.google.com/102230925443628784177?rel=author"><link rel="canonical" href="http://mindthecode.com"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><title>Spotify Boilerplate App - Mindthecode</title><meta property="og:title" content="Spotify Boilerplate App"><meta property="og:url" content="http://mindthecode.com/spotify-boilerplate-app/"><meta property="og:description" content="A Boilerplate with best practices to kickstart your Spotify App"><meta name="twitter:title" content="Spotify Boilerplate App"><meta name="twitter:description" content="A Boilerplate with best practices to kickstart your Spotify App"><meta name="description" content="A Boilerplate with best practices to kickstart your Spotify App"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30" class="floating"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>Spotify Boilerplate App</span></h1><h5><span>Best practices to kickstart your Spotify App</span></h5><time datetime="2012-09-17T22:00:00.000Z" class="post__time">Sep 18 2012</time></header><hr/><p>A while ago we were proud to be releasing 2 of the very first Spotify Apps in the Netherlands at <a href="http://noprotocol.nl" title="NoProtocol" target="_blank" rel="external">NoProtocol</a>. For a long time since I’ve been planning on creating a Boilerplate in which we could put all the best practices and redo some stuff in hindsight.</p>
+<p>And finally, it’s here! You can grab it at <a href="https://github.com/Hyra/Spotify-Boilerplate" target="_blank" rel="external">https://github.com/Hyra/Spotify-Boilerplate</a></p>
+<p>For a bit more in-depth information, read on ..</p>
+<p>The Boilerplate project aims to provide a foundation upon which you can start building Spotify Apps. It takes away the hassle of writing the necessary boilerplate code and is structured so you can start developing straight away.</p>
+<p>I will add to it as I stumble upon free time, but feel free to open a Pull Request or submit an issue for a suggestion</p>
+<h2 id="Some-of-the-features"><a href="#Some-of-the-features" class="headerlink" title="Some of the features"></a>Some of the features</h2><ul>
+<li>Small footprint</li>
+<li>Automatic Tab Handling</li>
+<li>Automatic Deeplink handling</li>
+<li>Automatic Cover Loading for playlists (mosaics)</li>
+<li>Online/offline status tracking and content switching</li>
+</ul>
+<h2 id="How-to-set-it-up-on-your-Mac"><a href="#How-to-set-it-up-on-your-Mac" class="headerlink" title="How to set it up (on your Mac)"></a>How to set it up (on your Mac)</h2><ol>
+<li>Sign up for a developer account on Spotify</li>
+<li>Open Terminal, and if it doesn’t exist yet <code>mkdir ~/Spotify</code></li>
+<li>cd ~/Spotify</li>
+<li>git clone git@github.com:Hyra/Spotify-Boilerplate.git</li>
+<li>Download the latest version of Spotify</li>
+<li>Open Spotify and type <code>spotify:app:boilerplate</code> in the search bar</li>
+</ol>
+<h2 id="What’s-in-the-Boilerplate"><a href="#What’s-in-the-Boilerplate" class="headerlink" title="What’s in the Boilerplate"></a>What’s in the Boilerplate</h2><p>The aim is to keep the Boilerplate as clean as possible, while giving all the tools to quickly develop your app.</p>
+<h2 id="How-to-work-with-it-the-short-version"><a href="#How-to-work-with-it-the-short-version" class="headerlink" title="How to work with it (the short version)"></a>How to work with it (the short version)</h2><p>What you want to look for is <code>js/app.js</code>. Once index.html has been loaded by Spotify it will fire off our Sammy instance:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token string">'/home'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Here you can also handle any other bootstrapping you might want to do.</p>
+<p>Next up, the Sammy route gets invoked:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>ctxt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token function">loadSection</span><span class="token punctuation">(</span>ctxt<span class="token punctuation">,</span> <span class="token string">"news"</span><span class="token punctuation">,</span> <span class="token string">"/templates/home.html"</span><span class="token punctuation">,</span> <span class="token string">"js/_example_data.json"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Callback actions</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This is what you will most likely expand on for your app. The route loads a Mustache template into the DOM, parses it, asynch-y fill in the Spotify details, and cache it. After that it will run your callback actions, should you need to.</p>
+<p><code>loadSection</code> takes 5 parameters at the moment:</p>
+<p><strong>ctxt</strong> A reference to the <code>Sammy.Context</code> which was passed to the route</p>
+<p><strong>ID</strong> A unique identifier for the content which is used as a cache-key</p>
+<p><strong>Template File</strong> location to the Mustache template</p>
+<p><strong>JSON Location</strong> location to the JSON you want to use. This is useful if you want to connect your app with a (RESTful) web service to feed content to your app. NOTE: If you use absolute URLs here you should add the domains to your <code>manifest.json</code></p>
+<p><strong>Callback</strong> This callback function you can use to do your post-processing</p>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p>The boilerplate relies on a couple of libraries:</p>
+<p>Sammy.js for the routing, templating parsing and content swapping. It’s just an awesome little tool</p>
+<p>jQuery as we’ve all become used to it at some point</p>
+<p>Mustache as a template handler. This can just as well be any of the other gazillion templating engines out there, so feel free to hack your favourite in.</p>
+<h2 id="Roadmap"><a href="#Roadmap" class="headerlink" title="Roadmap"></a>Roadmap</h2><ul>
+<li>Add more features/functionality regarding the Spotify API</li>
+<li>Make the loadSection and Sammy integration a bit more seamless and less explicit</li>
+<li>Spend more time documenting and writing how-to’s</li>
+</ul>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/spotify/" class="post__tag__link">spotify</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/good-times-with-watchr-coffeescript-and-less/" class="prevnext-prev"><p>← Prev</p></a><a href="/blogging-with-octopress/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode" class="floating"></a><br><p>Made with ❤ and 🍺</p><p>Follow me on <a target="_blank" href="https://twitter.com/stefvdham">Twitter</a> or <a target="_blank" href="https://www.facebook.com/mindthecode/">Facebook</a></p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

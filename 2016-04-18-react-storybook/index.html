@@ -1,0 +1,132 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>React Storybook - Mindthecode</title><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>React Storybook</span></h1><h5><span>How to set it up and develop your components isolated from your app</span></h5><time datetime="2016-11-22T16:42:15.000Z" class="post__time">Nov 22 2016</time></header><hr/><p>Recently React <a href="https://github.com/kadirahq/react-storybook" target="_blank" rel="external">Storybook</a> came out. It’s a tool to isolate your React Components to develop and design them outside of your app. In this post I’ll be going over how to get it set up.</p>
+<h2 id="Why-use-it"><a href="#Why-use-it" class="headerlink" title="Why use it?"></a>Why use it?</h2><p>What intrigued me about Storybook is the fact you can work on defining and designing your React components in an environment where you don’t have to worry about the app itself. In fact, by having them isolated you can make sure they work correctly by themselves and don’t rely on the rest of your application.</p>
+<p>As a nice side effect, you end up with some sort of “Styleguide” for your components so new members on the team can get familiar with the components without having to sift through the code.</p>
+<!-- Rectangle Ad -->
+<p><center><br><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-0534492338431642" data-ad-slot="3199566305"></ins><br></center></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h2 id="Setting-the-scene"><a href="#Setting-the-scene" class="headerlink" title="Setting the scene"></a>Setting the scene</h2><p>Make sure you run with NPM3 following this post as otherwise you might end up with storybook being unable to find its dependencies.</p>
+<p>Let’s start from scratch by creating a new directory and typing:</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> init
+</code></pre>
+<p>This way we end up with a <code>package.json</code> that Storybook relies on. In my case it looks like this:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+  <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"storybook-test"</span><span class="token punctuation">,</span>
+  <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span> 
+  <span class="token string">"description"</span><span class="token punctuation">:</span> 
+  <span class="token string">"Testing out Storybook!"</span><span class="token punctuation">,</span> 
+  <span class="token string">"main"</span><span class="token punctuation">:</span> <span class="token string">"index.js"</span><span class="token punctuation">,</span> 
+  <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token string">"author"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
+  <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"ISC"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Now let’s install React:</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> --save react
+</code></pre>
+<p>Next, let’s create a component we want to use in Storybook. Create a folder <code>components</code> and add a file <code>card.js</code> in it containing the following code:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Card</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">let</span> styles <span class="token operator">=</span> <span class="token punctuation">{</span>
+      card<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        border<span class="token punctuation">:</span> <span class="token string">'1px solid #FF4422'</span><span class="token punctuation">,</span>
+        borderRadius<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+        backgroundColor<span class="token punctuation">:</span> <span class="token string">'#FF9988'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      title<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        color<span class="token punctuation">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span>
+        margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        padding<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        fontFamily<span class="token punctuation">:</span> <span class="token string">'Helvetica Neue'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>card<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Card<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="Configuring-Storybook"><a href="#Configuring-Storybook" class="headerlink" title="Configuring Storybook"></a>Configuring Storybook</h2><p>Now that we got a base to work with, let’s install Storybook and set it up.</p>
+<p>First, install Storybook</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> --save @kadira/storybook
+</code></pre>
+<p>Storybook depends on a folder <code>.storybook</code> which contains the configuration, so let’s create that folder and inside add a <code>config.js</code>:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> configure <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@kadira/storybook'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">loadStories</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../components/stories/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token function">configure</span><span class="token punctuation">(</span>loadStories<span class="token punctuation">,</span> module<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>From the above you can probably guess the next step, we need to create a folder <code>stories</code> inside the <code>components</code> folder which will hold our stories. You are free to use any folder you want though.</p>
+<p>In <code>stories</code>, add a file <code>card.js</code> with this code:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span> <span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'../card'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// This is our component import { storiesOf, action } from '@kadira/storybook';</span>
+
+<span class="token function">storiesOf</span><span class="token punctuation">(</span><span class="token string">'Card'</span><span class="token punctuation">,</span> module<span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'with a text'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+
+<span class="token operator">&lt;</span>card title<span class="token operator">=</span><span class="token string">"A little card"</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token template-string"><span class="token string">``</span></span><span class="token template-string"><span class="token string">`&lt;/card>
+
+At the top we import our Card component. Storybook provides a chainable method `</span></span>storiesOf<span class="token template-string"><span class="token string">` after which you can describe all your possible 'states'. In the above example we only have one, but we'll add more in a second.
+
+Now, in `</span></span><span class="token punctuation">.</span>storybook<span class="token operator">/</span>config<span class="token punctuation">.</span>js<span class="token template-string"><span class="token string">` we declared our stories can be loaded from `</span></span>components<span class="token operator">/</span>stories<span class="token template-string"><span class="token string">`, so in order to be able to do that we need to create an `</span></span>index<span class="token punctuation">.</span>js<span class="token template-string"><span class="token string">` file which will import all the stories we want to show up in storybook, so create it and add the following inside:
+
+`</span></span><span class="token template-string"><span class="token string">``</span></span> javascript
+<span class="token keyword">import</span> <span class="token string">'./card'</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Alternatively you can specify the story files from the storybook config file, but this feels a bit more logical.</p>
+<h2 id="Running-storybook"><a href="#Running-storybook" class="headerlink" title="Running storybook"></a>Running storybook</h2><p>We’re almost there! In order to run Storybook we need to add a script to our <code>package.json</code>. Alter the file so it has the storybook script in there:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">...</span> <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">"storybook"</span><span class="token punctuation">:</span> <span class="token string">"start-storybook -p 9001"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token operator">...</span>
+</code></pre>
+<p>Now we can go to the command line and run</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> run storybook
+</code></pre>
+<p>and if all goes well we can navigate to our very own <a href="http://localhost:9001" target="_blank" rel="external">Storybook</a> and see our component!</p>
+<h2 id="Adding-more-stories"><a href="#Adding-more-stories" class="headerlink" title="Adding more stories"></a>Adding more stories</h2><p>To illustrate how storybook works, let’s add another story for our card:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span> <span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'../card'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// This is our component import { storiesOf, action } from '@kadira/storybook';</span>
+
+<span class="token function">storiesOf</span><span class="token punctuation">(</span><span class="token string">'Card'</span><span class="token punctuation">,</span> module<span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'with a text'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+
+<span class="token operator">&lt;</span>card title<span class="token operator">=</span><span class="token string">"A little card"</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'with a specific background'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>card title<span class="token operator">=</span><span class="token string">"A little card"</span> background<span class="token operator">=</span><span class="token string">"{"</span> <span class="token string">'#550011'</span><span class="token operator">=</span><span class="token string">""</span> <span class="token punctuation">}</span><span class="token operator">=</span><span class="token string">""</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token template-string"><span class="token string">``</span></span><span class="token template-string"><span class="token string">`&lt;/card>&lt;/card>
+
+We specified a story that states we can have a button with a specific background. Let's modify the render method of our component to make that possible:
+
+`</span></span><span class="token template-string"><span class="token string">``</span></span> javascript
+<span class="token operator">...</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token keyword">let</span> styles <span class="token operator">=</span> <span class="token punctuation">{</span> card<span class="token punctuation">:</span> <span class="token punctuation">{</span> border<span class="token punctuation">:</span> <span class="token string">'1px solid #FF4422'</span><span class="token punctuation">,</span> borderRadius<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token string">'#FF9988'</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> title<span class="token punctuation">:</span> <span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span> margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> padding<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> fontFamily<span class="token punctuation">:</span> <span class="token string">'Helvetica Neue'</span><span class="token punctuation">,</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>background<span class="token punctuation">)</span> <span class="token punctuation">{</span> styles<span class="token punctuation">.</span>card<span class="token punctuation">.</span>background <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>background<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+<span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">"{styles.card}"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token string">"{styles.title}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+ <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token operator">...</span>
+</code></pre>
+<p>Refresh your storybook, and you should see the second story show up and when you click it the button is slightly darker (unless you felt adventurous and made your own modifications of course!)</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I think <a href="https://github.com/kadirahq/react-storybook" target="_blank" rel="external">Storybook</a> is a perfect way to define the possible ‘states’ of your component and offers a nice isolated environment where a developer and designer can go over all the components to make sure they look the way they should, without having to interact with the actual app to force all different states to check them.</p>
+<p>I put the example code of this post up on Github so if you were somehow stuck you can check that out:</p>
+<p><a href="https://github.com/Hyra/react-storybook-demo" target="_blank" rel="external">https://github.com/Hyra/react-storybook-demo</a></p>
+<p>If you have any questions or comments, use Disqus below or find me on Twitter.</p>
+<p>Happy coding!</p>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/react/" class="post__tag__link">react</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/2013-12-29-how-to-use-environment-variables-in-your-angular-application/" class="prevnext-prev"><p>← Prev</p></a><a href="/2014-06-03-writing-browserify-modules-for-your-angular-app/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode"></a><br><p>Made with ❤ and 🍺</p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

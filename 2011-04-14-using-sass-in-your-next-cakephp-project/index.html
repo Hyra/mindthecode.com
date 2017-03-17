@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>Using SASS in your next CakePHP project - Mindthecode</title><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>Using SASS in your next CakePHP project</span></h1><h5><span>I heard a lot about SASS, mostly a lot of people raving about how it was the best thing since chocolate.</span></h5><time datetime="2016-11-22T16:42:15.000Z" class="post__time">Nov 22 2016</time></header><hr/><p>When I first saw some examples I thought the idea was good, but didn’t see the point of learning a new syntax in order to not having to use the CSS syntax. Because, honestly, how does typing some curly brackets and semicolons hurt?</p>
+<!-- <div class="teaser" style='background: transparent url(/images/headers/sass-cake.gif) no-repeat center center;'></div> -->
+<p>I did like the idea of inheretance by indentation though. By indenting subsequent selectors it saves a lot of repetitive class assigning and declarations. But I hate adding extra layers onto things. It just feels clunky and wrong. But with Compass your .sass files get compiled to proper CSS files that reside in your /webroot/css folder. Cool! How? Read on.</p>
+<h2 id="SASS"><a href="#SASS" class="headerlink" title="SASS"></a>SASS</h2><p>SASS is an abbrevation of <a href="http://sass-lang.com/" title="Sass - Syntactically Awesome Stylesheets" target="_blank" rel="external">Syntactically Awesome Style Sheets</a>. While I don’t really agree with the Syntactially Awesome bit, it IS awesome in that it relies on your syntax. It supports nested rules, selector inheretance, mixins, variables, and even more.</p>
+<h2 id="Installing-Compass"><a href="#Installing-Compass" class="headerlink" title="Installing Compass"></a>Installing Compass</h2><p><a href="http://compass-style.org/" title="Compass" target="_blank" rel="external">Compass</a> is basically an authoring framework which you install that manages your SASS files and offers plugins supporting CSS frameworks such as 960.gs, Susy and Blueprint. It runs from the command line and is just awesome.</p>
+<p>For the Mac users it’s easy. Open up the Terminal and go:</p>
+<pre class=" language-bash"><code class="language-bash">$ gem <span class="token function">install</span> compass
+</code></pre>
+<p>This will utilize Ruby to install Compass for you along with Sass.</p>
+<h2 id="Setting-up-Compass-to-work-with-CakePHP"><a href="#Setting-up-Compass-to-work-with-CakePHP" class="headerlink" title="Setting up Compass to work with CakePHP"></a>Setting up Compass to work with CakePHP</h2><p>Now for the fun part, getting Compass to work with Cake! Open up the Terminal again and do:</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> <span class="token operator">&lt;</span>your project folder<span class="token operator">></span>
+$ <span class="token function">mkdir</span> sass
+$ cs sass
+$ <span class="token function">touch</span> config.rb
+</code></pre>
+<p>This sass dir will be our home base for the SASS-stuff. Edit the config.rb file we just created and put in:</p>
+<pre class=" language-javascript"><code class="language-javascript">http_path <span class="token operator">=</span> <span class="token string">"/"</span>
+sass_dir <span class="token operator">=</span> <span class="token string">'src'</span>
+css_dir <span class="token operator">=</span> <span class="token string">'../app/webroot/css'</span>
+images_dir <span class="token operator">=</span> <span class="token string">'../app/webroot/img'</span>
+javascripts_dir <span class="token operator">=</span> <span class="token string">'../app/webroot/js'</span>
+http_stylesheets_path <span class="token operator">=</span> <span class="token string">'css'</span>
+http_javascripts_path <span class="token operator">=</span> <span class="token string">'js'</span>
+http_images_path <span class="token operator">=</span> <span class="token string">'img'</span>
+environment <span class="token operator">=</span> <span class="token punctuation">:</span>development
+output_style <span class="token operator">=</span> <span class="token punctuation">:</span>compressed
+</code></pre>
+<p>This basically tells Compass where we will have our SASS files (sass_dir) and to save the compiled CSS files and where the other diectories are. Not the output_style. This tells Compass how to compile them. I usually have it on :expanded during development so it’s easier on the eyes when opening the CSS file.</p>
+<p>Now, we’re good to go. Go back to the Terminal, and in your sass-directory, type:</p>
+<pre class=" language-bash"><code class="language-bash">$ compass <span class="token function">install</span> blueprint/semantic
+</code></pre>
+<p>This is just an example. You can use whatever framework you feel comfortable with, or use the compass default project ones. You will notice the ‘src’ folder has been created and you have a few Sass files to work on.</p>
+<p>I usually create a file <code>_base.sass</code> in <code>src/partials</code> and in screen.scss add:</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'partials/base'</span><span class="token punctuation">;</span></span>
+</code></pre>
+<p>Notice the underscore in the filename, but not in the import.</p>
+<p>In the Terminal, still in your <code>sass</code> directory, type:</p>
+<pre class=" language-bash"><code class="language-bash">$ compass <span class="token function">watch</span>
+</code></pre>
+<p>This will run Compass in watch-mode and when it detects any changes in the <code>src</code> directory, it will automagically save the compiled files to webroot/css</p>
+<p>Awesome! So open up your <code>_base.sass</code>, start typing Sass, and when you hit Save it will have an awesome stylesheet in your <code>css</code> directory.</p>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/sass/" class="post__tag__link">sass</a></li><li class="post__tag__item"><a href="/tags/cakephp/" class="post__tag__link">cakephp</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/2011-05-22-how-to-handle-multiple-domains-with-cakephp/" class="prevnext-prev"><p>← Prev</p></a><a href="/2011-12-06-loading-external-files-in-php-the-better-way/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode"></a><br><p>Made with ❤ and 🍺</p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

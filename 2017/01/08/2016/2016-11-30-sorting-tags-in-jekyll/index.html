@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><style>html {
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    font: 16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+    //- font: 16px/1.5em 'quatro-extra-light', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+    padding: 1ch;
+    margin: 0;
+    background: transparent url(http://mindthecode.com/images/bg-pixels.png) repeat;
+}       
+main, footer, body > header {
+    max-width: 64ch;
+    margin: auto;
+    padding: 40px 0;
+}
+main {
+    box-sizing: border-box;
+    padding: 1ch 0 2ch;
+    min-height: calc(100vh - 12ch);
+}
+h1 {
+    font-size: 1em;
+    font-weight: 700;
+}
+h1, .timestamp {
+    margin: 0;
+}
+a {
+    color: indianred;
+    background-image: linear-gradient(to bottom,indianred 75%,indianred 75%);
+    text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 96%;
+    text-decoration: none;
+}
+h1 a, h5 a {
+    color: white;
+    text-shadow: none;
+}
+.heading a {
+    color: black;
+    background-image: linear-gradient(to bottom,black 75%,black 75%);
+}
+.heading {
+    margin: 0 0 2ch;
+    padding: 0;
+}
+article.txt p {
+    white-space: pre-wrap;
+}
+hr {
+    border: 1px solid #ECECEC;
+}
+p {
+    margin: 1.5em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+}
+pre {
+    padding: 1ch;
+    overflow-x: auto;
+}
+ul, ol {
+    padding-left: 0;
+}
+li > ul, li > ol {
+    padding-left: 2ch;
+}
+blockquote {
+    font-style: italic;
+    margin: 1.5em 2ch;
+}
+img {
+    max-width:100%;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    header nav {
+        float: none;
+    }
+}
+article h1 {
+    color: white;
+    margin: 0 0 8px;
+    letter-spacing: .05em;
+    font: 38px/68px 'quatro-extra-light',sans-serif;
+    margin-left: 15px;
+}
+article h1 span {
+    background-color: #32323c;
+    padding: 0.8rem 0;
+    -webkit-box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+    box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+}
+article h5 {
+    color: white;
+    margin: 0 0 1.38889vw;
+    font: 25px/44px 'quatro-extra-light',sans-serif;
+    letter-spacing: .05em;
+    margin-left: 15px;
+}
+article h5 span {
+    background-color: #32323c;
+    padding: 0.8rem 0;
+    -webkit-box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+    box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+}
+
+@font-face {
+  font-family: 'quatro-extra-light';
+  src: url("http://mindthecode.com/fonts/Quatro_ExtraLight_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_ExtraLight_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_ExtraLight_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-extra-light-italic';
+  src: url("http://mindthecode.com/fonts/Quatro_ExtraLightItalic_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_ExtraLightItalic_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_ExtraLightItalic_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-light';
+  src: url("http://mindthecode.com/fonts/Quatro_Light_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Light_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Light_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-light-italic';
+  src: url("http://mindthecode.com/fonts/Quatro_LightItalic_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_LightItalic_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_LightItalic_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-black';
+  src: url("http://mindthecode.com/fonts/Quatro_Black_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Black_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Black_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-bold';
+  src: url("http://mindthecode.com/fonts/Quatro_Bold_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Bold_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Bold_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-medium';
+  src: url("http://mindthecode.com/fonts/Quatro_Medium_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Medium_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Medium_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-semi-bold';
+  src: url("http://mindthecode.com/fonts/Quatro_SemiBold_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_SemiBold_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_SemiBold_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-ultra';
+  src: url("http://mindthecode.com/fonts/Quatro_Ultra_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Ultra_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Ultra_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quatro-book';
+  src: url("http://mindthecode.com/fonts/Quatro_Book_v3Web.eot");
+  src: url("http://mindthecode.com/fonts/Quatro_Book_v3Web.woff") format("woff"), url("http://mindthecode.com/fonts/Quatro_Book_v3Web.eot") format("otf");
+  font-weight: normal;
+  font-style: normal; }</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><header><img src="http://mindthecode.com/logo.png" height="25"><nav><ul><li><a href="">aa</a></li><li><a href="">aa</a></li></ul></nav></header><main><article><header><h1><a href="/2017/01/08/2016/2016-11-30-sorting-tags-in-jekyll/"><span>Sorting tags in Jekyll</span></a></h1><time datetime="2017-01-08T20:06:35.000Z" class="post__time">2017-01-08</time><hr/></header><div class="post__main echo"><p>On this blog I list all the used tags in the sidebar. I realised these tags were listed <em>randomly</em> so wanted to know if you could sort them alphabetically.</p>
+<p>Turns out you can.</p>
+<h2 id="Tagging-posts"><a href="#Tagging-posts" class="headerlink" title="Tagging posts"></a>Tagging posts</h2><p>In your posts, make sure you tag your posts in the meta section:</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown">title: Your awesome title
+tags:
+<span class="token code keyword">    - something</span>
+<span class="token code keyword">    - here</span>
+<span class="token code keyword">    - three</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now, Jekyll is clever and knows about your tags and stores them in <code>site.tags</code>. To display a list of them, use the following snippet:</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Tags<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    {{ "<span class="token comment" spellcheck="true">&lt;!--￼0--></span>
+    {{ "<span class="token comment" spellcheck="true">&lt;!--￼1--></span>
+        {{ "<span class="token comment" spellcheck="true">&lt;!--￼2--></span>
+        {{ "<span class="token comment" spellcheck="true">&lt;!--￼3--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/tags/# {{ <span class="token punctuation">"</span></span> <span class="token attr-name">{{</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">t</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">|</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">downcase</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">replace:</span>'</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">','-'"</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">}}}}"</span><span class="token punctuation">></span></span>="" "{{t="" ','-'="" "="" }}}}="" <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>({{="" "{{="" posts="" size="" }}}})&lt;="" span>="" &lt;="" a>="" li>="" "{%="" endfor="" }}%}="" ul>="" &lt;="" code=""><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>So first Jekyll gets all tags, and pipes them through the sort function. Next we iterate over them and link to a page passing the tag for optional use on the target page. Behind the tag we can use the <strong>size</strong> pipe to show how many posts are tagged with the current tag.</p>
+<p>Good stuff.</p>
+<!-- Rectangle Ad -->
+<p><center><br><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-0534492338431642" data-ad-slot="3199566305"></ins><br></center></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>If you have any questions feel free to reach me at <a href="http://twitter.com/stefvdham" target="_blank" rel="external">@stefvdham</a> or in the comments below.</p>
+<p>Happy coding!</p>
+</div><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a href="/tags/jekyll/" class="post__tag__link">jekyll</a></li></ul><a href="/2017/01/08/2016/2016-11-30-sorting-tags-in-jekyll/#disqus_thread" class="post__foot-link u-fr"></a></footer></article></main><footer><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel asperiores illum suscipit nobis mollitia architecto, esse distinctio cupiditate adipisci sunt odit autem expedita enim repudiandae blanditiis hic reiciendis consequuntur, porro?</p></footer></body></html>

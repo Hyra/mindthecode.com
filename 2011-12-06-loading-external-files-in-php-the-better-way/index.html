@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>Loading external files in PHP the better way - Mindthecode</title><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>Loading external files in PHP the better way</span></h1><h5><span>Loading external assets with curl is not only easy, it's also a lot faster than file_get_contents</span></h5><time datetime="2016-11-22T16:42:15.000Z" class="post__time">Nov 22 2016</time></header><hr/><p>Sometimes you run into “weird behavior” when using <code>file_get_contents</code> in your code when retrieving external data. I noticed this for instance when accessing the Facebook Graph API the other day. When using file_get_contents the results were so much different than when using cUrl.</p>
+<!-- <div class="teaser" style='background: transparent url(/images/headers/external.gif) no-repeat center center;'></div> -->
+<p>Sometimes even, it is disabled on your host for security reasons. So i’m making it a habbit to run everything through cUrl instead. Not just to get the “actual results”, but also since it’s a lot faster.</p>
+<h2 id="Faster-you-say"><a href="#Faster-you-say" class="headerlink" title="Faster you say?"></a>Faster you say?</h2><p>Indeed! Take this benchmark for instance, <code>file_get_contents</code> vs <code>curl</code> on google.com:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array   <span class="token comment" spellcheck="true">// 1 request to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">0.4955058</span> <span class="token comment" spellcheck="true">// 38.88% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">0.3582108</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array   <span class="token comment" spellcheck="true">// 5 requests to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">2.2415568</span> <span class="token comment" spellcheck="true">// 24.44% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">1.7973249</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array  <span class="token comment" spellcheck="true">// 10 requests to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">4.7877922</span> <span class="token comment" spellcheck="true">// 29.46% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">3.6951289</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array  <span class="token comment" spellcheck="true">// 25 requests to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">10.932404</span> <span class="token comment" spellcheck="true">// 10.18% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">9.9168329</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array  <span class="token comment" spellcheck="true">// 50 requests to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">22.535982</span> <span class="token comment" spellcheck="true">// 24.74% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">18.068931</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> Array <span class="token comment" spellcheck="true">// 100 requests to google.com</span>
+<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>FGC<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span>  <span class="token number">44.685283</span> <span class="token comment" spellcheck="true">// 18.57% slower</span>
+    <span class="token punctuation">[</span>CURL<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">37.688820</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>Sure, it might not seem that big a difference. But imagine loading an external file being a big part of your (heavily) used application.</p>
+<h2 id="Got-an-example"><a href="#Got-an-example" class="headerlink" title="Got an example ?"></a>Got an example ?</h2><p>Sure, no worries. Rather than calling:</p>
+<pre class=" language-javascript"><code class="language-javascript">$data <span class="token operator">=</span> <span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token string">'http://whatever.com/sheep.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>you could do:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">loadFile</span><span class="token punctuation">(</span>$url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    $ch <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">curl_setopt</span><span class="token punctuation">(</span>$ch<span class="token punctuation">,</span> CURLOPT_HEADER<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">curl_setopt</span><span class="token punctuation">(</span>$ch<span class="token punctuation">,</span> CURLOPT_RETURNTRANSFER<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">curl_setopt</span><span class="token punctuation">(</span>$ch<span class="token punctuation">,</span> CURLOPT_URL<span class="token punctuation">,</span> $url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    $data <span class="token operator">=</span> <span class="token function">curl_exec</span><span class="token punctuation">(</span>$ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">curl_close</span><span class="token punctuation">(</span>$ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> $data<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+$data <span class="token operator">=</span> <span class="token function">loadFile</span><span class="token punctuation">(</span><span class="token string">'http://whatever.com/sheep.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>And you’re done.</p>
+<h2 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts?"></a>Thoughts?</h2><p>Anyone else experiencing different results between cUrl and the builtin function? I’ve been googling what could cause this, but so far nothing conclusive.</p>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/php/" class="post__tag__link">php</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/2011-04-14-using-sass-in-your-next-cakephp-project/" class="prevnext-prev"><p>← Prev</p></a><a href="/2013-08-06-a-more-colourful-cat-in-your-shell/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode"></a><br><p>Made with ❤ and 🍺</p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

@@ -1,0 +1,133 @@
+code[class*=language-], pre[class*=language-] {
+  color: #f8f8f2 !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3) !important;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace !important;
+  direction: ltr !important;
+  text-align: left !important;
+  white-space: pre !important;
+  word-spacing: normal !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  line-height: 1.5 !important;
+  -moz-tab-size: 4 !important;
+  -o-tab-size: 4 !important;
+  tab-size: 4 !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important; }
+
+pre[class*=language-] {
+  padding: 1em !important;
+  margin: .5em 0 !important;
+  overflow: auto !important;
+  border-radius: .3em !important; }
+
+:not(pre) > code[class*=language-], pre[class*=language-] {
+  background: #272822 !important; }
+
+:not(pre) > code[class*=language-] {
+  padding: .1em !important;
+  border-radius: .3em !important;
+  white-space: normal !important; }
+
+.token.cdata, .token.comment, .token.doctype, .token.prolog {
+  color: #708090 !important; }
+
+.token.punctuation {
+  color: #f8f8f2 !important; }
+
+.namespace {
+  opacity: .7 !important; }
+
+.token.constant, .token.deleted, .token.property, .token.symbol, .token.tag {
+  color: #f92672 !important; }
+
+.token.boolean, .token.number {
+  color: #ae81ff !important; }
+
+.token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string {
+  color: #a6e22e !important; }
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url, .token.variable {
+  color: #f8f8f2 !important; }
+
+.token.atrule, .token.attr-value, .token.function {
+  color: #e6db74 !important; }
+
+.token.keyword {
+  color: #66d9ef !important; }
+
+.token.important, .token.regex {
+  color: #fd971f !important; }
+
+.token.bold, .token.important {
+  font-weight: 700 !important; }
+
+.iconic, body {
+  font-weight: 400 !important; }
+
+.token.italic {
+  font-style: italic !important; }
+
+.h1, .h2, .iconic, .mfp-close, h1, h2 {
+  font-style: normal !important; }
+
+.token.entity {
+  cursor: help !important; }
+
+.token.operator {
+  background: none !important; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  background: none !important; }
+
+pre[class*=language-] {
+  background: #272822 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  padding: 20px 30px !important; }
+
+article pre[class*=language-] {
+  background: #32323c !important; }
+
+article pre[class*=language-]:before {
+  /*content:attr(data-title) !important;*/
+  /*position:absolute !important;*/
+  /*top:0 !important;*/
+  /*background:rgba(51,51,51,.4) !important;*/
+  /*text-align:right !important;*/
+  /*font-family:'Noto Sans',sans-serif !important;*/
+  /*text-shadow:none !important;*/
+  /*font-size:20px !important;*/
+  /*text-transform:uppercase !important;*/
+  /*font-weight:700 !important;*/
+  /*padding:20px 25% !important;*/
+  /*color:#636363!important !important;*/
+  /*margin-top:0 !important;*/
+  /*margin-bottom:0*/ }
+
+article .token.attr-name, article .token.builtin, article .token.char, article .token.inserted, article .token.selector, article .token.string {
+  color: #B8FFB0 !important; }
+
+article .token.constant, article .token.deleted, article .token.property, article .token.symbol, article .token.tag {
+  color: #FF99C6 !important; }
+
+article .token.boolean, article .token.number {
+  color: #7BCCFF !important; }
+
+article .token.atrule, article .token.attr-value, article .token.function {
+  color: #FFF595 !important; }
+
+article code[class*=language-] {
+  font-family: Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important; }
+
+article pre[class*=language-] {
+  position: relative !important; }
+
+article pre[class*=language-] .toolbar {
+  position: absolute !important;
+  right: 20px !important;
+  top: 10px !important; }

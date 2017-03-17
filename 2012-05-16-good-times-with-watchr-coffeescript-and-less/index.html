@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternative" href="/atom.xml" title="Mindthecode" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>Good times with Watchr, Coffeescript and LESS - Mindthecode</title><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><header><a href="/" class="logo"><img src="http://mindthecode.com/logo.png" height="30"></a><nav><ul><li><a href="/">Blog</a></li><li><a href="/about">About</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main><article class="post"><header><h1><span>Good times with Watchr, Coffeescript and LESS</span></h1><h5><span>With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.</span></h5><time datetime="2016-11-22T16:42:15.000Z" class="post__time">Nov 22 2016</time></header><hr/><p>I have been working on a pure HTML front-end for one of the pet projects I’m doing. A lot of fun, but while developing, running the terminal commands to compile both the .less and .coffee files gets a tad tedious. <a href="https://github.com/mynyml/watchr" target="_blank" rel="external">“Watchr”</a> to the rescue! With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.</p>
+<p>Here is how I got it set up now ..</p>
+<h2 id="Installing-watchr"><a href="#Installing-watchr" class="headerlink" title="Installing watchr"></a>Installing watchr</h2><p>First of all we need to get the Watchr gem installed. Assuming you have a Mac and got XCode (or at least the tools) installed, this is pretty simple:</p>
+<pre class=" language-bash"><code class="language-bash">$ gem <span class="token function">install</span> watchr
+</code></pre>
+<h2 id="Installing-coffeescript"><a href="#Installing-coffeescript" class="headerlink" title="Installing coffeescript"></a>Installing coffeescript</h2><p>Another easy one ..</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g coffee-script
+</code></pre>
+<p>Don’t forget the <code>-g</code> flag as you (probably) want it to be installed globally.</p>
+<h2 id="Installing-the-LESS-compiler"><a href="#Installing-the-LESS-compiler" class="headerlink" title="Installing the LESS compiler"></a>Installing the LESS compiler</h2><p>You got the hang of it now, it’s as easy as ..</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g <span class="token function">less</span>
+</code></pre>
+<h2 id="The-fun-part"><a href="#The-fun-part" class="headerlink" title="The fun part!"></a>The fun part!</h2><p>Now we’re ready for the fun bit, setting up watchr to do some automagic stuff.</p>
+<p>I have a typical folder structure, with the exception of a new <code>_src</code> folder which will contain all the raw coffeescript and less files.</p>
+<pre class=" language-bash"><code class="language-bash">/index.html
+/css
+/js
+/img
+/_src
+    /less
+    /coffee
+</code></pre>
+<p>Watchr works with a config file, which basically tells it what to watch for, and what to do if it finds any changes. I placed the file inside the <code>_src</code> folder and named it <code>watchr.rb</code></p>
+<p>Here’s my config file at the moment:</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token keyword">def</span> compile_less
+    <span class="token string">%x[lessc less/bootstrap/bootstrap.less ../css/main.css --yui-compress]</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">def</span> compile_coffee
+    <span class="token string">%x[coffee -c -j ../js/app.js coffee/]</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">def</span> <span class="token function">do_growl</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+  growlnotify <span class="token operator">=</span> `which growlnotify`<span class="token punctuation">.</span>chomp
+  title <span class="token operator">=</span> <span class="token string">"Watchr Message"</span>
+  passed <span class="token operator">=</span> message<span class="token punctuation">.</span>include<span class="token operator">?</span><span class="token punctuation">(</span><span class="token string">'0 failures, 0 errors'</span><span class="token punctuation">)</span>
+  image <span class="token operator">=</span> passed <span class="token operator">?</span> <span class="token string">"~/.watchr_images/passed.png"</span> <span class="token punctuation">:</span> <span class="token string">"~/.watchr_images/failed.png"</span>
+  severity <span class="token operator">=</span> passed <span class="token operator">?</span> <span class="token string">"-1"</span> <span class="token punctuation">:</span> <span class="token string">"1"</span>
+  options <span class="token operator">=</span> <span class="token string">"-w -n Watchr --image '<span class="token interpolation"><span class="token delimiter tag">#{</span>File<span class="token punctuation">.</span><span class="token function">expand_path</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token delimiter tag">}</span></span>'"</span>
+  options <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">" -m '<span class="token interpolation"><span class="token delimiter tag">#{</span>message<span class="token delimiter tag">}</span></span>' '<span class="token interpolation"><span class="token delimiter tag">#{</span>title<span class="token delimiter tag">}</span></span>' -p <span class="token interpolation"><span class="token delimiter tag">#{</span>severity<span class="token delimiter tag">}</span></span>"</span>
+  system <span class="token string">%(<span class="token interpolation"><span class="token delimiter tag">#{</span>growlnotify<span class="token delimiter tag">}</span></span> <span class="token interpolation"><span class="token delimiter tag">#{</span>options<span class="token delimiter tag">}</span></span> &amp;)</span>
+<span class="token keyword">end</span>
+
+do_growl <span class="token string">"Watching folders and waiting for changes .."</span>
+
+<span class="token function">watch</span><span class="token punctuation">(</span><span class="token string">'less/*'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">|</span>m<span class="token operator">|</span>
+    <span class="token comment" spellcheck="true"># Recompile LESS files</span>
+    compile_less
+    do_growl <span class="token string">"LESS Compiled and Compressed!"</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">watch</span><span class="token punctuation">(</span><span class="token string">'coffee/*'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">|</span>m<span class="token operator">|</span>
+    <span class="token comment" spellcheck="true"># Recompile Coffeescripts</span>
+    compile_coffee
+    do_growl <span class="token string">"Coffeescripts compiled and concatenated!"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As you can see at the bottom I’m watching the 2 folders seperately, as I want to run different commands for them. For the project I’m working on I’m using Twitter Bootstrap, so rather than compiling all the .less files to seperate .css files I just want to compiled bootstrap.less as that @imports all the things it needs. When it’s done with that it yui-compresses the lot and writes the output to <code>css/main.css</code>. Pretty cool!</p>
+<p>The compile_coffee command does something pretty similar. Whenever a .coffee file in the coffee folder changes it will compile them all and combine the output (notice the <code>-j</code> flag) and write it to <code>js/app.js</code>.</p>
+<p>To get the show on the road, cd to the <code>_src</code> folder, and run:</p>
+<pre class=" language-bash"><code class="language-bash">$ watchr watchr.rb
+</code></pre>
+<p>You may have noticed the <code>do_growl</code> function, which doesn’t really add value except that it’s just cool to get a Growl message whenever it has done it’s thing. To get that bit working you have to install <a href="http://growl.info/extras.php#growlnotify" target="_blank" rel="external">“Growl Notify”</a>.</p>
+<p>If you’re not that interested, or you don’t have a Mac with Growl simply remove the function and the do_growl calls from the watch patterns.</p>
+<p>I’m sure I could optimize this a bit, and add variables for output folders and options, but for now it’s simple, working, and pretty damn cool.</p>
+<p>Let me know how you get your watchr set up!</p>
+<hr/><ul class="tags"><li>Tags: </li><li class="post__tag__item"><a href="/tags/less/" class="post__tag__link">less</a></li><li class="post__tag__item"><a href="/tags/coffeescript/" class="post__tag__link">coffeescript</a></li></ul><a href="https://twitter.com/intent/tweet" class="twitter-share-button">Tweet</a><hr/><h2>Questions or comments?</h2><p>As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.</p><div class="prevnext"><a href="/2012-09-18-spotify-boilerplate-app/" class="prevnext-prev"><p>← Prev</p></a><a href="/2013-02-28-customize-the-terminal/" class="prevnext-next"><p>Next →</p></a></div></article></main><footer><a href="/"><img src="http://mindthecode.com/images/mtc_inv_white.png" alt="Mindthecode"></a><br><p>Made with ❤ and 🍺</p><p>© Copyright 2011-2017</p></footer><script src="/js/main.js"></script><script async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=mindthecode" id="_carbonads_js"></script></body></html>

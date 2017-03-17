@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mindthecode</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://mindthecode.com/"/>
+  <updated>2017-03-16T07:42:55.000Z</updated>
+  <id>http://mindthecode.com/</id>
+  
+  <author>
+    <name>Stef van den Ham</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sorting tags in Jekyll</title>
+    <link href="http://mindthecode.com/sorting-tags-in-jekyll/"/>
+    <id>http://mindthecode.com/sorting-tags-in-jekyll/</id>
+    <published>2016-11-29T23:00:00.000Z</published>
+    <updated>2017-03-16T07:42:55.000Z</updated>
+    
+    <summary type="html">
+    
+      How to sort your site.tags alphabetically in your Jekyll blog
+    
+    </summary>
+    
+    
+      <category term="jekyll" scheme="http://mindthecode.com/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Setting up Laravel with Docker Compose</title>
+    <link href="http://mindthecode.com/setting-up-laravel-with-docker-compose/"/>
+    <id>http://mindthecode.com/setting-up-laravel-with-docker-compose/</id>
+    <published>2016-11-27T23:00:00.000Z</published>
+    <updated>2017-03-16T07:43:35.000Z</updated>
+    
+    <summary type="html">
+    
+      Maintaining a local server for your projects can become cumbersome and can cause conflicts with your co-workers. Streamlining this with Docker makes sure everyone is in on the same page.
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://mindthecode.com/tags/docker/"/>
+    
+      <category term="laravel" scheme="http://mindthecode.com/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Getting started with the PanResponder in React Native</title>
+    <link href="http://mindthecode.com/getting-started-with-the-panresponder-in-react-native/"/>
+    <id>http://mindthecode.com/getting-started-with-the-panresponder-in-react-native/</id>
+    <published>2016-04-19T22:00:00.000Z</published>
+    <updated>2017-03-16T07:43:53.000Z</updated>
+    
+    <summary type="html">
+    
+      Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I&#39;ll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://mindthecode.com/tags/react/"/>
+    
+      <category term="react-native" scheme="http://mindthecode.com/tags/react-native/"/>
+    
+      <category term="javascript" scheme="http://mindthecode.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Storybook</title>
+    <link href="http://mindthecode.com/react-storybook/"/>
+    <id>http://mindthecode.com/react-storybook/</id>
+    <published>2016-04-17T22:00:00.000Z</published>
+    <updated>2017-03-16T07:44:09.000Z</updated>
+    
+    <summary type="html">
+    
+      Recently React Storybook came out. It&#39;s a tool to isolate your React Components to develop and design them outside of your app. I&#39;ll be walking through setting it up
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://mindthecode.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Getting your React Native App on an iOS device</title>
+    <link href="http://mindthecode.com/get-your-react-native-app-running-on-a-device/"/>
+    <id>http://mindthecode.com/get-your-react-native-app-running-on-a-device/</id>
+    <published>2015-10-07T22:00:00.000Z</published>
+    <updated>2017-03-16T07:45:57.000Z</updated>
+    
+    <summary type="html">
+    
+      As I was playing around with the awesome React Native library I encountered a few small hicups getting an app running on an actual device, so here&#39;s how I made it work for me.
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://mindthecode.com/tags/react/"/>
+    
+      <category term="react-native" scheme="http://mindthecode.com/tags/react-native/"/>
+    
+      <category term="ios" scheme="http://mindthecode.com/tags/ios/"/>
+    
+      <category term="mobile" scheme="http://mindthecode.com/tags/mobile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Writing Browserify modules for your Angular app</title>
+    <link href="http://mindthecode.com/writing-browserify-modules-for-your-angular-app/"/>
+    <id>http://mindthecode.com/writing-browserify-modules-for-your-angular-app/</id>
+    <published>2014-06-02T22:00:00.000Z</published>
+    <updated>2017-03-16T07:46:26.000Z</updated>
+    
+    <summary type="html">
+    
+      Following up on my previous post I got a few questions on how to create modules for your app. Let me show you.
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="http://mindthecode.com/tags/angular/"/>
+    
+      <category term="browserify" scheme="http://mindthecode.com/tags/browserify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Recording a website with PhantomJS and FFMpeg</title>
+    <link href="http://mindthecode.com/recording-a-website-with-phantomjs-and-ffmpeg/"/>
+    <id>http://mindthecode.com/recording-a-website-with-phantomjs-and-ffmpeg/</id>
+    <published>2014-05-24T22:00:00.000Z</published>
+    <updated>2017-03-16T07:46:36.000Z</updated>
+    
+    <summary type="html">
+    
+      When I realised you could easily generate screenshots from a site with PhantomJS I just needed to know if I could take it one step further, and record a video.
+    
+    </summary>
+    
+    
+      <category term="ffmpeg" scheme="http://mindthecode.com/tags/ffmpeg/"/>
+    
+      <category term="phantomjs" scheme="http://mindthecode.com/tags/phantomjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Let&#39;s build: An AngularJS app with Browserify and Gulp</title>
+    <link href="http://mindthecode.com/lets-build-an-angularjs-app-with-browserify-and-gulp/"/>
+    <id>http://mindthecode.com/lets-build-an-angularjs-app-with-browserify-and-gulp/</id>
+    <published>2014-05-04T22:00:00.000Z</published>
+    <updated>2017-03-16T07:46:46.000Z</updated>
+    
+    <summary type="html">
+    
+      Today I want to show a generic workflow and setup I have used a lot lately when working on building apps with Angular. It uses Gulp as a CI system and Browserify to minimize code clutter and maximize awesomeness.
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="http://mindthecode.com/tags/angular/"/>
+    
+      <category term="browserify" scheme="http://mindthecode.com/tags/browserify/"/>
+    
+      <category term="gulp" scheme="http://mindthecode.com/tags/gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to use environment variables in your Angular application</title>
+    <link href="http://mindthecode.com/how-to-use-environment-variables-in-your-angular-application/"/>
+    <id>http://mindthecode.com/how-to-use-environment-variables-in-your-angular-application/</id>
+    <published>2013-12-28T23:00:00.000Z</published>
+    <updated>2017-03-16T07:46:56.000Z</updated>
+    
+    <summary type="html">
+    
+      I will explain how to use environment variables in your Angular app
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="http://mindthecode.com/tags/angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTPIe, a command line HTTP client</title>
+    <link href="http://mindthecode.com/httpie-the-command-line-http-client/"/>
+    <id>http://mindthecode.com/httpie-the-command-line-http-client/</id>
+    <published>2013-12-07T23:00:00.000Z</published>
+    <updated>2017-03-16T07:47:06.000Z</updated>
+    
+    <summary type="html">
+    
+      Curl on steroids with an easy interface and syntax highlighted output.
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://mindthecode.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blogging with CabinJS and Grunt</title>
+    <link href="http://mindthecode.com/blogging-with-cabinjs-and-grunt/"/>
+    <id>http://mindthecode.com/blogging-with-cabinjs-and-grunt/</id>
+    <published>2013-12-07T23:00:00.000Z</published>
+    <updated>2017-03-17T06:38:32.000Z</updated>
+    
+    <summary type="html">
+    
+      My experience while rebuilding this blog with CabinJS and Grunt
+    
+    </summary>
+    
+    
+      <category term="cabinjs" scheme="http://mindthecode.com/tags/cabinjs/"/>
+    
+      <category term="grunt" scheme="http://mindthecode.com/tags/grunt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A more colourful cat in your shell</title>
+    <link href="http://mindthecode.com/a-more-colourful-cat-in-your-shell/"/>
+    <id>http://mindthecode.com/a-more-colourful-cat-in-your-shell/</id>
+    <published>2013-08-05T22:00:00.000Z</published>
+    <updated>2017-03-16T07:47:23.000Z</updated>
+    
+    <summary type="html">
+    
+      Let me show you how you can get syntax highlighted output from cat in the terminal
+    
+    </summary>
+    
+    
+      <category term="terminal" scheme="http://mindthecode.com/tags/terminal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Customize the terminal</title>
+    <link href="http://mindthecode.com/customize-the-terminal/"/>
+    <id>http://mindthecode.com/customize-the-terminal/</id>
+    <published>2013-02-27T23:00:00.000Z</published>
+    <updated>2017-03-16T07:47:31.000Z</updated>
+    
+    <summary type="html">
+    
+      In this post I want to show you how you can customize the terminal to not only make it look cool but work better, too
+    
+    </summary>
+    
+    
+      <category term="terminal" scheme="http://mindthecode.com/tags/terminal/"/>
+    
+      <category term="zsh" scheme="http://mindthecode.com/tags/zsh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Getting used to Vim</title>
+    <link href="http://mindthecode.com/getting-used-to-vim/"/>
+    <id>http://mindthecode.com/getting-used-to-vim/</id>
+    <published>2013-02-08T23:00:00.000Z</published>
+    <updated>2017-03-16T07:47:41.000Z</updated>
+    
+    <summary type="html">
+    
+      Trying not to touch the arrow keys, not use the h-j-k-l too extensively either, work with A and I a lot, and generally trying not to cock things up too much by hitting the wrong commands.
+    
+    </summary>
+    
+    
+      <category term="vim" scheme="http://mindthecode.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Updated the PHPUnit CakePHP installer</title>
+    <link href="http://mindthecode.com/updated-phpunit-cakephp-installer/"/>
+    <id>http://mindthecode.com/updated-phpunit-cakephp-installer/</id>
+    <published>2012-11-05T23:00:00.000Z</published>
+    <updated>2017-03-16T07:47:53.000Z</updated>
+    
+    <summary type="html">
+    
+      Updated the PHPUnit CakePHP installer
+    
+    </summary>
+    
+    
+      <category term="phpunit" scheme="http://mindthecode.com/tags/phpunit/"/>
+    
+      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blogging with Octopress</title>
+    <link href="http://mindthecode.com/blogging-with-octopress/"/>
+    <id>http://mindthecode.com/blogging-with-octopress/</id>
+    <published>2012-10-25T22:00:00.000Z</published>
+    <updated>2017-03-17T06:38:11.000Z</updated>
+    
+    <summary type="html">
+    
+      My experiences while converting this blog to an Octopress one
+    
+    </summary>
+    
+    
+      <category term="octopress" scheme="http://mindthecode.com/tags/octopress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spotify Boilerplate App</title>
+    <link href="http://mindthecode.com/spotify-boilerplate-app/"/>
+    <id>http://mindthecode.com/spotify-boilerplate-app/</id>
+    <published>2012-09-17T22:00:00.000Z</published>
+    <updated>2017-03-16T07:48:06.000Z</updated>
+    
+    <summary type="html">
+    
+      A Boilerplate with best practices to kickstart your Spotify App
+    
+    </summary>
+    
+    
+      <category term="spotify" scheme="http://mindthecode.com/tags/spotify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Good times with Watchr, Coffeescript and LESS</title>
+    <link href="http://mindthecode.com/good-times-with-watchr-coffeescript-and-less/"/>
+    <id>http://mindthecode.com/good-times-with-watchr-coffeescript-and-less/</id>
+    <published>2012-05-15T22:00:00.000Z</published>
+    <updated>2017-03-16T07:48:14.000Z</updated>
+    
+    <summary type="html">
+    
+      With this little gem you can watch specific folders or file extensions and run commands based on the files you watch.
+    
+    </summary>
+    
+    
+      <category term="less" scheme="http://mindthecode.com/tags/less/"/>
+    
+      <category term="coffeescript" scheme="http://mindthecode.com/tags/coffeescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Format associative JSON to work with Knockout.js</title>
+    <link href="http://mindthecode.com/format-associative-json-to-work-with-knockout-js/"/>
+    <id>http://mindthecode.com/format-associative-json-to-work-with-knockout-js/</id>
+    <published>2012-05-08T22:00:00.000Z</published>
+    <updated>2017-03-16T07:48:22.000Z</updated>
+    
+    <summary type="html">
+    
+      How to format an associative array in JSON with Knockout
+    
+    </summary>
+    
+    
+      <category term="knockout.js" scheme="http://mindthecode.com/tags/knockout-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using Sessions in PHPUnit Tests with CakePHP</title>
+    <link href="http://mindthecode.com/using-sessions-in-phpunit-tests-with-cakephp/"/>
+    <id>http://mindthecode.com/using-sessions-in-phpunit-tests-with-cakephp/</id>
+    <published>2012-02-23T23:00:00.000Z</published>
+    <updated>2017-03-16T07:48:30.000Z</updated>
+    
+    <summary type="html">
+    
+      How to use sessions within your unit tests using PHPUnit and CakePHP
+    
+    </summary>
+    
+    
+      <category term="phpunit" scheme="http://mindthecode.com/tags/phpunit/"/>
+    
+      <category term="cakephp" scheme="http://mindthecode.com/tags/cakephp/"/>
+    
+  </entry>
+  
+</feed>

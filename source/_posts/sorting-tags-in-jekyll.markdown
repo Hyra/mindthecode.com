@@ -13,7 +13,7 @@ On this blog I list all the used tags in the sidebar. I realised these tags were
 Turns out you can.
 <center>
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:block;width:615px;height:70px"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="3131304304"
      data-ad-format="auto"></ins>

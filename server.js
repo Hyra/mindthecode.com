@@ -20,7 +20,7 @@ app.use(compression())
 app.use(express.static('public'))
     
 // app.use(compression({ threshold: 0 }))
-app.use(favicon('./public/logo.png'))
+// app.use(favicon(__dirname + '/public/logo.png'))
 
 app.listen(process.env.PORT || 3000, function () {
   console.log(`Example app listening on port ${process.env.PORT || 3000}!`)

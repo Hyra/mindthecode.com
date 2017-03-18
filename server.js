@@ -25,7 +25,7 @@ app.use(function(req, res, next){
 })
 
 // app.use(compression({ threshold: 0 }))
-// app.use(favicon(__dirname + '/public/logo.png'))
+app.use(favicon(__dirname + '/public/favicon.ico'))
 
 app.listen(process.env.PORT || 3000, function () {
   console.log(`Example app listening on port ${process.env.PORT || 3000}!`)

@@ -10,6 +10,8 @@
     "npm": ">= 3.0.0"
   },
   "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
     "hexo": "^3.2.0",
     "hexo-deployer-git": "^0.2.0",
     "hexo-deployer-heroku": "^0.1.1",
@@ -25,6 +27,8 @@
     "hexo-renderer-marked": "^0.2.11",
     "hexo-renderer-sass": "^0.3.1",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "morgan": "^1.8.1",
+    "serve-favicon": "^2.4.1"
   }
 }

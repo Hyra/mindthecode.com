@@ -18,7 +18,7 @@ morgan(function (tokens, req, res) {
 app.use(compression())
 
 // app.use(express.static('public'))
-const oneDay = 86400000
+const oneDay = 86400000 * 7
 app.use(express.static('public', {
   maxage: oneDay
 }))

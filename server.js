@@ -18,7 +18,12 @@ morgan(function (tokens, req, res) {
 app.use(compression())
 
 app.use(express.static('public'))
-    
+
+app.use(function(req, res, next){
+  res.status(404)
+  res.sendfile(__dirname + '/public/404/index.html', { url: req.url })
+})
+
 // app.use(compression({ threshold: 0 }))
 // app.use(favicon(__dirname + '/public/logo.png'))
 

@@ -5,13 +5,13 @@ var morgan = require('morgan')
 
 var app = express()
 
-function forceSsl(req, res, next)(function() {
+function forceSsl(req, res, next) {
     if (req.header('x-forwarded-proto' !== 'https') && req.header('host') !== 'localhost') {
         return res.redirect("https://" + (req.header('host')) + req.url)
     } else {
         return next()
     }
-})
+}
 
 app.use(forceSsl)
 

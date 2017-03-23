@@ -6,14 +6,16 @@ var morgan = require('morgan')
 var app = express()
 
 function requireHTTPS(req, res, next) {
-    if (!req.secure && req.host !== 'localhost') {
+    if(!req.secure && process.env.NODE_ENV === 'production') {  
         //FYI this should work for local development as well)
-        return res.redirect('https://mindthecode.com' + req.url);
+        var secureUrl = "https://" + req.headers['host'] + req.url
+        res.redirect(secureUrl)
+        res.end()
     }
     next();
 }
 
-// app.use(requireHTTPS);
+app.use(requireHTTPS);
 
 morgan(function (tokens, req, res) {
   return [

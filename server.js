@@ -8,7 +8,7 @@ var app = express()
 function requireHTTPS(req, res, next) {
     if (!req.secure && req.host !== 'localhost') {
         //FYI this should work for local development as well)
-        return res.redirect('https://mindthecode.com/' + req.url);
+        return res.redirect('https://mindthecode.com' + req.url);
     }
     next();
 }

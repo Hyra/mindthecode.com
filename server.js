@@ -13,7 +13,7 @@ function requireHTTPS(req, res, next) {
     next();
 }
 
-app.use(requireHTTPS);
+// app.use(requireHTTPS);
 
 morgan(function (tokens, req, res) {
   return [

@@ -6,7 +6,7 @@ var morgan = require('morgan')
 var app = express()
 
 function requireHTTPS(req, res, next) {
-    if (!req.secure && req.host !== 'localhost' && req.host !== '127.0.0.1') {
+    if (!req.secure && (req.host !== 'localhost' && req.host !== '127.0.0.1')) {
         //FYI this should work for local development as well)
         return res.redirect('https://' + req.get('host') + req.url);
     }

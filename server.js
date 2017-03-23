@@ -5,17 +5,15 @@ var morgan = require('morgan')
 
 var app = express()
 
-function requireHTTPS(req, res, next) {
-    if(!req.secure && process.env.NODE_ENV === 'production') {  
-        //FYI this should work for local development as well)
-        var secureUrl = "https://" + req.headers['host'] + req.url
-        res.redirect(secureUrl)
-        res.end()
+function forceSsl(req, res, next)(function() {
+    if (req.header('x-forwarded-proto' !== 'https') && req.header('host') !== 'localhost') {
+        return res.redirect("https://" + (req.header('host')) + req.url)
+    } else {
+        return next()
     }
-    next();
-}
+})
 
-// app.use(requireHTTPS);
+app.use(forceSsl)
 
 morgan(function (tokens, req, res) {
   return [

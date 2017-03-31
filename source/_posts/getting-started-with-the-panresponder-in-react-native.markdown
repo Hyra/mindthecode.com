@@ -23,7 +23,9 @@ Inside React Native you can use the PanResponder to recognize multi-touch gestur
 
 Obviously we'll be wanting to focus on the PanResponder itself so UI wise this will be pretty barebones. We'll have an image on screen we can drag. When we release it it will bounce back to its original position. As a bonus, while we press down on the image it will scale up.
 
+<center>
 ![PanResponder Demo](/images/panresponder_demo.gif)
+</center>
 
 ## Setting the stage
 
@@ -79,7 +81,9 @@ render() {
 
 When you run the app now you should see the image in the center of the screen, waiting for you to do something more exciting. So let's get to it.
 
+<center>
 ![Panresponder 01](/images/panresponder_01.png)
+</center>
 
 ## Adding the PanResponder
 

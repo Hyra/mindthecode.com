@@ -11,13 +11,12 @@ date: 2016-11-30
 On this blog I list all the used tags in the sidebar. I realised these tags were listed _randomly_ so wanted to know if you could sort them alphabetically.
 
 Turns out you can.
-<center>
+<!-- Auto Responsive -->
 <ins class="adsbygoogle"
-     style="display:block;width:615px;height:70px"
+     style="display:block"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="3131304304"
      data-ad-format="auto"></ins>
-</center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -58,13 +57,12 @@ So first Jekyll gets all tags, and pipes them through the sort function. Next we
 
 Good stuff.
 
-<!-- Rectangle Ad -->
-<center>
+<!-- Auto Responsive -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
+     style="display:block"
      data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
+     data-ad-slot="3131304304"
+     data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>

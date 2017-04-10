@@ -21,11 +21,6 @@ mixin post(post)
     hr
     != post.content
 
-    ins(class="adsbygoogle", style="display:block", data-ad-client="ca-pub-0534492338431642", data-ad-slot="3131304304", data-ad-format="auto")
-    br
-    script.
-        (adsbygoogle = window.adsbygoogle || []).push({});
-
     hr
     if post.tags && post.tags.length
       ul.tags
@@ -36,6 +31,12 @@ mixin post(post)
         - })
     a(class="twitter-share-button", href="https://twitter.com/intent/tweet") Tweet
     hr
+
+    ins(class="adsbygoogle", style="display:block", data-ad-client="ca-pub-0534492338431642", data-ad-slot="3131304304", data-ad-format="auto")
+    br
+    script.
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
     h2 Questions or comments?
     p As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.
     .prevnext

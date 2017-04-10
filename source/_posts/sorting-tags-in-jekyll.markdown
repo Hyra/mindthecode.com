@@ -57,16 +57,6 @@ So first Jekyll gets all tags, and pipes them through the sort function. Next we
 
 Good stuff.
 
-<!-- Auto Responsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3131304304"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 If you have any questions feel free to reach me at [@stefvdham](http://twitter.com/stefvdham) or in the comments below.
 
 Happy coding!

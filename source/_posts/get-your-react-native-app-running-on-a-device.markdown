@@ -40,17 +40,6 @@ This was not enough in my and my colleagues case. Additionally, you will want to
 
 Once that's done you should be able to select your phone as build target and press "Build and run".
 
-<!-- Rectangle Ad -->
-<center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 Of course, when you want to make a final build which doesn't require the device to be on the same WiFi as the computer you are serving the bundle.js file of off there's more steps, but with the above we could get Live Reloading on an actual device to work.
 
 Happy Coding.

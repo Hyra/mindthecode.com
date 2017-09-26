@@ -37,9 +37,7 @@ The program in its simplest form should:
      style="display:inline-block;width:728px;height:90px"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="5872023147"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 ## What will we need

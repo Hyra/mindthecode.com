@@ -31,7 +31,7 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 console.log("%cMade with ❤ and %c🍺", "color: #333; font-size: 12px; font-weight: bold;", "font-weight: normal");
-console.log("%cYou can follow me on https://twitter.com/stefvdham", "color: #333; font-size: 11px;");
+console.log("%cYou can follow me on https://twitter.com/hyra", "color: #333; font-size: 11px;");
 
 var links = document.links;
 

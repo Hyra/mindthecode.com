@@ -31,7 +31,6 @@ The program in its simplest form should:
 - Update the image with a text-overlay showing the license plate it found
 
 <div style="margin: -60px 0 0 -50px">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Leaderboard MTC -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"

@@ -57,7 +57,7 @@ So first Jekyll gets all tags, and pipes them through the sort function. Next we
 
 Good stuff.
 
-If you have any questions feel free to reach me at [@stefvdham](http://twitter.com/stefvdham) or in the comments below.
+If you have any questions feel free to reach me at [@hyra](http://twitter.com/hyra) or in the comments below.
 
 Happy coding!
 

@@ -374,6 +374,6 @@ We've done quite a lot. We have set up a webserver, added Gulp to automate all o
 
 I created a repository with the above so you can check the finished project, which you can find [here](https://github.com/Hyra/angular-gulp-browserify-livereload-boilerplate).
 
-I hope the above was of some help, and if you have any questions feel free to find me on [Twitter](http://twitter.com/stefvdham), or leave a comment below.
+I hope the above was of some help, and if you have any questions feel free to find me on [Twitter](http://twitter.com/hyra), or leave a comment below.
 
 Happy coding.

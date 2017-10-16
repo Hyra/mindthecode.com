@@ -16,6 +16,8 @@ VueJS is awesome. Creating self contained components and compose them together i
 
 Or can you? 🤔 
 
+> TL;DR: I've prepared a repo with the full example code in case you want to dive right in at [Github](https://github.com/Hyra/vue-components-in-express)
+
 Laravel already got Vue tightly integrated out-of-the-box, and you can actually register and use `.vue` components in your `blade` templates relatively easy. My weapon of choice is usually Express though, as I'm a Javascript fanboy 🤓. I set out to see if this is possible and spent 2 evenings trying to get the same working. With success! Below the steps to get this up and running for your next Express app as well.
 
 <center>
@@ -296,5 +298,7 @@ It will compile our javascript and watch for changes. Try it out, make a change 
 ## Conclusion
 
 I'm glad I could get this working. Sometimes it doesn't make sense to go all out with a single page app. Having the ability to still use the Vue Components in your traditional project is just gold.
+
+If you want to see the full source code of the above, I've prepared a repository at [Github](https://github.com/Hyra/vue-components-in-express) which you can use as a reference or starting point.
 
 Hope the above helps!

@@ -50,9 +50,7 @@ Let's get our image on the screen so we can continue on to the cool part.
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="3199566305"></ins>
 </center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 Open up `index.ios.js` and add the `Image` component at the top:
 

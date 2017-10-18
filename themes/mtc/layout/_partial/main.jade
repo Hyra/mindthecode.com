@@ -14,11 +14,10 @@ html
                         a(href="/about") About
                     li
                         a(href="/atom.xml") RSS
-                    li
+                    li(style="position: relative; top: 5px;")
                         //- a(href="http://twitter.com/hyra", target="_blank") Follow me
                         a.twitter-follow-button(href='https://twitter.com/hyra?ref_src=twsrc%5Etfw', data-show-count='false') Follow @hyra
-script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
-    
+
         main
             block main
         footer
@@ -35,5 +34,5 @@ script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
         script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
         script(type='text/javascript').
           require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us8.list-manage.com","uuid":"81bc331f4f2d0e26941705aa8","lid":"9085d5fa6a"}) })
-
+        script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
         //- script(async, src="//my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js")

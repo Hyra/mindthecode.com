@@ -11,15 +11,16 @@ date: 2016-11-30
 On this blog I list all the used tags in the sidebar. I realised these tags were listed _randomly_ so wanted to know if you could sort them alphabetically.
 
 Turns out you can.
+
 <!-- Auto Responsive -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="3131304304"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## Tagging posts
 In your posts, make sure you tag your posts in the meta section:

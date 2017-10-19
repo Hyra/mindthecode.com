@@ -91,7 +91,7 @@ $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint
 ```
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -99,7 +99,7 @@ $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## Configuring our Gulpfile
 

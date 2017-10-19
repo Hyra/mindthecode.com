@@ -57,7 +57,7 @@ exports.controller = function AboutCtrl($scope) {
 As you can see, our inject function takes the app, and in turn returns our controller function. Simple, clean and effective.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -65,7 +65,7 @@ As you can see, our inject function takes the app, and in turn returns our contr
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## Dependency injection
 

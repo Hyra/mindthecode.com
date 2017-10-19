@@ -30,14 +30,14 @@ The program in its simplest form should:
 - Detect if there is a license plate in the image
 - Update the image with a text-overlay showing the license plate it found
 
-<div style="margin: -60px 0 0 -50px">
+<!-- <div style="margin: -60px 0 0 -50px"> -->
 <!-- Leaderboard MTC -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="5872023147"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+</div> -->
 
 ## What will we need
 
@@ -104,13 +104,13 @@ I went onto a website where you can [sell your car](https://www.marktplaats.nl/c
 That's okay though, I'm sure there's some treshold-like settings we could tweak, but at least we know that it's able to detect our plates. That will do for now.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
      data-ad-slot="3199566305"></ins>
 </center>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 
 ## Taking the next step
 
@@ -296,7 +296,7 @@ output { version: 2,
 ```
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -304,7 +304,7 @@ output { version: 2,
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## Creating an image
 

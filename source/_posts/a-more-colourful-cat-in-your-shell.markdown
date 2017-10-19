@@ -36,7 +36,7 @@ gem install pygments
 ```
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -44,7 +44,7 @@ gem install pygments
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 Next up, the alias itself. Depending on your shell and environment open up your profile. If you aren't sure whether you've installed or configured something specifically on your system, chances are the file you are looking for (on OSX at least) is `~/.bashrc`.
 

@@ -18,7 +18,7 @@ For some reason none of them really seemed what I wanted. Croogo is cool enough,
 I somehow stumbled upon [Octopress](http://octopress.org) earlier this week, and decided to give it a go. Short conclusion: _It's awesome_.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -26,7 +26,7 @@ I somehow stumbled upon [Octopress](http://octopress.org) earlier this week, and
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 I won't go into all of the features, as that's nicely explained on their site, but basically it allows for this workflow:
 

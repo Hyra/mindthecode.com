@@ -35,7 +35,26 @@ mixin post(post)
           li.post__tag__item: a.post__tag__link(href = config.root + tag.path)
             = tag.name
         - })
-    a(class="twitter-share-button", href="https://twitter.com/intent/tweet") Tweet
+    //- a(class="twitter-share-button", href="https://twitter.com/intent/tweet") Tweet
+    .shares
+        a.sbg-button.sbg-button-facebook(data-sbg-network='facebook', data-sbg-url=config.url + config.root + page.path, data-sbg-title=page.title, data-sbg-summary=page.description, data-sbg-image='', data-sbg-width='600', data-sbg-height='368')
+          i.sbg-button-icon.fa.fa-facebook
+        a.sbg-button.sbg-button-twitter(data-sbg-network='twitter', data-sbg-text=page.description + ' - ' + config.url + config.root + page.path, data-sbg-via='hyra', data-sbg-hashtags='', data-sbg-width='600', data-sbg-height='258')
+          i.sbg-button-icon.fa.fa-twitter
+        a.sbg-button.sbg-button-linkedin(data-sbg-network='linkedin', data-sbg-url=config.url + config.root + page.path, data-sbg-title=page.title, data-sbg-source='', data-sbg-summary=page.description, data-sbg-width='585', data-sbg-height='471')
+          i.sbg-button-icon.fa.fa-linkedin
+        a.sbg-button.sbg-button-google-plus(data-sbg-network='google-plus', data-sbg-url=config.url + config.root + page.path, data-sbg-width='500', data-sbg-height='505')
+          i.sbg-button-icon.fa.fa-google-plus
+        a.sbg-button.sbg-button-pinterest(data-sbg-network='pinterest', data-sbg-url=config.url + config.root + page.path, data-sbg-media='', data-sbg-description=page.description, data-sbg-width='750', data-sbg-height='322')
+          i.sbg-button-icon.fa.fa-pinterest
+
+      //- meta(property="og:title", content=page.title)
+      //- meta(property="og:url", content=config.url + config.root + page.path)
+      //- meta(property="og:description", content=page.description)
+      //- meta(name="twitter:title", content=page.title)
+      //- meta(name="twitter:description", content=page.description)
+      //- meta(name="description", content=page.description)
+
     hr
 
     br

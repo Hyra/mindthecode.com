@@ -44,8 +44,6 @@ mixin post(post)
     hr
 
     h2 Keep reading
-    -popular_posts( {} , post )
-
     if post.tags && post.tags.length
       ul.tags
         li Tags: 
@@ -53,8 +51,7 @@ mixin post(post)
           li.post__tag__item: a.post__tag__link(href = config.root + tag.path)
             = tag.name
         - })
-    //-popular_posts( {} , post )
-    //- list_related_posts( {} , post )
+
       //- meta(property="og:title", content=page.title)
       //- meta(property="og:url", content=config.url + config.root + page.path)
       //- meta(property="og:description", content=page.description)

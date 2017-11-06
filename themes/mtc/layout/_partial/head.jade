@@ -8,27 +8,54 @@ if theme.rss
 if theme.favicon
   link(rel="icon", href = theme.favicon)
 
-  meta(name="author", content="Stef van den Ham @stefvdham")
-    
-  meta(property="og:type", content="article")
-  meta(property="og:image", content="https://mindthecode.com/images/og_image.png")
-  meta(property="og:site_name", content="Mindthecode")
-  meta(name="twitter:creator", content="@stefvdham")
-  meta(name="twitter:card", content="summary")
-  meta(name="twitter:image:", content="https://mindthecode.com/images/og_image.png")
-  meta(name="keywords", content="html, javascript, code, hacking, tutorial, tutorials, web, css")
+meta(name="author", content="Stef van den Ham @hyra")
 
-  link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
-  link(rel="canonical", href="https://mindthecode.com")
+meta(property="og:type", content="article")
+meta(property="og:image", content="https://mindthecode.com/images/og_image.png")
+meta(property="og:site_name", content="Mindthecode")
+meta(name="twitter:creator", content="@hyra")
+meta(name="twitter:card", content="summary")
+meta(name="twitter:image:", content="https://mindthecode.com/images/og_image.png")
+meta(name="keywords", content="html, javascript, code, hacking, tutorial, tutorials, web, css")
 
-  meta(name="google-site-verification", content="MI_ypH3qC5ML7lT0FlzNGBZx2bW3ItJZi4ExqCNb6Q8")
+link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
+link(rel="canonical", href="https://mindthecode.com")
 
-  script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
-  //- link(href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700', rel='stylesheet', type='text/css')
-  
+link(href="https://fonts.googleapis.com/css?family=Lora:400,700", rel="stylesheet")
+
+meta(name="google-site-verification", content="MI_ypH3qC5ML7lT0FlzNGBZx2bW3ItJZi4ExqCNb6Q8")
+
+//- script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+//- link(href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700', rel='stylesheet', type='text/css')
+
+script(src='https://my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js', type='text/javascript', charset='utf-8', async='async')
+
+script(type='text/javascript', src='//platform-api.sharethis.com/js/sharethis.js#property=59ff4e31fa1bed0012e9427a&product=sticky-share-buttons', async='async')
+
+script#mcjs.
+  !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/81bc331f4f2d0e26941705aa8/8b692e22e0fd70cc2e98d9561.js");
+
+script.
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+  heap.load("2508489801");
+
+script.
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '385497871867419');
+  fbq('track', 'PageView');
+
+link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+
 block head
-//- != css('css/main')
-style.
+!= css('css/main')
+//- style.
     /* cyrillic-ext */
     @font-face {
       font-family: 'Roboto Mono';
@@ -284,8 +311,8 @@ style.
       margin: 0; }
 
     main, footer, body > header {
-      max-width: 64ch;
-      //- max-width: 728px;
+      //- max-width: 64ch;
+      max-width: 800px;
       margin: auto;
       padding: 20px 0; }
 
@@ -305,12 +332,12 @@ style.
       margin: 0; }
 
     a {
-      color: indianred;
+      color: inherit;
       background-image: linear-gradient(to bottom, indianred 75%, indianred 75%);
       text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
       background-repeat: repeat-x;
-      background-size: 1px 1px;
-      background-position: 0 96%;
+      background-size: 1px 2px;
+      background-position: 0 98%;
       text-decoration: none; }
 
     .heading a {
@@ -333,6 +360,9 @@ style.
     h1, h2, h3, h4, h5, h6 {
       font-size: 1em; }
 
+    article h2, article h3 {
+        text-transform: uppercase;
+    }
     pre {
       padding: 1ch;
       overflow-x: auto; }
@@ -374,8 +404,10 @@ style.
       margin-left: 30px; }
 
     article code {
-      background: rgba(255, 255, 0, 0.15);
-      padding: 2px 3px; }
+      //- background: rgba(255, 255, 0, 0.15);
+      //- padding: 2px 3px;
+      color: indianred;
+    }
 
     article.index a {
       color: black;
@@ -597,4 +629,36 @@ style.
       font-weight: normal;
       font-style: normal; }
 
+    .sbg-button{
+      display:inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 0;
+      border-radius:100em;
+      background-color:black;
+      text-decoration: none;
+      color:white;
+      cursor: pointer;
+      background-image: none;
+      margin-right: 7px;
+    }
+    .sbg-button:hover{color:white; }
+
+    .sbg-button-icon{font-size:16px;padding:.5em;}
+
+    .sbg-button-facebook{background-color:#3b5998;}
+    .sbg-button-facebook .sbg-button-icon{padding-left:.44em;}
+    .sbg-button-twitter{background-color:#00aced;}
+    .sbg-button-twitter .sbg-button-icon{padding-left:.48em;}
+    .sbg-button-linkedin{background-color:#007bb6;}
+    .sbg-button-google-plus{background-color:#dd4b39;}
+    .sbg-button-pinterest{background-color:#cb2027;}
+    .sbg-button-pinterest .sbg-button-icon{padding-left:.45em;padding-top: .48em;}
+    .sbg-button-email{background-color:#999999;}
+    .sbg-button-email .sbg-button-icon{padding-left: .434em;padding-top: .44em;}
+
+    .shares a {
+        text-shadow: none;
+    }
 <!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]-->

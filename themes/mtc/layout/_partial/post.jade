@@ -4,8 +4,9 @@ mixin post_snippet(post)
       h1(itemprop="headline"): a(href = config.root + post.path)
         span
           = post.title
+      p= post.description
       time.post__time(datetime = date_xml(post.date), itemprop="datePublished")
-        = date(post.date, theme.date_format)
+        = '@ ' + date(post.date, theme.date_format)
 
 mixin post(post)
   article.post(itemscope, itemtype="http://schema.org/BlogPosting")
@@ -22,6 +23,29 @@ mixin post(post)
     != post.content
 
     hr
+
+    h2 Questions or comments?
+    p As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/hyra"   target="_blank">Twitter</a>.
+
+    hr
+
+    .shares
+        a.sbg-button.sbg-button-facebook(data-sbg-network='facebook', data-sbg-url=config.url + config.root + page.path, data-sbg-title=page.title, data-sbg-summary=page.description, data-sbg-image='', data-sbg-width='600', data-sbg-height='368')
+          i.sbg-button-icon.fa.fa-facebook
+        a.sbg-button.sbg-button-twitter(data-sbg-network='twitter', data-sbg-text=page.description + ' - ' + config.url + config.root + page.path, data-sbg-via='hyra', data-sbg-hashtags='', data-sbg-width='600', data-sbg-height='258')
+          i.sbg-button-icon.fa.fa-twitter
+        a.sbg-button.sbg-button-linkedin(data-sbg-network='linkedin', data-sbg-url=config.url + config.root + page.path, data-sbg-title=page.title, data-sbg-source='', data-sbg-summary=page.description, data-sbg-width='585', data-sbg-height='471')
+          i.sbg-button-icon.fa.fa-linkedin
+        a.sbg-button.sbg-button-google-plus(data-sbg-network='google-plus', data-sbg-url=config.url + config.root + page.path, data-sbg-width='500', data-sbg-height='505')
+          i.sbg-button-icon.fa.fa-google-plus
+        a.sbg-button.sbg-button-pinterest(data-sbg-network='pinterest', data-sbg-url=config.url + config.root + page.path, data-sbg-media='', data-sbg-description=page.description, data-sbg-width='750', data-sbg-height='322')
+          i.sbg-button-icon.fa.fa-pinterest
+
+    hr
+
+    h2 Keep reading
+    -popular_posts( {} , post )
+
     if post.tags && post.tags.length
       ul.tags
         li Tags: 
@@ -29,21 +53,32 @@ mixin post(post)
           li.post__tag__item: a.post__tag__link(href = config.root + tag.path)
             = tag.name
         - })
-    a(class="twitter-share-button", href="https://twitter.com/intent/tweet") Tweet
+    //-popular_posts( {} , post )
+    //- list_related_posts( {} , post )
+      //- meta(property="og:title", content=page.title)
+      //- meta(property="og:url", content=config.url + config.root + page.path)
+      //- meta(property="og:description", content=page.description)
+      //- meta(name="twitter:title", content=page.title)
+      //- meta(name="twitter:description", content=page.description)
+      //- meta(name="description", content=page.description)
+
     hr
 
     br
-    ins(class="adsbygoogle", style="display:block", data-ad-client="ca-pub-0534492338431642", data-ad-slot="3131304304", data-ad-format="auto")
     br
-    script.
-        (adsbygoogle = window.adsbygoogle || []).push({});
+    //- div(style="margin: 0px 0 0 -50px")
+        ins.adsbygoogle(style="display:inline-block;width:728px;height:90px", data-ad-client="ca-pub-0534492338431642", data-ad-slot="5872023147")
+        
+        script.
+            (adsbygoogle = window.adsbygoogle || []).push({})
+    //- br
+    //- br
 
-    h2 Questions or comments?
-    p As always, if you have any questions or comments, you can find me on <a href="http://twitter.com/stefvdham"   target="_blank">Twitter</a>.
-    .prevnext
+.prevnext
         if post.next
           a(href=url_for(post.next.path), class="prevnext-prev")
             p ← Prev
         if post.prev
           a(href=url_for(post.prev.path), class="prevnext-next")
             p Next →
+

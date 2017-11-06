@@ -28,10 +28,12 @@ html {
 body {
     font: 16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
     margin: 0;
-    // background: transparent url(/images/bg-pixels.png) repeat;
+    background: transparent url(/images/bg-pixels.png) repeat;
+    // background: transparent url(http://www.fellipe.com/assets/themes/fellipecom/img/debut_light.png) repeat;
 }       
 main, footer, body > header {
-    max-width: 64ch;
+    // max-width: 64ch;
+    max-width: 800px;
     margin: auto;
     padding: 20px 0;
 }
@@ -51,12 +53,14 @@ h1, .timestamp {
     margin: 0;
 }
 a {
-    color: indianred;
-    background-image: linear-gradient(to bottom,indianred 75%,indianred 75%);
+    // color: indianred;
+    color: inherit;
+    background-image: linear-gradient(to bottom, indianred 75%, indianred 75%);
     text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
     background-repeat: repeat-x;
-    background-size: 1px 1px;
-    background-position: 0 96%;
+    background-size: 1px 2px;
+    background-position: 0 98%;
+    padding-bottom: 2px;
     text-decoration: none;
 }
 .heading a {
@@ -75,9 +79,13 @@ hr {
 }
 p {
     margin: 1.5em 0;
+    text-shadow: 1px 1px 0px #FFF;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-size: 1em;
+    font-size: 1.2em;
+}
+article h2, article h3 {
+    // text-transform: uppercase;
 }
 pre {
     padding: 1ch;
@@ -124,8 +132,9 @@ article ul {
     margin-left: 30px;
 }
 article code {
-    background: rgba(255, 255, 0, 0.15);
-    padding: 2px 3px;
+    // background: rgba(255, 255, 0, 0.15);
+    // padding: 2px 3px;
+    color: indianred;
 }
 article.index a {
     color: black;
@@ -134,6 +143,7 @@ article.index a {
 article.index {
     margin: 0 0 20px 0;
 }
+
 article.post h1 a, article.post h5 a {
     color: white;
     text-shadow: none;
@@ -141,11 +151,13 @@ article.post h1 a, article.post h5 a {
 article.post h1 {
     color: white;
     margin: 0 0 0;
-    letter-spacing: .05em;
-    font: 38px/60px 'quatro-extra-light', sans-serif;
+    letter-spacing: -.02em;
+    font: 50px/85px 'quatro-extra-light', sans-serif;
+    // font-weight: bold;
     margin-left: 15px;
     @include respond-to('small') {
-        font: 28px/50px 'quatro-extra-light', sans-serif;
+        font: 40px/61px 'quatro-extra-light', sans-serif
+        // font-weight: bold;
     }
 }
 article.post h1 span {
@@ -155,11 +167,13 @@ article.post h1 span {
     box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
 }
 article.post h5 {
-    color: white;
+    color: #fff;
     margin: 0 0 20px;
     font: 23px/42px 'quatro-extra-light',sans-serif;
+
     letter-spacing: .05em;
     margin-left: 15px;
+    font-weight: bold;
     @include respond-to('small') {
         font: 18px/37px 'quatro-extra-light',sans-serif;
     }
@@ -169,6 +183,41 @@ article.post h5 span {
     padding: 0.5rem 0;
     -webkit-box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
     box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+}
+
+article h2, article h3 {
+    background: #32323c;
+    display: inline;
+    color: white;
+    padding: 5px 10px;
+}
+
+.index {
+    h1 {
+        color: #fff;
+        margin: 0 0 0;
+        letter-spacing: -.02em;
+        font: 24px/44px 'quatro-extra-light', sans-serif;
+        font-weight: bold;
+        margin-left: 15px;
+        @include respond-to('small') {
+            font: 24px/44px 'quatro-extra-light',sans-serif;
+        }
+        a {
+            background-image: none;
+            color: #fff;
+            text-shadow: none;
+        }
+        span {
+            background-color: #32323c;
+            padding: 0.5rem 0;
+            -webkit-box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+            box-shadow: 1rem 0px 0px #32323c, -1rem 0px 0px #32323c;
+        }
+    }
+    p {
+        margin: 0;
+    }
 }
 
 article ul.tags {
@@ -255,15 +304,16 @@ footer a {
 
 #carbonads {
     position: fixed;
-    bottom: 0px;
-    right: 0px;
-    width: 165px;
+    bottom: 15px;
+    right: 15px;
+    width: 200px;
+    // margin: 0 auto;
 
     font-size: 10px;
     line-height: 20px;
-    padding: 0px 20px 20px 0px;
-    /*border-radius: 3px;*/
-    /*border: 1px dashed #DDD;*/
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: 1px dashed #DDD;
     background: rgba(255,255,255,1);
     text-align: center;
     @include respond-to('small') {
@@ -284,7 +334,7 @@ footer a {
 
 .teaser {
   margin: 10px 0;
-  height: 250px;
+  height: 300px;
   width: 100%;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -361,4 +411,41 @@ footer a {
     src: url("/fonts/Quatro_Book_v3Web.woff") format("woff"), url("/fonts/Quatro_Book_v3Web.eot") format("otf");
     font-weight: normal;
     font-style: normal;
+}
+
+.sbg-button{
+  display:inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 0;
+  border-radius:100em;
+  background-color:black;
+  text-decoration: none;
+  color:white;
+  cursor: pointer;
+  background-image: none;
+  margin-right: 7px;
+}
+.sbg-button:hover{color:white; }
+
+.sbg-button-icon{font-size:16px;padding:.5em;}
+
+.sbg-button-facebook{background-color:#3b5998;}
+.sbg-button-facebook .sbg-button-icon{padding-left:.44em;}
+.sbg-button-twitter{background-color:#00aced;}
+.sbg-button-twitter .sbg-button-icon{padding-left:.48em;}
+.sbg-button-linkedin{background-color:#007bb6;}
+.sbg-button-google-plus{background-color:#dd4b39;}
+.sbg-button-pinterest{background-color:#cb2027;}
+.sbg-button-pinterest .sbg-button-icon{padding-left:.45em;padding-top: .48em;}
+.sbg-button-email{background-color:#999999;}
+.sbg-button-email .sbg-button-icon{padding-left: .434em;padding-top: .44em;}
+
+.shares {
+    text-align: center;
+    padding: 20px 0;
+    a {
+        text-shadow: none;
+    }
 }

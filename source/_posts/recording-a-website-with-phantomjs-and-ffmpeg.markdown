@@ -34,7 +34,7 @@ In case you've been hiding, [PhantomJS](http://phantomjs.org/) is a headless scr
 With these two tools installed we are ready to create a video.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -42,7 +42,7 @@ With these two tools installed we are ready to create a video.
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## From the top
 

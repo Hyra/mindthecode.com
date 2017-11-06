@@ -20,7 +20,7 @@ What intrigued me about Storybook is the fact you can work on defining and desig
 As a nice side effect, you end up with some sort of "Styleguide" for your components so new members on the team can get familiar with the components without having to sift through the code.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -28,7 +28,7 @@ As a nice side effect, you end up with some sort of "Styleguide" for your compon
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## Setting the scene
 

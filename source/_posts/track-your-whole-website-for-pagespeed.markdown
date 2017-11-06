@@ -16,7 +16,7 @@ At the office we usually take some time to optimise our client's websites for [G
 This makes sense, as that's usually the main page, but what about all the other pages. For instance, the order process pages or your contact form. Those are just as, if not more, important to load up quickly.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -24,7 +24,7 @@ This makes sense, as that's usually the main page, but what about all the other 
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 This, combined with my desire to launch a webservice at some point, lead me to the idea to create a webapp called [Wulfdeck](https://wulfdeck.com). It automatically crawls the domain you enter and finds all the (internal) pages it links to, up to 2 levels deep. Next, you select which pages you would like to monitor, and you're good to go. Wulfdeck will scan all the pages for their Pagespeed and show you your average, as well as per-page specifics.
 

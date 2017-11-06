@@ -76,7 +76,7 @@ ngconstant: {
 This tells Grunt about your environments. Each target is told where to write the config file to, and inside `constants` you define your environmental variables you wish to use in your Angular App.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -84,7 +84,7 @@ This tells Grunt about your environments. Each target is told where to write the
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 Next up, we need to tell Grunt when to write this config file. Depending on your Gruntfile you will probably have a section that tells it to run a local server so you can develop your site. Mine usually looks like this:
 

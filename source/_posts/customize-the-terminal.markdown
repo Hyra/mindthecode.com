@@ -25,7 +25,7 @@ Below is a screenshot of what my terminal looks like:
 That's right, besides the beautiful colour-scheme it also visually tells you what git branch you're in and information about its status.
 
 <!-- Rectangle Ad -->
-<center>
+<!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
      data-ad-client="ca-pub-0534492338431642"
@@ -33,7 +33,7 @@ That's right, besides the beautiful colour-scheme it also visually tells you wha
 </center>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 ## The ingredients
 

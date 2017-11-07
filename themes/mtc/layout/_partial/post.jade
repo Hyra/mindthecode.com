@@ -1,3 +1,5 @@
+include newsletter
+
 mixin post_snippet(post)
   article.index(itemscope, itemtype="http://schema.org/BlogPosting")
     header
@@ -43,8 +45,12 @@ mixin post(post)
 
     hr
 
-    h2 Keep reading
-    if post.tags && post.tags.length
+    +newsletter_box()
+
+
+
+    //- h2 Keep reading
+    //- if post.tags && post.tags.length
       ul.tags
         li Tags: 
         -post.tags.forEach(function(tag){
@@ -59,7 +65,7 @@ mixin post(post)
       //- meta(name="twitter:description", content=page.description)
       //- meta(name="description", content=page.description)
 
-    hr
+    //- hr
 
     br
     br

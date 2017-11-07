@@ -1,4 +1,5 @@
 @import "mtc_prism";
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300');
 
 $breakpoints: (
   'small':  ( 767px ),
@@ -190,6 +191,8 @@ article h2, article h3 {
     display: inline;
     color: white;
     padding: 5px 10px;
+    position: relative;
+    top: 15px;
 }
 
 .index {
@@ -447,5 +450,52 @@ footer a {
     padding: 20px 0;
     a {
         text-shadow: none;
+    }
+}
+
+#newsletter_box {
+    background: white;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    display: flex;
+    .visual {
+        background-image: url(/images/newsletter.gif);
+        width: 320px;
+        height: 190px;
+        @include respond-to('small') {
+            display: none;
+        }
+    }
+    .form {
+        flex: 1;
+        padding: 20px 0 0px 20px;
+
+        #mce-EMAIL {
+          width: 90%;
+          height: 30px;
+          border-radius: 3px;
+          border: 1px solid #DDD;
+          margin: 10px 0;
+          padding: 0 10px;
+        }
+        #mc-embedded-subscribe {
+          background: indianred;
+          padding: 10px;
+          border: 0;
+          border-radius: 3px;
+          color: white;
+          font-size: 13px;
+          font-weight: bold;
+        }
+        #mc_embed_signup{
+            background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;
+            #intro {
+                font-size: 20px;
+                margin-top: -20px;
+                padding: 0 0 28px 0;
+            }
+        }
     }
 }

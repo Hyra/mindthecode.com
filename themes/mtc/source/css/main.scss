@@ -482,7 +482,6 @@ footer a {
         }
         #mc-embedded-subscribe {
           background: indianred;
-          padding: 10px;
           border: 0;
           border-radius: 3px;
           color: white;
@@ -490,10 +489,13 @@ footer a {
           font-weight: bold;
         }
         #mc_embed_signup{
-            background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;
+            background:#fff; clear:left; font:16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+            h2 {
+                padding: 5px 10px;
+                top: -25px;
+                font-size: 1.2em;
+            }
             #intro {
-                font-size: 20px;
-                margin-top: -20px;
                 padding: 0 0 28px 0;
             }
         }

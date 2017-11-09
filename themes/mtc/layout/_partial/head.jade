@@ -33,6 +33,10 @@ script(src='https://my.hellobar.com/e0d6ea7e93c0172c0a6adecbb11fcb0fa108ac3b.js'
 script#mcjs.
   !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/81bc331f4f2d0e26941705aa8/8b692e22e0fd70cc2e98d9561.js");
 
+script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
+script(type='text/javascript').
+  require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us8.list-manage.com","uuid":"81bc331f4f2d0e26941705aa8","lid":"9085d5fa6a"}) })
+
 script.
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
   heap.load("2508489801");

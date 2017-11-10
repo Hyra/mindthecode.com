@@ -464,7 +464,7 @@ footer a {
     .visual {
         background-image: url(/images/newsletter.gif);
         width: 320px;
-        height: 190px;
+        background-size: cover;
         @include respond-to('small') {
             display: none;
         }

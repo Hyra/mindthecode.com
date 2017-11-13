@@ -4,6 +4,8 @@ subtitle: Best practices to kickstart your Spotify App
 description: A Boilerplate with best practices to kickstart your Spotify App
 tags:
   - spotify
+  - boilerplate
+  - javascript
 layout: post
 header: spotify-boilerplate.gif
 date: 2012-09-18

@@ -7,6 +7,10 @@ description: >-
 tags:
   - browserify
   - angular
+  - modules
+  - javascript
+  - node
+  - nodejs
 layout: post
 header: modules.gif
 date: 2014-06-03

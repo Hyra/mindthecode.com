@@ -4,6 +4,9 @@ subtitle: Curl on steroids with an easy interface and syntax highlighted output.
 description: Curl on steroids with an easy interface and syntax highlighted output.
 tags:
   - http
+  - command line
+  - cli
+  - osx
 layout: post
 header: httpie.gif
 date: 2013-12-08

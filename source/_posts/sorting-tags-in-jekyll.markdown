@@ -4,6 +4,9 @@ subtitle: A short tip on how to sort your tags in your Jekyll blog
 description: How to sort your site.tags alphabetically in your Jekyll blog
 tags:
   - jekyll
+  - sorting
+  - tags
+  - static site generator
 layout: post
 date: 2016-11-30
 ---

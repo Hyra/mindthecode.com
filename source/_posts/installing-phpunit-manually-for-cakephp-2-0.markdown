@@ -6,6 +6,8 @@ tags:
   - phpunit
   - php
   - cakephp
+  - installing phpunit
+  - osx
 layout: post
 <!-- header: phpunit-manually.gif -->
 date: 2011-11-11

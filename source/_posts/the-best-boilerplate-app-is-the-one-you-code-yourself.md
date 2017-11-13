@@ -5,6 +5,9 @@ description: >-
   Boilerplate apps are great. They let you get your next project up and running quickly, and usually provide some form of structure you can follow. But the best boilerplate app is the one you code yourself.
 tags:
   - boilerplate
+  - mvp
+  - web application
+  - coding
 layout: post
 header: https://media.giphy.com/media/KPPS9YOCBGU5G/giphy.gif
 date: 2017-11-07

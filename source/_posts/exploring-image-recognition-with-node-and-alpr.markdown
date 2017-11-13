@@ -6,8 +6,10 @@ description: >-
 tags:
   - opencv
   - node
+  - nodejs
   - javascript
   - image recognition
+  - alpr
 layout: post
 header: customize-terminal.gif
 date: 2017-09-26

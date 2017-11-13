@@ -4,6 +4,7 @@ subtitle: Submodules are awesome. Adding them is easy enough. But how about gett
 description: In this short post I will show you how to get rid of a Git submodule
 tags:
   - git
+  - submodules
 layout: post
 <!-- teaser: submodule.gif -->
 date: 2011-05-26

@@ -4,6 +4,9 @@ subtitle: My experiences while converting this blog to an Octopress one
 description: My experiences while converting this blog to an Octopress one
 tags:
   - octopress
+  - blogging
+  - static site generator
+  - javascript
 layout: post
 header: octopress.gif
 date: 2012-10-26

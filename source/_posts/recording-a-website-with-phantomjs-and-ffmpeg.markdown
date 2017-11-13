@@ -8,6 +8,10 @@ description: >-
 tags:
   - ffmpeg
   - phantomjs
+  - record website
+  - node
+  - nodejs
+  - javascript
 layout: post
 header: recording-phantomjs.gif
 date: 2014-05-25

@@ -6,6 +6,9 @@ description: >-
   than file_get_contents
 tags:
   - php
+  - file_get_contents
+  - loading files
+  - curl
 layout: post
 <!-- header: external.gif -->
 date: 2011-12-06

@@ -4,6 +4,9 @@ subtitle: In this post I will show you how to add GZip to your PHP application
 description: In this post I will show you how to add GZip to your PHP application
 tags:
   - php
+  - gzip
+  - compression
+  - sitespeed
 layout: post
 <!-- header: gzip.gif -->
 date: 2011-10-14

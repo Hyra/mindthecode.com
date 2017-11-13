@@ -7,6 +7,7 @@ description: >-
   through setting it up
 tags:
   - react
+  - storybook
 layout: post
 date: 2016-04-18
 ---

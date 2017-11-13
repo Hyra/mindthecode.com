@@ -4,6 +4,9 @@ subtitle: Handling and managing variables in the front-end
 description: I will explain how to use environment variables in your Angular app
 tags:
   - angular
+  - angularjs
+  - environment
+  - variables
 layout: post
 header: environment.gif
 date: 2013-12-29

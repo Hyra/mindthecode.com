@@ -7,8 +7,10 @@ description: >-
   Browserify to minimize code clutter and maximize awesomeness.
 tags:
   - angular
+  - angularjs
   - browserify
   - gulp
+  - javascript
 layout: post
 <!-- teaser: letsbuild.gif -->
 date: 2014-05-05

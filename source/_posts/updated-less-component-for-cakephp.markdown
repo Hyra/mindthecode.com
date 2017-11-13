@@ -5,6 +5,7 @@ description: A small update to my LESS component for CakePHP
 tags:
   - less
   - cakephp
+  - component
 layout: post
 date: 2012-02-05
 ---

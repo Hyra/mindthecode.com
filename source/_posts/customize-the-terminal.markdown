@@ -6,7 +6,9 @@ description: >-
   make it look cool but work better, too
 tags:
   - terminal
+  - iterm2
   - zsh
+  - osx
 layout: post
 header: customize-terminal.gif
 date: 2013-02-28

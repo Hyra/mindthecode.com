@@ -4,6 +4,9 @@ description: How to use sessions within your unit tests using PHPUnit and CakePH
 tags:
   - phpunit
   - cakephp
+  - sessions
+  - unit testing
+  - testing
 layout: post
 header: sessions.gif
 date: 2012-02-24

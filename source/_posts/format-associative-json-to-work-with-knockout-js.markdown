@@ -4,6 +4,8 @@ subtitle: How to format an associative array in JSON with Knockout
 description: How to format an associative array in JSON with Knockout
 tags:
   - knockout.js
+  - javascript
+  - associative array
 layout: post
 header: associative.gif
 date: 2012-05-09

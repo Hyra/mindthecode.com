@@ -12,6 +12,10 @@ tags:
   - react
   - react-native
   - javascript
+  - panresponder
+  - ios
+  - iphone
+  - tap
 <!-- teaser: modules.gif -->
 date: 2016-04-20
 ---

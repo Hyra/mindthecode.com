@@ -6,6 +6,8 @@ description: >-
 tags:
   - docker
   - laravel
+  - php
+  - docker compose
 layout: post
 date: 2016-11-28
 ---

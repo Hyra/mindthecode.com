@@ -7,6 +7,7 @@ description: >-
 tags:
   - less
   - coffeescript
+  - watchr
 layout: post
 header: good-times.gif
 date: 2012-05-16

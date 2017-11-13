@@ -5,6 +5,8 @@ description: My experience while rebuilding this blog with CabinJS and Grunt
 tags:
   - cabinjs
   - grunt
+  - javascript
+  - static site generator
 layout: post
 header: cabinjs.gif
 date: 2013-12-08

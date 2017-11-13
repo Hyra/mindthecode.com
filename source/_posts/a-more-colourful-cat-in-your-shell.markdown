@@ -6,6 +6,11 @@ description: >-
   terminal
 tags:
   - terminal
+  - iterm2
+  - osx
+  - terminal color
+  - terminal colour
+  - pygments
 layout: post
 header: colourful.gif
 date: 2013-08-06

@@ -7,8 +7,10 @@ description: >-
 tags:
   - react
   - react-native
+  - react native
   - ios
   - mobile
+  - xcode
 layout: post
 header: react_native.gif
 date: 2015-10-08

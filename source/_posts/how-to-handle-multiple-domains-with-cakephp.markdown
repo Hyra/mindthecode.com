@@ -6,6 +6,8 @@ description: >-
 tags:
   - cakephp
   - php
+  - domains
+  - osx
 layout: post
 <!-- teaser: multiple-domains.gif -->
 date: 2011-05-22

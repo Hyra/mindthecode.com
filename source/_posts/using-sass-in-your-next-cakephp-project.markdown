@@ -7,6 +7,8 @@ description: >-
 tags:
   - sass
   - cakephp
+  - preprocessor
+  - pre-processor
 layout: post
 teaser: sass-cake.gif
 date: 2011-04-14

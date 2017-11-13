@@ -7,6 +7,7 @@ tags:
   - vue
   - express
   - javascript
+  - components
 layout: post
 header: colourful.gif
 date: 2017-10-12

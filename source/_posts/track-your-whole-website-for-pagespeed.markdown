@@ -6,6 +6,9 @@ description: >-
 tags:
   - pet project
   - pagespeed
+  - mvp
+  - webservice
+  - saas
 layout: post
 header: colourful.gif
 date: 2017-09-18

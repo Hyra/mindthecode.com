@@ -8,7 +8,7 @@ if theme.rss
 if theme.favicon
   link(rel="icon", href = theme.favicon)
 
-meta(name="author", content="Stef van den Ham @hyra")
+meta(name="author", content="Stef van den Ham")
 
 meta(property="og:type", content="article")
 meta(property="og:image", content="https://mindthecode.com/images/og_image.png")
@@ -16,7 +16,9 @@ meta(property="og:site_name", content="Mindthecode")
 meta(name="twitter:creator", content="@hyra")
 meta(name="twitter:card", content="summary")
 meta(name="twitter:image:", content="https://mindthecode.com/images/og_image.png")
-meta(name="keywords", content="html, javascript, code, hacking, tutorial, tutorials, web, css")
+
+if !page.tags
+  meta(name="keywords", content="html, javascript, code, hacking, tutorial, tutorials, web, css")
 
 link(rel="author", href="https://plus.google.com/102230925443628784177?rel=author")
 link(rel="canonical", href="https://mindthecode.com")

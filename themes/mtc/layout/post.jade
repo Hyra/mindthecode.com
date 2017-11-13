@@ -13,3 +13,11 @@ block head
   meta(name="twitter:title", content=page.title)
   meta(name="twitter:description", content=page.description)
   meta(name="description", content=page.description)
+  - tags = []
+  - if(page.tags) {
+    - page.tags.forEach(function(tag) {
+      - tags.push(tag.name)
+    - })
+  - }
+  - tags = tags.splice('').join(', ')
+  meta(name="keywords", content=tags)

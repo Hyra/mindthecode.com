@@ -10,7 +10,7 @@ tags:
   - startup
 layout: post
 header: procrastinating.gif
-date: 2017-11-13
+date: 2017-11-14
 references:
 ---
 

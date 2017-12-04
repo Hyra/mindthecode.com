@@ -3,7 +3,7 @@ layout: post
 title: Getting started with the PanResponder in React Native
 subtitle: Follow along as we tackle the madness that is the PanResponder.
 description: >-
-  Inside React Native you can use the PanResponder to recognize multi-touch
+  Inside React Native you can use the PanResponder to recognise multi-touch
   gestures as well as swipes and other touches that make native apps feel snappy
   and intuitive. But getting it up and running can feel daunting and borderline
   black magic. In this post I'll try and guide you through the process,
@@ -20,7 +20,7 @@ tags:
 date: 2016-04-20
 ---
 
-Inside React Native you can use the PanResponder to recognize multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
+Inside React Native you can use the PanResponder to recognise multi-touch gestures as well as swipes and other touches that make native apps feel snappy and intuitive. But getting it up and running can feel daunting and borderline black magic. In this post I'll try and guide you through the process, hopefully demystifying it a bit and get you on track to awesomeness.
 
 
 ## What we will be making

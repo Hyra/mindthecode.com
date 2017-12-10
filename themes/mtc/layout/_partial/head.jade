@@ -54,6 +54,14 @@ script.
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '385497871867419');
   fbq('track', 'PageView');
+  
+script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+script.
+  (adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-6085666403371637",
+  enable_page_level_ads: true
+  });
 
 block head
 != css('css/main')
+//- link(rel="stylesheet", href="/css/main.css?__inline=true")

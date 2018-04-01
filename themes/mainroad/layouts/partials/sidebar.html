@@ -40,6 +40,7 @@
 	{{ partial "widgets/carbon.html" . }}
 	{{ partial "widgets/categories.html" . }}
 	{{ partial "widgets/social.html" . }}
+	{{ partial "widgets/newsletter.html" . }}
 	{{ partial "widgets/taglist.html" . }}
 
 	{{- if and (not .Site.Params.widgets.search) (not .Site.Params.widgets.recent_articles) (not .Site.Params.widgets.categories) (not .Site.Params.widgets.social) (not .Site.Params.widgets.taglist) }}

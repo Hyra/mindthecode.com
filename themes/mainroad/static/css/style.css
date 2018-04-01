@@ -1362,3 +1362,46 @@ footer a {
   background: none;
   color: white;
   text-shadow: none; }
+
+
+
+  #newsletter_box {
+    background: white;
+    display: flex;
+    flex-direction: column }
+    #newsletter_box .visual {
+      background-image: url(/images/newsletter.gif);
+      height: 200px;
+      background-size: cover; }
+      @media (max-width: 767px) {
+        #newsletter_box .visual {
+          display: none; } }
+    #newsletter_box .form {
+      flex: 1;}
+      #newsletter_box .form #mce-EMAIL {
+        width: 90%;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid #DDD;
+        margin: 10px 0;
+        padding: 0 10px; }
+      #newsletter_box .form #mc-embedded-subscribe {
+        background: indianred;
+        border: 0;
+        border-radius: 3px;
+        color: white;
+        font-size: 13px;
+        font-weight: bold; }
+        #newsletter_box #mc_embed_signup form {
+          padding: 0;
+        }
+      #newsletter_box .form #mc_embed_signup {
+        background: #fff;
+        clear: left;}
+        #newsletter_box .form #mc_embed_signup h2 {
+          padding: 5px 10px;
+          top: -25px;
+          font-size: 1.2em; }
+        #newsletter_box .form #mc_embed_signup #intro {
+          padding: 0 0 28px 0; }
+  

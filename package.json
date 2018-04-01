@@ -6,7 +6,6 @@
       "version": "3.2.2"
     },
     "scripts": {
-      "postinstall": "/app/hugo",
       "start": "node server.js"
     },
     "engines": {

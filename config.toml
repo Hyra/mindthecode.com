@@ -1,0 +1,52 @@
+baseURL = "https://mindthecode.com/"
+languageCode = "en-us"
+title = "Mindthecode"
+theme = "mainroad"
+pygmentsCodefences=true
+
+paginate = "10" # Number of posts per page
+disqusShortname = "mindthecode" # Enable comments by entering your Disqus shortname
+googleAnalytics = "UA-40203772-4" # Enable Google Analytics by entering your tracking id
+
+[[menu.main]]
+    name = "Blog"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "home"
+    url = "/"
+
+[permalinks]
+    post = "/:filename/"
+
+[Author] # Used in authorbox
+    name = "Hyra"
+    bio = "I write"
+    avatar = "images/follow_pic.png"
+
+[Params]
+    subtitle = "Rambling about all things web" # Subtitle of your site. Used in site header
+    description = " Rambling about all things web" # Description of your site. Used in meta description
+    opengraph = true # Enable OpenGraph if true
+    readmore = false # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    # authorbox = true # Show authorbox at bottom of pages if true
+    post_navigation = true # Show post navigation at bottom of pages if true
+    postSections = ["post"] # the section pages to show on home page and the "Recent articles" widget
+    #postSections = ["post", "blog", "news"] # alternative that shows more than one section's pages
+    #dateformat = "2006-01-02" # change the format of dates
+
+[Params.widgets]
+    search = true # Enable "Search" widget
+    recent_articles = true # Enable "Recent articles" widget
+    recent_articles_num = 5 # Set the number of articles in the "Recent articles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
+    tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+    # Enable "Social" widget, if any of "social_*" set a value
+    social_facebook = "mindthecode"
+    social_twitter = "hyra"
+    social_linkedin = "stef-van-den-ham-21265214"
+    social_github = "hyra"
+    social_email = "stef@mindthecode.com"
+    # social_google_plus = "stefvdham"

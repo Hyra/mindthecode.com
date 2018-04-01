@@ -10,7 +10,6 @@ tags:
   - osx
   - terminal
 layout: post
-header: http://media0.giphy.com/media/3oz8xtBx06mcZWoNJm/giphy.gif
 date: 2013-02-09
 ---
 
@@ -23,6 +22,7 @@ So why do I willingly put myself through the torture of using the monster that i
 The new plan is not as exciting or brilliant as one might hope, but it's one that might just work: _Forceful editing_ What? Well, it's simple really .. whenever I was trying out Vim and found myself having to actually "quickly" edit a file or whip up some code I switched to my trustworthy Sublime. This time around I'm going to force myself to stay in Vim. This will slow me down at first. A lot. And it will probably lead to some cursing and frustration. But I guess it's the only way to learn.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"

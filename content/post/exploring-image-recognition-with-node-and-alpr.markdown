@@ -28,18 +28,10 @@ This won't be a clear cut walkthrough / tutorial. Rather, it's going to take you
 Obviously, the possibilities with image processing are spectaculary endless, so we need to set some sort of goal of what we want to achieve. I was sparked to look into OpenCV again through a recent post of someone who replicated a system that can detect license plates in images, but he didn't explain how he did it, so let's figure that out.
 
 The program in its simplest form should:
-- Take an image as input source
-- Detect if there is a license plate in the image
-- Update the image with a text-overlay showing the license plate it found
 
-<!-- <div style="margin: -60px 0 0 -50px"> -->
-<!-- Leaderboard MTC -->
-<!-- <ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="5872023147"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div> -->
+* Take an image as input source
+* Detect if there is a license plate in the image
+* Update the image with a text-overlay showing the license plate it found
 
 ## What will we need
 
@@ -53,7 +45,7 @@ A quick google search for [nodejs detect license plate](https://www.google.com/s
 
 Taking a look at the docs of the "OpenSource Automatic License Plate Recognition" library it seems we will need to compile it for our specific OS, and will give us a CLI tool. Not exactly what we want, but as it also says it has bindings for NodeJS I'm sure we can work out how to call this from our app once we get there.
 
-As I'm on OSX, I'll be following the steps [described here](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(OS-X)) to install it with [Homebrew](https://brew.sh/). FYI: this took forever on my Macbook 😴.
+As I'm on OSX, I'll be following the steps [described here](<https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(OS-X)>) to install it with [Homebrew](https://brew.sh/). FYI: this took forever on my Macbook 😴.
 
 ```bash
 brew tap homebrew/science
@@ -105,15 +97,6 @@ I went onto a website where you can [sell your car](https://www.marktplaats.nl/c
 
 That's okay though, I'm sure there's some treshold-like settings we could tweak, but at least we know that it's able to detect our plates. That will do for now.
 
-<!-- Rectangle Ad -->
-<!-- <center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
-
 ## Taking the next step
 
 Now, with just the `alpr` command line tool we pretty much have 80% of what we want already. It takes an image as argument and finds the plate information which it returns as a list of possible matches along with a confidence percentage. But we want to update the image with an overlay showing what we detected. So we're not done .. yet!
@@ -136,71 +119,71 @@ alpr -c eu alpr_sample2.jpg -j | json_pp
 
 This makes looking at the JSON output a lot easier on the eyes:
 
-```json
+```js
 {
-   "regions_of_interest" : [],
-   "img_width" : 2592,
-   "results" : [
-      {
-         "region_confidence" : 0,
-         "requested_topn" : 10,
-         "plate_index" : 0,
-         "plate" : "87RSR9",
-         "processing_time_ms" : 17.959999,
-         "region" : "",
-         "confidence" : 92.876862,
-         "coordinates" : [
-            {
-               "x" : 879,
-               "y" : 1054
-            },
-            {
-               "x" : 1486,
-               "y" : 1019
-            },
-            {
-               "x" : 1495,
-               "y" : 1134
-            },
-            {
-               "x" : 888,
-               "y" : 1171
-            }
-         ],
-         "candidates" : [
-            {
-               "confidence" : 92.876862,
-               "matches_template" : 0,
-               "plate" : "87RSR9"
-            },
-            {
-               "plate" : "87R5R9",
-               "matches_template" : 0,
-               "confidence" : 81.691261
-            },
-            {
-               "matches_template" : 0,
-               "plate" : "B7RSR9",
-               "confidence" : 78.581734
-            },
-            {
-               "matches_template" : 0,
-               "plate" : "B7R5R9",
-               "confidence" : 67.396126
-            }
-         ],
-         "matches_template" : 0
-      }
-   ],
-   "epoch_time" : 1506364279842,
-   "processing_time_ms" : 578.179993,
-   "img_height" : 1936,
-   "data_type" : "alpr_results",
-   "version" : 2
+  "regions_of_interest": [],
+  "img_width": 2592,
+  "results": [
+    {
+      "region_confidence": 0,
+      "requested_topn": 10,
+      "plate_index": 0,
+      "plate": "87RSR9",
+      "processing_time_ms": 17.959999,
+      "region": "",
+      "confidence": 92.876862,
+      "coordinates": [
+        {
+          "x": 879,
+          "y": 1054
+        },
+        {
+          "x": 1486,
+          "y": 1019
+        },
+        {
+          "x": 1495,
+          "y": 1134
+        },
+        {
+          "x": 888,
+          "y": 1171
+        }
+      ],
+      "candidates": [
+        {
+          "confidence": 92.876862,
+          "matches_template": 0,
+          "plate": "87RSR9"
+        },
+        {
+          "plate": "87R5R9",
+          "matches_template": 0,
+          "confidence": 81.691261
+        },
+        {
+          "matches_template": 0,
+          "plate": "B7RSR9",
+          "confidence": 78.581734
+        },
+        {
+          "matches_template": 0,
+          "plate": "B7R5R9",
+          "confidence": 67.396126
+        }
+      ],
+      "matches_template": 0
+    }
+  ],
+  "epoch_time": 1506364279842,
+  "processing_time_ms": 578.179993,
+  "img_height": 1936,
+  "data_type": "alpr_results",
+  "version": 2
 }
 ```
 
-So, where were we .. 
+So, where were we ..
 
 Looking at the JSON output we can see there's a `results` node, which is an array of "plates found", with an array of coordinates (clearly a box of where the plate is in the image), and a candidates list of 'guesses' per found plate which has a confidence percentage and the license plate as a string. We can also see there's a conficende level at the result level, but by the looks of it that's just the highest level of confidence found in candidates array.
 
@@ -217,17 +200,17 @@ npm install node-openalpr
 Next, let's create a file called `detect.js` in which we will write some code
 
 ```javascript
-var openalpr = require ('node-openalpr')
+var openalpr = require("node-openalpr");
 
-var path = 'alpr_sample2.jpg'
+var path = "alpr_sample2.jpg";
 
-openalpr.Start()
+openalpr.Start();
 openalpr.GetVersion();
 
-openalpr.IdentifyLicense (path, function (error, output) {
-    console.log('error', error)
-    console.log('output', output)
-})
+openalpr.IdentifyLicense(path, function(error, output) {
+  console.log("error", error);
+  console.log("output", output);
+});
 ```
 
 According to the example the above should be enough to get us going. I'm not sure why we have to explicity call Start and GetVersion on the library, but hey. I usually just console log both response arguments in the callback, just to see wether we get an error and what response we get to work with.
@@ -257,7 +240,7 @@ output { version: 2,
        candidates: [Object] } ] }
 ```
 
-Not bad, looks like it works. However, the plate should read `87RSR9` and not 387R. But, we already know this is probably because we need to pass in the country parameter somehow. Looking at the docs there doesn't seem to be a way to do this however. In this case, I like to go to the Issues page and check if anyone else already wondered [about this](https://github.com/netPark/node-openalpr/issues?utf8=%E2%9C%93&q=country). Usually you're not the first to solve a problem :) 
+Not bad, looks like it works. However, the plate should read `87RSR9` and not 387R. But, we already know this is probably because we need to pass in the country parameter somehow. Looking at the docs there doesn't seem to be a way to do this however. In this case, I like to go to the Issues page and check if anyone else already wondered [about this](https://github.com/netPark/node-openalpr/issues?utf8=%E2%9C%93&q=country). Usually you're not the first to solve a problem :)
 
 So according to [this issue](https://github.com/netPark/node-openalpr/issues/18), it seems we will need the [Sneko/node-openalpr](https://github.com/Sneko/node-openalpr) fork, which provides options like region. Now, to install a specific github repository as NPM module we need to specify it like so:
 
@@ -298,6 +281,7 @@ output { version: 2,
 ```
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -324,32 +308,32 @@ $ npm install node-gd
 Let's first see if we can create an image with a bit of text, before trying to incorporate it in our detect script. This keeps things nice and clear so we don't have to juggle everything at once. Create a file `image.js` and add some code. This is pretty much the node-gd example code, but modified a bit so we can show a license plate. Please note we apparently need to specify a font file for the text, so I used [Frank Bold](/images/alpr/frank-bold.ttf) so grab that if you don't have a .ttf handy.
 
 ```javascript
-// Require the node-gd library 
-var gd = require('node-gd');
- 
+// Require the node-gd library
+var gd = require("node-gd");
+
 // Create blank image in memory of 300x100 (which will be the license plate holder)
 var img = gd.createSync(300, 100);
- 
+
 // Set background color to black
 img.colorAllocate(0, 0, 0);
- 
+
 // Set text color to white
 var txtColor = img.colorAllocate(255, 255, 255);
- 
-// Set full path to font file 
-var fontPath = './frank-bold.ttf';
- 
-// Render string in image 
-img.stringFT(txtColor, fontPath, 24, 0, 10, 60, 'AABB123');
- 
-// Write image buffer to disk 
-img.savePng('output.png', 1, function(err) {
-  if(err) {
+
+// Set full path to font file
+var fontPath = "./frank-bold.ttf";
+
+// Render string in image
+img.stringFT(txtColor, fontPath, 24, 0, 10, 60, "AABB123");
+
+// Write image buffer to disk
+img.savePng("output.png", 1, function(err) {
+  if (err) {
     throw err;
   }
 });
- 
-// Destroy image to clean memory 
+
+// Destroy image to clean memory
 img.destroy();
 ```
 
@@ -375,65 +359,64 @@ So let's integrate the 2 scripts we have. Let's grab the original image (the pho
 
 ```javascript
 // Open ALPR library
-var openalpr = require ('node-openalpr')
+var openalpr = require("node-openalpr");
 
-// Node-GD library 
-var gd = require('node-gd');
+// Node-GD library
+var gd = require("node-gd");
 
 // Image with plate to scan
-var path = 'alpr_sample2.jpg'
+var path = "alpr_sample2.jpg";
 
 // Initialize openalpr with EU as country
-openalpr.Start(null, null, null, true, 'eu')
-openalpr.GetVersion()
+openalpr.Start(null, null, null, true, "eu");
+openalpr.GetVersion();
 
-openalpr.IdentifyLicense (path, function (error, output) {
-    // We assume we find one, we should of course have some more checks going here
-    var licensePlate = output.results[0].plate
+openalpr.IdentifyLicense(path, function(error, output) {
+  // We assume we find one, we should of course have some more checks going here
+  var licensePlate = output.results[0].plate;
 
-    // Create an overlay image
-    var img = gd.createSync(300, 100)
+  // Create an overlay image
+  var img = gd.createSync(300, 100);
 
-    // Set the background color to black
-    img.colorAllocate(0, 0, 0)
+  // Set the background color to black
+  img.colorAllocate(0, 0, 0);
 
-    // Set the text color to white
-    var txtColor = img.colorAllocate(255, 255, 255)
+  // Set the text color to white
+  var txtColor = img.colorAllocate(255, 255, 255);
 
-    // Load the Frank Bold font
-    var fontPath = './frank-bold.ttf'
+  // Load the Frank Bold font
+  var fontPath = "./frank-bold.ttf";
 
-    // Write it onto the image
-    img.stringFT(txtColor, fontPath, 44, 0, 10, 60, licensePlate)
+  // Write it onto the image
+  img.stringFT(txtColor, fontPath, 44, 0, 10, 60, licensePlate);
 
-    // Save the image as output.png
-    img.savePng('output.png', 1, function(err) {
-        if(err) throw err
-        
-        // Destroy the image (from memory)
-        img.destroy()
+  // Save the image as output.png
+  img.savePng("output.png", 1, function(err) {
+    if (err) throw err;
 
-        // Let's merge the 2 images we have
+    // Destroy the image (from memory)
+    img.destroy();
 
-        // Base image
-        var base = gd.createFromJpeg('alpr_sample2.jpg')
+    // Let's merge the 2 images we have
 
-        // Our overlay image
-        var overlay = gd.createFromPng('output.png')
+    // Base image
+    var base = gd.createFromJpeg("alpr_sample2.jpg");
 
-        // Copy the overlay image on top of the base image
-        overlay.copy(base, 20, 20, 0, 0, 300, 100)
+    // Our overlay image
+    var overlay = gd.createFromPng("output.png");
 
-        // Save the result
-        base.savePng('output_combined.png', 0, function(err) {
-            if (err) throw err
+    // Copy the overlay image on top of the base image
+    overlay.copy(base, 20, 20, 0, 0, 300, 100);
 
-            // Exit the program, else it will hang forever
-            process.exit(0)
-        })
+    // Save the result
+    base.savePng("output_combined.png", 0, function(err) {
+      if (err) throw err;
 
-    })
-})
+      // Exit the program, else it will hang forever
+      process.exit(0);
+    });
+  });
+});
 ```
 
 Now when we run this, we end up with our end result. The original image, with on top of it the license plate it detected
@@ -442,9 +425,9 @@ Now when we run this, we end up with our end result. The original image, with on
 
 Let's see what our original goals were:
 
-- Take an image as input source ✅
-- Detect if there is a license plate in the image ✅
-- Update the image with a text-overlay showing the license plate it found ✅
+* Take an image as input source ✅
+* Detect if there is a license plate in the image ✅
+* Update the image with a text-overlay showing the license plate it found ✅
 
 Looks like we're done!
 

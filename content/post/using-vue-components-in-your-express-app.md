@@ -15,40 +15,30 @@ date: 2017-10-12
 
 VueJS is awesome. Creating self contained components and compose them together in your pages makes so much sense, and therefore I've been using it extensively in my latest projects. However, sometimes you want (or need) to create a traditional app, and can't use the SPA workflow development with hot reloading and .vue files.
 
-Or can you? 🤔 
+Or can you? 🤔
 
 > TL;DR: I've prepared a repo with the full example code in case you want to dive right in at [Github](https://github.com/Hyra/vue-components-in-express)
 
 Laravel already got Vue tightly integrated out-of-the-box, and you can actually register and use `.vue` components in your `blade` templates relatively easy. My weapon of choice is usually Express though, as I'm a Javascript fanboy 🤓. I set out to see if this is possible and spent 2 evenings trying to get the same working. With success! Below the steps to get this up and running for your next Express app as well.
 
-<!-- <center>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0534492338431642"
-     data-ad-slot="3199566305"></ins>
-</center>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script> -->
-
 ## Defining some goals
 
 Before setting out to come up with a solution I had to define the goals I had in mind. I came up with the following:
 
-- **Be able to write components using the `.vue`  approach**
-Surely it's possible to write lengthy javascript and define components in one big file, but I want to use the .vue approach where `<template>`, `<script>` and `<style>` are combined in one file.
+* **Be able to write components using the `.vue` approach**
+  Surely it's possible to write lengthy javascript and define components in one big file, but I want to use the .vue approach where `<template>`, `<script>` and `<style>` are combined in one file.
 
-- **Use the components by puttin `<custom-tag>` in my view files**
-Registering and compiling is one thing, but being able to use them is another. I don't want to have to use Vue code to render the components explicity
+* **Use the components by puttin `<custom-tag>` in my view files**
+  Registering and compiling is one thing, but being able to use them is another. I don't want to have to use Vue code to render the components explicity
 
-- **Ability to use a pre-processor**
-I like writing my styles in the `scss` format, so this should be supported.
+* **Ability to use a pre-processor**
+  I like writing my styles in the `scss` format, so this should be supported.
 
-- **A simple build tool to compile**
-When developing SPA projects the build tools get rather verbose and complex. For the projects I want to use components in the build tool should be simple.
+* **A simple build tool to compile**
+  When developing SPA projects the build tools get rather verbose and complex. For the projects I want to use components in the build tool should be simple.
 
-- **Bonus Feature: Hot Reloading**
-Spoiler alert: I didn't set out to have this as a requirement, but it works, and it's awesome.
+* **Bonus Feature: Hot Reloading**
+  Spoiler alert: I didn't set out to have this as a requirement, but it works, and it's awesome.
 
 ## Setting the stage
 
@@ -87,11 +77,11 @@ yarn add vue
 Next, we need to create our entry Javascript file. We will eventually bundle all the referenced javascript code into one file, so this will be our main file. I created a file in `public/javascripts/main.js`. In there put the following:
 
 ```javascript
-var Vue = require('vue/dist/vue.js')
+var Vue = require("vue/dist/vue.js");
 
 const app = new Vue({
-  el: '#app'
-})
+  el: "#app"
+});
 ```
 
 Notice we pull in `vue/dist/vue.js` rather than just `vue`. This is because by default Vue includes the runtime-only build, which means we can't use templates like we want in .vue files.
@@ -146,7 +136,7 @@ html
 
 Next up is the part we've been waiting for .. an actual component! Let's add a file `public/javascripts/components/cruelWorld.vue`
 
-```javascript
+```jsx
 <template>
     <div class="cruel">
         Cruel
@@ -181,13 +171,13 @@ This is your basic Vue component. We have a simple template and some data, and i
 Let's add it to our `main.js` so we can use it:
 
 ```javascript
-var Vue = require('vue/dist/vue.js')
+var Vue = require("vue/dist/vue.js");
 
-Vue.component('cruelWorld', require('./components/cruelWorld.vue'));
+Vue.component("cruelWorld", require("./components/cruelWorld.vue"));
 
 const app = new Vue({
-  el: '#app'
-})
+  el: "#app"
+});
 ```
 
 And compile it by running the command again:
@@ -221,7 +211,7 @@ If all went well, you should be seeing our component alive and kicking!
 
 Now, we can use pre-processors as well. For instance, we can add `lang="scss"` to our `<style>` tag to use SASS syntax:
 
-```javascript
+```jsx
 <template>
     <div class="cruel">
         Cruel
@@ -264,7 +254,7 @@ Now, when you compile and run, you should see the SASS is being compiled correcl
 
 ![Express](/images/vue-express/02.png)
 
-This is great. We can write .vue components and then use them in our traditional app. We could stop here, but let's add one more feature .. 
+This is great. We can write .vue components and then use them in our traditional app. We could stop here, but let's add one more feature ..
 
 ## Bonus: Hot Reloading
 
@@ -272,11 +262,11 @@ This is just the icing on the cake. Being able to update our components and see 
 
 Open up your `package.json` and add the following **dev** script to the `scripts` section:
 
-```json
+```js
 "scripts": {
   "start": "node ./bin/www",
-  "dev": "watchify -vd -p browserify-hmr -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js & node ./bin/www" 
-  },
+  "dev": "watchify -vd -p browserify-hmr -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js & node ./bin/www"
+}
 ```
 
 This script looks daunting but is quite simple. Basically it uses **watchify** to watch for code changes, and proxies the result of **vueify** through browserify-hmr (hot module reloading) to our page. Awesome.

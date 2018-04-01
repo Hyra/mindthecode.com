@@ -9,7 +9,7 @@ tags:
   - web application
   - coding
 layout: post
-header: https://media.giphy.com/media/KPPS9YOCBGU5G/giphy.gif
+header: boiler.gif
 date: 2017-11-07
 references:
 ---
@@ -28,18 +28,18 @@ Of course you don't have to start from scratch with this. You can pick any exist
 
 ## But not all projects are the same!
 
-Agreed. Even more so, not every *environment* is the same. Or project team, for that matter. For instance, you might use a completely different stack when you are working on your pet side-projects than what you use at the office. Personally, I work with about 4 boilerplate apps, depending on the project, the people I work with and sometimes the constraints set by the client. For example, I have boilerplates for:
+Agreed. Even more so, not every _environment_ is the same. Or project team, for that matter. For instance, you might use a completely different stack when you are working on your pet side-projects than what you use at the office. Personally, I work with about 4 boilerplate apps, depending on the project, the people I work with and sometimes the constraints set by the client. For example, I have boilerplates for:
 
 * a Single Page VueJS App
 * an API only Express application
 * a Static Site Generator (Hexo) for blogs
 * etc.
 
-The idea is that you standardize as much as possible, but don't constrain yourself too much. Sure, every project and situation is different, but starting every project from a  **base** you are very familiar with makes sure you can get up and running quickly.
+The idea is that you standardize as much as possible, but don't constrain yourself too much. Sure, every project and situation is different, but starting every project from a **base** you are very familiar with makes sure you can get up and running quickly.
 
 ## Keeping up to date
 
-Ideally, you should keep your boilerplate apps up to date. Make sure to check your dependencies are up to date every now and then, check if it still works, and see if there's any upgrades you should be aware of. Over time you will know exactly what works, and what doesn't, so when that new library comes along you know exactly where to fit it in. But, **don't do this religously**, else we end up tinkering on Boilerplate apps rather than projects that will let you take over the world 
+Ideally, you should keep your boilerplate apps up to date. Make sure to check your dependencies are up to date every now and then, check if it still works, and see if there's any upgrades you should be aware of. Over time you will know exactly what works, and what doesn't, so when that new library comes along you know exactly where to fit it in. But, **don't do this religously**, else we end up tinkering on Boilerplate apps rather than projects that will let you take over the world
 
 It's all about that fine balance 🦄 ✨
 

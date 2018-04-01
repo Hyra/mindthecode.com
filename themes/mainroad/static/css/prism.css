@@ -471,7 +471,7 @@ h2 {
 
 pre[class*="language-"] {
   background: #272822 !important;
-  margin: 0 !important;
+  margin: 20px 0 !important;
   border-radius: 0 !important;
   padding: 20px 30px !important;
 }

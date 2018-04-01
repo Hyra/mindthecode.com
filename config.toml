@@ -8,6 +8,18 @@ paginate = "10" # Number of posts per page
 disqusShortname = "mindthecode" # Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-40203772-4" # Enable Google Analytics by entering your tracking id
 
+[mediaTypes]
+    [mediaTypes."application/atom"]
+        suffix = "xml"
+
+[outputFormats.Atom]
+    mediaType = "application/atom"
+    baseName = "index"
+    isPlainText = false
+
+[outputs]
+    home = [ "HTML", "Atom" ]
+
 [[menu.main]]
     name = "Blog"
     pre = "<i class='fa fa-heart'></i>"

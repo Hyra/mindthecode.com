@@ -5,8 +5,8 @@ theme = "mainroad"
 pygmentsCodefences=true
 
 paginate = "10" # Number of posts per page
-disqusShortname = "mindthecode" # Enable comments by entering your Disqus shortname
-googleAnalytics = "UA-40203772-4" # Enable Google Analytics by entering your tracking id
+disqusShortname = "mindthecode"
+googleAnalytics = "UA-40203772-4"
 
 [mediaTypes]
     [mediaTypes."application/atom"]

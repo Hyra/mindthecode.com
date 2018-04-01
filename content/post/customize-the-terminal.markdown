@@ -27,6 +27,7 @@ Below is a screenshot of what my terminal looks like:
 That's right, besides the beautiful colour-scheme it also visually tells you what git branch you're in and information about its status.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -63,15 +64,15 @@ I recently got to know [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), w
 
 To get it working you first have to change the shell you're working in. By default OSX users get the `/bin/bash` shell. ZSH is pretty much the same, but comes with quite a few handy additions to make it cool enough to use. To change your shell to zsh simply go:
 
-- System Preferences
-- Users & Groups
-- Right click your user account and select `Advanced Options` (You might have to click the little lock first)
-- Change `/bin/bash/` to `/bin/zsh` in the Login Shell dropdown
-- Save your changes
+* System Preferences
+* Users & Groups
+* Right click your user account and select `Advanced Options` (You might have to click the little lock first)
+* Change `/bin/bash/` to `/bin/zsh` in the Login Shell dropdown
+* Save your changes
 
 Next, to get oh-my-zsh working, they have provided a nice one-line install script which you run, of course, in the terminal:
 
-``` bash
+```bash
 curl -L <https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh> | sh
 ```
 
@@ -89,7 +90,7 @@ Save this file as `~/.zshrc`. Go to the `themes` folder again, and create a new 
 
 Now the fun part. Making it all yours. Open up the theme file you created, and put the following inside:
 
-``` bash
+```bash
 function git_prompt_info() { ref=$(git symbolic-ref HEAD 2> /dev/null) || return echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX" }
 
 function get_pwd() { print -D $PWD }

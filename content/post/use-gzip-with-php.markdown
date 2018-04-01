@@ -26,7 +26,7 @@ I recently built the backend of a mobile application, which relied on a JSON int
 
 Simple. At the top of your PHP file you add the following:
 
-``` php
+```php
 @ob_start ('ob_gzhandler');
 header('Content-type: text/html; charset: UTF-8');
 header('Cache-Control: must-revalidate');
@@ -42,7 +42,7 @@ The only caveat is that you must have `mod_gzip` installed as an Apache module, 
 
 [Jose Gonzales][1] made a nice little plugin to use GZip in your Cake Applications. Find it at [Github][2] Basically, all you have to do is add the plugin to your `plugins` folder, and then add the following to your `app_controller.php`
 
-``` php
+```php
 var $components = array('Gzip.Gzip');
 ```
 

@@ -16,6 +16,7 @@ On this blog I list all the used tags in the sidebar. I realised these tags were
 Turns out you can.
 
 <!-- Auto Responsive -->
+
 <!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-0534492338431642"
@@ -26,19 +27,17 @@ Turns out you can.
 </script> -->
 
 ## Tagging posts
+
 In your posts, make sure you tag your posts in the meta section:
 
-``` markdown
+```markdown
 title: Your awesome title
-tags:
-	- something
-	- here
-	- three
+tags: - something - here - three
 ```
 
 Now, Jekyll is clever and knows about your tags and stores them in `site.tags`. To display a list of them, use the following snippet:
 
-``` markup
+```markup
 {% raw %}
 <h2>Tags</h2>
 <ul>
@@ -48,7 +47,7 @@ Now, Jekyll is clever and knows about your tags and stores them in `site.tags`. 
   {{ "{% assign posts = tag | last " }}%}
   <li>
   	<a href="/tags/# {{ "{{ t | downcase | replace:' ','-'" }}}}">
-		{{ "{{t | downcase | replace:' ','-' " }}}} 
+		{{ "{{t | downcase | replace:' ','-' " }}}}
   		<span>({{ "{{ posts | size " }}}})</span>
   	</a>
   </li>
@@ -64,4 +63,3 @@ Good stuff.
 If you have any questions feel free to reach me at [@hyra](http://twitter.com/hyra) or in the comments below.
 
 Happy coding!
-

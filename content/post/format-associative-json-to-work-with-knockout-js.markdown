@@ -17,7 +17,7 @@ While Knockout.js is a lot of fun, it does expect your JSON to be in a certain f
 
 Take the following response from a simple `find` action:
 
-``` javascript
+```javascript
 "Projects": [
   {
       "Project": {
@@ -56,6 +56,7 @@ Take the following response from a simple `find` action:
 This is fine to work with in your typical View, but Knockout rather has a nested format, and doesn't like the leading `Project` nodes. You could write custom parsers in Knockout, but would quickly become a hell to maintain.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -68,7 +69,7 @@ This is fine to work with in your typical View, but Knockout rather has a nested
 
 Instead, I wrote a little function to reformat the response to get the result Knockout likes:
 
-``` php
+```php
 public function formatResponse($data) {
     $ret = array();
     foreach($data as $key) {
@@ -91,7 +92,7 @@ $this->set('_serialize', array('projects'));
 
 This will reformat the Projects response to:
 
-``` javascript
+```javascript
 "projects": [
     {
         "id": "151",

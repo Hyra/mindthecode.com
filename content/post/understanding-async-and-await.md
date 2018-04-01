@@ -20,7 +20,7 @@ draft: true
 One obvious thing about Javascript is (in)famous for is the async side of the language. People seem to either love it, or hate it with a passion. However, most people have `async` mentally linked to "callback hell", but nowadays that isn't all that fair. The Javascript community has been doing a very awesome job to provide new ways to handle asynchronicity a lot better, and with the arrival of async / await we're getting some nice tools to work with.
 
 Promises
-You might have heard about Promises. How this pattern works is quite simple. You ask for some data with a function call, which in turn **promises** it will get back to you, eventually. Maybe. Imagine you ask your boss for a raise. Your boss promises he will get back to you on that. Now, 3 things can happen. You either get a raise (resolved)  // Shortly explain what promises are
+You might have heard about Promises. How this pattern works is quite simple. You ask for some data with a function call, which in turn **promises** it will get back to you, eventually. Maybe. Imagine you ask your boss for a raise. Your boss promises he will get back to you on that. Now, 3 things can happen. You either get a raise (resolved) // Shortly explain what promises are
 
 Async / Await
 // What does it solve

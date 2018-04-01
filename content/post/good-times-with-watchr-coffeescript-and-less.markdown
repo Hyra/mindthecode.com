@@ -21,7 +21,7 @@ Here is how I got it set up now ..
 
 First of all we need to get the Watchr gem installed. Assuming you have a Mac and got XCode (or at least the tools) installed, this is pretty simple:
 
-``` bash
+```bash
 $ gem install watchr
 ```
 
@@ -29,7 +29,7 @@ $ gem install watchr
 
 Another easy one ..
 
-``` bash
+```bash
 $ npm install -g coffee-script
 ```
 
@@ -39,7 +39,7 @@ Don't forget the `-g` flag as you (probably) want it to be installed globally.
 
 You got the hang of it now, it's as easy as ..
 
-``` bash
+```bash
 $ npm install -g less
 ```
 
@@ -49,7 +49,7 @@ Now we're ready for the fun bit, setting up watchr to do some automagic stuff.
 
 I have a typical folder structure, with the exception of a new `_src` folder which will contain all the raw coffeescript and less files.
 
-``` bash
+```bash
 /index.html
 /css
 /js
@@ -63,7 +63,7 @@ Watchr works with a config file, which basically tells it what to watch for, and
 
 Here's my config file at the moment:
 
-``` ruby
+```ruby
 def compile_less
     %x[lessc less/bootstrap/bootstrap.less ../css/main.css --yui-compress]
 end
@@ -104,7 +104,7 @@ The compile_coffee command does something pretty similar. Whenever a .coffee fil
 
 To get the show on the road, cd to the `_src` folder, and run:
 
-``` bash
+```bash
 $ watchr watchr.rb
 ```
 

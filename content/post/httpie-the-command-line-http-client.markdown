@@ -22,19 +22,19 @@ Of course you can do actual useful stuff as well, such as POST-ing, Authenticati
 
 As the repo says, the main features are:
 
-- Expressive and intuitive syntax
-- Formatted and colorized terminal output
-- Built-in JSON support
-- Forms and file uploads
-- HTTPS, proxies, and authentication
-- Arbitrary request data
-- Custom headers
-- Persistent sessions
-- Wget-like downloads
-- Python 2.6, 2.7 and 3.x support
-- Linux, Mac OS X and Windows support
-- Documentation
-- Test coverage
+* Expressive and intuitive syntax
+* Formatted and colorized terminal output
+* Built-in JSON support
+* Forms and file uploads
+* HTTPS, proxies, and authentication
+* Arbitrary request data
+* Custom headers
+* Persistent sessions
+* Wget-like downloads
+* Python 2.6, 2.7 and 3.x support
+* Linux, Mac OS X and Windows support
+* Documentation
+* Test coverage
 
 I haven't played with it much yet, but so far it seems like a rather useful little tool, worth checking out.
 

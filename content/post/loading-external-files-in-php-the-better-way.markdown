@@ -21,7 +21,7 @@ Sometimes even, it is disabled on your host for security reasons. So i'm making 
 
 Indeed! Take this benchmark for instance, `file_get_contents` vs `curl` on google.com:
 
-``` javascript
+```javascript
 [1] => Array   // 1 request to google.com
 (
     [FGC] =>  0.4955058 // 38.88% slower
@@ -60,27 +60,27 @@ Sure, it might not seem that big a difference. But imagine loading an external f
 
 Sure, no worries. Rather than calling:
 
-``` javascript
-$data = file_get_contents('http://whatever.com/sheep.jpg');
+```javascript
+$data = file_get_contents("http://whatever.com/sheep.jpg");
 ```
 
 you could do:
 
-``` javascript
+```javascript
 function loadFile($url) {
-    $ch = curl_init();
+  $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_URL, $url);
 
-    $data = curl_exec($ch);
-    curl_close($ch);
+  $data = curl_exec($ch);
+  curl_close($ch);
 
-    return $data;
+  return $data;
 }
 
-$data = loadFile('http://whatever.com/sheep.jpg');
+$data = loadFile("http://whatever.com/sheep.jpg");
 ```
 
 And you're done.

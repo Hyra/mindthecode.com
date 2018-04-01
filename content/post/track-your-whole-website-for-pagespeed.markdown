@@ -19,6 +19,7 @@ At the office we usually take some time to optimise our client's websites for [G
 This makes sense, as that's usually the main page, but what about all the other pages. For instance, the order process pages or your contact form. Those are just as, if not more, important to load up quickly.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"

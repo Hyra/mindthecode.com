@@ -23,13 +23,13 @@ I downloaded the normal user version, and obviously my application didn't fully 
 
 This means one can't change tabs in the following way anymore:
 
-``` javascript
+```javascript
 application.observe(models.EVENT.ARGUMENTSCHANGED, handleArgs);
 
 function handleArgs() {
-    var args = models.application.arguments;
-    $(".section").hide();   // Hide all sections
-    $("#"+args[0]).show();  // Show current section
+  var args = models.application.arguments;
+  $(".section").hide(); // Hide all sections
+  $("#" + args[0]).show(); // Show current section
 }
 ```
 
@@ -37,10 +37,10 @@ function handleArgs() {
 
 I did some digging, and noticed `sp.core` has some eventListeners. After some fiddling I can now switch tabs again by doing the following:
 
-``` javascript
-sp.core.addEventListener('argumentsChanged', function() {
-    $(".section").hide();                   // Hide all sections
-    $("#"+sp.core.getArguments()).show();   // Show current section
+```javascript
+sp.core.addEventListener("argumentsChanged", function() {
+  $(".section").hide(); // Hide all sections
+  $("#" + sp.core.getArguments()).show(); // Show current section
 });
 ```
 

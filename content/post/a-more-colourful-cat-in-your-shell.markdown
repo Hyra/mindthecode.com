@@ -20,7 +20,7 @@ I just wanted to quickly share a shell alias I have been using lately to get som
 
 Below is a screenshot of what an [average terminal](/customize-the-terminal/) looks like when you just use
 
-``` bash
+```bash
 $ cat somefile.js
 ```
 
@@ -36,11 +36,12 @@ Indeed! If you could, why wouldn't you?
 
 So, let's get to it. Luckily this isn't very complex to get going on your machine. Let's start by installing [Pygments](https://github.com/tmm1/pygments.rb). This little Ruby wrapper library is used to make the realtime syntax highlighting possible: bash
 
-``` bash
+```bash
 gem install pygments
 ```
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -55,7 +56,7 @@ Next up, the alias itself. Depending on your shell and environment open up your 
 
 In there, add the following alias:
 
-``` bash
+```bash
 alias c='pygmentize -O style=monokai -f console256 -g'
 ```
 

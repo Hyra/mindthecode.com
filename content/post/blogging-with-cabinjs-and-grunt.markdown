@@ -20,8 +20,8 @@ There's quite a few **static site generators** on the market today, of which [Je
 
 If you're looking for a blog generator that uses Grunt for:
 
-- Auto reloading
-- SASS compiling
-- Deploying to Github, Amazon S3 or FTP
+* Auto reloading
+* SASS compiling
+* Deploying to Github, Amazon S3 or FTP
 
 .. make sure to [CabinJS](http://www.cabinjs.com) a try.

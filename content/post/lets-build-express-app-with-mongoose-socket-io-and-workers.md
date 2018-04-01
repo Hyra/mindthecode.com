@@ -30,7 +30,7 @@ And of course you don't have to start from scratch. You can pick any boilerplate
 
 ## But not all projects are the same!
 
-Agreed. Even more so, not every *environment* is the same. Or project team, for that matter. For instance, you might use a completely different stack when you are working on your pet side-projects than what you use at the office. Personally, I work with about 4 boilerplate apps, depending on the project, the people I work with and sometimes the constraints set by the client. For example:
+Agreed. Even more so, not every _environment_ is the same. Or project team, for that matter. For instance, you might use a completely different stack when you are working on your pet side-projects than what you use at the office. Personally, I work with about 4 boilerplate apps, depending on the project, the people I work with and sometimes the constraints set by the client. For example:
 
 * A VueJS Single Page App
 * An API only Express application
@@ -43,9 +43,7 @@ The idea is that you standardize as much as possible, but don't constrain yourse
 
 Of course, you should keep your boilerplate apps up to date. Make sure to check your dependencies are up to date every now and then, check it still works, and see if there's any upgrades. Over time you will know exactly what works, and what doesn't, so when that new library comes along you know exactly where to fit it in. But, don't do this religously, else we end up tinkering on Boilerplate apps rather than projects that will let you take over the world 🦄
 
-
-
- They provide you with a kick-start so you can start developing your project straight away. In reality though, most developers find themselves spending hours and hours getting familiar with how the boilerplate code works and what makes it tick. This is because developers are curious by nature, and have a thing where they want to know exactly how things run under the hood.
+They provide you with a kick-start so you can start developing your project straight away. In reality though, most developers find themselves spending hours and hours getting familiar with how the boilerplate code works and what makes it tick. This is because developers are curious by nature, and have a thing where they want to know exactly how things run under the hood.
 
 This is very healthy.
 
@@ -60,55 +58,64 @@ Don't worry, this isn't a post about the gazillionth starter kit and how it solv
 So what are we going to do? I'll walk you through how I built my Express boilerplate app.
 
 ## run express generator for default code
+
 express --view=pug bah
 
-DEBUG=bah:* npm start
+DEBUG=bah:\* npm start
 
 # yarn install
+
 yarn start
 
 # Make sure it all works
+
 (node bin/www)
 
 # Add .gitignore (commit early and often)
 
 # Add mongo and redis through docker-compose
-+ docker-compose.yml
+
+* docker-compose.yml
 
 # Create Makefile to run multiple things
-- modify package.json, add dev with 'nodemon ./bin/www'
-- yarn add nodemon
-+ nodemon.json:
 
-    {
-        "verbose": true,
-        "ignore": ["node_modules/*", "public/*"],
-        "delay": "1666"
-    }
+* modify package.json, add dev with 'nodemon ./bin/www'
+* yarn add nodemon
 
-+ Makefile
-    
-    run:
-        docker-compose down && docker-compose up -d
-        concurrently --kill-others --prefix "[{name}]" --names "APP" -c "magenta" "yarn dev"
+- nodemon.json:
+
+  {
+  "verbose": true,
+  "ignore": ["node_modules/*", "public/*"],
+  "delay": "1666"
+  }
+
+- Makefile
+  run:
+  docker-compose down && docker-compose up -d
+  concurrently --kill-others --prefix "[{name}]" --names "APP" -c "magenta" "yarn dev"
 
 Now runs mongo, redis and express concurrently
 
 # Add .env
+
 ❯ yarn add dotenv
 
 # Implement mongoose
-+ models/index.js
-+ models/user.js
-❯ yarn add mongoose-slug-hero mongoose bcryptjs slug
+
+* models/index.js
+* models/user.js
+  ❯ yarn add mongoose-slug-hero mongoose bcryptjs slug
 
 add MONGODB_URI to .env
 
 # Add a worker process (even if not used, good to test things out)
-+ worker.js
-Add it to Makefile
+
+* worker.js
+  Add it to Makefile
 
 # Add Kue
+
 yarn add kue
 Add REDIS_URL to .env
 Example in worker
@@ -133,6 +140,7 @@ Example in worker
     });
 
 # Add Socket.io
+
 ❯ yarn add socket.io
 app.js
 
@@ -140,40 +148,44 @@ app.js
     require("./sockets")(app.io);
 
 bin/www
-    
-    app.io.attach(server); 
+
+ app.io.attach(server);
 
 worker.js
-    
-    sample emit
+
+ sample emit
 
 layout.pug
 
     script(src='/socket.io/socket.io.js')
 
-+ sockets.js
+* sockets.js
 
 Add socket script to app.js
 
 # Add Vue (refer to post)
-+ webpack.config.js
-+ public/javascripts/main.js
-+ public/javascripts/components
-+ public/javascripts/components/example.vue
--> add to main.js
--> add #app to layout.pug
--> add script to layout.pug
 
-    script(src="/javascripts/bundle.js")
--> add to package.json
+* webpack.config.js
+* public/javascripts/main.js
+* public/javascripts/components
+* public/javascripts/components/example.vue
+  -> add to main.js
+  -> add #app to layout.pug
+  -> add script to layout.pug
 
-    "dev": "watchify -vd -p browserify-hmr -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js"
--> add packages
-❯ yarn add vue watchify vueify browserify-hmr node-sass babel-loader babel-core babel-preset-es2015 babel-plugin-transform-runtime sass-loader
+      script(src="/javascripts/bundle.js")
+
+  -> add to package.json
+
+      "dev": "watchify -vd -p browserify-hmr -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js"
+
+  -> add packages
+  ❯ yarn add vue watchify vueify browserify-hmr node-sass babel-loader babel-core babel-preset-es2015 babel-plugin-transform-runtime sass-loader
 
 Update Makefile
 
 # Deploy to Heroku
+
 heroku addons:create heroku-redis:hobby-dev
 heroku addons:create mongolab:sandbox
 
@@ -185,13 +197,12 @@ Procfile for worker
 
 # Bits and bobs
 
-+ nodemon.json
-
+* nodemon.json
 
 # Production mode
 
 cross-env
 envify
 script build
-    
-    "build": "cross-env NODE_ENV='production' browserify -g envify -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js"
+
+ "build": "cross-env NODE_ENV='production' browserify -g envify -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js"

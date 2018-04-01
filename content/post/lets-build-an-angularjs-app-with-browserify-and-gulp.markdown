@@ -30,7 +30,7 @@ Instead of starting from a cloned code repository let's build our setup together
 
 When building a web application I tend to have an `app` folder for the original source files, and a `dist` folder which contains all the processed files and will serve as the root directory for the webserver. So let's create the following folder structure:
 
-``` bash
+```bash
 - app
   - index.html
   - images            // Visual assets
@@ -88,11 +88,12 @@ These I use so I can run a local webserver and support live reloading of the app
 
 And this will do fine for now. So! Let's install all these babies, and save them to our `package.json` by adding `--save-dev`
 
-``` bash
+```bash
 $ npm install gulp browserify gulp-browserify gulp-clean gulp-concat gulp-jshint gulp-util gulp-embedlr gulp-livereload tiny-lr connect-livereload express --save-dev
 ```
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -109,42 +110,46 @@ Now we have all the components in place it's time to write our Gulpfile. Let's s
 
 First, let's make sure we can `watch` our javascript files, and as they change, run them through JSHint and have Browserify bundle the code into a single file:
 
-``` javascript
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    jshint = require('gulp-jshint'),
-    browserify = require('gulp-browserify'),
-    concat = require('gulp-concat'),
-    clean = require('gulp-clean');
+```javascript
+var gulp = require("gulp"),
+  gutil = require("gulp-util"),
+  jshint = require("gulp-jshint"),
+  browserify = require("gulp-browserify"),
+  concat = require("gulp-concat"),
+  clean = require("gulp-clean");
 
 // JSHint task
-gulp.task('lint', function() {
-  gulp.src('./app/scripts/*.js')
-  .pipe(jshint())
-  // You can look into pretty reporters as well, but that's another story
-  .pipe(jshint.reporter('default'));
+gulp.task("lint", function() {
+  gulp
+    .src("./app/scripts/*.js")
+    .pipe(jshint())
+    // You can look into pretty reporters as well, but that's another story
+    .pipe(jshint.reporter("default"));
 });
 
 // Browserify task
-gulp.task('browserify', function() {
+gulp.task("browserify", function() {
   // Single point of entry (make sure not to src ALL your files, browserify will figure it out for you)
-  gulp.src(['app/scripts/main.js'])
-  .pipe(browserify({
-    insertGlobals: true,
-    debug: true
-  }))
-  // Bundle to a single file
-  .pipe(concat('bundle.js'))
-  // Output it to our dist folder
-  .pipe(gulp.dest('dist/js'));
+  gulp
+    .src(["app/scripts/main.js"])
+    .pipe(
+      browserify({
+        insertGlobals: true,
+        debug: true
+      })
+    )
+    // Bundle to a single file
+    .pipe(concat("bundle.js"))
+    // Output it to our dist folder
+    .pipe(gulp.dest("dist/js"));
 });
 
-gulp.task('watch', ['lint'], function() {
+gulp.task("watch", ["lint"], function() {
   // Watch our scripts
-  gulp.watch(['app/scripts/*.js', 'app/scripts/**/*.js'],[
-    'lint',
-    'browserify'
-  ]);
+  gulp.watch(
+    ["app/scripts/*.js", "app/scripts/**/*.js"],
+    ["lint", "browserify"]
+  );
 });
 ```
 
@@ -154,7 +159,7 @@ So far so good! Whenever we change code in our javascript files a fresh bundle.j
 
 Let's create a simple `index.html` file so we can see our work in the browser. Open up `index.html` and add something like the following:
 
-``` html
+```html
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -172,27 +177,27 @@ The above should look familiar. We include our bundle.js file we created earlier
 
 First of all, we want this index.html file to be added to our `dist` folder so we can actually serve it. We can do this by adding an extra task:
 
-``` javascript
+```javascript
 // Views task
-gulp.task('views', function() {
+gulp.task("views", function() {
   // Get our index.html
-  gulp.src('app/index.html')
-  // And put it in the dist folder
-  .pipe(gulp.dest('dist/'));
+  gulp
+    .src("app/index.html")
+    // And put it in the dist folder
+    .pipe(gulp.dest("dist/"));
 
   // Any other view files from app/views
-  gulp.src('./app/views/**/*')
-  // Will be put in the dist/views folder
-  .pipe(gulp.dest('dist/views/'));
+  gulp
+    .src("./app/views/**/*")
+    // Will be put in the dist/views folder
+    .pipe(gulp.dest("dist/views/"));
 });
 ```
 
 We can also set up another watcher in the watch task to pick up any changes as we build:
 
-``` javascript
-gulp.watch(['app/index.html', 'app/views/**/*.html'], [
-  'views'
-]);
+```javascript
+gulp.watch(["app/index.html", "app/views/**/*.html"], ["views"]);
 ```
 
 At the moment we pretty much have a working app. We just can't see it. Let's change this by adding a self contained webserver, straight from our Gulp.
@@ -201,38 +206,38 @@ At the moment we pretty much have a working app. We just can't see it. Let's cha
 
 First of all, we need to add some modules to our Gulpfile that allows us to run a mini express server.
 
-``` javascript
-var embedlr = require('gulp-embedlr'),
-    refresh = require('gulp-livereload'),
-    lrserver = require('tiny-lr')(),
-    express = require('express'),
-    livereload = require('connect-livereload'),
-    livereloadport = 35729,
-    serverport = 5000;
+```javascript
+var embedlr = require("gulp-embedlr"),
+  refresh = require("gulp-livereload"),
+  lrserver = require("tiny-lr")(),
+  express = require("express"),
+  livereload = require("connect-livereload"),
+  livereloadport = 35729,
+  serverport = 5000;
 
 // Set up an express server (but not starting it yet)
 var server = express();
 // Add live reload
-server.use(livereload({port: livereloadport}));
+server.use(livereload({ port: livereloadport }));
 // Use our 'dist' folder as rootfolder
-server.use(express.static('./dist'));
+server.use(express.static("./dist"));
 // Because I like HTML5 pushstate .. this redirects everything back to our index.html
-server.all('/*', function(req, res) {
-    res.sendfile('index.html', { root: 'dist' });
+server.all("/*", function(req, res) {
+  res.sendfile("index.html", { root: "dist" });
 });
 ```
 
 Next, let's start the server. You can do this from any task, but let's create a `dev` task for the fun of it.
 
-``` javascript
+```javascript
 // Dev task
-gulp.task('dev', function() {
+gulp.task("dev", function() {
   // Start webserver
   server.listen(serverport);
   // Start live reload
   lrserver.listen(livereloadport);
   // Run the watch task, to keep taps on changes
-  gulp.run('watch');
+  gulp.run("watch");
 });
 ```
 
@@ -240,14 +245,14 @@ Now, when you run `gulp dev` it will kickstart our internal webserver with our `
 
 If all is well you should see the `index.html` show up. Whenever you change a file however, the changes won't automatically show up in the browser. This is because we have to manually invoke the server refresh from within our task. Let's modify our `views` task to automatically refresh the browser after it has done its work:
 
-``` javascript
-gulp.task('views', function() {
-  gulp.src('./app/index.html')
-  .pipe(gulp.dest('dist/'));
+```javascript
+gulp.task("views", function() {
+  gulp.src("./app/index.html").pipe(gulp.dest("dist/"));
 
-  gulp.src('./app/views/**/*')
-  .pipe(gulp.dest('dist/views/'))
-  .pipe(refresh(lrserver)); // Tell the lrserver to refresh
+  gulp
+    .src("./app/views/**/*")
+    .pipe(gulp.dest("dist/views/"))
+    .pipe(refresh(lrserver)); // Tell the lrserver to refresh
 });
 ```
 
@@ -257,15 +262,15 @@ Now, whenever you change a view file, the server will reload. Of course, you can
 
 We are getting somewhere. All that's missing is some actual Angular code. So let's add some. Open up the `main.js` file and put in the following:
 
-``` javascript
-'use strict';
+```javascript
+"use strict";
 
-var angular = require('angular'); // That's right! We can just require angular as if we were in node
+var angular = require("angular"); // That's right! We can just require angular as if we were in node
 
-var app = angular.module('myApp', []);
+var app = angular.module("myApp", []);
 
-app.controller('HelloCtrl', function($scope) {
-  $scope.test = 'Test varretjes';
+app.controller("HelloCtrl", function($scope) {
+  $scope.test = "Test varretjes";
 });
 ```
 
@@ -275,11 +280,11 @@ Of course, the controller code should move to a file of its own in the controlle
 
 Create a new file `controllers/WelcomeCtrl.js` and add in the following:
 
-``` javascript
-'use strict';
+```javascript
+"use strict";
 
 var WelcomeCtrl = function($scope) {
-  $scope.testVar = 'We are up and running from a required module!';
+  $scope.testVar = "We are up and running from a required module!";
 };
 
 module.exports = WelcomeCtrl;
@@ -287,15 +292,15 @@ module.exports = WelcomeCtrl;
 
 Notice we use `module.exports` to expose (parts of) our code, as you do with modules. This way we can `require` them from our `main.js` file and use it as a module. Let's change `main.js` to use our fresh module:
 
-``` javascript
-'use strict';
+```javascript
+"use strict";
 
-var angular = require('angular'); // That's right! We can just require angular as if we were in node
+var angular = require("angular"); // That's right! We can just require angular as if we were in node
 
-var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our WelcomeCtrl.js as a module. Rainbows.
+var WelcomeCtrl = require("./controllers/WelcomeCtrl"); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
-var app = angular.module('myApp', []);
-app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+var app = angular.module("myApp", []);
+app.controller("WelcomeCtrl", ["$scope", WelcomeCtrl]);
 ```
 
 This is obviously a very bare example, but you can see how using simple `require` calls will save a lot of script tags in your index.html, and having your files behave as modules helps you write re-usable code.
@@ -304,7 +309,7 @@ This is obviously a very bare example, but you can see how using simple `require
 
 You might have noticed `gulp lint` gives us some errors. That's because it needs some guidance, as it doesn't know about our `require` and preferences. Let's add a file called `.jshintrc` and add in the following configuration:
 
-``` javascript
+```javascript
 {
   "node": true,
   "browser": true,
@@ -334,38 +339,43 @@ You may or may not agree with any of these settings, so feel free to tweak them.
 
 You may have a CSS pre-processor of choice, so let's add support for this. I usually go with SASS, but of course this is adaptable to your liking. Let's install a new module named `gulp-sass` and include it in our Gulpfile.
 
-``` bash
+```bash
 $ npm install gulp-sass gulp-autoprefixer --save-dev
 ```
 
-``` javascript
-var sass = require('gulp-sass');
+```javascript
+var sass = require("gulp-sass");
 // Not necessary, but I like this one, it automatically adds prefixes for all browsers
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require("gulp-autoprefixer");
 ```
 
 Next, let's write a task for it:
 
-``` javascript
+```javascript
 // Styles task
-gulp.task('styles', function() {
-  gulp.src('app/styles/*.scss')
-  // The onerror handler prevents Gulp from crashing when you make a mistake in your SASS
-  .pipe(sass({onError: function(e) { console.log(e); } }))
-  // Optionally add autoprefixer
-  .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
-  // These last two should look familiar now :)
-  .pipe(gulp.dest('dist/css/'))
-  .pipe(refresh(lrserver));
+gulp.task("styles", function() {
+  gulp
+    .src("app/styles/*.scss")
+    // The onerror handler prevents Gulp from crashing when you make a mistake in your SASS
+    .pipe(
+      sass({
+        onError: function(e) {
+          console.log(e);
+        }
+      })
+    )
+    // Optionally add autoprefixer
+    .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
+    // These last two should look familiar now :)
+    .pipe(gulp.dest("dist/css/"))
+    .pipe(refresh(lrserver));
 });
 ```
 
 And add another watcher.
 
-``` javascript
-gulp.watch(['app/styles/**/*.scss'], [
-  'styles'
-]);
+```javascript
+gulp.watch(["app/styles/**/*.scss"], ["styles"]);
 ```
 
 Now, whenever you make changes to your SASS files it will compile it to CSS and live-reload our webserver. Good times.

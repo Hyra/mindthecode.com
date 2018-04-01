@@ -19,7 +19,7 @@ Lately, we've been working with multiple environments/servers for our websites t
 
 So, what changes in your config? Not all that much. Let's have a look at the default database.php config file
 
-``` javascript
+```javascript
 class DATABASE_CONFIG {
 
     var $default = array(
@@ -46,7 +46,7 @@ class DATABASE_CONFIG {
 
 The `$default` database config is used when you don't specify anything. The `$test` database is used by SimpleTest. Let's say you want to have a `local` environment and one for when you're on your live/production server. Below is the database config I use
 
-``` javascript
+```javascript
 class DATABASE_CONFIG {
 
     var $local = array(

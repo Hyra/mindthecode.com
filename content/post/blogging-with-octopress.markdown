@@ -21,6 +21,7 @@ For some reason none of them really seemed what I wanted. Croogo is cool enough,
 I somehow stumbled upon [Octopress](http://octopress.org) earlier this week, and decided to give it a go. Short conclusion: _It's awesome_.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -33,11 +34,11 @@ I somehow stumbled upon [Octopress](http://octopress.org) earlier this week, and
 
 I won't go into all of the features, as that's nicely explained on their site, but basically it allows for this workflow:
 
-- Run `rake preview` in the background
-- Write my posts in [Markdown](http://daringfireball.net/projects/markdown/), with some settings in the top such as title, publish date, etc.
-- Hit save
-- See the changes in the browser
-- When happy, `rake deploy`
+* Run `rake preview` in the background
+* Write my posts in [Markdown](http://daringfireball.net/projects/markdown/), with some settings in the top such as title, publish date, etc.
+* Hit save
+* See the changes in the browser
+* When happy, `rake deploy`
 
 Now, the deploy function is very awesome. It automatically generate the site to a `public` folder, commits the whole thing to your git repository, and pushes it. When linked to a Github Pages site it will auto update your site.
 

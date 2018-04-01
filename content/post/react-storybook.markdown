@@ -21,6 +21,7 @@ What intrigued me about Storybook is the fact you can work on defining and desig
 As a nice side effect, you end up with some sort of "Styleguide" for your components so new members on the team can get familiar with the components without having to sift through the code.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -37,51 +38,49 @@ Make sure you run with NPM3 following this post as otherwise you might end up wi
 
 Let's start from scratch by creating a new directory and typing:
 
-``` bash
+```bash
 $ npm init
 ```
 
 This way we end up with a `package.json` that Storybook relies on. In my case it looks like this:
 
-``` javascript
+```javascript
 {
   "name": "storybook-test",
-  "version": "1.0.0", 
-  "description": 
-  "Testing out Storybook!", 
-  "main": "index.js", 
-  "scripts": { }, 
-  "author": "", 
+  "version": "1.0.0",
+  "description":
+  "Testing out Storybook!",
+  "main": "index.js",
+  "scripts": { },
+  "author": "",
   "license": "ISC"
 }
 ```
 
 Now let's install React:
 
-``` bash
+```bash
 $ npm install --save react
 ```
 
 Next, let's create a component we want to use in Storybook. Create a folder `components` and add a file `card.js` in it containing the following code:
 
-``` javascript
-import React from 'react';
+```javascript
+import React from "react";
 
 class Card extends React.Component {
-
   render() {
-
     let styles = {
       card: {
-        border: '1px solid #FF4422',
+        border: "1px solid #FF4422",
         borderRadius: 4,
-        backgroundColor: '#FF9988',
+        backgroundColor: "#FF9988"
       },
       title: {
-        color: 'white',
+        color: "white",
         margin: 0,
         padding: 10,
-        fontFamily: 'Helvetica Neue',
+        fontFamily: "Helvetica Neue"
       }
     };
 
@@ -90,7 +89,6 @@ class Card extends React.Component {
         <h1 style={styles.title}>{this.props.title}</h1>
       </div>
     );
-
   }
 }
 
@@ -103,16 +101,18 @@ Now that we got a base to work with, let's install Storybook and set it up.
 
 First, install Storybook
 
-``` bash
+```bash
 $ npm install --save @kadira/storybook
 ```
 
 Storybook depends on a folder `.storybook` which contains the configuration, so let's create that folder and inside add a `config.js`:
 
-``` javascript
-import { configure } from '@kadira/storybook';
+```javascript
+import { configure } from "@kadira/storybook";
 
-function loadStories() { require('../components/stories/'); }
+function loadStories() {
+  require("../components/stories/");
+}
 
 configure(loadStories, module);
 ```
@@ -121,7 +121,7 @@ From the above you can probably guess the next step, we need to create a folder 
 
 In `stories`, add a file `card.js` with this code:
 
-``` javascript
+````javascript
 import React from 'react'; import Card from '../card'; // This is our component import { storiesOf, action } from '@kadira/storybook';
 
 storiesOf('Card', module) .add('with a text', () => (
@@ -136,7 +136,7 @@ Now, in `.storybook/config.js` we declared our stories can be loaded from `compo
 
 ``` javascript
 import './card';
-```
+````
 
 Alternatively you can specify the story files from the storybook config file, but this feels a bit more logical.
 
@@ -144,13 +144,13 @@ Alternatively you can specify the story files from the storybook config file, bu
 
 We're almost there! In order to run Storybook we need to add a script to our `package.json`. Alter the file so it has the storybook script in there:
 
-``` javascript
+```javascript
 ... "scripts": { "storybook": "start-storybook -p 9001" }, ...
 ```
 
 Now we can go to the command line and run
 
-``` bash
+```bash
 $ npm run storybook
 ```
 
@@ -160,7 +160,7 @@ and if all goes well we can navigate to our very own [Storybook](http://localhos
 
 To illustrate how storybook works, let's add another story for our card:
 
-``` javascript
+````javascript
 import React from 'react'; import Card from '../card'; // This is our component import { storiesOf, action } from '@kadira/storybook';
 
 storiesOf('Card', module) .add('with a text', () => (
@@ -188,9 +188,7 @@ return (
 </div>
 
  ); } ...
- ```
-
-
+````
 
 Refresh your storybook, and you should see the second story show up and when you click it the button is slightly darker (unless you felt adventurous and made your own modifications of course!)
 

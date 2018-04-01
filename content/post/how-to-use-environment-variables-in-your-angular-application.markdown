@@ -34,7 +34,7 @@ I'll assume you're familiar with [Grunt](http://gruntjs.com/) and have set it up
 
 This Grunt plugin takes care of the dynamic generation of your constants. Grab it [here](https://github.com/werk85/grunt-ng-constant), or simply install it by doing:
 
-``` javascript
+```javascript
 npm install grunt-ng-constant --save-dev
 ```
 
@@ -42,7 +42,7 @@ npm install grunt-ng-constant --save-dev
 
 Now that you have all you need, let's set it up! Open up your `Gruntfile.js`, and inside the `grunt.initConfig` section add the following:
 
-``` javascript
+```javascript
 ngconstant: {
   // Options for all targets
   options: {
@@ -79,6 +79,7 @@ ngconstant: {
 This tells Grunt about your environments. Each target is told where to write the config file to, and inside `constants` you define your environmental variables you wish to use in your Angular App.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -91,20 +92,20 @@ This tells Grunt about your environments. Each target is told where to write the
 
 Next up, we need to tell Grunt when to write this config file. Depending on your Gruntfile you will probably have a section that tells it to run a local server so you can develop your site. Mine usually looks like this:
 
-``` javascript
-grunt.registerTask('serve', function (target) {
-  if (target === 'dist') {
-    return grunt.task.run(['build', 'connect:dist:keepalive']);
+```javascript
+grunt.registerTask("serve", function(target) {
+  if (target === "dist") {
+    return grunt.task.run(["build", "connect:dist:keepalive"]);
   }
 
   grunt.task.run([
-    'clean:server',
-    'ngconstant:development', // ADD THIS
-    'bower-install',
-    'concurrent:server',
-    'autoprefixer',
-    'connect:livereload',
-    'watch'
+    "clean:server",
+    "ngconstant:development", // ADD THIS
+    "bower-install",
+    "concurrent:server",
+    "autoprefixer",
+    "connect:livereload",
+    "watch"
   ]);
 });
 ```
@@ -113,7 +114,7 @@ Here we tell Grunt to build the ng-constants for the **development** area. So wh
 
 Likewise, we want to do the same for our production environment. Best place to do that is in our `grunt build` task:
 
-``` javascript
+```javascript
 grunt.registerTask('build', [
   'clean:dist',
   'ngconstant:production', // ADD THIS
@@ -124,15 +125,16 @@ grunt.registerTask('build', [
 
 When Grunt runs the task, a config file is generated, with our constants:
 
-``` javascript
-'use strict';
+```javascript
+"use strict";
 
-angular.module('config', [])
+angular
+  .module("config", [])
 
-.constant('ENV', {
-  'name': 'development',
-  'apiEndpoint': 'http://your-development.api.endpoint:3000'
-});
+  .constant("ENV", {
+    name: "development",
+    apiEndpoint: "http://your-development.api.endpoint:3000"
+  });
 ```
 
 ## Using the config file in your App
@@ -141,33 +143,32 @@ So, now that we have a dynamic `config.js` file based on where we are, let's see
 
 First thing to do is add the config file to our `index.html`
 
-``` html
+```html
 <script src="/scripts/config.js" />
 ```
 
 Next, we can inject it into our app:
 
-``` javascript
-var app = angular.module('myApp', [ 'config' ]);
+```javascript
+var app = angular.module("myApp", ["config"]);
 ```
 
 And now, since config.js exposes an object `ENV` which is injected, whenever we need our ENV variables we can simply use them in our controllers by doing:
 
-``` javascript
-angular.module('myApp')
-  .controller('MainCtrl', function ($scope, $http, ENV) { // ENV is injected
+```javascript
+angular.module("myApp").controller("MainCtrl", function($scope, $http, ENV) {
+  // ENV is injected
 
   $scope.login = function() {
-
-    $http.post(
-      ENV.apiEndPoint, // Our environmental var :)
-      $scope.yourData
-    ).success(function() {
-      console.log('Cows');
-    });
-
+    $http
+      .post(
+        ENV.apiEndPoint, // Our environmental var :)
+        $scope.yourData
+      )
+      .success(function() {
+        console.log("Cows");
+      });
   };
-
 });
 ```
 

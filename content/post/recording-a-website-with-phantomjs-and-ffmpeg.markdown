@@ -38,6 +38,7 @@ In case you've been hiding, [PhantomJS](http://phantomjs.org/) is a headless scr
 With these two tools installed we are ready to create a video.
 
 <!-- Rectangle Ad -->
+
 <!-- <center>
 <ins class="adsbygoogle"
      style="display:inline-block;width:336px;height:280px"
@@ -52,31 +53,32 @@ With these two tools installed we are ready to create a video.
 
 Capturing a webpage as an image with PhantomJS is easy stuff. They have a example on how to do this [over here](https://github.com/ariya/phantomjs/blob/master/examples/technews.js), so let's strip it down to what we need and save it as `runner.js`
 
-``` javascript
-var page = require('webpage').create();
+```javascript
+var page = require("webpage").create();
 page.viewportSize = { width: 640, height: 480 };
 
-page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
-  page.render('dragon.png', { format: "png" });
+page.open("http://www.goodboydigital.com/pixijs/examples/12-2/", function() {
+  page.render("dragon.png", { format: "png" });
   phantom.exit();
 });
 ```
 
 We can now run this with:
 
-``` bash
+```bash
 $ phantomjs runner.js
 ```
 
 After a few moments PhantomJS will have booted up and rendered an image. But .. it's white! That's because PhantomJS takes the image before the `<canvas>` has actually fully loaded and started the animation. Let's add a little delay before we write the image.
 
-``` javascript
-var page = require('webpage').create();
+```javascript
+var page = require("webpage").create();
 page.viewportSize = { width: 640, height: 480 };
 
-page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
-  setTimeout(function() { // Add a little delay before capturing the image
-    page.render('dragon.png', { format: "png" });
+page.open("http://www.goodboydigital.com/pixijs/examples/12-2/", function() {
+  setTimeout(function() {
+    // Add a little delay before capturing the image
+    page.render("dragon.png", { format: "png" });
     phantom.exit();
   }, 666);
 });
@@ -90,20 +92,20 @@ This time, you should end up with an image of .. a dragon!
 
 From here it's easy enough to render multiple images with an interval. Create a folder `frames` and modify the runner code to capture 50 images:
 
-``` javascript
-var page = require('webpage').create();
+```javascript
+var page = require("webpage").create();
 page.viewportSize = { width: 640, height: 480 };
 
-page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
+page.open("http://www.goodboydigital.com/pixijs/examples/12-2/", function() {
   setTimeout(function() {
     // Initial frame
     var frame = 0;
     // Add an interval every 25th second
     setInterval(function() {
       // Render an image with the frame name
-      page.render('frames/dragon'+(frame++)+'.png', { format: "png" });
+      page.render("frames/dragon" + frame++ + ".png", { format: "png" });
       // Exit after 50 images
-      if(frame > 50) {
+      if (frame > 50) {
         phantom.exit();
       }
     }, 25);
@@ -117,7 +119,7 @@ Sweet, we end up with 50 frames of the dragon. When flicking through them it loo
 
 Now we know how to get the frames we want, we need to figure out how to feed them to ffmpeg. Traditionally, one would first render all the frames and then use an ffmpeg command to stitch the images to a movie. This would look a bit like this:
 
-``` bash
+```bash
 $ ffmpeg -start_number 10 -i frames/dragon%02d.png -c:v libx264 -r 25 -pix_fmt yuv420p out.mp4
 ```
 
@@ -127,13 +129,13 @@ So, at this point we have a movie from the site we wanted. Good stuff, but we ca
 
 Let's alter the render method a bit:
 
-``` javascript
-var page = require('webpage').create();
+```javascript
+var page = require("webpage").create();
 page.viewportSize = { width: 640, height: 480 };
 
-page.open('http://www.goodboydigital.com/pixijs/examples/12-2/', function () {
+page.open("http://www.goodboydigital.com/pixijs/examples/12-2/", function() {
   setInterval(function() {
-    page.render('/dev/stdout', { format: "png" });
+    page.render("/dev/stdout", { format: "png" });
   }, 25);
 });
 ```
@@ -144,7 +146,7 @@ Now, when we run the runner again, the CLI will throw raw image data at us, so d
 
 Instead, let's add a pipe to it and feed that juicy image data to ffmpeg instead, who can devour it much better than we can:
 
-``` bash
+```bash
 $ phantomjs runner.js | ffmpeg -y -c:v png -f image2pipe -r 25 -t 10  -i - -c:v libx264 -pix_fmt yuv420p -movflags +faststart dragon.mp4
 ```
 

@@ -23,20 +23,20 @@ I will add to it as I stumble upon free time, but feel free to open a Pull Reque
 
 ## Some of the features
 
-- Small footprint
-- Automatic Tab Handling
-- Automatic Deeplink handling
-- Automatic Cover Loading for playlists (mosaics)
-- Online/offline status tracking and content switching
+* Small footprint
+* Automatic Tab Handling
+* Automatic Deeplink handling
+* Automatic Cover Loading for playlists (mosaics)
+* Online/offline status tracking and content switching
 
 ## How to set it up (on your Mac)
 
-1. Sign up for a developer account on Spotify
-2. Open Terminal, and if it doesn't exist yet `mkdir ~/Spotify`
-3. cd ~/Spotify
-4. git clone git@github.com:Hyra/Spotify-Boilerplate.git
-5. Download the latest version of Spotify
-6. Open Spotify and type `spotify:app:boilerplate` in the search bar
+1.  Sign up for a developer account on Spotify
+2.  Open Terminal, and if it doesn't exist yet `mkdir ~/Spotify`
+3.  cd ~/Spotify
+4.  git clone git@github.com:Hyra/Spotify-Boilerplate.git
+5.  Download the latest version of Spotify
+6.  Open Spotify and type `spotify:app:boilerplate` in the search bar
 
 ## What's in the Boilerplate
 
@@ -46,9 +46,9 @@ The aim is to keep the Boilerplate as clean as possible, while giving all the to
 
 What you want to look for is `js/app.js`. Once index.html has been loaded by Spotify it will fire off our Sammy instance:
 
-``` javascript
+```javascript
 $(document).ready(function() {
-  app.run('/home');
+  app.run("/home");
 });
 ```
 
@@ -56,13 +56,17 @@ Here you can also handle any other bootstrapping you might want to do.
 
 Next up, the Sammy route gets invoked:
 
-``` javascript
-this.get('home', function(ctxt) {
-
-  loadSection(ctxt, "news", "/templates/home.html", "js/_example_data.json", function() {
-    // Callback actions
-  });
-
+```javascript
+this.get("home", function(ctxt) {
+  loadSection(
+    ctxt,
+    "news",
+    "/templates/home.html",
+    "js/_example_data.json",
+    function() {
+      // Callback actions
+    }
+  );
 });
 ```
 
@@ -92,6 +96,6 @@ Mustache as a template handler. This can just as well be any of the other gazill
 
 ## Roadmap
 
-- Add more features/functionality regarding the Spotify API
-- Make the loadSection and Sammy integration a bit more seamless and less explicit
-- Spend more time documenting and writing how-to's
+* Add more features/functionality regarding the Spotify API
+* Make the loadSection and Sammy integration a bit more seamless and less explicit
+* Spend more time documenting and writing how-to's

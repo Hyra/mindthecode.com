@@ -26,7 +26,7 @@ But how do you decide which features make it into your Minimal Viable Product? A
 
 For illustration purposes, I'll be using one of my own webservices and use it to go through the process of defining the MVP for it. I recently launched [Wulfdeck.com](https://wulfdeck.com), a service that cralws your website and finds all pages. It then takes them through the Google Pagespeed API and finds the pagespeed for each page. Once scanned you can see what needs to be improved to increase the score. As a bonus, it will tell you exactly how much your score will improve per individual improvement, so you don't waste time fixing things that are not be worth the time/tech investment.
 
-At the moment it uses a Freemium model and a monthly Pro subscription. I've decided that marketing this SaaS will take too much of my time, let alone maintaining it for paying customers (*which it doesn't have yet*). So, I will be dropping the account system altogether and .. make the service free for everyone! In addition, it allows me to use it as a real life use case on this blog to illustrate various topics.
+At the moment it uses a Freemium model and a monthly Pro subscription. I've decided that marketing this SaaS will take too much of my time, let alone maintaining it for paying customers (_which it doesn't have yet_). So, I will be dropping the account system altogether and .. make the service free for everyone! In addition, it allows me to use it as a real life use case on this blog to illustrate various topics.
 
 **A win-win situation 🦄**
 
@@ -44,10 +44,10 @@ Every product should have a goal. What problem is your SaaS trying to solve? Ide
 
 This goal leaves a lot of things unclear. How about things like:
 
-- Do users need to have an account?
-- Is the service free to use?
-- Do I get the results instantly or do I need to wait?
-- Do I get just a score, or information what to fix?
+* Do users need to have an account?
+* Is the service free to use?
+* Do I get the results instantly or do I need to wait?
+* Do I get just a score, or information what to fix?
 
 The first two are not all that important. They could change and are not directly related to the problem we're solving, so we don't need to mention this in our goal.
 
@@ -59,13 +59,13 @@ That sounds better! We're stating what we offer, why we do it, and how we do it.
 
 ## Define the User Journey
 
-As a user goes through the app there are a few steps he/she will follow to get to the result. This is the *User Journey* and should be clear from the beginning. If you have too many different ways a user can use the app it will be difficult to build all flows correctly, and what's worse, it will most likely confuse the user.
+As a user goes through the app there are a few steps he/she will follow to get to the result. This is the _User Journey_ and should be clear from the beginning. If you have too many different ways a user can use the app it will be difficult to build all flows correctly, and what's worse, it will most likely confuse the user.
 
 What would a user journey for Wulfdeck look like.
 
-1. Enter the domain
-2. See list of pages we find
-3. See instructions on how to increase the pagespeed score for that page
+1.  Enter the domain
+2.  See list of pages we find
+3.  See instructions on how to increase the pagespeed score for that page
 
 This may sound over-simplified. And it should be. If your user has to go through a lot of steps it's only logical there's more points in the flow the user will stop and not get to the result.
 
@@ -79,26 +79,28 @@ If we think of the steps in our User Journey as pages in our webservice, we can 
 
 **Enter the domain**
 
-- Should be able to add domain with or without http(s):// and or www
-- Form should have validation
+* Should be able to add domain with or without http(s):// and or www
+* Form should have validation
 
 **See list of pages**
-- Page should show the google pagespeed score for mobile
-- Page should show the google pagespeed score for desktop
-- Page should show the url and title
-- Pages that are 404 should be marked as such
-- Pages should be updated in real time as they are crawled
-- Scores should be updated in realtime
-- Page should show a screenshot
-- Should be able to re-check a page for fresh Pagescore
+
+* Page should show the google pagespeed score for mobile
+* Page should show the google pagespeed score for desktop
+* Page should show the url and title
+* Pages that are 404 should be marked as such
+* Pages should be updated in real time as they are crawled
+* Scores should be updated in realtime
+* Page should show a screenshot
+* Should be able to re-check a page for fresh Pagescore
 
 **See instructions on how to increase the pagespeed score per page**
-- Should see a list of things that should be fixed
-- Should see how many points we gain for fixing an issue
-- Should be able to re-check a page for fresh Pagescore
-- Should see a screenshot
-- Show a visual HAR graph of page loading time
-- Offer download of optimized assets
+
+* Should see a list of things that should be fixed
+* Should see how many points we gain for fixing an issue
+* Should be able to re-check a page for fresh Pagescore
+* Should see a screenshot
+* Show a visual HAR graph of page loading time
+* Offer download of optimized assets
 
 At this point we have a bunch of features, and have to start prioritizing. Basically, for every feature, no matter how cool it sounds, we have to ask ourselves these four questions:
 
@@ -121,24 +123,22 @@ If we look at our list above, the most 'feature fluff' is in the last step. Whic
 I think the final MVP list for Wulfdeck features could look like this:
 
 **Enter the domain**
-- Form should have validation
+
+* Form should have validation
 
 **See list of pages**
-- Page should show the google pagespeed score for mobile and desktop
-- Page should show the url and title
-- Scores should be updated in realtime
+
+* Page should show the google pagespeed score for mobile and desktop
+* Page should show the url and title
+* Scores should be updated in realtime
 
 **See instructions on how to increase the pagespeed score per page**
-- Should see a list of things that should be fixed
-- Should see how many points we gain for fixing an issue
+
+* Should see a list of things that should be fixed
+* Should see how many points we gain for fixing an issue
 
 It definately feels weird to cut out all the extra features, and you might feel the app is not complete without them. However, don't forget we're building a Minimal Viable Product. We're focussing on getting something out there so real world users can play with the core and essentials. The sooner we can learn from our application `out in the wild` the better. Often you will find the features you added to the roadmap are not even the features your users are asking for. Good thing you didn't invest your time in building things people don't want! 😉
 
 ## Feature creep
 
 Having defined the MVP the most important next step is; **AVOID FEATURE CREEP**. As you're building your MVP it is not uncommon you think of a **new** exciting features for your application. This is a good thing, but also very dangerous. If you didn't think of it while defining the above list, it's most likely not that important, and can safely be added to the Roadmap.
-
-
-
-
-

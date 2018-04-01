@@ -1342,3 +1342,23 @@ textarea {
 body {
   background: transparent url(/images/bg-pixels.png) repeat;
 }
+
+footer {
+  min-width: 100%;
+  background: #2b303e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px; }
+
+footer p {
+  margin: 0;
+  text-shadow: none; }
+
+footer img {
+  height: 25px; }
+
+footer a {
+  background: none;
+  color: white;
+  text-shadow: none; }

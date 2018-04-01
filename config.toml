@@ -5,7 +5,7 @@ theme = "mainroad"
 pygmentsCodefences=true
 
 paginate = "10" # Number of posts per page
-disqusShortname = "mindthecode"
+disqusShortname = ""
 googleAnalytics = "UA-40203772-4"
 
 [mediaTypes]

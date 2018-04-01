@@ -8,7 +8,7 @@ tags:
   - particle
   - canvas
 layout: post
-<!-- header: less-cakephp.gif -->
+header: less-cakephp.gif
 date: 2017-09-28
 references:
 draft: true

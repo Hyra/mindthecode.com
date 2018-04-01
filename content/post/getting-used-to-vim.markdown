@@ -10,7 +10,7 @@ tags:
   - osx
   - terminal
 layout: post
-<!-- teaser: http://media0.giphy.com/media/3oz8xtBx06mcZWoNJm/giphy.gif -->
+header: http://media0.giphy.com/media/3oz8xtBx06mcZWoNJm/giphy.gif
 date: 2013-02-09
 ---
 

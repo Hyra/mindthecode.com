@@ -10,13 +10,11 @@ tags:
   - loading files
   - curl
 layout: post
-<!-- header: external.gif -->
+header: external.gif
 date: 2011-12-06
 ---
 
 Sometimes you run into "weird behavior" when using `file_get_contents` in your code when retrieving external data. I noticed this for instance when accessing the Facebook Graph API the other day. When using file_get_contents the results were so much different than when using cUrl.
-
-<!-- <div class="teaser" style='background: transparent url(/images/headers/external.gif) no-repeat center center;'></div> -->
 
 Sometimes even, it is disabled on your host for security reasons. So i'm making it a habbit to run everything through cUrl instead. Not just to get the "actual results", but also since it's a lot faster.
 

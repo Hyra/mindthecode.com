@@ -17,8 +17,6 @@ date: 2017-09-26
 
 I've always been intrigued by image processing. Especially by programs that can actually detect objects in images. However, I've never done anything serious with this except for the odd API calls to various Cloud based services like [Google Vision](https://cloud.google.com/vision/), [Watson](https://www.ibm.com/watson/services/visual-recognition/) or [Clarifai](https://www.clarifai.com/api).
 
-<div class="teaser" style="background-image: url(/images/headers/{{header}})"></div>
-
 I always wanted to toy around with a library that makes these services tick, such as [OpenCV](http://opencv.org/), but it requires installing some OS specific tools and the whole thing always feels daunting so I never really got anywhere with this. But today we'll explore this together, so I'm sure we'll be fine 👀.
 
 ## Disclaimer

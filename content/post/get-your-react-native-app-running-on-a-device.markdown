@@ -18,8 +18,6 @@ date: 2015-10-08
 
 As I was playing around with the awesome React Native library I encountered a few small hicups getting an app running on an actual device, so here's how I made it work for me.
 
-<div class="teaser" style="background-image: url(/images/headers/{{header}})"></div>
-
 At the time of writing I've tested the following with:
 
 - OSX

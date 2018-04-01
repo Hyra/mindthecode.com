@@ -9,7 +9,7 @@ tags:
   - domains
   - osx
 layout: post
-<!-- teaser: multiple-domains.gif -->
+header: multiple-domains.gif
 date: 2011-05-22
 ---
 

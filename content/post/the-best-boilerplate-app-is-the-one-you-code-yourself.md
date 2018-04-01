@@ -18,8 +18,6 @@ Boilerplate apps are great. They let you get your next project up and running qu
 
 They can also, however, be a massive **time-sink**. We developers are curious by nature, and tend to have this thing where we want to know exactly how things run under the hood 🙈 In addition, boilerplates can be too minimalistic for your needs, or too much bloat. This means you either spend time adding base-features, or scraping off the excess things you don't need.
 
-<div class="teaser" style="background-image: url({{header}})"></div>
-
 This process is not a bad thing in itself, obviously, but it can easily lead to procrastination. Time you could probably better spend building that awesome feature, instead!
 
 ## Should we use boilerplates?

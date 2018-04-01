@@ -15,8 +15,6 @@ date: 2011-04-11
 
 I'd like to use my first post to describe how I set up new projects in a simple way that works best for me. My setup is pretty straight-forward, really. I know some people who mess about with include-paths so they can run *multiple apps* on one cake-install, but since I work for various clients and even more various projects I like my project folders to be self-contained.
 
-<!-- <div class="teaser" style='background: transparent url(/images/headers/cake-mamp-osx.gif) no-repeat center center;'></div> -->
-
 ## Downloading CakePHP
 
 Easy enough. Grab a fresh copy of [CakePHP @ Github][1]

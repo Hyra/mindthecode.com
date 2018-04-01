@@ -12,7 +12,7 @@ tags:
   - gulp
   - javascript
 layout: post
-<!-- teaser: letsbuild.gif -->
+header: letsbuild.gif
 date: 2014-05-05
 ---
 

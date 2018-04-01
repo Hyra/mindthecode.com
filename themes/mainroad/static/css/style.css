@@ -1338,3 +1338,7 @@ textarea {
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
 }
+
+body {
+  background: transparent url(/images/bg-pixels.png) repeat;
+}

@@ -53,8 +53,6 @@ This is also very time-consuming
 
 But I often find myself setting out to create a new project only to find myself, hours later, fiddling with boilerplate code and organizing the base. Now, there is a lot of "starter kit" apps out there to battle just this, but I find them to either be too much bloat, or too minimalistic. In the first case I spend my time scraping off all the things I don't need or want, and with the latter I end up spending my time installing and configuring additional packages or features.
 
-/*<div class="teaser" style="background-image: url(/images/headers/{{header}})"></div>*/
-
 Don't worry, this isn't a post about the gazillionth starter kit and how it solves everyones use cases. Instead, I want to encourage every developer to make their own boilerplate for your own (side-)projects. Not only does it teach you a **ton**, it also leaves you with a piece of base code you know inside out and can use to start working on that next project, rather than procrastinating.
 
 > I want to encourage every developer to make their own boilerplate for your own (side-)projects

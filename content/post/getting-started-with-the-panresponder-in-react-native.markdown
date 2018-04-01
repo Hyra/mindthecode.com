@@ -16,7 +16,7 @@ tags:
   - ios
   - iphone
   - tap
-<!-- teaser: modules.gif -->
+header: modules.gif
 date: 2016-04-20
 ---
 

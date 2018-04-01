@@ -6,7 +6,7 @@ tags:
   - git
   - submodules
 layout: post
-<!-- teaser: submodule.gif -->
+header: submodule.gif
 date: 2011-05-26
 ---
 

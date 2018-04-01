@@ -10,13 +10,11 @@ tags:
   - preprocessor
   - pre-processor
 layout: post
-teaser: sass-cake.gif
+header: sass-cake.gif
 date: 2011-04-14
 ---
 
 When I first saw some examples I thought the idea was good, but didn't see the point of learning a new syntax in order to not having to use the CSS syntax. Because, honestly, how does typing some curly brackets and semicolons hurt?
-
-<div class="teaser" style='background: transparent url(/images/headers/sass-cake.gif) no-repeat center center;'></div>
 
 I did like the idea of inheretance by indentation though. By indenting subsequent selectors it saves a lot of repetitive class assigning and declarations. But I hate adding extra layers onto things. It just feels clunky and wrong. But with Compass your .sass files get compiled to proper CSS files that reside in your /webroot/css folder. Cool! How? Read on.
 

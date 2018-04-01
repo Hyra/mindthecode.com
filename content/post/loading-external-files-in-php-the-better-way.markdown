@@ -6,7 +6,6 @@ description: >-
   than file_get_contents
 tags:
   - php
-  - file_get_contents
   - loading files
   - curl
 layout: post

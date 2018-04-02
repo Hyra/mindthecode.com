@@ -1,4 +1,5 @@
 /*** CSS Reset based on http://meyerweb.com/eric/tools/css/reset/ v2.0 ***/
+
 html,
 body,
 div,
@@ -147,6 +148,7 @@ strong {
 }
 
 /*** Structure ***/
+
 html {
   font-size: 100%;
   -ms-text-size-adjust: none;
@@ -213,6 +215,7 @@ body {
 }
 
 /*** Animation ***/
+
 .menu__item,
 .tags__item,
 .widget__link--taglist,
@@ -223,6 +226,7 @@ body {
 }
 
 /*** Button ***/
+
 .btn {
   font-weight: 700;
   padding: 5px 10px;
@@ -237,6 +241,7 @@ body {
 }
 
 /*** Columns ***/
+
 .row [class*="col-"]:first-child {
   margin: 0;
 }
@@ -307,6 +312,7 @@ body {
 }
 
 /*** Typography ***/
+
 h1 {
   font-size: 32px;
   font-size: 2rem;
@@ -458,6 +464,7 @@ a:hover {
 }
 
 /*** Lists ***/
+
 .post__content ul {
   list-style: square;
 }
@@ -504,6 +511,7 @@ select {
 }
 
 /*** Header ***/
+
 .header {
   background: #fff;
 }
@@ -543,6 +551,7 @@ select {
 }
 
 /*** Navigation — Responsive-nav.js ***/
+
 .menu {
   background: #2a2a2a;
   width: 100%;
@@ -626,20 +635,16 @@ select {
   .js .menu {
     position: relative;
   }
-
   .js .menu.closed {
     max-height: none;
   }
-
   .menu__toggle {
     display: none;
   }
-
   .menu {
     border-bottom: 5px solid #ff615f;
     min-height: 42px;
   }
-
   .menu__item {
     float: left;
     position: relative;
@@ -647,6 +652,7 @@ select {
 }
 
 /*** Posts/Pages ***/
+
 .post__header,
 .page-header {
   margin-bottom: 20px;
@@ -790,6 +796,7 @@ select {
 }
 
 /*** Author Box ***/
+
 .authorbox {
   line-height: 1.5;
   padding: 25px 0;
@@ -822,6 +829,7 @@ select {
 }
 
 /*** List content ***/
+
 .list__item {
   padding-bottom: 20px;
   padding-bottom: 1.25rem;
@@ -859,6 +867,7 @@ select {
 }
 
 /*** Pagination ***/
+
 .pagination {
   margin-top: 20px;
 }
@@ -878,6 +887,7 @@ select {
 }
 
 /*** Post Navigation ***/
+
 .post-nav {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -906,6 +916,7 @@ select {
 }
 
 /*** Footer ***/
+
 .footer {
   padding: 10px 25px;
   border-top: 3px solid #999;
@@ -923,9 +934,11 @@ select {
 }
 
 /*** Images / Video ***/
+
 img {
   max-width: 100%;
-  width: auto\9; /* ie8 */
+  width: auto\9;
+  /* ie8 */
   height: auto;
   vertical-align: bottom;
 }
@@ -971,6 +984,7 @@ video {
 }
 
 /*** Tables ***/
+
 table {
   width: 100%;
   margin-bottom: 20px;
@@ -991,6 +1005,7 @@ th {
 }
 
 /*** Forms ***/
+
 input {
   font-size: 12px;
   padding: 5px;
@@ -1046,6 +1061,7 @@ textarea {
 }
 
 /*** Searchform ***/
+
 .widget-search__form input {
   font-size: 11px;
   line-height: 1;
@@ -1093,6 +1109,7 @@ textarea {
 }
 
 /*** Widgets ***/
+
 .widget {
   margin-bottom: 25px;
   overflow: hidden;
@@ -1124,6 +1141,7 @@ textarea {
 }
 
 /*** Default WordPress Widgets ***/
+
 .widget-categories li {
   border-bottom: 1px dotted #ebebeb;
 }
@@ -1138,6 +1156,7 @@ textarea {
 }
 
 /*** Tag Cloud Widget ***/
+
 .widget__link--taglist {
   display: inline-block;
   font-size: 12px;
@@ -1157,6 +1176,7 @@ textarea {
 }
 
 /*** Recent Posts Widget ***/
+
 .widget-recent li {
   display: block;
   padding: 5px 0;
@@ -1176,11 +1196,11 @@ textarea {
 }
 
 /*** Media Queries ***/
+
 @media screen and (max-width: 1475px) {
   .container {
     width: 95%;
   }
-
   .container-inner {
     width: 100%;
   }
@@ -1190,24 +1210,19 @@ textarea {
   .container-outer {
     margin: 0 auto;
   }
-
   .mobile .container {
     width: 100%;
   }
-
   .wrapper,
   .logo {
     padding: 20px;
   }
-
   .footer__copyright {
     text-align: center;
   }
-
   .widget {
     margin-bottom: 20px;
   }
-
   .meta-comments {
     display: none;
   }
@@ -1222,21 +1237,17 @@ textarea {
     width: 100%;
     margin: 0;
   }
-
   .logo {
     text-align: center;
   }
-
   .logo__title,
   .post__title {
     font-size: 24px;
     font-size: 1.5rem;
   }
-
   .sidebar {
     margin-top: 20px;
   }
-
   .post__meta {
     padding: 5px 0;
   }
@@ -1249,65 +1260,52 @@ textarea {
   input[type="url"] {
     width: 88%;
   }
-
   [class*="col-"] {
     float: none;
     width: 100%;
     margin: 0;
   }
-
   .post__meta-categories,
   .entry-meta-comments {
     display: none;
   }
-
   .authorbox {
     text-align: center;
   }
-
   .authorbox__avatar {
     float: none;
     display: inline-block;
     margin: 0 0 20px;
   }
-
   .post-nav__item {
     text-align: center;
   }
-
   .post-nav__item--prev {
     padding-bottom: 25px;
   }
-
   .post__content ul,
   .post__content ol {
     margin: 0 0 20px 20px;
   }
-
   .post__content ul ul,
   .post__content ol ol {
     margin: 0 0 0 20px;
   }
-
   .single-post .post-nav__item--next {
     margin-top: 25px;
   }
-
   .list__thumbnail {
     max-width: 80px;
   }
-
   .list__title {
     font-size: 14px;
     font-size: 0.875rem;
   }
-
   .list__meta {
     display: block;
     font-size: 11px;
     font-size: 0.6875rem;
   }
-
   .list__excerpt {
     display: none;
   }
@@ -1324,6 +1322,7 @@ textarea {
     -webkit-transform: translate(0, 0px);
   }
 }
+
 .floating {
   -webkit-animation-name: Floatingx;
   -webkit-animation-duration: 3s;
@@ -1368,19 +1367,23 @@ footer a {
   display: flex;
   flex-direction: column;
 }
+
 #newsletter_box .visual {
   background-image: url(/images/newsletter.gif);
   height: 200px;
   background-size: cover;
 }
+
 @media (max-width: 767px) {
   #newsletter_box .visual {
     display: none;
   }
 }
+
 #newsletter_box .form {
   flex: 1;
 }
+
 #newsletter_box .form #mce-EMAIL {
   width: 90%;
   height: 30px;
@@ -1389,26 +1392,31 @@ footer a {
   margin: 10px 0;
   padding: 0 10px;
 }
+
 #newsletter_box .form #mc-embedded-subscribe {
-  background: indianred;
+  background: #ff615f;
   border: 0;
   border-radius: 3px;
   color: white;
   font-size: 13px;
   font-weight: bold;
 }
+
 #newsletter_box #mc_embed_signup form {
   padding: 0;
 }
+
 #newsletter_box .form #mc_embed_signup {
   background: #fff;
   clear: left;
 }
+
 #newsletter_box .form #mc_embed_signup h2 {
   padding: 5px 10px;
   top: -25px;
   font-size: 1.2em;
 }
+
 #newsletter_box .form #mc_embed_signup #intro {
   padding: 0 0 28px 0;
 }
@@ -1433,16 +1441,19 @@ footer a {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
+
 @media (min-width: 768px) and (max-width: 1200) {
   .back-to-top {
     display: none !important;
   }
 }
+
 @media (max-width: 767px) {
   .back-to-top {
     display: none !important;
   }
 }
+
 .back-to-top.back-to-top-on {
   bottom: 30px;
 }

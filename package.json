@@ -1,21 +1,21 @@
 {
-    "name": "hexo-site",
-    "version": "0.0.0",
-    "private": true,
-    "hexo": {
-      "version": "3.2.2"
-    },
-    "scripts": {
-      "start": "node server.js"
-    },
-    "engines": {
-      "node": "4.0.0",
-      "npm": "3.0.0"
-    },
-    "dependencies": {
-      "compression": "^1.6.2",
-      "express": "^4.15.2",
-      "morgan": "^1.8.1",
-      "serve-favicon": "^2.4.1"
-    }
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.9.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "global": "^4.4.0",
+    "hexo": "^3.9.0",
+    "hexo-cli": "^2.0.0",
+    "hexo-server": "^1.0.0",
+    "morgan": "^1.8.1",
+    "serve-favicon": "^2.4.1"
   }
+}

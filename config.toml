@@ -10,7 +10,7 @@ googleAnalytics = "UA-40203772-4"
 
 [mediaTypes]
     [mediaTypes."application/atom"]
-        suffix = "xml"
+        suffixes = ["xml"]
 
 [outputFormats.Atom]
     mediaType = "application/atom"

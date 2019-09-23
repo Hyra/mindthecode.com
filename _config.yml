@@ -1,0 +1,30 @@
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: /blog/:title
+
+# Setup
+title: "Mindthecode"
+description: "Writing about all things web."
+url: https://mindthecode.com
+baseurl: "/"
+
+author:
+  name: "Stef van den Ham"
+
+# Custom vars
+twitter: https://twitter.com/hyra
+github: https://github.com/hyra
+
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-3206068-17
+    anonymizeIp: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-analytics

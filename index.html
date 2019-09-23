@@ -1,0 +1,29 @@
+---
+layout: default
+title:
+---
+
+{% include header.html %}
+
+<main>
+  <h1>Hello! 👋</h1>
+  On this little site I <a href="/blog">write</a> about things web I find
+  interesting, take you on mini-adventures in the
+  <a href="/rebuilds">Rebuild series</a> and let you tag along with my progress
+  while <a href="/projects">building</a> new web-apps.
+  <hr />
+  <h2>Latest posts</h2>
+
+  {% for post in site.posts limit:5 %}
+  <article>
+    <header class="heading">
+      <h1 class="post-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+    </header>
+  </article>
+  {% endfor %}
+</main>
+
+{% include footer.html %}

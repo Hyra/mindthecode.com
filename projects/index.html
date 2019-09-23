@@ -1,0 +1,29 @@
+---
+layout: post
+skip_title: true
+nav: projects
+title: Projects
+---
+
+These posts describe the progress I make on my pet projects. I try to take you along the thought process. Talk you through the code that goes into them and when they are actually finished a little bit of marketing/promoting and optimising them.
+
+<main>
+{% for page in site.pages %}
+  {% if page.project == true %}
+    {% if page.hidden != true %}
+      <article>
+        <header class="heading">
+      {% if page.link %}
+        <h1 class="page-title"><a href="{{ page.link }}">
+      {% else %}
+        <h1 class="page-title"><a href="{{ page.url | replace: '/index.html', '' }}">
+      {% endif %}
+      {{ page.title }}</a></h1>
+        <p class="timestamp">{{ page.summary }}</p>
+        </header>
+      </article>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</main>
+

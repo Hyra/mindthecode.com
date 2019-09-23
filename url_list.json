@@ -1,0 +1,1070 @@
+[
+  {
+    "old": "/page/2/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/page/3/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/page/4/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/xcode",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/browserify/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/iphone/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/compression/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/docker-compose/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sass/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/express/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/javascript/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/octopress/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pygments/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/environment/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/jekyll/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/markdown",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cakephp",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/submodules",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/laravel",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/coding",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/blogging",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/image-recognition",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/startup",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/octopress",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cli",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/storybook",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/domains",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/react-native",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cabinjs",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/angular",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/watchr",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/installing-phpunit",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mvp",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/saas",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/javascript",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal-color",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/modules",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/webservice",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/react",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/gulp",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/osx",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/browserify",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/vim",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sorting",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/git",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/nodejs",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/associative-array",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pagespeed",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/record-website",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/iterm2",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/tags",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/phantomjs",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pre-processor",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/static-site-generator",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/express",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pygments",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sessions",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/iphone",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/docker-compose",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/component",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/docker",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/knockout.js",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/variables",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/curl",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/grunt",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mamp",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/environment",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/jekyll",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sass",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/angularjs",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sitespeed",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/command-line",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/tap",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/gzip",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/opencv",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/unit-testing",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/panresponder",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/vue",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/php",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/coffeescript",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/phpunit",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pet-project",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/ios",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/spotify",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/boilerplate",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/web-application",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/preprocessor",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/node",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/http",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/testing",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/components",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/alpr",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/gulp/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/preprocessor/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mobile",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/tags/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/laravel/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/opencv/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/command-line/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/saas/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/react/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/vue/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/http/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/git/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sorting/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/osx/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/markdown/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/nodejs/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mamp/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/coffeescript/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mobile/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cabinjs/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/associative-array/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/ffmpeg/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal-colour",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/less",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/zsh",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/compression",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/ffmpeg",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/loading-files",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/panresponder/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/curl/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/zsh/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/phantomjs/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/component/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/variables/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sessions/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pagespeed/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/ios/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/angular/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/php/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/domains/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/loading-files/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/web-application/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/knockout.js/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/node/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/boilerplate/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/installing-phpunit/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/startup/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/gzip/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/tap/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/storybook/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/iterm2/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/unit-testing/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/mvp/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/sitespeed/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/image-recognition/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/grunt/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/submodules/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cli/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pet-project/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/react-native/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/alpr/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal-color/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/components/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/angularjs/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/testing/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/docker/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/record-website/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/modules/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/phpunit/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/webservice/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/spotify/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/watchr/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/xcode/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/static-site-generator/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/coding/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/vim/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/terminal-colour/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/cakephp/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/blogging/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/pre-processor/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/tags/less/",
+    "new": "/",
+    "code": 410
+  },
+  {
+    "old": "/sorting-tags-in-jekyll/",
+    "new": "/blog/sorting-tags-in-jekyll",
+    "code": 301
+  },
+  {
+    "old": "/track-your-whole-website-for-pagespeed/",
+    "new": "/blog/track-your-whole-website-for-pagespeed",
+    "code": 301
+  },
+  {
+    "old": "/getting-started-with-the-panresponder-in-react-native/",
+    "new": "/blog/getting-started-with-the-panresponder-in-react-native",
+    "code": 301
+  },
+  {
+    "old": "/the-best-boilerplate-app-is-the-one-you-code-yourself/",
+    "new": "/blog/the-best-boilerplate-app-is-the-one-you-code-yourself",
+    "code": 301
+  },
+  {
+    "old": "/setting-up-laravel-with-docker-compose/",
+    "new": "/blog/setting-up-laravel-with-docker-compose",
+    "code": 301
+  },
+  {
+    "old": "/exploring-image-recognition-with-node-and-alpr/",
+    "new": "/blog/exploring-image-recognition-with-node-and-alpr",
+    "code": 301
+  },
+  {
+    "old": "/react-storybook/",
+    "new": "/blog/react-storybook",
+    "code": 301
+  },
+
+  {
+    "old": "/using-vue-components-in-your-express-app/",
+    "new": "/blog/using-vue-components-in-your-express-app",
+    "code": 301
+  },
+  {
+    "old": "/get-your-react-native-app-running-on-a-device/",
+    "new": "/blog/get-your-react-native-app-running-on-a-device",
+    "code": 301
+  },
+  {
+    "old": "/launching-a-webservice--defining-your-mvp/",
+    "new": "/blog/launching-a-webservice--defining-your-mvp",
+    "code": 301
+  },
+  {
+    "old": "/getting-used-to-vim/",
+    "new": "/blog/getting-used-to-vim",
+    "code": 301
+  },
+  {
+    "old": "/a-more-colourful-cat-in-your-shell/",
+    "new": "/blog/a-more-colourful-cat-in-your-shell",
+    "code": 301
+  },
+  {
+    "old": "/recording-a-website-with-phantomjs-and-ffmpeg/",
+    "new": "/blog/recording-a-website-with-phantomjs-and-ffmpeg",
+    "code": 301
+  },
+  {
+    "old": "/writing-browserify-modules-for-your-angular-app/",
+    "new": "/blog/writing-browserify-modules-for-your-angular-app",
+    "code": 301
+  },
+  {
+    "old": "/blogging-with-cabinjs-and-grunt/",
+    "new": "/blog/blogging-with-cabinjs-and-grunt",
+    "code": 301
+  },
+  {
+    "old": "/httpie-the-command-line-http-client/",
+    "new": "/blog/httpie-the-command-line-http-client",
+    "code": 301
+  },
+  {
+    "old": "/lets-build-an-angularjs-app-with-browserify-and-gulp/",
+    "new": "/blog/lets-build-an-angularjs-app-with-browserify-and-gulp",
+    "code": 301
+  },
+  {
+    "old": "/customize-the-terminal/",
+    "new": "/blog/customize-the-terminal",
+    "code": 301
+  },
+
+  {
+    "old": "/updated-phpunit-cakephp-installer/",
+    "new": "/blog/updated-phpunit-cakephp-installer",
+    "code": 301
+  },
+  {
+    "old": "/how-to-use-environment-variables-in-your-angular-application/",
+    "new": "/blog/how-to-use-environment-variables-in-your-angular-application",
+    "code": 301
+  },
+  {
+    "old": "/spotify-boilerplate-app/",
+    "new": "/blog/spotify-boilerplate-app",
+    "code": 301
+  },
+  {
+    "old": "/phpunit-installer-updated-to-3-6-4/",
+    "new": "/blog/phpunit-installer-updated-to-3-6-4",
+    "code": 301
+  },
+  {
+    "old": "/using-sessions-in-phpunit-tests-with-cakephp/",
+    "new": "/blog/using-sessions-in-phpunit-tests-with-cakephp",
+    "code": 301
+  },
+  {
+    "old": "/loading-external-files-in-php-the-better-way/",
+    "new": "/blog/loading-external-files-in-php-the-better-way",
+    "code": 301
+  },
+  {
+    "old": "/using-markdown-in-cakephp/",
+    "new": "/blog/using-markdown-in-cakephp",
+    "code": 301
+  },
+  {
+    "old": "/good-times-with-watchr-coffeescript-and-less/",
+    "new": "/blog/good-times-with-watchr-coffeescript-and-less",
+    "code": 301
+  },
+
+  {
+    "old": "/format-associative-json-to-work-with-knockout-js/",
+    "new": "/blog/format-associative-json-to-work-with-knockout-js",
+    "code": 301
+  },
+  {
+    "old": "/installing-phpunit-manually-for-cakephp-2-0/",
+    "new": "/blog/installing-phpunit-manually-for-cakephp-2-0",
+    "code": 301
+  },
+  {
+    "old": "/blogging-with-octopress/",
+    "new": "/blog/blogging-with-octopress",
+    "code": 301
+  },
+  {
+    "old": "/how-to-handle-multiple-domains-with-cakephp/",
+    "new": "/blog/how-to-handle-multiple-domains-with-cakephp",
+    "code": 301
+  },
+  {
+    "old": "/how-to-remove-a-submodule-from-your-git-repository/",
+    "new": "/blog/how-to-remove-a-submodule-from-your-git-repository",
+    "code": 301
+  },
+  {
+    "old": "/setting-up-cakephp-with-mamp-pro-on-mac-osx/",
+    "new": "/blog/setting-up-cakephp-with-mamp-pro-on-mac-osx",
+    "code": 301
+  },
+  {
+    "old": "/spotify-preview-build-expired/",
+    "new": "/blog/spotify-preview-build-expired",
+    "code": 301
+  },
+  {
+    "old": "/use-gzip-with-php/",
+    "new": "/blog/use-gzip-with-php",
+    "code": 301
+  },
+  {
+    "old": "/using-less-in-cakephp/",
+    "new": "/blog/using-less-in-cakephp",
+    "code": 301
+  },
+  {
+    "old": "/updated-less-component-for-cakephp/",
+    "new": "/blog/updated-less-component-for-cakephp",
+    "code": 301
+  },
+  {
+    "old": "/using-sass-in-your-next-cakephp-project/",
+    "new": "/blog/using-sass-in-your-next-cakephp-project",
+    "code": 301
+  },
+  {
+    "old": "/about/",
+    "new": "/about",
+    "code": 301
+  }
+]

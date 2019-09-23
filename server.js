@@ -2,6 +2,7 @@ var express = require("express");
 var compression = require("compression");
 const favicon = require("serve-favicon");
 var morgan = require("morgan");
+var redirects = require("./url_list.json");
 
 var app = express();
 
@@ -19,7 +20,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(forceSsl);
 }
 
-// app.use(forceSsl)
+// Redirects
+app.use(function(req, res, next) {
+  const match = redirects.filter(i => {
+    return i.old === req.url;
+  });
+  if (match.length) {
+    return res.redirect(match[0].code, match[0].new);
+  }
+  next();
+});
 
 morgan(function(tokens, req, res) {
   return [

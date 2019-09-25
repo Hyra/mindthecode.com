@@ -17,6 +17,8 @@
 
 body {
   font: 16px/1.75em "Roboto Mono", "Verdana", sans-serif;
+  /* background-image: url(/images/bg-pixels.png); */
+  /* background-attachment: fixed; */
   padding: 1ch;
   margin: 0;
   color: #4a4c52;
@@ -31,7 +33,7 @@ body.index .username:after {
 main,
 footer,
 body > header {
-  max-width: 64ch;
+  max-width: 60ch;
   margin: auto;
 }
 main {
@@ -42,7 +44,7 @@ main {
 
 @media screen and (min-width: 800px) {
   body {
-    font: 20px/1.75em "Roboto Mono";
+    font: 20px/1.95em "Merriweather";
   }
   hr {
     border: 4px solid #ececec;

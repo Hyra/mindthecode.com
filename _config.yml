@@ -10,6 +10,7 @@ title: "Mindthecode"
 description: "Writing about all things web."
 url: https://mindthecode.com
 baseurl: "/"
+logo: "logo.png"
 
 author:
   name: "Stef van den Ham"

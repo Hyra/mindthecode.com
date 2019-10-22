@@ -21,7 +21,7 @@ github: https://github.com/hyra
 
 jekyll_analytics:
   GoogleAnalytics:
-    id: UA-3206068-17
+    id: UA-402037772-4
     anonymizeIp: false
 
 plugins:

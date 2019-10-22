@@ -9,7 +9,7 @@ tags:
   - react
   - storybook
 layout: post
-image: fb_share.png
+image: fb_share.jpg
 date: 2016-04-18
 ---
 

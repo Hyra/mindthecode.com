@@ -10,7 +10,7 @@ tags:
   - watchr
 layout: post
 header: good-times.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2012-05-16
 ---
 

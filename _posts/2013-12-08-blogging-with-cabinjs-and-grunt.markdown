@@ -9,7 +9,7 @@ tags:
   - static site generator
 layout: post
 header: cabinjs.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2013-12-08
 ---
 

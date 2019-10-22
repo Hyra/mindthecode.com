@@ -10,7 +10,7 @@ tags:
   - startup
 layout: post
 header: procrastinating.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2017-11-14
 references:
 ---

@@ -10,7 +10,7 @@ tags:
   - php
 layout: post
 header: less-cakephp.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2011-09-10
 ---
 

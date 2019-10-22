@@ -9,7 +9,7 @@ tags:
   - sitespeed
 layout: post
 header: gzip.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2011-10-14
 ---
 

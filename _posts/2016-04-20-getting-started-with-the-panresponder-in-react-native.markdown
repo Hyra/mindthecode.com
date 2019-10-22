@@ -17,7 +17,7 @@ tags:
   - iphone
   - tap
 header: modules.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2016-04-20
 ---
 

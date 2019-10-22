@@ -10,7 +10,7 @@ tags:
   - curl
 layout: post
 header: external.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2011-12-06
 ---
 

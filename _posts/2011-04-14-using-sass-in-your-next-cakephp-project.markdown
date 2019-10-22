@@ -11,7 +11,7 @@ tags:
   - pre-processor
 layout: post
 header: sass-cake.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2011-04-14
 ---
 

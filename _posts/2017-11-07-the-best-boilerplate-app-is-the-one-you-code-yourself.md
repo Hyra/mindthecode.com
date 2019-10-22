@@ -10,7 +10,7 @@ tags:
   - coding
 layout: post
 header: boiler.gif
-image: fb_share.png
+image: fb_share.jpg
 date: 2017-11-07
 references:
 ---

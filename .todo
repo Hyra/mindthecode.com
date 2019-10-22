@@ -10,3 +10,48 @@ https://www.zachleat.com/web/google-fonts-display/
 
 
 https://jekyll-pug.dougie.io/
+
+https://sentry.io/branding/
+
+https://github.com/bda-research/node-crawler/issues?utf8=%E2%9C%93&q=urls
+
+crawl
+check page (up to x)
+broken link checker
+favicon
+screenshots
+
+https://treo.sh/pricing
+
+Domain:
+- SSL Status (health + expiration)
+- www vs non-www
+- Is https forced?
+- robots.txt present
+- sitemap found?
+- favicon found
+- Are there 404s? (intern or external)
+- pagespeed
+Additional:
+    - Amount of urls
+    - List all urls found
+
+Create account
+
+
+https://github.com/brendonboshell/supercrawler
+https://ohdear.app/tools
+https://www.npmjs.com/package/get-ssl-certificate
+
+
+
+Sentry opruimen
+Sentry analyzeren
+
+Repos inhoudelijk checken
+- Code
+- Deployments
+- PSR-2 / ESLint
+- Branches
+
+How to's schrijven en bijhouden

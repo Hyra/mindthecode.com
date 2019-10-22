@@ -9,6 +9,7 @@ tags:
   - php
   - docker compose
 layout: post
+image: fb_share.png
 date: 2016-11-28
 ---
 

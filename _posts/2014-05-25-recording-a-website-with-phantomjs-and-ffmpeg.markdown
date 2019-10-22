@@ -14,6 +14,7 @@ tags:
   - javascript
 layout: post
 header: recording-phantomjs.gif
+image: fb_share.png
 date: 2014-05-25
 ---
 

@@ -6,6 +6,7 @@ tags:
   - spotify
 layout: post
 header: spotify.gif
+image: fb_share.png
 date: 2012-02-11
 ---
 

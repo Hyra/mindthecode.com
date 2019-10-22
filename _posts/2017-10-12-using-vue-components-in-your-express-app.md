@@ -10,6 +10,7 @@ tags:
   - components
 layout: post
 header: colourful.gif
+image: fb_share.png
 date: 2017-10-12
 ---
 

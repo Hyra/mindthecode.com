@@ -8,6 +8,7 @@ tags:
   - associative array
 layout: post
 header: associative.gif
+image: fb_share.png
 date: 2012-05-09
 ---
 

@@ -9,6 +9,7 @@ tags:
   - variables
 layout: post
 header: environment.gif
+image: fb_share.png
 date: 2013-12-29
 ---
 

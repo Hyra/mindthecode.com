@@ -8,6 +8,7 @@ tags:
   - javascript
 layout: post
 header: spotify-boilerplate.gif
+image: fb_share.png
 date: 2012-09-18
 ---
 

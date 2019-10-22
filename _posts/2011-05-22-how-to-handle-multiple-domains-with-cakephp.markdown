@@ -10,6 +10,7 @@ tags:
   - osx
 layout: post
 header: multiple-domains.gif
+image: fb_share.png
 date: 2011-05-22
 ---
 

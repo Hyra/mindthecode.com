@@ -10,6 +10,7 @@ tags:
   - osx
 layout: post
 header: phpunit-manually.gif
+image: fb_share.png
 date: 2011-11-11
 ---
 

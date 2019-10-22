@@ -9,6 +9,7 @@ tags:
   - testing
 layout: post
 header: sessions.gif
+image: fb_share.png
 date: 2012-02-24
 ---
 

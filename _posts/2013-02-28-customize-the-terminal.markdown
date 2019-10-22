@@ -11,6 +11,7 @@ tags:
   - osx
 layout: post
 header: customize-terminal.gif
+image: fb_share.png
 date: 2013-02-28
 ---
 

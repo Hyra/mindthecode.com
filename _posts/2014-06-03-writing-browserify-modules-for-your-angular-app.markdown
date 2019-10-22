@@ -13,6 +13,7 @@ tags:
   - nodejs
 layout: post
 header: modules.gif
+image: fb_share.png
 date: 2014-06-03
 ---
 

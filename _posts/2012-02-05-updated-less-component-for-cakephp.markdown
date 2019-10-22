@@ -7,6 +7,7 @@ tags:
   - cakephp
   - component
 layout: post
+image: fb_share.png
 date: 2012-02-05
 ---
 

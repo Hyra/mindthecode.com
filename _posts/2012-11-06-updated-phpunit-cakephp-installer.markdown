@@ -5,6 +5,7 @@ tags:
   - phpunit
   - cakephp
 layout: post
+image: fb_share.png
 date: 2012-11-06
 ---
 

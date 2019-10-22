@@ -8,6 +8,7 @@ tags:
   - php
 layout: post
 header: markdown-cakephp.gif
+image: fb_share.png
 date: 2011-07-10
 ---
 

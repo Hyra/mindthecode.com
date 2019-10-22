@@ -10,6 +10,7 @@ tags:
   - osx
   - terminal
 layout: post
+image: fb_share.png
 date: 2013-02-09
 ---
 

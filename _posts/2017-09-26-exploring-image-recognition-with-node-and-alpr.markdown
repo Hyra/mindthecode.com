@@ -12,6 +12,7 @@ tags:
   - alpr
 layout: post
 header: customize-terminal.gif
+image: fb_share.png
 date: 2017-09-26
 ---
 

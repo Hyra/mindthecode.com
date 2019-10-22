@@ -7,6 +7,7 @@ tags:
   - submodules
 layout: post
 header: submodule.gif
+image: fb_share.png
 date: 2011-05-26
 ---
 

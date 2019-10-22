@@ -10,6 +10,7 @@ tags:
   - osx
   - mamp
 layout: post
+image: fb_share.png
 date: 2011-04-11
 ---
 

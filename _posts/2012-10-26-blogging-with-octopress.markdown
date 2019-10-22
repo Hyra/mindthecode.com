@@ -9,6 +9,7 @@ tags:
   - javascript
 layout: post
 header: octopress.gif
+image: fb_share.png
 date: 2012-10-26
 ---
 

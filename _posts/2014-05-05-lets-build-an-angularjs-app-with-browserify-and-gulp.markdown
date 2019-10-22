@@ -13,6 +13,7 @@ tags:
   - javascript
 layout: post
 header: letsbuild.gif
+image: fb_share.png
 date: 2014-05-05
 ---
 

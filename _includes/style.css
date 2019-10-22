@@ -17,7 +17,7 @@
 
 body {
   /* font: 16px/1.75em "Roboto Mono", "Verdana", sans-serif; */
-  font: 16px/1.95em "Merriweather";
+  font: 16px/1.95em "Exo";
   /* background-image: url(/images/bg-pixels.png); */
   /* background-attachment: fixed; */
   font-weight: 100;
@@ -35,7 +35,7 @@ body.index .username:after {
 main,
 footer,
 body > header {
-  max-width: 60ch;
+  max-width: 55ch;
   margin: auto;
 }
 main {
@@ -44,9 +44,13 @@ main {
   min-height: calc(100vh - 12ch);
 }
 
+strong {
+  font-weight: 400;
+}
+
 @media screen and (min-width: 800px) {
   body {
-    font: 20px/1.95em "Merriweather";
+    font: 20px/1.95em "Exo";
     font-weight: 100;
     /* font: 20px/1.75em "Roboto Mono"; */
   }
@@ -56,7 +60,7 @@ main {
 }
 h1 {
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
 }
 h1,
 .timestamp {
@@ -118,6 +122,10 @@ h4,
 h5,
 h6 {
   font-size: 1em;
+  font-weight: 400;
+}
+h2 {
+  font-size: 1.5em;
 }
 pre {
   padding: 1ch;
@@ -229,7 +237,7 @@ video {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 550px) {
+@media (max-width: 800px) {
   .site-header .nav-primary ul {
     width: 120px;
     text-align: right;
@@ -240,12 +248,12 @@ video {
   /* padding-bottom: 20px; */
   list-style: none;
 }
-@media (max-width: 550px) {
+@media (max-width: 800px) {
   .site-header .nav-primary ul li + li {
     margin-top: 15px;
   }
 }
-@media (min-width: 551px) {
+@media (min-width: 801px) {
   .site-header .nav-primary ul li + li {
     margin-left: 23px;
   }

@@ -1,19 +1,739 @@
----
-layout: default
-title: Post
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
 
-{% include header.html %}
+      @font-face {
+        font-family: "jetbrains_mono";
+        font-display: block;
+        src: url("/fonts/jetbrains_mono/woff2/JetBrainsMono-Regular.woff2")
+            format("woff2"),
+          url("/fonts/jetbrains_mono/woff/JetBrainsMono-Regular.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "jetbrains_mono";
+        font-display: block;
+        src: url("/fonts/jetbrains_mono/woff2/JetBrainsMono-Bold.woff2")
+            format("woff2"),
+          url("/fonts/jetbrains_mono/woff/JetBrainsMono-Bold.woff")
+            format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "jetbrains_mono";
+        font-display: block;
+        src: url("/fonts/jetbrains_mono/woff2/JetBrainsMono-Italic.woff2")
+            format("woff2"),
+          url("/fonts/jetbrains_mono/woff/JetBrainsMono-Italic.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "jetbrains_mono";
+        font-display: block;
+        src: url("/fonts/jetbrains_mono/woff2/JetBrainsMono-Bold-Italic.woff2")
+            format("woff2"),
+          url("/fonts/jetbrains_mono/woff/JetBrainsMono-Bold-Italic.woff")
+            format("woff");
+        font-weight: bold;
+        font-style: italic;
+      }
+      body {
+        font: 16px/1.5em "jetbrains_mono", "Consolas", "Andale Mono", "Monaco",
+          "Courier New", Courier, monospace;
+        padding: 1ch;
+        margin: 0;
+      }
+      body .username:after {
+        content: " ✐";
+      }
+      body.index .username:after {
+        content: " ⌂";
+      }
+      main,
+      footer,
+      .page > header {
+        max-width: 64ch;
+        margin: auto;
+      }
+      main {
+        box-sizing: border-box;
+        padding: 1ch 0 2ch;
+        min-height: calc(100vh - 12ch);
+      }
+      h1 {
+        font-size: 1em;
+        font-weight: 700;
+      }
+      h1,
+      .timestamp,
+      .description {
+        margin: 0;
+      }
+      a {
+        color: #fa7268;
+        background-image: linear-gradient(to bottom, #fa7268 75%, #fa7268 75%);
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+          1px 1px 0 white;
+        background-repeat: repeat-x;
+        background-size: 1px 1px;
+        background-position: 0 96%;
+        text-decoration: none;
+      }
+      .heading a {
+        color: black;
+        background-image: linear-gradient(to bottom, black 75%, black 75%);
+      }
+      .heading {
+        margin: 0 0 2ch;
+        padding: 0;
+      }
+      article.txt p {
+        white-space: pre-wrap;
+      }
+      .username a {
+        text-shadow: none;
+        background-image: none;
+        background-color: #333;
+        color: #eee;
+        padding: 1ch;
+        border: 0;
+      }
+      hr {
+        border: 1px solid #ececec;
+      }
+      p {
+        margin: 1.5em 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 1em;
+      }
+      pre {
+        padding: 1ch;
+        overflow-x: auto;
+      }
+      ul,
+      ol {
+        padding-left: 0;
+      }
+      li > ul,
+      li > ol {
+        padding-left: 2ch;
+      }
+      blockquote {
+        font-style: italic;
+        margin: 1.5em 0ch;
+        border-left: 10px solid #fa7268;
+        padding: 1ch 2ch;
+        background-color: #fbf9f9;
+      }
+      img {
+        max-width: 100%;
+      }
+      footer a {
+        color: lightgrey;
+        background-image: linear-gradient(
+          to bottom,
+          lightgrey 75%,
+          lightgrey 75%
+        );
+      }
+      @media screen and (min-width: 1367px) {
+        body {
+          font: 20px/1.75em "jetbrains_mono";
+        }
+        hr {
+          border: 4px solid #ececec;
+        }
+      }
 
-<main>
-  <article class="md">
-    <header class="heading">
-      <h1>{{ page.title }}</h1>
-      <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
-      <hr />
-    </header>
-    {{ content }}
-  </article>
-</main>
+      video {
+        width: 100%;
+      }
 
-{% include footer.html %}
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-container.skinny {
+        padding-bottom: 43.076923%;
+      }
+
+      .video-container.slate {
+        padding-bottom: 50%;
+        margin-bottom: 1em;
+      }
+
+      .video-container iframe,
+      .video-container object,
+      .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /*
+
+      Name:       Base16 Ocean Dark
+      Author:     Chris Kempson (http://chriskempson.com)
+
+      Pygments template by Jan T. Sott (https://github.com/idleberg)
+      Created with Base16 Builder by Chris Kempson (https://github.com/chriskempson/base16-builder)
+
+      */
+      code {
+        padding: 2px 3px;
+        background-color: #272936;
+      }
+      .highlighter-rouge {
+        /* font-size: 16px; */
+        padding: 2px 3px;
+        line-height: 1.35em;
+
+        /* background: #333; */
+      }
+      div.highlighter-rouge {
+        /*margin-left: calc(-100vw / 2 + 64ch / 2);
+        margin-right: calc(-100vw / 2 + 64ch / 2);*/
+      }
+      .highlighter-rouge code {
+        padding: 0;
+      }
+      .highlight .hll {
+        background-color: #f1fa8c;
+      }
+      .highlight {
+        background: #282a36;
+        color: #f8f8f2;
+        border-radius: 3px;
+        font-size: 16px;
+        padding: 5px 10px;
+      }
+      .highlight .c {
+        color: #6272a4;
+      } /* Comment */
+      .highlight .err {
+        color: #f8f8f2;
+      } /* Error */
+      .highlight .g {
+        color: #f8f8f2;
+      } /* Generic */
+      .highlight .k {
+        color: #ff79c6;
+      } /* Keyword */
+      .highlight .l {
+        color: #f8f8f2;
+      } /* Literal */
+      .highlight .n {
+        color: #f8f8f2;
+      } /* Name */
+      .highlight .o {
+        color: #ff79c6;
+      } /* Operator */
+      .highlight .x {
+        color: #f8f8f2;
+      } /* Other */
+      .highlight .p {
+        color: #f8f8f2;
+      } /* Punctuation */
+      .highlight .ch {
+        color: #6272a4;
+      } /* Comment.Hashbang */
+      .highlight .cm {
+        color: #6272a4;
+      } /* Comment.Multiline */
+      .highlight .cp {
+        color: #ff79c6;
+      } /* Comment.Preproc */
+      .highlight .cpf {
+        color: #6272a4;
+      } /* Comment.PreprocFile */
+      .highlight .c1 {
+        color: #6272a4;
+      } /* Comment.Single */
+      .highlight .cs {
+        color: #6272a4;
+      } /* Comment.Special */
+      .highlight .gd {
+        color: #8b080b;
+      } /* Generic.Deleted */
+      .highlight .ge {
+        color: #f8f8f2;
+        text-decoration: underline;
+      } /* Generic.Emph */
+      .highlight .gr {
+        color: #f8f8f2;
+      } /* Generic.Error */
+      .highlight .gh {
+        color: #f8f8f2;
+        font-weight: bold;
+      } /* Generic.Heading */
+      .highlight .gi {
+        color: #f8f8f2;
+        font-weight: bold;
+      } /* Generic.Inserted */
+      .highlight .go {
+        color: #44475a;
+      } /* Generic.Output */
+      .highlight .gp {
+        color: #f8f8f2;
+      } /* Generic.Prompt */
+      .highlight .gs {
+        color: #f8f8f2;
+      } /* Generic.Strong */
+      .highlight .gu {
+        color: #f8f8f2;
+        font-weight: bold;
+      } /* Generic.Subheading */
+      .highlight .gt {
+        color: #f8f8f2;
+      } /* Generic.Traceback */
+      .highlight .kc {
+        color: #ff79c6;
+      } /* Keyword.Constant */
+      .highlight .kd {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Keyword.Declaration */
+      .highlight .kn {
+        color: #ff79c6;
+      } /* Keyword.Namespace */
+      .highlight .kp {
+        color: #ff79c6;
+      } /* Keyword.Pseudo */
+      .highlight .kr {
+        color: #ff79c6;
+      } /* Keyword.Reserved */
+      .highlight .kt {
+        color: #8be9fd;
+      } /* Keyword.Type */
+      .highlight .ld {
+        color: #f8f8f2;
+      } /* Literal.Date */
+      .highlight .m {
+        color: #bd93f9;
+      } /* Literal.Number */
+      .highlight .s {
+        color: #f1fa8c;
+      } /* Literal.String */
+      .highlight .na {
+        color: #50fa7b;
+      } /* Name.Attribute */
+      .highlight .nb {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Builtin */
+      .highlight .nc {
+        color: #50fa7b;
+      } /* Name.Class */
+      .highlight .no {
+        color: #f8f8f2;
+      } /* Name.Constant */
+      .highlight .nd {
+        color: #f8f8f2;
+      } /* Name.Decorator */
+      .highlight .ni {
+        color: #f8f8f2;
+      } /* Name.Entity */
+      .highlight .ne {
+        color: #f8f8f2;
+      } /* Name.Exception */
+      .highlight .nf {
+        color: #50fa7b;
+      } /* Name.Function */
+      .highlight .nl {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Label */
+      .highlight .nn {
+        color: #f8f8f2;
+      } /* Name.Namespace */
+      .highlight .nx {
+        color: #f8f8f2;
+      } /* Name.Other */
+      .highlight .py {
+        color: #f8f8f2;
+      } /* Name.Property */
+      .highlight .nt {
+        color: #ff79c6;
+      } /* Name.Tag */
+      .highlight .nv {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Variable */
+      .highlight .ow {
+        color: #ff79c6;
+      } /* Operator.Word */
+      .highlight .w {
+        color: #f8f8f2;
+      } /* Text.Whitespace */
+      .highlight .mb {
+        color: #bd93f9;
+      } /* Literal.Number.Bin */
+      .highlight .mf {
+        color: #bd93f9;
+      } /* Literal.Number.Float */
+      .highlight .mh {
+        color: #bd93f9;
+      } /* Literal.Number.Hex */
+      .highlight .mi {
+        color: #bd93f9;
+      } /* Literal.Number.Integer */
+      .highlight .mo {
+        color: #bd93f9;
+      } /* Literal.Number.Oct */
+      .highlight .sa {
+        color: #f1fa8c;
+      } /* Literal.String.Affix */
+      .highlight .sb {
+        color: #f1fa8c;
+      } /* Literal.String.Backtick */
+      .highlight .sc {
+        color: #f1fa8c;
+      } /* Literal.String.Char */
+      .highlight .dl {
+        color: #f1fa8c;
+      } /* Literal.String.Delimiter */
+      .highlight .sd {
+        color: #f1fa8c;
+      } /* Literal.String.Doc */
+      .highlight .s2 {
+        color: #f1fa8c;
+      } /* Literal.String.Double */
+      .highlight .se {
+        color: #f1fa8c;
+      } /* Literal.String.Escape */
+      .highlight .sh {
+        color: #f1fa8c;
+      } /* Literal.String.Heredoc */
+      .highlight .si {
+        color: #f1fa8c;
+      } /* Literal.String.Interpol */
+      .highlight .sx {
+        color: #f1fa8c;
+      } /* Literal.String.Other */
+      .highlight .sr {
+        color: #f1fa8c;
+      } /* Literal.String.Regex */
+      .highlight .s1 {
+        color: #f1fa8c;
+      } /* Literal.String.Single */
+      .highlight .ss {
+        color: #f1fa8c;
+      } /* Literal.String.Symbol */
+      .highlight .bp {
+        color: #f8f8f2;
+        font-style: italic;
+      } /* Name.Builtin.Pseudo */
+      .highlight .fm {
+        color: #50fa7b;
+      } /* Name.Function.Magic */
+      .highlight .vc {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Variable.Class */
+      .highlight .vg {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Variable.Global */
+      .highlight .vi {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Variable.Instance */
+      .highlight .vm {
+        color: #8be9fd;
+        font-style: italic;
+      } /* Name.Variable.Magic */
+      .highlight .il {
+        color: #bd93f9;
+      } /* Literal.Number.Integer.Long */
+
+      .about-avatar {
+        float: left;
+        width: 3.2em;
+        margin: 0 1em 1em 0;
+      }
+
+      @media screen and (max-width: 480px) {
+        .about-avatar {
+          width: 4.1em;
+        }
+      }
+      code {
+        color: #fff;
+        padding: 2px 3px;
+      }
+
+      .site-header {
+        display: flex;
+        padding: 20px 0;
+      }
+      .site-header .logo {
+        text-shadow: none;
+        background-image: none;
+        border: 0;
+      }
+      .site-header .logo img {
+        height: 40px;
+      }
+      .site-header .nav-primary {
+        margin-left: auto;
+      }
+      .site-header .nav-primary ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      @media (max-width: 800px) {
+        .site-header .nav-primary ul {
+          width: 120px;
+          text-align: right;
+          flex-direction: column;
+        }
+      }
+      .site-header .nav-primary ul li {
+        /* padding-bottom: 20px; */
+        list-style: none;
+      }
+      @media (max-width: 800px) {
+        .site-header .nav-primary ul li + li {
+          margin-top: 15px;
+        }
+      }
+      @media (min-width: 801px) {
+        .site-header .nav-primary ul li + li {
+          margin-left: 23px;
+        }
+      }
+      .site-header .nav-primary ul li.active a {
+        border-bottom: 5px solid #fa7268;
+        padding-bottom: 15px;
+        /* color: #fa7268; */
+      }
+      .site-header .nav-primary ul a {
+        font-family: "Exo 2";
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-image: none;
+      }
+      .site-header .nav-primary ul a:link,
+      .site-header .nav-primary ul a:visited {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .site-footer {
+        margin-top: 150px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: flex-end;
+        line-height: 1;
+        font-family: "Exo 2";
+      }
+      .site-footer p {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 13px;
+      }
+      .site-footer p.copyright {
+        font-size: 13px;
+      }
+      .site-footer ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .site-footer ul li {
+        padding: 10px;
+        text-transform: uppercase;
+      }
+      .site-footer ul li:last-of-type {
+        padding-right: 0;
+      }
+      .site-footer ul li a:link,
+      .site-footer ul li a:visited {
+        text-decoration: none;
+        color: #26282e;
+        font-size: 13px;
+        background-image: none;
+      }
+      .site-footer ul li a:hover {
+        text-decoration: underline;
+      }
+
+      @-webkit-keyframes Floatingx {
+        from {
+          -webkit-transform: translate(0, 0px);
+        }
+        65% {
+          -webkit-transform: translate(0, -7px);
+        }
+        to {
+          -webkit-transform: translate(0, 0px);
+        }
+      }
+
+      .floating {
+        -webkit-animation-name: Floatingx;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+        -moz-animation-name: Floating;
+        -moz-animation-duration: 3s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: ease-in-out;
+      }
+
+      #carbonads {
+        text-align: center;
+        display: block;
+        overflow: hidden;
+        padding: 1em;
+        padding-bottom: 0.3em;
+        font-family: Verdana, helvetica neue, Helvetica, sans-serif;
+        line-height: 1.5;
+        border: 2px solid #f5f5f5;
+        margin-bottom: 10px;
+        float: right;
+        width: 160px;
+        font-size: 13px;
+        margin-left: 20px;
+      }
+      #carbonads a {
+        text-decoration: none;
+        background-image: none;
+      }
+      #carbonads span {
+        display: block;
+        overflow: hidden;
+      }
+      .carbon-text {
+        text-align: center;
+        display: block;
+        text-align: center;
+        margin-bottom: 1em;
+        color: #666;
+      }
+      .carbon-img {
+        display: block;
+        margin: 0 auto 1em;
+        /* margin-left: 25px; */
+      }
+      .carbon-poweredby {
+        display: block;
+        text-align: right;
+        font-size: 0.7em;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top" class="page" role="document">
+      <header class="site-header">
+        <a
+          href="/"
+          target="_self"
+          class="logo"
+          aria-label="Back to Mindthecode.com homepage"
+          ><img src="/mtc_logo@2x.png" alt="" class="floating"
+        /></a>
+        <nav class="nav-primary" role="navigation">
+          <ul>
+            <li class="{% if page.url == '/' %} active {% endif %}">
+              <a href="/">Home</a>
+            </li>
+            <li class="{% if page.url contains '/blog' %} active {% endif %}">
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="https://github.com/hyra" target="_blank">Github</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <article class="md">
+          <header class="heading">
+            <h1>{{ page.title }}</h1>
+            <p class="timestamp">{{ page.date | date: "%b %e %Y" }}</p>
+            <hr />
+          </header>
+          {{ content }}
+        </article>
+
+        <br />
+        <br />
+
+        <h2>Latest blog posts</h2>
+        <hr />
+        {% for post in site.posts limit:3 %}
+        <article>
+          <header class="heading">
+            <h1 class="post-title">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h1>
+            <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+          </header>
+        </article>
+        {% endfor %}
+      </main>
+      <footer class="site-footer" role="contentinfo">
+        <div>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/blog/">Archives</a>
+            </li>
+            <li>
+              <a href="https://github.com/hyra" target="_blank" rel="noreferrer"
+                >Github</a
+              >
+            </li>
+            <li>
+              <a href="http://twitter.com/hyra" target="_blank" rel="noreferrer"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a href="{{ site.url }}/feed.xml" target="_blank" rel="noreferrer"
+                >RSS</a
+              >
+            </li>
+          </ul>
+          <p class="copyright">
+            © 2010-2020 Stef van den Ham (Hyra)
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

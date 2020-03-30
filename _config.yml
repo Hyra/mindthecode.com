@@ -7,13 +7,13 @@ permalink: /blog/:title
 
 # Setup
 title: "Mindthecode"
-description: "Writing about all things web."
+description: "Stef van den Ham writes about web"
 url: https://mindthecode.com
 baseurl: "/"
-logo: "logo.png"
+logo: "favicon.png"
 
 author:
-  name: "Stef van den Ham"
+  name: "Stef van den Jam"
 
 # Custom vars
 twitter: https://twitter.com/hyra

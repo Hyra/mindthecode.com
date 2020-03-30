@@ -1,3 +1,16 @@
+
+
+Home                /                   Introduction
+Blog                /blog               Archive of posts
+Projects            /projects           Overview of pet projects
+Project detail      /projects/:slug     Overview of pet projects
+Builds              /builds             Overview of Builds
+Build detail        /builds/:slug       Overview of Builds
+About               /about              About
+
+
+
+
 Load balanced sessions craft
 
 Elementquerycache

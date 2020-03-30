@@ -27,31 +27,16 @@ title: Home
     </nav>
   </header>
   <main>
-    <p>
-      <img src="/avatar.jpg" class="about-avatar" /> My name is Stef van den
-      Ham. I write SASS, HTML5, Javascript, PHP, NodeJS and Bash for fun and
-      profit.
-    </p>
-
-    <p>
-      I work as CTO at <a href="https://noprotocol.nl/">NoProtocol</a> in
-      Amsterdam. When not fondling with NodeJS or websockets I like to twiddle
-      with Arduino’s and making useful and useless things with hardware.
-    </p>
-
-    <blockquote>
-      <h2>Latest blog posts</h2>
-      {% for post in site.posts limit:3 %}
-      <article>
-        <header class="heading">
-          <h1 class="post-title">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h1>
-          <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
-        </header>
-      </article>
-      {% endfor %}
-    </blockquote>
+    {% for post in site.posts %}
+    <article>
+      <header class="heading">
+        <h1 class="post-title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h1>
+        <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+      </header>
+    </article>
+    {% endfor %}
   </main>
   <footer class="site-footer" role="contentinfo">
     <div>

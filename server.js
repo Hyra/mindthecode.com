@@ -37,7 +37,7 @@ app.get('/*', function(req, res, next) {
   } else {
     next();     
   }
-})
+});
 
 morgan(function(tokens, req, res) {
   return [

@@ -31,13 +31,15 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/*', function(req, res, next) {
-  if (req.headers.host.match(/^www/) !== null ) {
-    res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
-  } else {
-    next();     
+function wwwRedirect(req, res, next) {
+  if (req.headers.host.slice(0, 4) === 'www.') {
+      var newHost = req.headers.host.slice(4);
+      return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
   }
-});
+  next();
+};
+app.set('trust proxy', true);
+app.use(wwwRedirect);
 
 morgan(function(tokens, req, res) {
   return [

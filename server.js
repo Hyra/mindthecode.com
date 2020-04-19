@@ -31,6 +31,14 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/*', function(req, res, next) {
+  if (req.headers.host.match(/^www/) !== null ) {
+    res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
+  } else {
+    next();     
+  }
+})
+
 morgan(function(tokens, req, res) {
   return [
     tokens.method(req, res),

@@ -1063,8 +1063,8 @@
     "code": 301
   },
   {
-    "old": "/about/",
-    "new": "/about",
+    "old": "/projects/",
+    "new": "/blog",
     "code": 301
   }
 ]

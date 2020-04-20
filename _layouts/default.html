@@ -675,6 +675,20 @@ Created with Base16 Builder by Chris Kempson (https://github.com/chriskempson/ba
   {% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
   <meta content="{{ tag }}" property="article:tag" />
   {% endfor %} {% endif %}
+
+  {% if page.url == '/' %}
+    {% include homeJSONLD.html %}
+  {% else %}
+    {% if page.title %}
+    {% if page.jsonld %}
+    {% include {{page.jsonld}}.html %}
+    {% else %}
+    {% include postJSONLD.html %}
+    {% endif %}
+    {% else %}
+    {% include homeJSONLD.html %}
+    {% endif %}  
+  {% endif %}  
 </head>
 <body class="index"}">
   {{ content }}

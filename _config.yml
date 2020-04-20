@@ -7,7 +7,7 @@ permalink: /blog/:title
 
 # Setup
 title: "Mindthecode"
-description: "Stef van den Ham writes about web"
+description: "Walking web developers through projects, code and giving tips, tricks and insights on webdevelopment as a whole"
 url: https://mindthecode.com
 baseurl: "/"
 logo: "favicon.png"

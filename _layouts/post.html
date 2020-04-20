@@ -828,10 +828,22 @@
     {% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
     <meta content="{{ tag }}" property="article:tag" />
     {% endfor %} {% endif %}
+
+  {% if page.title %}
+    {% if page.jsonld %}
+        {% include {{page.jsonld}}.html %}
+    {% else %}
+        {% include postJSONLD.html %}
+    {% endif %}
+  {% else %}
+    {% include homeJSONLD.html %}
+  {% endif %}  
   </head>
   <body>
+    
     <div id="top" class="page" role="document">
       <header class="site-header">
+        {{ page.jsonld }}
         <a
           href="/"
           target="_self"
@@ -863,6 +875,7 @@
           {{ content }}
         </article>
 
+        {% if page.url != '/about/' %}
         <div class="post__share">
           <div class="share__title">Share:</div>
           <ul class="share__list list-reset">
@@ -890,7 +903,9 @@
             </li>
           </ul>
         </div>
+        {% endif %}
         
+        {% if page.url != '/about/' %}
         <div class="post-author">
           <a href="/about/" class="post-author__image" style="background-image: url(/images/avatar.jpg)" aria-label="Stef van den Ham"></a>
           <div class="post-author__info">
@@ -916,10 +931,11 @@
             </div>
           </div>
         </div>
-
-
+        {% endif %}
+        
         <div class="mailing-list">
           <h2>Subscribe to the mailing list</h2>
+          <hr>
           <small>Be in the loop when a new post is published 💪</small>
           <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
           <style type="text/css">
@@ -951,6 +967,8 @@
           </div>
           <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         </div>
+
+        <br>
 
         <h2>Latest blog posts</h2>
         <hr />

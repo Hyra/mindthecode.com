@@ -1066,5 +1066,10 @@
     "old": "/projects/",
     "new": "/blog",
     "code": 301
+  },
+  {
+    "old": "/new.html",
+    "new": "/",
+    "code": 301
   }
 ]

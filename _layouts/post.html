@@ -10,7 +10,10 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
 
@@ -660,7 +663,7 @@
         display: flex;
         padding: 30px 20px;
         margin: 20px 0 40px 0;
-        background: rgb(251, 251, 251)
+        background: rgb(251, 251, 251);
       }
       .post-author a {
         background-image: none;
@@ -716,7 +719,7 @@
         margin-right: 10px;
         font-size: 12px;
         line-height: 1;
-        color: #F00;;
+        color: #f00;
       }
       .post-author .post-author__link:hover {
         color: pink;
@@ -734,12 +737,11 @@
           margin-right: 0;
         }
         .post-author .post-author__image,
-      .post-author .post-author__name,
-      .post-author .post-author__bio {
+        .post-author .post-author__name,
+        .post-author .post-author__bio {
           margin-bottom: 15px;
         }
       }
-
 
       .post__share {
         display: flex;
@@ -827,20 +829,11 @@
     <meta content="{{ category }}" property="article:section" />
     {% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
     <meta content="{{ tag }}" property="article:tag" />
-    {% endfor %} {% endif %}
-
-  {% if page.title %}
-    {% if page.jsonld %}
-        {% include {{page.jsonld}}.html %}
-    {% else %}
-        {% include postJSONLD.html %}
-    {% endif %}
-  {% else %}
-    {% include homeJSONLD.html %}
-  {% endif %}  
+    {% endfor %} {% endif %} {% if page.title %} {% if page.jsonld %} {% include
+    {{page.jsonld}}.html %} {% else %} {% include postJSONLD.html %} {% endif %}
+    {% else %} {% include homeJSONLD.html %} {% endif %}
   </head>
   <body>
-    
     <div id="top" class="page" role="document">
       <header class="site-header">
         {{ page.jsonld }}
@@ -880,67 +873,123 @@
           <div class="share__title">Share:</div>
           <ul class="share__list list-reset">
             <li class="share__item">
-              <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+              <a
+                class="share__link share__facebook"
+                href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
                 onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-                title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+                title="Share on Facebook"
+                rel="nofollow"
+                ><i class="ion ion-logo-facebook"></i
+              ></a>
             </li>
 
             <li class="share__item">
-              <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+              <a
+                class="share__link share__twitter"
+                href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
                 onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-                title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+                title="Share on Twitter"
+                rel="nofollow"
+                ><i class="ion ion-logo-twitter"></i
+              ></a>
             </li>
 
             <li class="share__item">
-              <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
-              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+              <a
+                class="share__link share__linkedin"
+                href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on LinkedIn"
+                rel="nofollow"
+                ><i class="ion ion-logo-linkedin"></i
+              ></a>
             </li>
 
             <li class="share__item">
-              <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&amp;media={{ site.url }}{{ site.baseurl }}{{ page.image }}&amp;description={{ page.title | uri_escape }}"
-              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
-              rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+              <a
+                class="share__link share__pinterest"
+                href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&amp;media={{ site.url }}{{ site.baseurl }}{{ page.image }}&amp;description={{ page.title | uri_escape }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Pinterest"
+                rel="nofollow"
+                ><i class="ion ion-logo-pinterest"></i
+              ></a>
             </li>
           </ul>
         </div>
-        {% endif %}
-        
-        {% if page.url != '/about/' %}
+        {% endif %} {% if page.url != '/about/' %}
         <div class="post-author">
-          <a href="/about/" class="post-author__image" style="background-image: url(/images/avatar.jpg)" aria-label="Stef van den Ham"></a>
+          <a
+            href="/about/"
+            class="post-author__image"
+            style="background-image: url(/images/avatar.jpg);"
+            aria-label="Stef van den Ham"
+          ></a>
           <div class="post-author__info">
             <a class="post-author__name" href="/about/">About me</a>
-            <p class="post-author__bio">I’m Stef van den Ham. I write
-              SASS, HTML5, Javascript, PHP, NodeJS and Bash with <span style="text-decoration: line-through">Sublime Text 2</span>, <span style="text-decoration: line-through">Atom</span>, Vim for fun and
-              profit.
-            </p>
-            
             <p class="post-author__bio">
-              I work as CTO at <a href="https://noprotocol.nl/">NoProtocol</a> in Amsterdam.
-              When not fondling with NodeJS or websockets I like to make useful and useless things with hardware.</p>
+              I’m Stef van den Ham. I write SASS, HTML5, Javascript, PHP, NodeJS
+              and Bash with
+              <span style="text-decoration: line-through;">Sublime Text 2</span
+              >, <span style="text-decoration: line-through;">Atom</span>, Vim
+              for fun and profit.
+            </p>
+
+            <p class="post-author__bio">
+              I work as CTO at
+              <a href="https://noprotocol.nl/">NoProtocol</a> in Amsterdam. When
+              not fondling with NodeJS or websockets I like to make useful and
+              useless things with hardware.
+            </p>
             <div class="post-author__meta">
-              
-              <a class="post-author__link" href="https://www.facebook.com/mindthecode" target="_blank">Facebook</a>
-              
-              <a class="post-author__link" href="https://instagram.com/stefvdham" target="_blank">Instagram</a>
-              
-              <a class="post-author__link" href="https://github.com/hyra" target="_blank">Github</a>
-              
-              <a class="post-author__link" href="https://twitter.com/hyra" target="_blank">Twitter</a>
-              
+              <a
+                class="post-author__link"
+                href="https://www.facebook.com/mindthecode"
+                target="_blank"
+                >Facebook</a
+              >
+
+              <a
+                class="post-author__link"
+                href="https://instagram.com/stefvdham"
+                target="_blank"
+                >Instagram</a
+              >
+
+              <a
+                class="post-author__link"
+                href="https://github.com/hyra"
+                target="_blank"
+                >Github</a
+              >
+
+              <a
+                class="post-author__link"
+                href="https://twitter.com/hyra"
+                target="_blank"
+                >Twitter</a
+              >
             </div>
           </div>
         </div>
         {% endif %}
-        
+
         <div class="mailing-list">
           <h2>Subscribe to the mailing list</h2>
-          <hr>
+          <hr />
           <small>Be in the loop when a new post is published 💪</small>
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <link
+            href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
+            rel="stylesheet"
+            type="text/css"
+          />
           <style type="text/css">
-            #mc_embed_signup{background:#fff; clear:left; font:14px 'jetbrains_mono', Helvetica,Arial,sans-serif; }
-            
+            #mc_embed_signup {
+              background: #fff;
+              clear: left;
+              font: 14px "jetbrains_mono", Helvetica, Arial, sans-serif;
+            }
+
             #mc_embed_signup form {
               padding: 10px 0 10px 0 !important;
             }
@@ -949,26 +998,84 @@
             }
           </style>
           <div id="mc_embed_signup">
-          <form action="https://mindthecode.us8.list-manage.com/subscribe/post?u=81bc331f4f2d0e26941705aa8&amp;id=9085d5fa6a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <form
+              action="https://mindthecode.us8.list-manage.com/subscribe/post?u=81bc331f4f2d0e26941705aa8&amp;id=9085d5fa6a"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+              novalidate
+            >
               <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-          </label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-          </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_81bc331f4f2d0e26941705aa8_9085d5fa6a" tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL"
+                    >Email Address <span class="asterisk">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                    class="required email"
+                    id="mce-EMAIL"
+                  />
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div
+                    class="response"
+                    id="mce-error-response"
+                    style="display: none;"
+                  ></div>
+                  <div
+                    class="response"
+                    id="mce-success-response"
+                    style="display: none;"
+                  ></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div
+                  style="position: absolute; left: -5000px;"
+                  aria-hidden="true"
+                >
+                  <input
+                    type="text"
+                    name="b_81bc331f4f2d0e26941705aa8_9085d5fa6a"
+                    tabindex="-1"
+                    value=""
+                  />
+                </div>
+                <div class="clear">
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="button"
+                  />
+                </div>
               </div>
-          </form>
+            </form>
           </div>
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+          ></script>
+          <script type="text/javascript">
+            (function ($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = "EMAIL";
+              ftypes[0] = "email";
+              fnames[1] = "FNAME";
+              ftypes[1] = "text";
+              fnames[2] = "LNAME";
+              ftypes[2] = "text";
+            })(jQuery);
+            var $mcj = jQuery.noConflict(true);
+          </script>
         </div>
 
-        <br>
+        <br />
 
         <h2>Latest blog posts</h2>
         <hr />
@@ -981,7 +1088,7 @@
             <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
           </header>
         </article>
-        {% endfor %}
+        {% endfor %} dffd
       </main>
       <footer class="site-footer" role="contentinfo">
         <div>

@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $category := "Uncategorized" }}
+{{ if .Params.Categories }}
+{{$category = index (.Params.Categories) 0}}
+{{ end }}
+<article class="item">
+  <div class="category">
+    <span>{{ $category }}</span>
+  </div>
+  <div class="title">
+    <h1>
+      {{ .Title }}
+    </h1>
+  </div>
+  <div class="post-date">
+    <span>✍🏻 Written on {{ .Date.Format "January 2, 2006" }}</span> - 
+    <span>👓 Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minute{{ if gt (math.Round (div (countwords .Content) 220.0)) 1 }}s{{ end }}</span>
+  </div>
+
+  {{- partial "carbon.html" . -}}
+  
+  {{ .Content }}
+</article>
+{{ end }}

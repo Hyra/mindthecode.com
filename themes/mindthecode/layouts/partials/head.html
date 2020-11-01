@@ -1,0 +1,73 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  {{ $title := print .Site.Title " | " .Title }}
+  {{ if .IsHome }}
+    {{ $title = .Site.Title }}
+  {{ end }}
+  <title>{{ $title }}</title>
+  <!-- {{ $style := resources.Get "sass/style.scss" | toCSS | minify | fingerprint }} -->
+  <!-- <link rel="stylesheet" href="{{ $style.Permalink }}"> -->
+  {{ with resources.Get "sass/style.scss" | toCSS | minify | fingerprint }}
+  <style type="text/css">{{ .Content | safeCSS }}</style>
+  {{ end }}
+
+  {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
+  <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+
+
+  {{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+  {{ else }}
+  <meta name="description" content="Writing about all things web.">
+  {{ end }}
+    <!-- Start of Open Graph -->
+    <meta property="og:title" content="{{ .Title }}">
+    {{ if .IsPage }}
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+    {{ else }}
+    <meta property="og:type" content="website">
+    {{ end }}
+    {{ if .Description }}
+    <meta property="og:description" content="{{ .Description }}">
+    {{ else }}
+    <meta property="og:description" content="Writing about all things web.">
+    {{ end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    {{ if .Params.thumbnail }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+    {{ else }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}fb_share.jpg">
+    {{ end }}
+    {{ range .Params.tags }}
+    <meta property="og:tags" content="{{ . }}">
+    {{ end }}
+    <!-- End of Open Graph -->
+    <!-- Start of Twitter -->
+    {{ if .Site.Params.twitter_card_whitelisted }}
+        {{ if .Params.twitter_summary }}
+    <meta property="twitter:card" content="{{ .Params.twitter_summary }}">
+        {{ else if .Description }}
+    <meta property="twitter:card" content="{{ .Description }}">
+        {{ else }}
+    <meta property="twitter:card" content="{{ .Title }}">
+        {{ end }}
+    {{ end }}
+    <meta property="twitter:description" content="{{ .Description }}">
+    <meta property="twitter:title" content="{{ .Title }}">
+    {{ if .Params.thumbnail }}
+    <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+    {{ end }}
+    <!-- End of Twitter -->
+    {{ .Hugo.Generator }}
+    {{ if .Site.RSSLink }}
+    <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+{{ partial "schema.html" . }}
+{{ partial "analytics.html" . }}
+
+</head>

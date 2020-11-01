@@ -1,0 +1,20 @@
+<header>
+  <div class="logo">
+    <a href="/">
+      <img src="https://mindthecode.com/mtc_logo@2x.png" width="230" height="35" alt="Mindthecode" />
+    </a>
+  </div>
+  <nav class="menu">
+    <ul>
+			{{ $url := .URL }}
+        {{ range .Site.Menus.main }}
+      <li {{ if eq $url .URL }}class="active"{{ end }}>
+        <a href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

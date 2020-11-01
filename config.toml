@@ -1,0 +1,66 @@
+baseURL = "https://mindthecode.com/"
+languageCode = "en-us"
+title = "Mindthecode.com"
+
+theme = "mindthecode"
+
+disableKinds = ["section"]
+enableRobotsTXT = true
+
+[taxonomies]
+    year = "year"
+    month = "month"
+
+[permalinks]
+  single = "/:title/"
+  posts = "/blog/:title/"
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Archive"
+    pre = "pen-tool"
+    url = "/archive/"
+    weight = 2
+  [[menu.main]]
+    name = "Tools I use"
+    pre = "tag"
+    url = "/tools/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    pre = "tag"
+    url = "/about/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = "Hyra"
+  logo = "logo.png"
+  header = "Mindthecode"
+  facebook = "mindthecode"
+  twitter = "hyra"
+  instagram = "stefvdham"
+  github = "hyra"
+  linkedin = "stef-van-den-ham-21265214"
+  UA = "UA-40203772-4"

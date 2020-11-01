@@ -1,27 +1,5 @@
 {
-  "name": "mindthecode.com",
-  "version": "1.0.0",
-  "description": "Source of https://mindthecode.com",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "build": "JEKYLL_ENV=production bundle exec jekyll build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tybenz/tybenz.github.com.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tybenz/tybenz.github.com/issues"
-  },
-  "homepage": "https://github.com/tybenz/tybenz.github.com#readme",
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "remove-trailing-slash": "^0.1.0",
-    "serve-favicon": "^2.5.0"
+    "medium-zoom": "^1.0.6"
   }
 }

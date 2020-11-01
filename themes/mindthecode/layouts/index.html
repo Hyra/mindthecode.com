@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+  {{ range first 10 ( where .Site.Pages "Section" "posts" ).ByPublishDate.Reverse }}
+    {{ $category := "Uncategorized" }}
+    {{ if .Params.Categories }}
+    {{$category = index (.Params.Categories) 0}}
+    {{ end }}
+      <div class="item">
+          <div class="category">
+              <span>{{ $category }}</span>
+          </div>
+          <div class="title">
+              <h1>
+              <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+              </a>
+              </h1>
+          </div>
+          <div class="post-date">
+              <span>✍🏻 Written on {{ .Date.Format "January 2, 2006" }}</span> - 
+              <span>👓 Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minute{{ if gt (math.Round (div (countwords .Content) 220.0)) 1 }}s{{ end }}</span>
+          </div>
+          <div class="description">
+              <p>{{ .Description }}</p>
+          </div>
+      </div>
+  {{ end }}
+
+  <center>
+      <h2><a href="/archive">Read more in the Archive</a></h2>
+  </center>
+
+  <br>
+  <br>
+
+{{ end }}
+

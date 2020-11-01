@@ -1,3 +1,4 @@
 {
-    "root": "public/"
+    "root": "public/",
+    "canonical_host": "mindthecode.com"
   }

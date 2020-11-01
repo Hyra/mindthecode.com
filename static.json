@@ -1,4 +1,6 @@
 {
     "root": "public/",
-    "canonical_host": "mindthecode.com"
+    "canonical_host": "mindthecode.com",
+    "clean_urls": true,
+    "https_only": true
   }

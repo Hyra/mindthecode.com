@@ -70,6 +70,7 @@ $data = file_get_contents("http://whatever.com/sheep.jpg");
 you could do:
 
 ```php
+<?php
 function loadFile($url) {
   $ch = curl_init();
 

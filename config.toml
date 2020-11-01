@@ -7,10 +7,6 @@ theme = "mindthecode"
 disableKinds = ["section"]
 enableRobotsTXT = true
 
-[taxonomies]
-    year = "year"
-    month = "month"
-
 [permalinks]
   single = "/:title/"
   posts = "/blog/:title/"

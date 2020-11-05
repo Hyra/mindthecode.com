@@ -17,6 +17,8 @@ layout: post
 header: letsbuild.gif
 image: fb_share.jpg
 date: 2014-05-05
+aliases:
+  - lets-build-an-angularjs-app-with-browserify-and-gulp
 ---
 
 Today I want to show a generic workflow and setup I have used a lot lately when working on building apps with Angular. It uses Gulp as a CI system and Browserify to minimize code clutter and maximize awesomeness. So let's jump in.

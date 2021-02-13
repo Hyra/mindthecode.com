@@ -81,6 +81,8 @@
     </div>
   </div>
 
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553J&placement=mindthecode" id="_carbonads_js"></script>
+
     @yield('scripts')
 
     {!! $schemawebsite !!}
@@ -102,73 +104,68 @@
         gtag('config', 'UA-40203772-4');
     </script>
     <style>
-        #carbonads {
-        padding: 1rem;
-        --bg-opacity: 1;
-        background-color: ivory;
-        background-color: rgba(255, 255, 240, var(--bg-opacity));
-        border-width: 1px;
-        --border-opacity: 1;
-        border-color: #faf089;
-        border-color: rgba(250, 240, 137, var(--border-opacity));
-        font-size: 0.75rem;
-        --text-opacity: 1;
-        color: #4a5568;
-        color: rgba(74, 85, 104, var(--text-opacity));
-        line-height: 1.375;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
-        max-width: 24rem;
-    }
-    @media (prefers-color-scheme: dark) {
-        #carbonads {
-            --bg-opacity: 1;
-            background-color: #000;
-            background-color: rgba(0, 0, 0, var(--bg-opacity));
-            --text-opacity: 1;
-            color: #e2e8f0;
-            color: rgba(226, 232, 240, var(--text-opacity));
-            --border-opacity: 1;
-            border-color: #000;
-            border-color: rgba(0, 0, 0, var(--border-opacity));
+        #carbonads * {
+            margin: initial;
+            padding: initial;
         }
-    }
-    #carbonads > span {
-        display: grid;
-        grid-gap: 0.5rem;
-        grid-template-areas: "img" "text" "poweredby";
-    }
-    @media (min-width: 640px) {
-        #carbonads > span {
-            grid-gap: 1rem;
-            grid-template-areas: "img text" "img poweredby";
+        #carbonads {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
         }
-    }
-    .carbon-img {
-        grid-area: img;
-    }
-    .carbon-text {
-        grid-area: text;
-    }
-    .carbon-poweredby {
-        grid-area: poweredby;
-    }
-    .carbon-wrap {
-        display: contents;
-    }
-    #carbonads a {
-            box-shadow: none;
-            border: none;
-    }
-    #carbonads a:hover {
-        background: none;
-        color: black;
-    }
-    #carbonads img {
+        #carbonads {
+            display: flex;
+            max-width: 330px;
+            background-color: hsl(0, 0%, 98%);
+            box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+            z-index: 100;
+        }
+        #carbonads a {
+            color: inherit;
+            text-decoration: none;
+        }
+        #carbonads a:hover {
+            color: inherit;
+        }
+        #carbonads span {
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+        #carbonads .carbon-wrap {
+            display: flex;
+        }
+        #carbonads .carbon-img {
+            display: block;
             margin: 0;
-    }
+            line-height: 1;
+        }
+        #carbonads .carbon-img img {
+            display: block;
+        }
+        #carbonads .carbon-text {
+            font-size: 13px;
+            padding: 10px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        #carbonads .carbon-poweredby {
+            display: block;
+            padding: 6px 8px;
+            background: #f1f1f2;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            font-size: 8px;
+            line-height: 1;
+            border-top-left-radius: 3px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     </style>
 </body>
 

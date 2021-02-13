@@ -19,4 +19,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-nested'),
         require('postcss-font-magician'),
     ])
-    .purgeCss()
+    .purgeCss({
+        whitelist: ['#carbonads', 'pre']
+    })

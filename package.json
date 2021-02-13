@@ -1,5 +1,33 @@
 {
-  "dependencies": {
-    "medium-zoom": "^1.0.6"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.2.4",
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.2.4",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.32.6",
+        "sass-loader": "8.*",
+        "tailwindcss": "^2.0.2"
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.4.0",
+        "laravel-mix-purgecss": "^6.0.0",
+        "medium-zoom": "^1.0.6",
+        "postcss-font-magician": "^3.0.0",
+        "postcss-google-font": "^1.1.0",
+        "postcss-import": "^14.0.0",
+        "postcss-nested": "^5.0.3",
+        "prismjs": "^1.23.0"
+    }
 }

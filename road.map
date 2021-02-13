@@ -1,0 +1,141 @@
+https://christoph-rumpel.com/
+https://stitcher.io/
+https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/landing
+https://www.rias.be/blog
+https://rubenvanassche.com/getting-started-with-github-actions/
+https://sebastiandedeyne.com/forget-about-component-lifecycles-and-start-thinking-in-effects/
+https://github.com/riasvdv/rias.be/blob/master/tailwind.config.js
+https://adamwathan.me/tailwindcss-from-side-project-byproduct-to-multi-mullion-dollar-business/
+https://tailwindcss.com/docs/hover-focus-and-other-states
+
+
+
+X rss feed
+X sitemap
+X zoom
+X footer
+X favicon
+X console validation
+x structured data
+X social share image
+X articles
+
+- caching
+- newsletter page
+- sentry
+- x min read
+
+
+http://www.wswebcreation.nl/i-have-stopped-creating-websites/
+
+https://github.com/JetBrains/JetBrainsMono/tree/master/fonts/webfonts
+
+https://github.com/francoischalifour/medium-zoom
+
+https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/
+
+https://gohugo.io/templates/homepage/
+https://gohugo.io/hugo-pipes/scss-sass/
+https://gohugo.io/getting-started/directory-structure/
+
+https://blog.fullstackdigital.com/how-to-automatically-generate-and-inline-critical-css-with-hugo-pipes-48c52c2d8f82
+
+
+404
+Fix footer on mobile (1 column?)
+Generate facebook thumb based on title, with DIN font
+
+Deploying hugo to heroku
+
+
+* Host jekyll on heroku with nodejs
+* Getting started with GraphQL in CraftCMS
+* Ideas on how to structure Craft Sections and Fields
+* Beginners guide to Puppeteer from Google
+* A practical introduction to currying in JavaScript
+* Writing your first CraftCMS plugin
+* Top Programming Blogs to read (https://catswhocode.com/programming-blogs/)
+* Checking Pagespeed programmatically
+* Jekyll recipe markup
+
+* Write a SSL health checker
+
+* A bot that reports daily on the number of commits made to your team repos
+
+Front and Back .. match frontend devs with backend devs?
+
+
+https://www.creativebloq.com/features/6-ways-to-get-into-creative-coding
+
+
+Home                /                   Introduction
+Blog                /blog               Archive of posts
+Projects            /projects           Overview of pet projects
+Project detail      /projects/:slug     Overview of pet projects
+Builds              /builds             Overview of Builds
+Build detail        /builds/:slug       Overview of Builds
+About               /about              About
+
+
+
+
+Load balanced sessions craft
+
+Elementquerycache
+
+
+font-display
+https://developers.google.com/web/updates/2016/02/font-display?utm_source=lighthouse&utm_medium=devtools
+https://www.zachleat.com/web/google-fonts-display/
+
+
+
+https://jekyll-pug.dougie.io/
+
+https://sentry.io/branding/
+
+https://github.com/bda-research/node-crawler/issues?utf8=%E2%9C%93&q=urls
+
+crawl
+check page (up to x)
+broken link checker
+favicon
+screenshots
+
+https://treo.sh/pricing
+
+Domain:
+- SSL Status (health + expiration)
+- www vs non-www
+- Is https forced?
+- robots.txt present
+- sitemap found?
+- favicon found
+- Are there 404s? (intern or external)
+- pagespeed
+Additional:
+    - Amount of urls
+    - List all urls found
+
+Create account
+
+
+https://github.com/brendonboshell/supercrawler
+https://ohdear.app/tools
+https://www.npmjs.com/package/get-ssl-certificate
+
+
+buy me a coffee https://www.buymeacoffee.com/ukuleleabe
+https://help.buymeacoffee.com/en/articles/3417581-our-values
+
+
+Sentry opruimen
+Sentry analyzeren
+
+Repos inhoudelijk checken
+- Code
+- Deployments
+- PSR-2 / ESLint
+- Branches
+
+How to's schrijven en bijhouden

@@ -68,7 +68,7 @@
             <a href="/blog" class="inline-block mr-5 text-gray-600 hover:text-red-500">Blog</a>
             <a href="/archive" class="inline-block mr-5 text-gray-600 hover:text-red-500">Archive</a>
             <a href="/setup" class="inline-block mr-5 text-gray-600 hover:text-red-500">Setup</a>
-            <a href="/contacts" class="inline-block mr-5 text-gray-600 hover:text-red-500">Contact</a>
+            <a href="/contact" class="inline-block mr-5 text-gray-600 hover:text-red-500">Contact</a>
             <a href="https://twitter.com/hyra" rel="noopener" target="_blank" class="inline-block mr-5 text-gray-600 hover:text-red-500">Twitter</a>
             <a href="https://github.com/hyra" rel="noopener" target="_blank" class="inline-block mr-5 text-gray-600 hover:text-red-500">Github</a>
           </nav>

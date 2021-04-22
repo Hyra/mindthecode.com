@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', function (Sheets $sheets) {
-    $articles = $sheets->collection('posts')->all()->reverse()->take(5);
+    $articles = $sheets->collection('posts')->all()->reverse();
     return view('blog', ['articles' => $articles]);
 });
 

@@ -1,35 +1,27 @@
 @extends('layouts.default')
 
 @section('content')
+
 <div id="progress" class="h-1 z-20 -inset-0 w-full fixed" style="background:linear-gradient(to right, #fa7369 var(--scroll), transparent 0);"></div>
 
-<div class="max-w-2xl">
+<article class="prose prose-xl mx-auto mb-auto">
 
-<article class="mx-auto">
+    <small class="text-base font-normal">{{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }}</small>
+    <h1 class="mb-0 leading-tight tracking-tight"><span class="font-extralights">{!! $article->title !!}</span></h1>
 
-    <div class="text-lg">
-        <div class="text-gray-600 uppercase font-semibold text-xs tracking-wide">
-            {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} 
-        </div>
-        <h1 class="text-3xl font-extrabold text-black leading-tight mt-1 mb-6">{!! $article->title !!}</h1>
-        <hr class="border-t border-gray-200">
-        <div class="prose mt-6 prose-md">
-        {{-- <img src="https://www.rias.be/assets/cats/one.jpg" class="h-60 w-full object-cover" /> --}}
-        {!! $article->contents !!}
-        </div>
-    </div>
+    {!! $article->contents !!}
 
     <hr class="border-t border-gray-200 my-5">
 
     <h2 class="text-xl font-extrabold text-black mb-4">Leave a comment</h2>
 
     <script src="https://utteranc.es/client.js"
-    repo="hyra/mindthecode.com"
-    issue-term="pathname"
-    label="comment"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
+        repo="hyra/mindthecode.com"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
     </script>
 
 </article>

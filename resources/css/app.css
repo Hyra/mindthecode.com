@@ -38,6 +38,14 @@ body {
     }
 
     /* background: url(/pattern_mtc.jpg) repeat; */
+    h1::before {
+        width: calc(25% - 24px);
+        display: block;
+        margin-bottom: 8px;
+        background-color: #fa7369;
+        height: 4px;
+        content: "";
+    }
 
     h1,
     h2,
@@ -70,6 +78,10 @@ body {
                 @apply text-red-400;
                 /* @pply border-b-0; */
             }
+        }
+
+        #socials a {
+            @apply border-0;
         }
 
         img {

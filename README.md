@@ -1,3 +1,11 @@
+
+
+
+https://blog.imgix.com/2020/10/16/api-deprecation
+https://kinsta.com/blog/
+
+https://zapier.com/apps/microsoft-exchange/integrations
+
 https://rias.be/
 https://rias.be/blog/responsive-art-direction-in-statamic
 

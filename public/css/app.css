@@ -32543,6 +32543,15 @@ body ::selection {
 
 /* background: url(/pattern_mtc.jpg) repeat; */
 
+body h1::before {
+    width: calc(25% - 24px);
+    display: block;
+    margin-bottom: 8px;
+    background-color: #fa7369;
+    height: 4px;
+    content: "";
+  }
+
 body h1,
     body h2,
     body h3,
@@ -32586,6 +32595,10 @@ body .prose a:hover {
         color: rgba(248, 113, 113, var(--tw-text-opacity));
         /* @pply border-b-0; */
       }
+
+body .prose #socials a {
+      border-width: 0px;
+    }
 
 body .prose img {
       margin: auto;

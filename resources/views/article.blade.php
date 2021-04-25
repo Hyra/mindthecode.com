@@ -50,7 +50,7 @@
             </article>
         </div>
         <aside class="w-2/6 hidden md:block">
-            <div class="mb-10">
+            <div class="mb-10 hidden">
                 <h3 class="font-semibold text-lg mb-2">Subscribe</h3>
                 Stay up to date with our blog for the latest imgix news, features, and posts.
                 <form action="">

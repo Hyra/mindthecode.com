@@ -6,24 +6,24 @@
 
 <div class="px-2 sm:px-6 lg:px-8 mt-24">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex gap-24">
-        <div class="w-4/6">
+        <div class="w:6/6 md:w-4/6">
             <article class="prose prose-xl mx-auto mb-auto">
 
                 <h1 class="mb-0 leading-tight tracking-tight"><span class="font-extralights">{!! $article->title !!}</span></h1>
 
                 <div class="flex items-center justify-center">
                     <div class="flex-1">
-                        <small class="text-base font-light">{{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }}</small>
+                        <small class="text-base font-light">Posted {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }}</small>
                     </div>
                     <div class="flex list-none" id="socials">
-                        <a href="https://facebook.com/sharer.php?u=https://blog.imgix.com/2020/10/16/api-deprecation" target="_blank" rel="nofollow">
-                            <img class="h-10" src="https://assets.imgix.net/blog/social-icons.ai?dpr=3&amp;page=1&amp;fm=png8&amp;bg=fff&amp;cs=strip">
+                        <a href="https://facebook.com/sharer.php?u=https://mindthecode.com/blog/{{ $article->slug }}" target="_blank" rel="nofollow">
+                            <img class="h-10" src="/images/socials/facebook.png">
                         </a>
-                        <a href="https://twitter.com/intent/tweet?text=Deprecation of Legacy API: New API Keys Bring Improved Functionality&amp;url=https://blog.imgix.com/2020/10/16/api-deprecation&amp;via=imgix&amp;related=imgix" class="share-item twitter" target="_blank" rel="nofollow">
-                            <img class="h-10" src="https://assets.imgix.net/blog/social-icons.ai?dpr=3&amp;page=2&amp;fm=png8&amp;bg=fff&amp;cs=strip">
+                        <a href="https://twitter.com/intent/tweet?text={{ $article->title }}&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;via=mindthecode&amp;related=mindthecode" class="share-item twitter" target="_blank" rel="nofollow">
+                            <img class="h-10" src="/images/socials/twitter.png">
                         </a>
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;summary=imgix has launched a new API and will be deprecating legacy API keys.&amp;source=imgix" target="_blank" rel="nofollow">
-                            <img class="h-10" src="https://assets.imgix.net/blog/social-icons.ai?dpr=3&amp;page=3&amp;fm=png8&amp;bg=fff&amp;cs=strip">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;summary={{ $article->title }}&amp;source=mindthecode" target="_blank" rel="nofollow">
+                            <img class="h-10" src="/images/socials/linkedin.png">
                         </a>
                     </div>
                 </div>
@@ -49,23 +49,37 @@
 
             </article>
         </div>
-        <div class="w-2/6">
-
-            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553J&placement=mindthecode" id="_carbonads_js"></script>
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias, porro ab suscipit reiciendis non assumenda animi sed? Necessitatibus tempore velit eos deleniti alias esse unde commodi beatae perspiciatis quibusdam.
+        <aside class="w-2/6 hidden md:block">
+            <div class="mb-10">
+                <h3 class="font-semibold text-lg mb-2">Subscribe</h3>
+                Stay up to date with our blog for the latest imgix news, features, and posts.
+                <form action="">
+                    <input type="text">
+                </form>
+            </div>
+            <div class="mb-10">
+                <h3 class="font-semibold text-lg mb-2">Advert</h3>
+                <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553J&placement=mindthecode" id="_carbonads_js"></script>
+            </div>
+            <div class="mb-10">
+                <h3 class="font-semibold text-lg mb-2">Recent posts</h3>
+                @foreach($recentArticles as $recentArticle)
+                <a href="/blog/{{ $recentArticle->slug }}">
+                    <div class="font-semibold text-base hover:text-red-400">{{ $recentArticle->title }}</div>
+                    <div class="font-base mb-5 text-base">{{ $recentArticle->description }}</div>
+                </a>
+                @endforeach
+            </div>
+            <div class="mb-10">
+                <h3 class="font-semibold text-lg mb-2">Other posts</h3>
+                @foreach($randomArticles as $randomArticle)
+                <a href="/blog/{{ $recentArticle->slug }}">
+                    <div class="font-semibold text-base hover:text-red-400">{{ $randomArticle->title }}</div>
+                    <div class="font-base mb-5 text-base">{{ $randomArticle->description }}</div>
+                </a>
+                @endforeach
+            </div>
+        </aside>
         </div>
     </div>
 </div>

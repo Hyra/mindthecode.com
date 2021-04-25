@@ -32552,6 +32552,17 @@ body h1::before {
     content: "";
   }
 
+/* background: url(/pattern_mtc.jpg) repeat; */
+
+body aside h3::before {
+    width: calc(25% - 24px);
+    display: block;
+    margin-bottom: 4px;
+    background-color: #fa7369;
+    height: 2px;
+    content: "";
+  }
+
 body h1,
     body h2,
     body h3,

@@ -1,4 +1,5 @@
-
+Wavey footer:
+https://stillat.com/blog/2018/04/22/laravel-5-collections-retrieving-random-collection-elements-with-random
 
 
 https://blog.imgix.com/2020/10/16/api-deprecation

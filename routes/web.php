@@ -70,7 +70,15 @@ Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
     $blogArticleData->articleBody($article->contents);
     $blogArticleData->author($author);
 
-    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData]);
+    // Reent articles
+    $recentArticles = $sheets->collection('posts')->all();
+    $recentArticles = collect($recentArticles)->reverse()->take(3);
+
+    // Random articles
+    $randomArticles = $sheets->collection('posts')->all();
+    $randomArticles = collect($randomArticles)->random(3);
+
+    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles, 'recentArticles' => $recentArticles]);
 })->name('articles.show');
 
 Route::get('/setup', function () {

@@ -126,13 +126,12 @@
         }
         #carbonads {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+            /* position: fixed; */
+            /* bottom: 20px; */
+            /* right: 20px; */
         }
         #carbonads {
-            display: flex;
-            max-width: 330px;
+            display: block;
             background-color: hsl(0, 0%, 98%);
             box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
             z-index: 100;

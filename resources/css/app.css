@@ -47,6 +47,16 @@ body {
         content: "";
     }
 
+    /* background: url(/pattern_mtc.jpg) repeat; */
+    aside h3::before {
+        width: calc(25% - 24px);
+        display: block;
+        margin-bottom: 4px;
+        background-color: #fa7369;
+        height: 2px;
+        content: "";
+    }
+
     h1,
     h2,
     h3,

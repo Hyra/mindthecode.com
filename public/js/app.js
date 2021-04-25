@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-(0,medium_zoom__WEBPACK_IMPORTED_MODULE_0__.default)(document.querySelectorAll('.prose img'), {
+(0,medium_zoom__WEBPACK_IMPORTED_MODULE_0__.default)(document.querySelectorAll('.prose img:not(.share-item img)'), {
   margin: 24,
   background: 'rgb(33, 37, 48)'
 });

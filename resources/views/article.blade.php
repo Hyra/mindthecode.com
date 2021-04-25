@@ -16,13 +16,13 @@
                         <small class="text-base font-light">Posted {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }}</small>
                     </div>
                     <div class="flex list-none" id="socials">
-                        <a href="https://facebook.com/sharer.php?u=https://mindthecode.com/blog/{{ $article->slug }}" target="_blank" rel="nofollow">
+                        <a href="https://facebook.com/sharer.php?u=https://mindthecode.com/blog/{{ $article->slug }}" class="share-item" target="_blank" rel="nofollow">
                             <img class="h-10" src="/images/socials/facebook.png">
                         </a>
-                        <a href="https://twitter.com/intent/tweet?text={{ $article->title }}&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;via=mindthecode&amp;related=mindthecode" class="share-item twitter" target="_blank" rel="nofollow">
+                        <a href="https://twitter.com/intent/tweet?text={{ $article->title }}&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;via=mindthecode&amp;related=mindthecode" class="share-item" target="_blank" rel="nofollow">
                             <img class="h-10" src="/images/socials/twitter.png">
                         </a>
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;summary={{ $article->title }}&amp;source=mindthecode" target="_blank" rel="nofollow">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;summary={{ $article->title }}&amp;source=mindthecode" class="share-item" target="_blank" rel="nofollow">
                             <img class="h-10" src="/images/socials/linkedin.png">
                         </a>
                     </div>
@@ -96,7 +96,7 @@
     <meta property="og:description" content="{{ $article->description }}">
     <meta property="og:url" content="https://mindthecode.com/{{ $article->slug }}">
     <meta property="og:site_name" content="Mindthecode.com">
-    <meta property="og:image" content="{{ $article->image }}">
+    <meta property="og:image" content="https://mindthecode.com/{{ $article->image ?? 'fb_share.jpg' }}">
     <meta property="twitter:description" content="{{ $article->description }}">
     <meta property="twitter:title" content="{{ $article->title }}">
 @stop

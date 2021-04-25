@@ -94,7 +94,7 @@
     <meta property="og:title" content="{{ $article->title }}">
     <meta property="og:type" content="website">
     <meta property="og:description" content="{{ $article->description }}">
-    <meta property="og:url" content="https://mindthecode.com/{{ $article->slug }}">
+    <meta property="og:url" content="https://mindthecode.com/blog/{{ $article->slug }}">
     <meta property="og:site_name" content="Mindthecode.com">
     <meta property="og:image" content="https://mindthecode.com/{{ $article->image ?? 'fb_share.jpg' }}">
     <meta property="twitter:description" content="{{ $article->description }}">

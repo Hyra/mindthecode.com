@@ -23,17 +23,14 @@ module.exports = {
         typography: {
             'xl': {
               css: {
-                // fontSize: '1.875rem',
                 h1: {
                   fontSize: '3rem',
                 },
                 h2: {
-                //   fontSize: '1.8rem',
                   fontFamily: 'Open Sans Condensed',
                   letterSpacing: '-0.5px',
                   marginBottom: '0.3em'
                 },
-                // ...
               },
             },
           },

@@ -3,27 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Feed\Feedable;
-use Spatie\Feed\FeedItem;
+use Spatie\Sluggable\HasSlug;
 
-class Article extends Model implements Feedable
+class Article extends Model
 {
-    use HasFactory;
+    use HasSlug;
 
-    public function toFeedItem(): FeedItem
+    public function getSlugOptions(): SlugOptions
     {
-        return FeedItem::create()
-            ->id($this->id)
-            ->title($this->title)
-            ->summary($this->summary_html ?? '')
-            ->updated($this->updated_at)
-            ->link($this->slug)
-            ->author('Stef van den Ham (Hyra)');
-    }
-
-    public static function getFeedItems()
-    {
-        return Article::all();
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
+        // ->doNotGenerateSlugsOnUpdate();
     }
 }

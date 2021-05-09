@@ -123,6 +123,11 @@ body {
     @apply text-sm;
 }
 
+.prose-xl pre {
+    @apply border;
+    @apply border-gray-800;
+}
+
 pre {
     overflow: hidden;
     margin-top: 1.5rem;

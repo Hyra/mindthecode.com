@@ -12,7 +12,7 @@
         <div class="flex items-center justify-center">
             <div class="flex-1">
                 <small class="text-blue-300 text-base font-light">
-                    Posted {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", $article->contents)) / 200) }} min read
+                    Posted {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($article->body_md))) / 200) }} min read
                 </small>
             </div>
             <div class="flex list-none" id="socials">
@@ -32,11 +32,32 @@
             <img src="https://www.indiewire.com/wp-content/uploads/2020/05/Rick-and-Morty-Season-4-Episode-7.png?w=780" alt="">
         </div>
 
-        {!! $article->contents !!}
+        {!! Markdown::convertToHtml($article->body_md) !!}
 
     </article>
 
+    <div class="my-16 border-b border-gray-800"></div>
 
+    <div class="prose">
+        <h3>More posts</h3>
+        @foreach ($randomArticles as $randomArticle)
+        <div>
+            <div class="text-gray-300 font-semibold list-header">
+                <a href="{{ Route('articles.show', $randomArticle->slug) }}">{{$randomArticle->title}}</a>
+            </div>
+            <small class="text-blue-200 text-sm">
+                {{ \Carbon\Carbon::parse($randomArticle->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($randomArticle->body_md))) / 200) }} min read
+            </small>
+            <div class="font-extralight text-gray-200">{!! $randomArticle->description !!}</div>
+            <div class="flex flex-col items-end">
+                <div>
+                    <a href="{{ Route('articles.show', $randomArticle->slug) }}" class="text-white text-sm hover:text-red-400">Continue reading</a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+
+    </div>
     <br>
     <br>
     <br>

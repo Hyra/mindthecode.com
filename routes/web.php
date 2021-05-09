@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Mail\Markdown;
+use App\Models\Article;
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\Route;
 use Spatie\SchemaOrg\Schema;
 use Spatie\Sheets\Sheets;
@@ -17,13 +18,37 @@ use Spatie\Sheets\Sheets;
 */
 
 Route::get('/', function (Sheets $sheets) {
-    $articles = $sheets->collection('posts')->all()->take(3)->reverse();
+    // $articles = $sheets->collection('posts')->all()->take(3)->reverse();
+    $articles = Article::orderBy('published_at', 'DESC')->take(5)->get();
     return view('home', ['articles' => $articles]);
 });
 
-Route::get('/blog', function (Sheets $sheets) {
-    $articles = $sheets->collection('posts')->all()->reverse();
-    return view('blog', ['articles' => $articles]);
+Route::get('/blog', function (int $pageNr = 1, Sheets $sheets) {
+    $perPage = 6;
+
+    $articles = Article::orderBy('published_at', 'DESC')->skip(($pageNr - 1) * $perPage)->take($perPage)->get();
+    $totalCount = Article::count();
+
+    return view('blog', [
+        'articles' => $articles,
+        'currentPage' => $pageNr,
+        'perPage' => $perPage,
+        'totalPages' => $totalCount / $perPage,
+    ]);
+});
+
+Route::get('/blog/page/{pageNr?}', function (int $pageNr = 1, Sheets $sheets) {
+    $perPage = 6;
+
+    $articles = Article::orderBy('published_at', 'DESC')->skip(($pageNr - 1) * $perPage)->take($perPage)->get();
+    $totalCount = Article::count();
+
+    return view('blog', [
+        'articles' => $articles,
+        'currentPage' => $pageNr,
+        'perPage' => $perPage,
+        'totalPages' => $totalCount / $perPage,
+    ]);
 });
 
 Route::get('/archive', function (Sheets $sheets) {
@@ -33,22 +58,24 @@ Route::get('/archive', function (Sheets $sheets) {
 
 Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
 
-    $article = $sheets->collection('posts')->all()->first(function ($item) use ($slug) {
-        return $item->slug === $slug;
-    });
+    $article = Article::where('slug', $slug)->first();
 
-    if (!$article) {
-        $redirect = $sheets->collection('posts')->all()->first(function ($item) use ($slug) {
-            if (isset($item->aliases)) {
-                if (in_array($slug, $item->aliases)) {
-                    return $item->slug;
-                }
-            }
-        });
-        if ($redirect) {
-            return redirect('/blog/' . $redirect->slug);
-        }
-    }
+    // $article = $sheets->collection('posts')->all()->first(function ($item) use ($slug) {
+    //     return $item->slug === $slug;
+    // });
+
+    // if (!$article) {
+    //     $redirect = $sheets->collection('posts')->all()->first(function ($item) use ($slug) {
+    //         if (isset($item->aliases)) {
+    //             if (in_array($slug, $item->aliases)) {
+    //                 return $item->slug;
+    //             }
+    //         }
+    //     });
+    //     if ($redirect) {
+    //         return redirect('/blog/' . $redirect->slug);
+    //     }
+    // }
 
     $author = Schema::person()
         ->name('Stef van den Ham')
@@ -57,7 +84,7 @@ Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
     $blogArticleData = Schema::blogPosting();
     $blogArticleData->mainEntityOfPage("https://mindthecode.com/");
     $blogArticleData->headline($article->title);
-    $blogArticleData->description($article->description);
+    $blogArticleData->description(Markdown::convertToHtml($article->description));
     $blogArticleData->image('https://mindthecode.com/' . $article->image);
     $blogArticleData->url('https://mindthecode.com/' . $slug);
     $blogArticleData->editor('Stef van den Ham');
@@ -65,30 +92,27 @@ Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
     // $blogArticleData->datePublished($article->published_at);
     // $blogArticleData->dateCreated($article->created_at);
     // $blogArticleData->dateModified($article->updated_at);
-    $blogArticleData->datePublished(\Carbon\Carbon::parse($article->date));
-    $blogArticleData->dateCreated(\Carbon\Carbon::parse($article->date));
-    $blogArticleData->dateModified(\Carbon\Carbon::parse($article->date));
-    $blogArticleData->articleBody($article->contents);
+    $blogArticleData->datePublished(\Carbon\Carbon::parse($article->published_at));
+    $blogArticleData->dateCreated(\Carbon\Carbon::parse($article->published_at));
+    $blogArticleData->dateModified(\Carbon\Carbon::parse($article->published_at));
+    $blogArticleData->articleBody(Markdown::convertToHtml($article->body_md));
     $blogArticleData->author($author);
-
-    // Reent articles
-    $recentArticles = $sheets->collection('posts')->all();
-    $recentArticles = collect($recentArticles)->reverse()->take(3);
 
     // Random articles
     $randomArticles = $sheets->collection('posts')->all();
     $randomArticles = collect($randomArticles)->random(3);
+    $randomArticles = Article::inRandomOrder()->take(3)->get();
 
-    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles, 'recentArticles' => $recentArticles]);
+    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles]);
 })->name('articles.show');
 
 Route::get('/setup', function () {
-    $content = Markdown::parse(implode('', file(resource_path('content/setup.md'))));
+    $content = implode('', file(resource_path('content/setup.md')));
     return view('setup', ['content' => $content]);
 });
 
 Route::get('/contact', function () {
-    $content = Markdown::parse(implode('', file(resource_path('content/contact.md'))));
+    $content = implode('', file(resource_path('content/contact.md')));
     return view('contact', ['content' => $content]);
 });
 

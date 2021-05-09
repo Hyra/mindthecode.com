@@ -10,32 +10,7 @@
         <p>During the day I work as CTO at <a href="https://noprotocol.nl">NoProtocol</a> where we build complete solutions for ambitious clients.</p>
         <p>On this blog I write about my findings, struggles and solutions I encounter during my development experiences. Both during developing and managing the process in a team.</p>
     </div>
-    <div class="mt-16 border-b border-gray-800"></div>
-</div>
-
-<div class="mx-auto max-w-2xl mt-10">
-    <div class="prose prose-xl">
-        <h2>Recent articles</h2>
-        <br>
-        <div class="space-y-10 prose prose-xl">
-        @foreach ($articles as $article)
-            <div>
-                <div class="text-gray-300 font-semibold list-header">
-                    <a href="{{ Route('articles.show', $article->slug) }}">{{$article->title}}</a>
-                </div>
-                <small class="text-blue-200 text-sm">
-                    {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", $article->contents)) / 200) }} min read
-                </small>
-                <div class="font-extralight text-gray-200">{{$article->description}}</div>
-                <div class="flex flex-col items-end">
-                    <div>
-                        <a href="{{ Route('articles.show', $article->slug) }}" class="text-white text-lg hover:text-red-400">Continue reading</a>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        </div>
-    </div>
+    {{-- <div class="mt-16 border-b border-gray-800"></div> --}}
 </div>
 
 <br>

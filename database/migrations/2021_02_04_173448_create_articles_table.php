@@ -17,10 +17,9 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->index();
+            $table->text('description');
             $table->text('body_md');
-            $table->text('summary_md');
-            $table->text('body_html')->nullable();
-            $table->text('summary_html')->nullable();
+            $table->string('image');
             $table->dateTime('published_at')->nullable();
             $table->boolean('online')->default(false);
             $table->timestamps();

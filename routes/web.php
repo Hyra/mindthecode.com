@@ -99,8 +99,6 @@ Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
     $blogArticleData->author($author);
 
     // Random articles
-    $randomArticles = $sheets->collection('posts')->all();
-    $randomArticles = collect($randomArticles)->random(3);
     $randomArticles = Article::inRandomOrder()->take(3)->get();
 
     return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles]);
@@ -116,4 +114,6 @@ Route::get('/contact', function () {
     return view('contact', ['content' => $content]);
 });
 
-SitemapGenerator::create('https://mindthecode.com')->writeToFile('sitemap.xml');
+Route::feeds();
+
+SitemapGenerator::create('https://mindthecode.com')->writeToFile('public/sitemap.xml');

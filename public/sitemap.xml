@@ -2,289 +2,289 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://mindthecode.com/</loc>
-        <lastmod>2021-05-09T17:43:02+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:21+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog</loc>
-        <lastmod>2021-05-09T17:43:02+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:21+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/a-more-colourful-cat-in-your-shell</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/blogging-with-cabinjs-and-grunt</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/blogging-with-octopress</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/customize-the-terminal</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/customize-the-terminal/</loc>
-        <lastmod>2021-05-09T17:43:05+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/developer-adventure-a-quest-to-find-a-large-dataset-of-beers</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/exploring-the-wonderous-world-of-image-processing</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/format-associative-json-to-work-with-knockout-js</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/getting-started-with-the-panresponder-in-react-native</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/getting-used-to-vim</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/getting-your-react-native-app-on-an-ios-device</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/good-times-with-watchr-coffeescript-and-less</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/how-to-handle-multiple-domains-with-cakephp</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/how-to-redirect-www-traffic-to-non-www-in-your-express-app</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/how-to-remove-a-submodule-from-your-git-repository</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/how-to-use-environment-variables-in-your-angular-application</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/httpie-a-command-line-http-client</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/i-made-a-tool-to-track-your-whole-sites-pagespeed</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/installing-phpunit-manually-for-cakephp-20</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/launching-a-webservice-defining-your-mvp</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/lets-build-an-angularjs-app-with-browserify-and-gulp</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/lets-build-an-angularjs-app-with-browserify-and-gulp/</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/loading-external-files-in-php-the-better-way</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/phpunit-installer-updated-to-3-6-4</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/react-storybook</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/recording-a-website-with-phantomjs-and-ffmpeg</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/setting-up-cakephp-with-mamp-pro-on-mac-osx</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/setting-up-laravel-with-docker-compose</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/sorting-tags-in-jekyll</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/spotify-boilerplate-app</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/spotify-preview-build-expired</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/the-best-boilerplate-app-is-the-one-you-code-yourself</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/updated-less-component-for-cakephp</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/updated-the-phpunit-cakephp-installer</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/use-gzip-with-php</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/using-less-in-cakephp</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/using-markdown-in-cakephp</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/using-sass-in-your-next-cakephp-project</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/using-sessions-in-phpunit-tests-with-cakephp</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/using-vue-components-in-your-express-app</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/blog/writing-browserify-modules-for-your-angular-app</loc>
-        <lastmod>2021-05-09T17:43:03+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:22+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/contact</loc>
-        <lastmod>2021-05-09T17:43:02+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:21+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/images/alpr/frank-bold.ttf</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/images/panresponder-target.png</loc>
-        <lastmod>2021-05-09T17:43:04+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/images/screenshots/custom-terminal.png</loc>
-        <lastmod>2021-05-09T17:43:06+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:23+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mindthecode.com/setup</loc>
-        <lastmod>2021-05-09T17:43:02+00:00</lastmod>
+        <lastmod>2021-05-09T18:12:21+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>

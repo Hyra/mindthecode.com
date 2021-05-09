@@ -19,7 +19,7 @@ return [
             'url' => '/feed',
 
             'title' => 'Mindthecode Feed',
-            'description' => 'All Mindthecode.com articles.',
+            'description' => 'All Mindthecode.com articles',
             'language' => 'en-US',
 
             /*

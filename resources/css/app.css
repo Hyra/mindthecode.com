@@ -89,6 +89,7 @@ body {
             background-color: rgba(0, 0, 0, 0.2);
             @apply border-l-4;
             @apply border-blue-300;
+            @apply rounded-r;
             padding: 1px 10px 1px 20px;
             @apply text-lg;
             @apply text-gray-300;

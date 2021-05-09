@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Article;
+use App\Models\Redirect;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\Route;
 use Spatie\SchemaOrg\Schema;
@@ -58,7 +59,7 @@ Route::get('/archive', function (Sheets $sheets) {
 
 Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
 
-    $article = Article::where('slug', $slug)->first();
+    $article = Article::where('slug', $slug)->firstOrFail();
 
     // $article = $sheets->collection('posts')->all()->first(function ($item) use ($slug) {
     //     return $item->slug === $slug;

@@ -33,7 +33,7 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex-shrink-0 flex items-center">
-                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="150" style="transfsorm: translatey(-15px); animsation: float 8s ease-in-out infinite;" /></a>
+                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="180" style="transfsorm: translatey(-15px); animsation: float 8s ease-in-out infinite;" /></a>
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

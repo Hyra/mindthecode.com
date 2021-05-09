@@ -2956,16 +2956,16 @@
         },
         {
             "name": "spatie/laravel-sitemap",
-            "version": "5.9.1",
+            "version": "5.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sitemap.git",
-                "reference": "4d9ba07fe006bfacc1ccfe1b603995a247da71d0"
+                "reference": "df5c3db511e08a8e64a3d7e28613ab018a99e95d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/4d9ba07fe006bfacc1ccfe1b603995a247da71d0",
-                "reference": "4d9ba07fe006bfacc1ccfe1b603995a247da71d0",
+                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/df5c3db511e08a8e64a3d7e28613ab018a99e95d",
+                "reference": "df5c3db511e08a8e64a3d7e28613ab018a99e95d",
                 "shasum": ""
             },
             "require": {
@@ -2973,7 +2973,7 @@
                 "illuminate/support": "^8.0",
                 "nesbot/carbon": "^2.0",
                 "php": "^7.4|^8.0",
-                "spatie/crawler": "^5.0",
+                "spatie/crawler": "^5.0|^6.0",
                 "symfony/dom-crawler": "^5.1.14"
             },
             "require-dev": {
@@ -3016,7 +3016,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-sitemap/issues",
-                "source": "https://github.com/spatie/laravel-sitemap/tree/5.9.1"
+                "source": "https://github.com/spatie/laravel-sitemap/tree/5.9.2"
             },
             "funding": [
                 {
@@ -3024,7 +3024,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-12-01T21:18:41+00:00"
+            "time": "2021-03-04T22:57:48+00:00"
         },
         {
             "name": "spatie/laravel-sluggable",

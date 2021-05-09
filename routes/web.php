@@ -1,11 +1,10 @@
 <?php
 
 use App\Models\Article;
-use App\Models\Redirect;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\Route;
 use Spatie\SchemaOrg\Schema;
-use Spatie\Sheets\Sheets;
+use Spatie\Sitemap\SitemapGenerator;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,4 +116,4 @@ Route::get('/contact', function () {
     return view('contact', ['content' => $content]);
 });
 
-Route::feeds();
+SitemapGenerator::create('https://mindthecode.com')->writeToFile('sitemap.xml');

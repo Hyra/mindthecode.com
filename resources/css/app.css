@@ -63,18 +63,35 @@ body {
         @apply font-sans;
     }
 
+    .prose .list-header a {
+        @apply border-b-0;
+    }
+
     .prose {
         a {
             text-decoration: none;
-            @apply border-b-2;
-            @apply border-gray-300;
             @apply font-semibold;
-            @apply px-1;
+            @apply border-red-400;
+            /* @apply border-dashed; */
+            @apply border-b-2;
 
             &:hover {
-                @apply text-red-400;
-                /* @pply border-b-0; */
+                @apply text-blue-300;
+                @apply border-b-0;
             }
+        }
+
+        strong {
+            @apply text-white;
+        }
+
+        blockquote {
+            background-color: rgba(0, 0, 0, 0.2);
+            @apply border-l-4;
+            @apply border-blue-300;
+            padding: 1px 10px 1px 20px;
+            @apply text-lg;
+            @apply text-gray-300;
         }
 
         #socials a {
@@ -87,16 +104,14 @@ body {
 
         code:not(pre code) {
             @apply text-sm;
-            background: #fbf9c9;
-            padding: 2px 4px;
-            @apply shadow-sm;
+            @apply font-light;
             @apply rounded;
-            font-weight: 100;
+            background: #29323d;
+            /* color: #bcc6d2; */
+            @apply text-blue-300;
+            padding: 5px 5px;
 
-            &::before {
-                content: "";
-            }
-
+            &::before,
             &::after {
                 content: "";
             }

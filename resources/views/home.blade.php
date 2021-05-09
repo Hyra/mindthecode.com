@@ -2,24 +2,46 @@
 
 @section('content')
 
-<div class="px-2 sm:px-6 lg:px-8 mt-24">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-2xl mt-20 px-5 md:px-0">
+    <div class="prose prose-xl">
+        <h1 class="font-xl font-bold leading-tight">Heya, I'm Stef 👋🏻</h1>
+        <p>Online known as <a href="https://twitter.com/hyra">@hyra</a>, I'm an entrepeneur, web-developer, tooling enthusiast, martial artist and experienced procrastinator from Amsterdam.</p>
+        <p>I enjoy building useful and useless applications in <a href="https://nodejs.org/en/">Node</a>, <a href="https://vuejs.org/">VueJS</a>, <a href="https://laravel.com/docs/8.x">Laravel</a> or bash. Recently picked up <a href="https://golang.org/">Golang</a> as well.<p>
+        <p>During the day I work as CTO at <a href="https://noprotocol.nl">NoProtocol</a> where we build complete solutions for ambitious clients.</p>
+        <p>On this blog I write about my findings, struggles and solutions I encounter during my development experiences. Both during developing and managing the process in a team.</p>
+    </div>
+    <div class="mt-16 border-b border-gray-800"></div>
+</div>
 
-        <header class="mb-4 flex items-center justify-between">
-            <div class="prose prose-xl">
-                <h1 class="font-xl font-bold leading-tight text-gray-900">Heya 👋</h1>
-                <p>I'm <a href="https://twitter.com/hyra" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">@hyra</a>, entrepeneur, web-developer, tooling enthusiast, martial artist and experienced procrastinator from Amsterdam.</p>
-                <p>I enjoy building useful and useless applications in <a href="https://nodejs.org/en/" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">Node</a>, <a href="https://vuejs.org/" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">VueJS</a>, <a href="https://laravel.com/docs/8.x" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">Laravel</a> or bash. Recently picked up <a href="https://golang.org/" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">Golang</a> as well.<p>
-                <p>During the day I work as CTO at <a href="https://noprotocol.nl" class="border-b-2 border-gray-300 font-bold px-1 hover:border-b-0">NoProtocol</a> where we build complete solutions for ambitious clients.</p>
-                <p>On this blog I write about my findings, struggles and solutions I encounter during my development experiences. Both during developing and managing the process in a team.</p>
+<div class="mx-auto max-w-2xl mt-10">
+    <div class="prose prose-xl">
+        <h2>Recent articles</h2>
+        <br>
+        <div class="space-y-10 prose prose-xl">
+        @foreach ($articles as $article)
+            <div>
+                <div class="text-gray-300 font-semibold list-header">
+                    <a href="{{ Route('articles.show', $article->slug) }}">{{$article->title}}</a>
+                </div>
+                <small class="text-blue-200 text-sm">
+                    {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", $article->contents)) / 200) }} min read
+                </small>
+                <div class="font-extralight text-gray-200">{{$article->description}}</div>
+                <div class="flex flex-col items-end">
+                    <div>
+                        <a href="{{ Route('articles.show', $article->slug) }}" class="text-white text-lg hover:text-red-400">Continue reading</a>
+                    </div>
+                </div>
             </div>
-            <div class="hidden lg:block flex-shrink-0 mx-auto">
-                <img class="rounded-full h-72 w-72" src="https://scontent-ams4-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/152503070_282300290057607_8928206356552139433_n.jpg?tp=1&_nc_ht=scontent-ams4-1.cdninstagram.com&_nc_cat=103&_nc_ohc=aKYTv2vg5soAX_GWGxm&edm=AP_V10EAAAAA&ccb=7-4&oh=24a2dab83ea645a7e4c773f2ed8d1b85&oe=60991F25&_nc_sid=4f375e">
-            </div>
-        </header>
-
+        @endforeach
+        </div>
     </div>
 </div>
+
+<br>
+<br>
+<br>
+
 @stop
 
 @section('og')

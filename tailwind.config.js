@@ -4,7 +4,7 @@ module.exports = {
     './resources/**/*.js',
     './resources/**/*.vue',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     screens: {
         'sm': '640px',
@@ -21,13 +21,38 @@ module.exports = {
             'mono': '"Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;'
         },
         typography: {
+            DEFAULT: {
+                css: {
+                  color: "#bcc6d2",
+                  h1: {
+                    color: '#FFF'
+                  },
+                  h2: {
+                    color: '#FFF'
+                  },
+                  h3: {
+                    color: '#FFF'
+                  },
+                  a: {
+                    color: '#FFF',
+                    '&:hover': {
+                      color: '#fa7369',
+                    },
+                  },
+                },
+            },
             'xl': {
               css: {
                 h1: {
                   fontSize: '3rem',
                 },
                 h2: {
-                  fontFamily: 'Open Sans Condensed',
+                  fontSize: '1.75rem',
+                  letterSpacing: '-0.5px',
+                  marginBottom: '0.3em'
+                },
+                h3: {
+                  fontSize: '1.5rem',
                   letterSpacing: '-0.5px',
                   marginBottom: '0.3em'
                 },

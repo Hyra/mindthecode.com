@@ -15,9 +15,9 @@
     @yield('og')
 </head>
 
-<body class="font-sans text-lg leading-normal text-gray-700 bg-gray-50">
+<body class="font-sans text-lg leading-normal" style="background-color: #1a1f24">
 
-    <nav class="py-5 shadow-lg" style="background-color: #0e2231;" x-data="{ mobileOpen: false }">
+    <nav class="border-b border-gray-800" x-data="{ mobileOpen: false }">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -33,15 +33,15 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex-shrink-0 flex items-center">
-                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="220" height="35" style="transform: translatey(-15px); animation: float 5s ease-in-out infinite;" /></a>
+                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="150" style="transfsorm: translatey(-15px); animsation: float 8s ease-in-out infinite;" /></a>
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
-                        <a href="/blog" class="px-3 py-2 rounded-md text-sm font-medium {{ (request()->is('blog') || request()->is('blog/*')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}" aria-current="page">Blog</a>
-                        <a href="/setup" class="px-3 py-2 rounded-md text-sm font-medium {{ request()->is('setup') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">Setup</a>
-                        <a href="/contact" class="px-3 py-2 rounded-md text-sm font-medium {{ request()->is('cont') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">Contact</a>
+                        <a href="/blog" class="px-3 py-2 rounded-md text-sm font-medium {{ (request()->is('blog') || request()->is('blog/*')) ? 'text-white' : 'text-gray-400 hover:bg-gray-700 hover:text-white' }}" aria-current="page">Blog</a>
+                        <a href="/setup" class="px-3 py-2 rounded-md text-sm font-medium {{ request()->is('setup') ? 'text-white' : 'text-gray-400 hover:bg-gray-700 hover:text-white' }}">Setup</a>
+                        <a href="/contact" class="px-3 py-2 rounded-md text-sm font-medium {{ request()->is('contact') ? 'text-white' : 'text-gray-400 hover:bg-gray-700 hover:text-white' }}">Contact</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
 
         <div class="sm:hidden" id="mobile-menu" x-show="mobileOpen">
           <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="/blog" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Blog</a>
+            <a href="/blog" class=" text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Blog</a>
             <a href="/setup" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Setup</a>
             <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
           </div>

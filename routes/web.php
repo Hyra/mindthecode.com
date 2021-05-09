@@ -16,8 +16,9 @@ use Spatie\Sheets\Sheets;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', function (Sheets $sheets) {
+    $articles = $sheets->collection('posts')->all()->take(3)->reverse();
+    return view('home', ['articles' => $articles]);
 });
 
 Route::get('/blog', function (Sheets $sheets) {

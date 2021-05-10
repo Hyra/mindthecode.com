@@ -4,7 +4,6 @@ use App\Models\Article;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\Route;
 use Spatie\SchemaOrg\Schema;
-use Spatie\Sitemap\SitemapGenerator;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +16,13 @@ use Spatie\Sitemap\SitemapGenerator;
 |
 */
 
-Route::get('/', function (Sheets $sheets) {
+Route::get('/', function () {
     // $articles = $sheets->collection('posts')->all()->take(3)->reverse();
     $articles = Article::orderBy('published_at', 'DESC')->take(5)->get();
     return view('home', ['articles' => $articles]);
 });
 
-Route::get('/blog', function (int $pageNr = 1, Sheets $sheets) {
+Route::get('/blog', function (int $pageNr = 1) {
     $perPage = 6;
 
     $articles = Article::orderBy('published_at', 'DESC')->skip(($pageNr - 1) * $perPage)->take($perPage)->get();
@@ -37,7 +36,7 @@ Route::get('/blog', function (int $pageNr = 1, Sheets $sheets) {
     ]);
 });
 
-Route::get('/blog/page/{pageNr?}', function (int $pageNr = 1, Sheets $sheets) {
+Route::get('/blog/page/{pageNr?}', function (int $pageNr = 1) {
     $perPage = 6;
 
     $articles = Article::orderBy('published_at', 'DESC')->skip(($pageNr - 1) * $perPage)->take($perPage)->get();
@@ -51,12 +50,7 @@ Route::get('/blog/page/{pageNr?}', function (int $pageNr = 1, Sheets $sheets) {
     ]);
 });
 
-Route::get('/archive', function (Sheets $sheets) {
-    $articles = $sheets->collection('posts')->all()->reverse();
-    return view('archive', ['articles' => $articles]);
-});
-
-Route::get('/blog/{slug}', function (string $slug, Sheets $sheets) {
+Route::get('/blog/{slug}', function (string $slug) {
 
     $article = Article::where('slug', $slug)->firstOrFail();
 

@@ -16,7 +16,7 @@
     @yield('og')
 </head>
 
-<body class="font-sans text-lg leading-normal" style="background-color: #1a1f24">
+<body class="font-sans text-lg leading-normal" style="background-color: rgba(26,32,44,1)">
 
     <nav class="border-b border-gray-800" x-data="{ mobileOpen: false }">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

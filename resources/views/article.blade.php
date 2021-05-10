@@ -17,19 +17,15 @@
             </div>
             <div class="flex list-none" id="socials">
                 <a href="https://facebook.com/sharer.php?u=https://mindthecode.com/blog/{{ $article->slug }}" class="share-item" target="_blank" rel="nofollow">
-                    <img class="h-10" src="/images/socials/facebook.png">
+                    <img class="h-10" src="/images/socials/facebook.png" width="40" height="40">
                 </a>
                 <a href="https://twitter.com/intent/tweet?text={{ $article->title }}&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;via=mindthecode&amp;related=mindthecode" class="share-item" target="_blank" rel="nofollow">
-                    <img class="h-10" src="/images/socials/twitter.png">
+                    <img class="h-10" src="/images/socials/twitter.png" width="40" height="40">
                 </a>
                 <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mindthecode.com/blog/{{ $article->slug }}&amp;summary={{ $article->title }}&amp;source=mindthecode" class="share-item" target="_blank" rel="nofollow">
-                    <img class="h-10" src="/images/socials/linkedin.png">
+                    <img class="h-10" src="/images/socials/linkedin.png" width="40" height="40">
                 </a>
             </div>
-        </div>
-
-        <div class="hidden py-5">
-            <img src="https://www.indiewire.com/wp-content/uploads/2020/05/Rick-and-Morty-Season-4-Episode-7.png?w=780" alt="">
         </div>
 
         {!! Markdown::convertToHtml($article->body_md) !!}

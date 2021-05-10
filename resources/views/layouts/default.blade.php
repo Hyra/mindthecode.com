@@ -14,7 +14,7 @@
     </style>
     <title>Mindthecode{{ isset($article) ? ' | ' . $article->title : ''}}</title>
     <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> --}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     @include('feed::links')
     @yield('og')
@@ -38,7 +38,7 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex-shrink-0 flex items-center">
-                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="180" style="transfsorm: translatey(-15px); animsation: float 8s ease-in-out infinite;" /></a>
+                <a href="/"><img src="/mtc_logo_white@2x.png" alt="Mindthecode" width="180" height="32" style="transfsorm: translatey(-15px); animsation: float 8s ease-in-out infinite;" /></a>
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

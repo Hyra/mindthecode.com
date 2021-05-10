@@ -115,5 +115,3 @@ Route::get('/contact', function () {
 });
 
 Route::feeds();
-
-SitemapGenerator::create('https://mindthecode.com')->writeToFile('public/sitemap.xml');

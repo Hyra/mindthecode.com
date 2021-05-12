@@ -64,6 +64,10 @@
 
     @yield('content')
 
+    <div class="hidden md:block">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553J&placement=mindthecode" id="_carbonads_js"></script>
+    </div>
+
     @yield('scripts')
 
     {!! $schemawebsite !!}
@@ -92,6 +96,10 @@
             background-color: hsl(0, 0%, 98%);
             box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
             z-index: 100;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
         }
         #carbonads a {
             color: inherit;

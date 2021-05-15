@@ -21,12 +21,12 @@
 
 @section('og')
     <meta name="description" content="I'm Stef van den Ham (@hyra), entrepeneur, web-developer, tooling enthusiast, martial artist and experienced procrastinator from Amsterdam. Writing about all things web.">
-    <meta property="og:title" content="Mindthecode.com">
+    <meta property="og:title" content="Mindthecode">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Writing about all things web.">
     <meta property="og:url" content="https://mindthecode.com">
-    <meta property="og:site_name" content="Mindthecode.com">
+    <meta property="og:site_name" content="Mindthecode">
     <meta property="og:image" content="https://mindthecode.com/fb_share.jpg">
     <meta property="twitter:description" content="Writing about all things web.">
-    <meta property="twitter:title" content="Mindthecode.com">
+    <meta property="twitter:title" content="Mindthecode">
 @stop

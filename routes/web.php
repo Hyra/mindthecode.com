@@ -19,7 +19,7 @@ use Spatie\SchemaOrg\Schema;
 Route::get('/', function () {
     // $articles = $sheets->collection('posts')->all()->take(3)->reverse();
     $articles = Article::orderBy('published_at', 'DESC')->take(5)->get();
-    return view('home', ['articles' => $articles]);
+    return view('home', ['articles' => $articles, 'pageTitle' => 'Mindthecode']);
 });
 
 Route::get('/blog', function (int $pageNr = 1) {
@@ -33,6 +33,7 @@ Route::get('/blog', function (int $pageNr = 1) {
         'currentPage' => $pageNr,
         'perPage' => $perPage,
         'totalPages' => $totalCount / $perPage,
+        'pageTitle' => 'Blog'
     ]);
 });
 
@@ -47,6 +48,7 @@ Route::get('/blog/page/{pageNr?}', function (int $pageNr = 1) {
         'currentPage' => $pageNr,
         'perPage' => $perPage,
         'totalPages' => $totalCount / $perPage,
+        'pageTitle' => 'Blog'
     ]);
 });
 
@@ -95,17 +97,17 @@ Route::get('/blog/{slug}', function (string $slug) {
     // Random articles
     $randomArticles = Article::inRandomOrder()->take(3)->get();
 
-    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles]);
+    return view('article', ['article' => $article, 'blogArticleData' => $blogArticleData, 'randomArticles' => $randomArticles, 'pageTitle' => $article->title]);
 })->name('articles.show');
 
 Route::get('/setup', function () {
     $content = implode('', file(resource_path('content/setup.md')));
-    return view('setup', ['content' => $content]);
+    return view('setup', ['content' => $content, 'pageTitle' => 'My setup']);
 });
 
 Route::get('/contact', function () {
     $content = implode('', file(resource_path('content/contact.md')));
-    return view('contact', ['content' => $content]);
+    return view('contact', ['content' => $content, 'pageTitle' => 'Contact']);
 });
 
 Route::feeds();

@@ -19,7 +19,7 @@
                 <a href="{{ Route('articles.show', $article->slug) }}">{{$article->title}}</a>
             </div>
             <small class="text-blue-200 text-sm">
-                {{ \Carbon\Carbon::parse($article->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($article->body_md))) / 200) }} min read
+                {{ \Carbon\Carbon::parse($article->published_at)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($article->body_md))) / 200) }} min read
             </small>
             <div class="font-extralight text-gray-200">{!! $article->description !!}</div>
             <div class="flex flex-col items-end">

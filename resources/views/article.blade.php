@@ -42,7 +42,7 @@
                 <a href="{{ Route('articles.show', $randomArticle->slug) }}">{{$randomArticle->title}}</a>
             </div>
             <small class="text-blue-200 text-sm">
-                {{ \Carbon\Carbon::parse($randomArticle->date)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($randomArticle->body_md))) / 200) }} min read
+                {{ \Carbon\Carbon::parse($randomArticle->published_at)->format('F jS, Y') }} • {{ ceil(count(explode(" ", Markdown::convertToHtml($randomArticle->body_md))) / 200) }} min read
             </small>
             <div class="font-extralight text-gray-200">{!! $randomArticle->description !!}</div>
             <div class="flex flex-col items-end">

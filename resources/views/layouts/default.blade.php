@@ -68,6 +68,8 @@
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553J&placement=mindthecode" id="_carbonads_js"></script>
     </div>
 
+    <div id="background-gradient"></div>
+
     @yield('scripts')
 
     {!! $schemawebsite !!}

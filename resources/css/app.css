@@ -16,6 +16,15 @@
     }
 }
 
+@font-face {
+    font-family: "Means Web";
+    src: url("/fonts/MeansWeb-Light.woff2") format("woff2"),
+        url("/fonts/MeansWeb-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* purgecss start ignore */
 body {
     font-weight: 300;
@@ -50,7 +59,7 @@ body {
     h4,
     h5 {
         color: #141430;
-        @apply font-sans;
+        font-family: "Means Web";
     }
 
     .prose .list-header a {
@@ -106,6 +115,9 @@ body {
             &::after {
                 content: "";
             }
+        }
+        h1 {
+            line-height: 1.25;
         }
     }
 }

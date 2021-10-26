@@ -59,7 +59,7 @@ body {
     h4,
     h5 {
         color: #141430;
-        font-family: "Means Web";
+        @apply font-serif;
     }
 
     .prose .list-header a {

@@ -40,10 +40,10 @@
         <div class="my-16 border-b border-gray-800"></div>
 
         <div class="prose">
-            <h3>More posts</h3>
+            <h3 class="text-5xl">More posts</h3>
             @foreach ($randomArticles as $randomArticle)
                 <div>
-                    <div class="text-gray-300 font-semibold list-header">
+                    <div class="text-gray-300 font-semibold list-header font-serif">
                         <a href="{{ Route('articles.show', $randomArticle->slug) }}">{{ $randomArticle->title }}</a>
                     </div>
                     <small class="text-blue-200 text-sm">
@@ -103,7 +103,6 @@
             progress.style.setProperty('--scroll', scroll + '%');
 
         });
-
     </script>
     <script src="/prism.js" defer></script>
 @stop

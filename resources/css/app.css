@@ -286,7 +286,7 @@ pre {
     );
 }
 
-article p:first-of-type {
+article > p:first-of-type {
     @apply text-2xl;
     @apply italic;
 }

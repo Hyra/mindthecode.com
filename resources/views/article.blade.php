@@ -39,11 +39,19 @@
 
         <div class="my-16 border-b border-gray-800"></div>
 
+        <h3 class="text-2xl text-white">Comments</h3>
+        <script src="https://utteranc.es/client.js" repo="hyra/mindthecode.com" issue-term="pathname" label="comment"
+                theme="dark-blue" crossorigin="anonymous" async>
+        </script>
+
+        <div class="my-16 border-b border-gray-800"></div>
+
+        <h3 class="text-2xl text-white mb-5">Keep reading</h3>
+
         <div class="prose">
-            <h3 class="text-5xl">More posts</h3>
             @foreach ($randomArticles as $randomArticle)
                 <div>
-                    <div class="text-gray-300 font-semibold list-header font-serif">
+                    <div class="text-gray-800 font-bold list-header font-serif">
                         <a href="{{ Route('articles.show', $randomArticle->slug) }}">{{ $randomArticle->title }}</a>
                     </div>
                     <small class="text-blue-200 text-sm">

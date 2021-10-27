@@ -37,14 +37,67 @@
 
         </article>
 
-        <div class="my-16 border-b border-gray-800"></div>
+        <div class="my-8 border-b border-gray-800"></div>
+
+        <div class="p-3 rounded-md" id="mc_embed_signup">
+            <div class="bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6" id="mc_embed_signup_scroll">
+                    <h3 class="text-xl leading-6 font-medium text-gray-900">
+                        Stay up to date
+                    </h3>
+                    <div class="mt-2 max-w-xl text-sm text-gray-500">
+                        <p>
+                            Want to know when a new post comes out and stay in the loop on tips, tricks and gotchas?
+                            Consider signing up for the Mindthecode newsletter.
+                        </p>
+                    </div>
+                    <form
+                        action="https://mindthecode.us8.list-manage.com/subscribe/post?u=81bc331f4f2d0e26941705aa8&amp;id=9085d5fa6a"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                        class="validate mt-5 sm:flex sm:items-center" target="_blank" novalidate>
+                        <div class="w-full sm:max-w-xs mc-field-group">
+                            <label for="mce-EMAIL" class="sr-only">Email</label>
+                            <input type="email" name="EMAIL" id="mce-EMAIL"
+                                class="required email shadow-sm py-2 px-2 focus:ring-gray-300 focus:border-gray-300 block w-full sm:text-sm border border-gray-300 rounded-md"
+                                placeholder="hantori@hanzo.com">
+                        </div>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                name="b_81bc331f4f2d0e26941705aa8_9085d5fa6a" tabindex="-1" value=""></div>
+                        <button type="submit" id="mc-embedded-subscribe"
+                            class="mt-3 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm rounded-md text-white bg-red-400 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm font-serif font-bold">
+                            Sign me up!
+                        </button>
+                    </form>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                    <script type='text/javascript'>
+                        (function($) {
+                            window.fnames = new Array();
+                            window.ftypes = new Array();
+                            fnames[0] = 'EMAIL';
+                            ftypes[0] = 'email';
+                            fnames[1] = 'FNAME';
+                            ftypes[1] = 'text';
+                            fnames[2] = 'LNAME';
+                            ftypes[2] = 'text';
+                        }(jQuery));
+                        var $mcj = jQuery.noConflict(true);
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-8 border-b border-gray-800"></div>
 
         <h3 class="text-2xl text-white">Comments</h3>
         <script src="https://utteranc.es/client.js" repo="hyra/mindthecode.com" issue-term="pathname" label="comment"
                 theme="dark-blue" crossorigin="anonymous" async>
         </script>
 
-        <div class="my-16 border-b border-gray-800"></div>
+        <div class="my-8 border-b border-gray-800"></div>
 
         <h3 class="text-2xl text-white mb-5">Keep reading</h3>
 

@@ -131,6 +131,11 @@ body {
     @apply border-gray-800;
 }
 
+#mc_embed_signup div.mce_inline_error {
+    @apply my-5;
+    @apply bg-red-400;
+}
+
 pre {
     overflow: hidden;
     margin-top: 1.5rem;
